@@ -1,0 +1,10 @@
+{
+  "$schema": "../pack.schema.json",
+  "name": "high-contrast",
+  "title": "High contrast",
+  "description": "For low vision and bright screens: yellow on a solid black box, larger and heavier text, no motion. Classes differ by weight, italics and inversion, not by color alone.",
+  "author": "Overtone maintainers",
+  "license": "MIT",
+  "tags": ["accessibility", "tv", "desktop"],
+  "contrast": "Solid black box, so the video never shows through: yellow text 17.2:1, key words inverted (black on yellow) 17.2:1, lowest is gray soft text at 13.6:1."
+}

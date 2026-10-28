@@ -1,0 +1,21 @@
+{
+  "language": "en",
+  "horizontal": [
+    "0.500 3.950 S1 Well, so / the thing is that we never really planned",
+    "4.500 7.710 S1 for this kind of / growth in the first place.",
+    "9.000 10.700 S2 Right. / And what did you",
+    "11.900 13.020 S2 do when it happened?",
+    "13.020 14.315 S1 We hired three people,",
+    "15.400 19.860 S1 then the servers went down, and we / had to start over again."
+  ],
+  "vertical": [
+    "0.500 3.250 S1 Well, so the thing / is that we never",
+    "3.250 5.460 S1 really planned / for this kind of",
+    "6.260 7.994 S1 growth / in the first place.",
+    "9.000 10.700 S2 Right. / And what did you",
+    "11.900 13.020 S2 do when it happened?",
+    "13.020 14.487 S1 We hired three people,",
+    "15.400 17.190 S1 then the servers / went down,",
+    "17.190 19.860 S1 and we had to start / over again."
+  ]
+}

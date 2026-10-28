@@ -1,0 +1,11 @@
+/* Style pack "clean" (the default, TV/desktop): a dark box, subtle tints, bold key words, mint tabular numbers. */
+.ot-layer.ot-theme-clean {
+  --ot-bg: rgb(10 10 10 / 0.78);
+  --ot-font-weight: 500;
+  --ot-brand-color: #9fd4ff;
+  --ot-emphasis-color: #ffe9a8;
+  --ot-key-weight: 700;
+  --ot-soft-color: rgb(255 255 255 / 0.68);
+  --ot-number-color: #a6f0c6; /* apart from brand blue and emphasis yellow */
+  --ot-number-variant: tabular-nums;
+}

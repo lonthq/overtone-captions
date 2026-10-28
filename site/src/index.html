@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overtone · captions for every screen shape</title>
+  <meta name="description" content="Overtone keeps your captions in one file with a line cut for each screen shape, made by reading rules. Re-cut your SRT or WebVTT offline, or transcribe audio and video. An open format, a video.js plugin and a CLI, MIT licensed.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#111318">
+  <meta property="og:title" content="Overtone: captions cut for every screen shape">
+  <meta property="og:description" content="One caption file with a line cut for 16:9 and one for 9:16. The player shows the cut closest to the picture. Re-cut your own subtitles, or transcribe with the pipeline.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://overtone.lont.ai/">
+  <meta property="og:image" content="https://overtone.lont.ai/media/social.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tears of Steel, a Blender open movie, in a 16:9 and a 9:16 Overtone player side by side, each with its own line cut and key words in yellow">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Overtone: captions cut for every screen shape">
+  <meta name="twitter:description" content="One caption file with a line cut for 16:9 and one for 9:16. The player shows the cut closest to the picture. Re-cut your own subtitles, or transcribe with the pipeline.">
+  <meta name="twitter:image" content="https://overtone.lont.ai/media/social.png">
+  <meta name="twitter:image:alt" content="Tears of Steel, a Blender open movie, in a 16:9 and a 9:16 Overtone player side by side, each with its own line cut and key words in yellow">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="media/hero.webp" fetchpriority="high">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111318;
+      --surface: #181b22;
+      --surface-2: #20242d;
+      --border: #2b303b;
+      --text: #e8e8ee;
+      --muted: #a9adbb;
+      --dim: #8f93a3;
+      --link: #9fd4ff;
+      --key: #ffd400;
+      --brand: #7cf3c8;
+      --number: #8ad4ff;
+      --radius: 14px;
+      --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 var(--font); overflow-wrap: break-word; }
+    a { color: var(--link); text-underline-offset: 0.15em; }
+    a:hover { color: #c8e7ff; }
+    :focus-visible { outline: 2px solid var(--key); outline-offset: 3px; border-radius: 4px; }
+    code, pre, kbd { font-family: var(--mono); font-size: 0.88em; }
+    code { padding: 0.1em 0.35em; border-radius: 5px; background: var(--surface-2); }
+    .wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+    @media (min-width: 720px) { .wrap { padding: 0 28px; } }
+    .skip { position: absolute; left: 16px; top: -48px; padding: 8px 14px; border-radius: 8px; background: var(--key); color: #111; font-weight: 700; }
+    .skip:focus { top: 12px; }
+
+    /* Header */
+    .top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding-top: 18px; padding-bottom: 18px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); font-weight: 750; font-size: 18px; text-decoration: none; letter-spacing: 0.01em; }
+    .brand svg { width: 28px; height: 28px; }
+    .brand + .by { margin-left: -14px; margin-right: auto; color: var(--dim); font-size: 14px; text-decoration: none; }
+    .brand + .by:hover, .brand + .by:focus-visible { color: var(--text); text-decoration: underline; }
+    .top nav { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 15px; }
+    .top nav a { color: var(--muted); text-decoration: none; }
+    .top nav a:hover, .top nav a:focus-visible { color: var(--text); text-decoration: underline; }
+
+    /* Hero */
+    .hero { padding-top: 28px; padding-bottom: 8px; }
+    .eyebrow { margin: 0 0 12px; color: var(--brand); font-size: 14px; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 18ch; font-size: clamp(2.1rem, 1.2rem + 4vw, 3.6rem); line-height: 1.08; letter-spacing: -0.02em; font-weight: 800; }
+    mark { padding: 0 0.12em; border-radius: 0.12em; background: var(--key); color: #111; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+    .lede { max-width: 60ch; margin: 18px 0 0; color: var(--muted); font-size: clamp(1.05rem, 1rem + 0.4vw, 1.25rem); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 18px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface-2); color: var(--text); font-weight: 650; text-decoration: none; }
+    .btn:hover { border-color: #4a5160; background: #272c37; color: var(--text); }
+    .btn.primary { border-color: var(--key); background: var(--key); color: #111; }
+    .btn.primary:hover { background: #ffe14d; color: #111; }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+    .clip { margin: 40px 0 0; }
+    .clip-frame { overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: #0b0c10; box-shadow: 0 24px 60px rgb(0 0 0 / 0.45); }
+    .clip img { display: block; width: 100%; height: auto; }
+    .clip figcaption { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin-top: 12px; color: var(--dim); font-size: 14px; }
+    .clip figcaption span { flex: 1 1 32ch; }
+    .linkish { padding: 0; border: 0; background: none; color: var(--link); font: inherit; text-decoration: underline; text-underline-offset: 0.15em; cursor: pointer; }
+    .linkish:hover { color: #c8e7ff; }
+
+    /* Sections */
+    section.block { padding-top: 72px; }
+    h2 { margin: 0 0 8px; font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem); line-height: 1.2; letter-spacing: -0.01em; }
+    .section-intro { max-width: 68ch; margin: 0 0 28px; color: var(--muted); }
+    .section-intro.compare-note { margin: 20px 0 0; }
+    .pitch { max-width: 70ch; margin: 0; color: var(--text); font-size: 1.12rem; }
+    .pitch strong { color: #fff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; }
+    .card { display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 22px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+    .card h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 0; font-size: 1.2rem; }
+    .card h3 code { padding: 0; background: none; color: var(--dim); font-size: 0.8rem; font-weight: 500; }
+    .card p { margin: 0; color: var(--muted); }
+    .card .more { margin-top: auto; padding-top: 6px; font-weight: 600; }
+    .card pre { margin: 4px 0 0; padding: 12px 14px; overflow-x: auto; border-radius: 10px; background: #0d0f13; color: #d6dae4; font-size: 13px; line-height: 1.55; }
+    .card pre code { padding: 0; background: none; font-size: inherit; }
+    .tag { display: inline-block; width: 10px; height: 10px; border-radius: 3px; }
+    .tag.format { background: var(--number); }
+    .tag.player { background: var(--key); }
+    .tag.cli { background: var(--brand); }
+    .tok-s { color: var(--brand); }
+    .tok-k { color: var(--number); }
+    .tok-c { color: var(--dim); }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 0; padding: 0; list-style: none; }
+    .chips a { display: inline-block; padding: 3px 10px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface-2); color: var(--text); font-size: 13px; text-decoration: none; }
+    .chips a:hover { border-color: var(--key); }
+    .files { margin: 0; padding: 0; list-style: none; font-size: 14px; }
+    .files li { padding: 3px 0; }
+    .files a { font-family: var(--mono); font-size: 13px; overflow-wrap: anywhere; }
+    a.card { color: inherit; text-decoration: none; transition: border-color 0.15s, background 0.15s; }
+    a.card:hover { border-color: #4a5160; background: #1c2028; }
+    a.card .more { color: var(--link); }
+    a.card:hover .more { text-decoration: underline; }
+    .contribute .card h3::before { content: ""; display: inline-block; width: 6px; height: 1.1em; margin-right: 4px; border-radius: 3px; background: var(--key); align-self: center; }
+
+    footer.wrap { margin-top: 88px; padding-top: 28px; padding-bottom: 40px; border-top: 1px solid var(--border); color: var(--dim); font-size: 14px; }
+    footer p { margin: 0 0 8px; max-width: 80ch; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="wrap top">
+    <a class="brand" href="./" aria-label="Overtone home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#20242d"/><rect x="6" y="13" width="20" height="4.5" rx="2.25" fill="#e8e8ee"/><rect x="6" y="20" width="8" height="4.5" rx="2.25" fill="#e8e8ee"/><rect x="15.5" y="20" width="10.5" height="4.5" rx="2.25" fill="#ffd400"/></svg>
+      Overtone
+    </a>
+    <a class="by" href="https://lont.ai">by Lont</a>
+    <nav aria-label="Main">
+      <a href="demo/">Demo</a>
+      <a href="styles/">Style packs</a>
+      <a href="#output">Live output</a>
+      <a href="#contribute">Contribute</a>
+      <a href="%%GITHUB%%">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="wrap hero" aria-labelledby="title">
+      <p class="eyebrow">Open-source captions · MIT</p>
+      <h1 id="title">Captions cut for <mark>every screen shape</mark>.</h1>
+      <p class="lede">One file holds the words and a line cut for each shape: 16:9, 9:16 or any you add. The player shows the cut closest to the picture. Re-cut subtitles you already have, or make new ones from audio.</p>
+      <div class="actions">
+        <a class="btn primary" href="demo/?clip=tears-of-steel&amp;theme=social">Try the demo</a>
+        <a class="btn" href="styles/">See the style packs</a>
+        <a class="btn" href="%%GITHUB%%">
+          <svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+      <figure class="clip">
+        <div class="clip-frame">
+          <picture>
+            <source id="hero-still" media="(prefers-reduced-motion: reduce)" srcset="media/hero-still.webp">
+            <img src="media/hero.webp" width="%%HERO_W%%" height="%%HERO_H%%" fetchpriority="high" decoding="async"
+                 alt="A scene from Tears of Steel, a Blender open movie, in a 16:9 and a 9:16 Overtone player side by side. Captions appear word by word. Key words turn yellow and pop as they are spoken. The captions button then cycles from off to styled to plain and back to off.">
+          </picture>
+        </div>
+        <figcaption>
+          <span>Real pipeline output on Tears of Steel, a Blender open movie. The same moment is cut for 16:9 and 9:16. Key words pop, and the CC button cycles off → styled → plain.</span>
+          <span><button type="button" class="linkish" id="hero-toggle">Pause animation</button>%%MP4_LINK%%</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="wrap block" aria-labelledby="why">
+      <h2 id="why">Why Overtone</h2>
+      <p class="pitch">
+        Most captions are cut once, for one screen, by filling each line to a length limit. Turn the video vertical
+        and that cut falls apart. Overtone stores <strong>every word once</strong>, with its time and speaker, and cuts
+        the lines <strong>for each screen shape</strong> by reading rules. A line avoids ending on “the” or “of”. Names
+        and numbers stay together. Each speaker gets their own caption, and pauses show as breaks. Bring your own SRT or
+        WebVTT, or let the CLI transcribe your media: a transcription model writes the text, speech engines time each
+        word, and an LLM editor fixes names and terms. The LLM never sets timestamps.
+      </p>
+    </section>
+
+    <section class="wrap block" aria-labelledby="compare">
+      <h2 id="compare">Same words, cut two ways</h2>
+      <p class="section-intro">A NASA interview with two speakers, cut for a 9:16 phone video (22 characters × 2 lines), from the same words and times. Filling lines to the limit ignores who is speaking and ends lines on “Jim,”, “A”, “I”, “the” and “about”.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Lines filled to the limit</h3>
+          <pre>the 2004 class. Jim,
+thank you for joining
+
+us. It's great to be
+here, Allard. Thanks.
+
+Well, if you wouldn't
+mind, we've got a
+
+…
+
+don't you walk us
+through you? Okay. A
+
+little about me: I
+grew up in Eugene,
+
+Oregon. I joined the
+Astronaut Corps about
+
+four years ago, as you
+said, May of 2004,</pre>
+        </article>
+        <article class="card">
+          <h3>Overtone</h3>
+          <pre>Jim, thank you
+for joining us.
+
+It's great to be here,
+Allard. Thanks.
+
+Well,
+if you wouldn't mind,
+
+…
+
+Okay.
+A little about me:
+
+I grew up
+in Eugene, Oregon.
+
+I joined
+the Astronaut Corps
+
+about four years ago,
+
+as you said,
+May of 2004,</pre>
+        </article>
+      </div>
+      <p class="section-intro compare-note">On three English clips (21 minutes, 16:9 cuts), 0.3% of Overtone’s breaks end on a word like “the”, “of” or “and” with no pause after it. Filling lines to the limit gives 29%, ElevenLabs’ SRT export 16%. Overtone shows all 47 pauses of 0.5–1.5 s as a break; the other two show 28% and 72%. These are rule checks, not reader judgments. Details in the <a href="%%GITHUB%%/blob/main/bench/captions/RESULTS.md">caption benchmark</a>.</p>
+    </section>
+
+    <section class="wrap block" aria-labelledby="parts">
+      <h2 id="parts">Three packages. Use any one.</h2>
+      <p class="section-intro">The format sits in the middle. The player shows it, and the CLI writes it.</p>
+      <div class="grid">
+        <article class="card">
+          <h3><span class="tag format" aria-hidden="true"></span>Format <code>overtone-format</code></h3>
+          <p>One <code>.overtone.json</code> file holds each word once, with its time, speaker and semantic classes, plus a line cut per screen shape. Comes with a JSON Schema, a validator and exporters to WebVTT, SRT and plain text. No runtime dependencies. Runs in Node and the browser.</p>
+          <pre><code>{ "text": "Peacocks.",
+  "start": 30.39, "end": 31.07,
+  <span class="tok-s">"classes": ["key"]</span> }</code></pre>
+          <a class="more" href="%%GITHUB%%/tree/main/packages/format">Format docs →</a>
+        </article>
+        <article class="card">
+          <h3><span class="tag player" aria-hidden="true"></span>Player <code>videojs-overtone</code></h3>
+          <p>A video.js 8.5+ plugin. It shows the line cut closest to the shape of the picture and switches live on resize. The CC button or the <kbd>C</kbd> key cycles off → styled → plain. Pick one of %%PACK_COUNT%% style packs or write your own CSS.</p>
+          <pre><code>player.<span class="tok-k">overtone</span>({
+  src: <span class="tok-s">'talk.overtone.json'</span>,
+  theme: <span class="tok-s">'social'</span>,
+});</code></pre>
+          <a class="more" href="%%GITHUB%%/tree/main/packages/videojs">Player docs →</a>
+        </article>
+        <article class="card">
+          <h3><span class="tag cli" aria-hidden="true"></span>CLI <code>overtone-captions</code></h3>
+          <p>Re-cuts the SRT or WebVTT you already have, offline and with no keys. Or turns audio and video into captions: text from a transcription model (OpenAI, Azure OpenAI or ElevenLabs), word times and speakers from Azure AI Speech (or ElevenLabs or OpenAI), and an LLM editor (OpenAI, Azure OpenAI or Anthropic). Code checks the structure of every edit. <code>--local</code> runs it all on your machine. Writes JSON, WebVTT, SRT and a transcript, or an MP4 with the styled captions burned in.</p>
+          <pre><code>npx overtone-captions recut talk.srt
+
+overtone transcribe talk.mp4 \
+  --context <span class="tok-s">"Panel about cycling"</span></code></pre>
+          <a class="more" href="%%GITHUB%%/tree/main/packages/cli">CLI docs →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap block" aria-labelledby="try">
+      <h2 id="try">Try it</h2>
+      <p class="section-intro">Everything here runs in your browser from static files. The videos stream from NASA and Blender; they are not part of this project.</p>
+      <div class="grid">
+        <a class="card" href="demo/?clip=tears-of-steel">
+          <h3>Demo</h3>
+          <p>Three Blender open movies and a NASA interview in a 16:9 and a 9:16 player. Switch style packs, show or hide speaker names and cycle the CC button.</p>
+          <span class="more">Open the demo →</span>
+        </a>
+        <div class="card">
+          <h3><a href="styles/">Style gallery</a></h3>
+          <p>Every semantic class in all %%PACK_COUNT%% style packs, styled and plain, at 16:9 and 9:16, with a check that each line fits.</p>
+          <ul class="chips" aria-label="Style packs">%%PACK_LIST%%</ul>
+          <a class="more" href="styles/?view=overview">All packs side by side →</a>
+        </div>
+        <div class="card" id="output">
+          <h3>Live output</h3>
+          <p>Unedited files from a real pipeline run on the NASA interview: 473 words, two speakers.</p>
+          <ul class="files">
+            <li><a href="examples/output/nasa/nasa-dutton.overtone.json">nasa-dutton.overtone.json</a></li>
+            <li><a href="examples/output/nasa/nasa-dutton.horizontal.vtt">nasa-dutton.horizontal.vtt</a> · <a href="examples/output/nasa/nasa-dutton.vertical.vtt">vertical.vtt</a></li>
+            <li><a href="examples/output/nasa/nasa-dutton.horizontal.srt">nasa-dutton.horizontal.srt</a> · <a href="examples/output/nasa/nasa-dutton.vertical.srt">vertical.srt</a></li>
+            <li><a href="examples/output/nasa/nasa-dutton.txt">nasa-dutton.txt</a></li>
+          </ul>
+          <p>The same for three Blender open movies, each playable in the demo:</p>
+          <ul class="files">
+            <li><a href="demo/?clip=tears-of-steel&amp;theme=social">Tears of Steel</a> · <a href="examples/output/tears-of-steel/tears-of-steel.overtone.json">JSON</a> · <a href="examples/output/tears-of-steel/tears-of-steel.horizontal.vtt">VTT</a></li>
+            <li><a href="demo/?clip=elephants-dream&amp;theme=social">Elephants Dream</a> · <a href="examples/output/elephants-dream/elephants-dream.overtone.json">JSON</a> · <a href="examples/output/elephants-dream/elephants-dream.horizontal.vtt">VTT</a></li>
+            <li><a href="demo/?clip=cosmos-laundromat&amp;theme=social">Cosmos Laundromat</a> · <a href="examples/output/cosmos-laundromat/cosmos-laundromat.overtone.json">JSON</a> · <a href="examples/output/cosmos-laundromat/cosmos-laundromat.horizontal.vtt">VTT</a></li>
+          </ul>
+          <a class="more" href="%%GITHUB%%/blob/main/examples/output/README.md">How we made them →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap block contribute" id="contribute" aria-labelledby="contribute-title">
+      <h2 id="contribute-title">Contribute</h2>
+      <p class="section-intro">Each task is small, has its own guide and needs no knowledge of the pipeline.</p>
+      <div class="grid">
+        <a class="card" href="%%GITHUB%%/blob/main/docs/contributing/languages.md">
+          <h3>Add a language</h3>
+          <p>A language pack is a set of word lists written by native speakers. They tell the line cutter which words belong together and where a line may end.</p>
+          <span class="more">Language guide →</span>
+        </a>
+        <a class="card" href="%%GITHUB%%/blob/main/docs/contributing/style-packs.md">
+          <h3>Make a style pack</h3>
+          <p>A caption theme for the player: one CSS file and a short <code>pack.json</code>. No JavaScript. The tests tell you when it is ready.</p>
+          <span class="more">Style pack guide →</span>
+        </a>
+        <a class="card" href="%%GITHUB%%/blob/main/docs/contributing/providers.md">
+          <h3>Add a provider</h3>
+          <p>Connect another transcription, timing or LLM service to the CLI, through the interface every provider uses.</p>
+          <span class="more">Provider guide →</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>Made by <a href="https://lont.ai">Lont</a></p>
+    <p>Open source under the MIT license · <a href="%%GITHUB%%">github.com/lonthq/overtone-captions</a></p>
+    <p>NASA interview: <a href="https://images.nasa.gov/details/ksc_053108_sts124_dutton">KSC-08-S-00035</a>, streamed from NASA's servers. This project hosts only the captions it generated. NASA does not endorse this project.</p>
+    <p>Blender open movies, streamed from download.blender.org; this project hosts only the captions it generated, and the Blender Foundation does not endorse this project. Tears of Steel: (CC) Blender Foundation | <a href="https://mango.blender.org/">mango.blender.org</a>, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>. Elephants Dream: (c) copyright 2006, Blender Foundation / Netherlands Media Art Institute / <a href="https://orange.blender.org/">www.elephantsdream.org</a>, <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>. Cosmos Laundromat: (CC) Blender Foundation | <a href="https://gooseberry.blender.org/">gooseberry.blender.org</a>, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+  </footer>
+
+  <script>
+    // Pause or play the hero animation (it starts paused when the system asks for reduced motion).
+    (function () {
+      var button = document.getElementById('hero-toggle');
+      var still = document.getElementById('hero-still');
+      var paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function render() {
+        still.media = paused ? 'all' : 'not all';
+        button.textContent = paused ? 'Play animation' : 'Pause animation';
+      }
+      button.addEventListener('click', function () { paused = !paused; render(); });
+      render();
+    })();
+  </script>
+</body>
+</html>

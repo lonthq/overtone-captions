@@ -1,0 +1,44 @@
+{
+ "_note": "Synthesized in the shape whisper-cli 1.9.5 writes with -ojf -tdrz (examples/cli/cli.cpp, output_json): speaker_turn_next on a segment marks a speaker change after it. No tdrz model was run.",
+ "params": { "model": "ggml-small.en-tdrz.bin", "language": "en", "translate": false },
+ "result": { "language": "en" },
+ "transcription": [
+  { "offsets": { "from": 0, "to": 1500 }, "text": " Hi Maya, how are you?",
+    "tokens": [
+     { "text": "[_BEG_]", "offsets": { "from": 0, "to": 0 }, "id": 50364, "p": 0.9, "t_dtw": -1 },
+     { "text": " Hi", "offsets": { "from": 100, "to": 300 }, "id": 1, "p": 0.98, "t_dtw": -1 },
+     { "text": " Maya", "offsets": { "from": 320, "to": 700 }, "id": 2, "p": 0.91, "t_dtw": -1 },
+     { "text": ",", "offsets": { "from": 700, "to": 760 }, "id": 3, "p": 0.95, "t_dtw": -1 },
+     { "text": " how", "offsets": { "from": 800, "to": 950 }, "id": 4, "p": 0.99, "t_dtw": -1 },
+     { "text": " are", "offsets": { "from": 950, "to": 1080 }, "id": 5, "p": 0.99, "t_dtw": -1 },
+     { "text": " you", "offsets": { "from": 1080, "to": 1300 }, "id": 6, "p": 0.99, "t_dtw": -1 },
+     { "text": "?", "offsets": { "from": 1300, "to": 1500 }, "id": 7, "p": 0.97, "t_dtw": -1 },
+     { "text": " [SPEAKER_TURN]", "offsets": { "from": 1500, "to": 1500 }, "id": 50363, "p": 0.8, "t_dtw": -1 }
+    ],
+    "speaker_turn_next": true },
+  { "offsets": { "from": 1600, "to": 2600 }, "text": " Fine, thanks.",
+    "tokens": [
+     { "text": " Fine", "offsets": { "from": 1700, "to": 2000 }, "id": 8, "p": 0.96, "t_dtw": -1 },
+     { "text": ",", "offsets": { "from": 2000, "to": 2050 }, "id": 9, "p": 0.9, "t_dtw": -1 },
+     { "text": " thanks", "offsets": { "from": 2100, "to": 2450 }, "id": 10, "p": 0.97, "t_dtw": -1 },
+     { "text": ".", "offsets": { "from": 2450, "to": 2600 }, "id": 11, "p": 0.9, "t_dtw": -1 }
+    ],
+    "speaker_turn_next": true },
+  { "offsets": { "from": 2600, "to": 3200 }, "text": " [BLANK_AUDIO]",
+    "tokens": [
+     { "text": " [", "offsets": { "from": 2600, "to": 2700 }, "id": 12, "p": 0.5, "t_dtw": -1 },
+     { "text": "BLANK", "offsets": { "from": 2700, "to": 2900 }, "id": 13, "p": 0.5, "t_dtw": -1 },
+     { "text": "_AUDIO", "offsets": { "from": 2900, "to": 3100 }, "id": 14, "p": 0.5, "t_dtw": -1 },
+     { "text": "]", "offsets": { "from": 3100, "to": 3200 }, "id": 15, "p": 0.5, "t_dtw": -1 }
+    ],
+    "speaker_turn_next": false },
+  { "offsets": { "from": 3200, "to": 4000 }, "text": " Good to hear.",
+    "tokens": [
+     { "text": " Good", "offsets": { "from": 3300, "to": 3500 }, "id": 16, "p": 0.97, "t_dtw": -1 },
+     { "text": " to", "offsets": { "from": 3500, "to": 3600 }, "id": 17, "p": 0.99, "t_dtw": -1 },
+     { "text": " hear", "offsets": { "from": 3600, "to": 3900 }, "id": 18, "p": 0.98, "t_dtw": -1 },
+     { "text": ".", "offsets": { "from": 3900, "to": 4000 }, "id": 19, "p": 0.9, "t_dtw": -1 }
+    ],
+    "speaker_turn_next": false }
+ ]
+}

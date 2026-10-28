@@ -1,0 +1,66 @@
+# Dutch caption examples (Nederlandse voorbeelden). Format: docs/contributing/languages.md#write-caption-examples
+#
+#   good: een ondertitelregel / afgebroken waar de lezer het verwacht
+#   bad:  dezelfde woorden, / afgebroken waar het pijn doet      (one or more bad lines per good line)
+#   keep: woorden rond [een woordgroep die nooit breekt]
+#   profile: vertical | horizontal | 32x2 | none                 (also checks line length and balance)
+#   glossary: DriveCover, Lumora                                 (terms for the examples below)
+#
+# The "#" line right before an example is its title. Test: npm run test:lang
+
+# Een onderwerp blijft bij zijn werkwoord: "dat hij | morgen komt"
+good: Gisteren zei de monteur / dat hij morgen komt.
+bad:  Gisteren zei de monteur dat hij / morgen komt.
+
+# "dat" na een werkwoord kan een lijdend voorwerp zijn: een beter regeleinde dan "ik"
+good: Ik weet dat / ik het niet zeker weet,
+bad:  Ik weet dat ik / het niet zeker weet,
+
+# Een regel eindigt nooit op een voorzetsel: "over | de nieuwe verzekering"
+good: We praten vandaag / over de nieuwe verzekering.
+bad:  We praten vandaag over / de nieuwe verzekering.
+
+# Een regel eindigt nooit op een lidwoord: "vanaf de | eerste dag"
+glossary: DriveCover, Lumora
+good: Met DriveCover van Lumora / ben je vanaf de eerste dag verzekerd,
+bad:  Met DriveCover van Lumora ben je vanaf de / eerste dag verzekerd,
+glossary:
+
+# Een voegwoord begint de volgende regel: "goedkoop, en | je kunt"
+good: Het is goedkoop, / en je kunt direct claimen in de app.
+bad:  Het is goedkoop, en / je kunt direct claimen in de app.
+
+# Een nieuwe zin begint niet aan het eind van een regel: "Dat klopt. Ik | denk"
+good: Dat klopt. / Ik denk dat het veilig is.
+bad:  Dat klopt. Ik / denk dat het veilig is.
+
+# Een bijvoeglijk naamwoord blijft bij zijn zelfstandig naamwoord: "een praktische | oplossing"
+good: Dat is een praktische oplossing / voor iedereen.
+bad:  Dat is een praktische / oplossing voor iedereen.
+
+# Op telefoonbreedte (vertical: 22 tekens, 2 regels)
+profile: vertical
+good: Gisteren zei hij / dat hij komt.
+bad:  Gisteren zei hij dat / hij komt.
+profile: none
+
+# Een naam met tussenvoegsels blijft heel: "Jan de Vries"
+keep: Gisteren sprak [Jan de Vries] met Maya van der Berg over de zaak.
+
+# Ook met meer tussenvoegsels: "Maya van der Berg"
+keep: Gisteren sprak Jan de Vries met [Maya van der Berg] over de zaak.
+
+# Een bedrag blijft bij zijn periode: "twaalf euro per maand"
+keep: Je betaalt [twaalf euro per maand], zonder eigen risico.
+
+# Ook met een eurosymbool: "€12 per maand"
+keep: Je betaalt [€12 per maand] voor de hele familie.
+
+# Een verhouding blijft heel: "één op de vijf"
+keep: Elk jaar heeft [één op de vijf] bestuurders schade aan de auto.
+
+# Een vraag mag na het hulpwerkwoord breken als het onderwerp volgt: "Hoe is | het project begonnen?"
+profile: vertical
+good: Hoe is / het project begonnen?
+bad:  Hoe / is het project begonnen?
+profile: none

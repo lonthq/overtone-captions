@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overtone style packs</title>
+  <link rel="icon" href="data:,">
+  <!-- The style packs are added by packs.js. -->
+  <link rel="stylesheet" href="/packages/videojs/dist/themes/base.css">
+  <style>
+    body { margin: 0; padding: 24px; background: #f4f4f6; color: #1c1c22; font: 15px/1.5 system-ui, sans-serif; }
+    h1 { margin: 0 0 4px; }
+    h2 { margin: 0; font-size: 22px; }
+    h2 code { font-size: 15px; font-weight: 500; color: #6b6b80; }
+    .intro, .note { max-width: 75ch; color: #55556a; }
+    .note { margin: 4px 0; }
+    #pack-nav { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 12px 0 0; }
+    #pack-nav a { color: #3157c9; }
+    #pack-nav .sep { color: #a0a0b0; }
+    .pack { margin-top: 48px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+    .tag { padding: 1px 8px; border-radius: 999px; background: #e3e4ec; color: #44445a; font-size: 12px; }
+    .meta { margin: 0; font-size: 13px; color: #6b6b80; }
+    .row { display: grid; grid-template-columns: 110px 1fr 1fr 200px 200px; gap: 12px; align-items: end; margin-top: 16px; }
+    .row h3 { margin: 0; align-self: center; font-size: 15px; }
+    .frame { margin: 0; }
+    /* A bright and a dark half, to show legibility on both. */
+    .screen {
+      position: relative; overflow: hidden; border-radius: 8px;
+      background:
+        linear-gradient(180deg, #9cc0db 0 38%, transparent 38%),
+        linear-gradient(105deg, #ebe4d4 0 48%, #34465a 48% 100%);
+    }
+    /* A gallery frame sizes itself instead of filling the player. */
+    .screen.ot-picture { position: relative; inset: auto; }
+    .frame.wraps .screen { outline: 3px solid #d93025; outline-offset: 2px; }
+    .frame.wraps figcaption::after { content: ' · a line wraps'; color: #d93025; }
+    figcaption { margin-top: 4px; font-size: 12px; color: #6b6b80; }
+    .fit { margin: 12px 0 0; font-size: 13px; color: #2f7d4a; }
+    .fit.bad { color: #d93025; }
+    .fit-lab { position: absolute; left: -10000px; top: 0; }
+    /* Overview: one row per pack. */
+    .view-overview { padding: 20px 24px; }
+    .view-overview .intro, .view-overview #pack-nav { display: none; }
+    .view-overview #gallery { display: grid; gap: 14px; width: max-content; padding: 4px 0; }
+    .overview-row { display: grid; grid-template-columns: 210px auto; gap: 16px; align-items: center; }
+    .overview-row .pack-info h2 { font-size: 19px; }
+    .overview-row .pack-info h2 code { display: block; font-size: 13px; }
+    .overview-row .note { font-size: 13px; line-height: 1.4; }
+    .overview-row .frames { display: flex; gap: 12px; }
+    .overview-row .frame-horizontal .screen, .overview-row .frame-1x1 .screen { height: 208px; }
+    /* A narrow 9:16 player, lower half only (where captions sit). */
+    .overview-row .frame-vertical { display: flex; flex-direction: column; justify-content: flex-end; height: 208px; overflow: hidden; border-radius: 8px; }
+    .overview-row .frame-vertical .screen { flex: none; width: 200px; border-radius: 0; }
+    .overview-row figcaption { position: absolute; top: 0; left: 0; margin: 0; padding: 6px 8px; font-size: 11px; color: #34465a; }
+    .overview-row .frame { position: relative; }
+    .overview-row.cta { padding: 12px 16px; border: 2px dashed #b8b9c8; border-radius: 10px; grid-template-columns: 1fr; }
+    .overview-row.cta h2 { font-size: 17px; }
+    @media (max-width: 800px) { .row { grid-template-columns: 1fr 1fr; } .row h3, .frame-horizontal { grid-column: 1 / -1; } }
+  </style>
+</head>
+<body>
+  <h1>Overtone style packs</h1>
+  <p class="intro">
+    Every style pack in <code>packages/videojs/styles/</code>, with each semantic class of
+    <code>examples/fixtures/sample.overtone.json</code> in styled and plain mode, at 16:9 (horizontal profile) and
+    9:16 (vertical profile); the overview adds a 1:1 frame (a profile cut with <code>overtone recut --profiles 1:1</code>).
+    Frames are rendered with the player's own <code>renderCue()</code> and <code>applyProfileToLayer()</code> at the
+    moment the styled word is spoken, so motion like the social pack's "pop" is visible. A red outline marks a line
+    that wraps; the line-fit check renders every cue at 16:9, 1:1 and 9:16 widths.
+    Make your own: <code>docs/contributing/style-packs.md</code>.
+  </p>
+  <nav id="pack-nav" aria-label="Style packs"></nav>
+  <div id="gallery">Loading…</div>
+  <script src="/node_modules/video.js/dist/video.min.js"></script>
+  <script src="/packages/videojs/dist/index.global.js"></script>
+  <script src="packs.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+WEBVTT - an interview
+Kind: captions
+Language: en
+
+NOTE
+This file was written by hand for the tests.
+
+STYLE
+::cue(v[voice="Sarah"]) { color: yellow }
+
+intro
+00:00:01.000 --> 00:00:04.500 align:start position:10%
+<v Sarah>Thanks for joining us. How did the
+project start?</v>
+
+00:00:05.000 --> 00:00:09.800 line:85%
+<v Tom>It started with a question from a viewer:
+why are captions on my phone so hard to read?</v>
+
+00:00:10.000 --> 00:00:13.000
+<v Sarah>And what did you find?
+
+00:00:13.200 --> 00:00:18.000
+<v.loud Tom>That the lines were cut for television,
+<c.key>not</c> for a screen in portrait mode.
+
+00:00:18.500 --> 00:00:20.000
+<v Sarah>Makes sense.</v> <v Tom>It does.</v>

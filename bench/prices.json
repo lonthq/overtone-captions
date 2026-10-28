@@ -1,0 +1,15 @@
+{
+  "$comment": "List prices used for the cost column. Sources, meters and caveats: PRICES.md. USD, pay-as-you-go, retrieved 2026-10-17.",
+  "retrieved": "2026-10-17",
+  "gptTranscribe": { "usdPerAudioHour": 0.27, "meter": "Azure OpenAI Media / gpt-transcribe Gl Unit (Global)" },
+  "azureSpeechFast": { "usdPerAudioHour": 0.36, "meter": "Azure Speech / Fast Transcription Speech To Text (standard)", "promoUsdPerAudioHour": 0.10 },
+  "elevenlabsScribeV2": { "usdPerAudioHour": 0.22, "keytermsUsdPerAudioHour": 0.05, "source": "https://elevenlabs.io/pricing/api (retrieved 2026-10-17); see PRICES.md for the cost the API reported per request" },
+  "llm": {
+    "model": "gpt-6.1-sol",
+    "usdPerMInput": 2.0,
+    "usdPerMCachedInput": 0.10,
+    "usdPerMCacheWrite": 2.50,
+    "usdPerMOutput": 10.0,
+    "meter": "Azure OpenAI GPT6 / 6.1-sol ShortCo * Std Gl (Global Standard, short context)"
+  }
+}

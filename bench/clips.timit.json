@@ -1,0 +1,62 @@
+{
+  "$comment": "Human-checked word times: the TIMIT sample that NLTK distributes (16 of TIMIT's 630 speakers, 10 sentences each; word times hand-verified by LDC). CC BY-NC-SA, unlike the other sets: the audio is downloaded, never stored in the repository. TIMIT is a classic test set and likely in the engines' training data, so its WER says little; it is here for word timing. Selection rules and license: DATASETS.md. The audio is stored as FLAC. Fetch with: node bench/fetch.mjs --clips bench/clips.timit.json (checksums in bench/checksums.timit.json).",
+  "audioFormat": "flac",
+  "clips": [
+    {
+      "id": "timit-dr1-dr2",
+      "source": "timit-nltk",
+      "speakers": [
+        "dr1-fvmh0",
+        "dr1-mcpm0",
+        "dr2-faem0",
+        "dr2-marc0"
+      ],
+      "gap": 0.3,
+      "language": "en",
+      "kind": "read speech (American English, TIMIT), 4 speakers, 10 sentences each",
+      "context": "Read speech: four American English speakers each read ten unrelated sentences."
+    },
+    {
+      "id": "timit-dr3-dr4",
+      "source": "timit-nltk",
+      "speakers": [
+        "dr3-falk0",
+        "dr3-madc0",
+        "dr4-falr0",
+        "dr4-maeb0"
+      ],
+      "gap": 0.3,
+      "language": "en",
+      "kind": "read speech (American English, TIMIT), 4 speakers, 10 sentences each",
+      "context": "Read speech: four American English speakers each read ten unrelated sentences."
+    },
+    {
+      "id": "timit-dr5-dr6",
+      "source": "timit-nltk",
+      "speakers": [
+        "dr5-ftlg0",
+        "dr5-mbgt0",
+        "dr6-fapb0",
+        "dr6-mbma1"
+      ],
+      "gap": 0.3,
+      "language": "en",
+      "kind": "read speech (American English, TIMIT), 4 speakers, 10 sentences each",
+      "context": "Read speech: four American English speakers each read ten unrelated sentences."
+    },
+    {
+      "id": "timit-dr7-dr8",
+      "source": "timit-nltk",
+      "speakers": [
+        "dr7-fblv0",
+        "dr7-madd0",
+        "dr8-fbcg1",
+        "dr8-mbcg0"
+      ],
+      "gap": 0.3,
+      "language": "en",
+      "kind": "read speech (American English, TIMIT), 4 speakers, 10 sentences each",
+      "context": "Read speech: four American English speakers each read ten unrelated sentences."
+    }
+  ]
+}

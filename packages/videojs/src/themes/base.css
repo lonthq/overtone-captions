@@ -1,0 +1,176 @@
+/*
+ * videojs-overtone base stylesheet: load it before a theme. It sets every --ot-* default; a theme overrides them on
+ * `.ot-layer.ot-theme-<name>`. Class styling applies only in .ot-mode-styled.
+ */
+
+/* The visible picture, placed by the controller: cqw units and --ot-bottom are relative to it. */
+.ot-picture {
+  position: absolute;             /* the controller's inline box overrides this */
+  inset: 0;
+  container-type: inline-size;
+  pointer-events: none;
+}
+
+.ot-layer {
+  --ot-font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ot-font-size: 3.4cqw;            /* size for a 42-character line; other line lengths scale from it */
+  --ot-scale: 1;                     /* a pack's own factor, e.g. in .ot-tall */
+  --ot-chars: 42;                   /* the profile's maxCharsPerLine, set by the renderer */
+  --ot-font-weight: 500;
+  --ot-line-height: 1.25;
+  --ot-color: #fff;
+  --ot-bg: rgb(0 0 0 / 0.72);       /* box behind each line */
+  --ot-radius: 0.2em;
+  --ot-padding: 0.08em 0.4em;
+  --ot-shadow: none;                 /* text-shadow, for themes without a box */
+  --ot-bottom: 6%;                   /* distance from the bottom of the video */
+  --ot-controls-offset: 30px;        /* extra lift while the control bar shows; raise it for a taller bar */
+  --ot-speaker-color: #ffd866;
+  --ot-speaker-size: 0.7em;
+  --ot-emphasis-color: var(--ot-color);
+  --ot-emphasis-style: normal;
+  --ot-key-weight: 700;
+  --ot-key-color: var(--ot-color);
+  --ot-key-highlight: transparent;   /* background behind key words */
+  --ot-brand-color: var(--ot-color);
+  --ot-brand-weight: var(--ot-font-weight);
+  --ot-number-variant: tabular-nums;
+  --ot-number-color: var(--ot-color);
+  --ot-soft-color: rgb(255 255 255 / 0.72);
+  --ot-pop-scale: 1;                 /* scale of a styled word while spoken (social) */
+  --ot-turn: 1;                      /* 1 or -1 per word, set by the renderer */
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: var(--ot-bottom);          /* % of the picture height (padding % would follow the width) */
+  /* No z-index: DOM order stacks it under menus and dialogs. */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2%;
+  pointer-events: none;
+  font-family: var(--ot-font);
+  font-size: calc(var(--ot-font-size) * 42 / var(--ot-chars) * var(--ot-scale));
+  font-weight: var(--ot-font-weight);
+  line-height: var(--ot-line-height);
+  color: var(--ot-color);
+  text-align: center;
+  transition: bottom 0.2s ease;
+}
+
+/* Lift above the control bar only when there is one. */
+.vjs-has-started.vjs-user-active:not(.vjs-controls-disabled):not(.vjs-using-native-controls) .ot-layer,
+.vjs-has-started.vjs-paused:not(.vjs-controls-disabled):not(.vjs-using-native-controls) .ot-layer {
+  bottom: calc(var(--ot-bottom) + var(--ot-controls-offset));
+}
+
+.ot-layer.ot-mode-off {
+  display: none;
+}
+
+.ot-cue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1em;
+}
+
+.ot-line {
+  /* Lines are cut per profile; a line wraps only when wider than the layer. */
+  width: fit-content;
+  max-width: 100%;
+  padding: var(--ot-padding);
+  border-radius: var(--ot-radius);
+  background: var(--ot-bg);
+  text-shadow: var(--ot-shadow);
+}
+
+.ot-speaker {
+  padding: var(--ot-padding);
+  border-radius: var(--ot-radius);
+  background: var(--ot-bg);
+  color: var(--ot-speaker-color);
+  font-size: var(--ot-speaker-size);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: var(--ot-shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ot-layer {
+    transition: none;
+  }
+}
+
+/* Semantic classes: styled mode only. Later rules win when a word has several classes. */
+.ot-mode-styled .ot-number {
+  color: var(--ot-number-color);
+  font-variant-numeric: var(--ot-number-variant);
+}
+
+.ot-mode-styled .ot-emphasis {
+  color: var(--ot-emphasis-color);
+  font-style: var(--ot-emphasis-style);
+}
+
+.ot-mode-styled .ot-brand {
+  color: var(--ot-brand-color);
+  font-weight: var(--ot-brand-weight);
+}
+
+.ot-mode-styled .ot-key {
+  color: var(--ot-key-color);
+  font-weight: var(--ot-key-weight);
+  background: var(--ot-key-highlight);
+  border-radius: 0.15em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.ot-mode-styled .ot-soft {
+  color: var(--ot-soft-color);
+}
+
+/* Short on-player label after a mode change ("Captions: styled"). */
+.ot-toast {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 0.75);
+  color: #fff;
+  font: 600 14px/1.2 system-ui, sans-serif;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.ot-toast.ot-toast-visible {
+  opacity: 1;
+}
+
+/* Captions button: a bar under the CC icon when styled, dimmed when plain. */
+.video-js .ot-captions-button::after {
+  content: '';
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  bottom: 22%;
+  height: 2px;
+  border-radius: 1px;
+  background: currentColor;
+  opacity: 0;
+}
+
+.video-js .ot-captions-button.ot-mode-styled::after {
+  opacity: 1;
+}
+
+.video-js .ot-captions-button.ot-mode-plain::after {
+  opacity: 0.45;
+}

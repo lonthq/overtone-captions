@@ -1,0 +1,5119 @@
+{
+  "format": "overtone",
+  "version": 1,
+  "language": "en-US",
+  "duration": 730.56,
+  "speakers": [
+    {
+      "id": "S1",
+      "label": "Franck",
+      "role": "Sheep"
+    },
+    {
+      "id": "S2",
+      "label": "Victor",
+      "role": "Salesman"
+    }
+  ],
+  "turns": [
+    {
+      "speaker": "S1",
+      "start": 38.649,
+      "end": 47.06,
+      "words": [
+        {
+          "text": "Hey!",
+          "start": 38.649,
+          "end": 38.914,
+          "match": "interpolated",
+          "confidence": 0
+        },
+        {
+          "text": "Hey,",
+          "start": 38.914,
+          "end": 39.18,
+          "match": "interpolated",
+          "confidence": 0
+        },
+        {
+          "text": "no!",
+          "start": 39.18,
+          "end": 39.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "No!",
+          "start": 42.8,
+          "end": 42.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "No!",
+          "start": 44.38,
+          "end": 44.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "No!",
+          "start": 45.46,
+          "end": 45.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "No!",
+          "start": 46.78,
+          "end": 47.06,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 140.1,
+      "end": 144.76,
+      "words": [
+        {
+          "text": "Excuse",
+          "start": 140.1,
+          "end": 140.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "me?",
+          "start": 140.5,
+          "end": 140.68,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Excuse",
+          "start": 142.04,
+          "end": 142.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "me,",
+          "start": 142.34,
+          "end": 142.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "sir?",
+          "start": 143.12,
+          "end": 143.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Excuse",
+          "start": 144.4,
+          "end": 144.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "me?",
+          "start": 144.64,
+          "end": 144.76,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 146.9,
+      "end": 148.56,
+      "words": [
+        {
+          "text": "Oh,",
+          "start": 146.9,
+          "end": 147.04,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "soft"
+          ]
+        },
+        {
+          "text": "come",
+          "start": 147.28,
+          "end": 147.74,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "soft"
+          ]
+        },
+        {
+          "text": "on.",
+          "start": 147.88,
+          "end": 148.56,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "soft"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 150.44,
+      "end": 151.14,
+      "words": [
+        {
+          "text": "You",
+          "start": 150.44,
+          "end": 150.49,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 150.49,
+          "end": 150.56,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 150.6,
+          "end": 150.65,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "moment,",
+          "start": 150.66,
+          "end": 150.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "sir?",
+          "start": 150.96,
+          "end": 151.14,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 152.44,
+      "end": 156.44,
+      "words": [
+        {
+          "text": "I'm",
+          "start": 152.44,
+          "end": 152.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "kind",
+          "start": 152.68,
+          "end": 152.94,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "of",
+          "start": 153.02,
+          "end": 153.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "in",
+          "start": 153.22,
+          "end": 153.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 153.34,
+          "end": 153.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "middle",
+          "start": 153.5,
+          "end": 153.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "of",
+          "start": 153.78,
+          "end": 153.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "something",
+          "start": 153.98,
+          "end": 154.4,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "here,",
+          "start": 154.42,
+          "end": 154.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "yes,",
+          "start": 155.1,
+          "end": 155.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "thank",
+          "start": 155.8,
+          "end": 156.12,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you.",
+          "start": 156.18,
+          "end": 156.44,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 156.88,
+      "end": 183.7,
+      "words": [
+        {
+          "text": "I've",
+          "start": 156.88,
+          "end": 156.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "come",
+          "start": 157,
+          "end": 157.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 157.12,
+          "end": 157.17,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "long",
+          "start": 157.18,
+          "end": 157.32,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "way",
+          "start": 157.36,
+          "end": 157.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "for",
+          "start": 157.52,
+          "end": 157.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you,",
+          "start": 157.66,
+          "end": 157.71,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Franck.",
+          "start": 157.78,
+          "end": 158.02,
+          "match": "edited",
+          "confidence": 0.833
+        },
+        {
+          "text": "My",
+          "start": 169.42,
+          "end": 169.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "name",
+          "start": 169.52,
+          "end": 169.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "is",
+          "start": 169.64,
+          "end": 169.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Victor.",
+          "start": 169.8,
+          "end": 170.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Hi.",
+          "start": 172.54,
+          "end": 172.94,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "And",
+          "start": 174.98,
+          "end": 175.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 175.14,
+          "end": 175.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "are...",
+          "start": 175.32,
+          "end": 175.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 177.86,
+          "end": 177.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "are",
+          "start": 177.96,
+          "end": 178.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Franck.",
+          "start": 178.1,
+          "end": 178.38,
+          "match": "edited",
+          "confidence": 0.833
+        },
+        {
+          "text": "But",
+          "start": 180.5,
+          "end": 180.64,
+          "match": "fuzzy",
+          "confidence": 0
+        },
+        {
+          "text": "you",
+          "start": 180.72,
+          "end": 180.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "are",
+          "start": 180.82,
+          "end": 180.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "so",
+          "start": 181.36,
+          "end": 181.52,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "much",
+          "start": 181.58,
+          "end": 181.8,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "more",
+          "start": 181.86,
+          "end": 182.04,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "than",
+          "start": 182.08,
+          "end": 182.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "just",
+          "start": 182.28,
+          "end": 182.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 182.48,
+          "end": 182.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "sheep,",
+          "start": 182.7,
+          "end": 182.98,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "aren't",
+          "start": 183.22,
+          "end": 183.44,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you?",
+          "start": 183.48,
+          "end": 183.7,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 184.74,
+      "end": 188.02,
+      "words": [
+        {
+          "text": "Oh",
+          "start": 184.74,
+          "end": 184.86,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "yeah?",
+          "start": 184.96,
+          "end": 185.22,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "How",
+          "start": 186.76,
+          "end": 187.02,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "would",
+          "start": 187.08,
+          "end": 187.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 187.44,
+          "end": 187.56,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "know?",
+          "start": 187.68,
+          "end": 188.02,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 190.38,
+      "end": 210.54,
+      "words": [
+        {
+          "text": "Look",
+          "start": 190.38,
+          "end": 190.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "at",
+          "start": 190.56,
+          "end": 190.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you.",
+          "start": 190.76,
+          "end": 190.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "You're",
+          "start": 191.02,
+          "end": 191.12,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "an",
+          "start": 191.16,
+          "end": 191.22,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "adventurer,",
+          "start": 191.26,
+          "end": 192.02,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "Franck.",
+          "start": 192.22,
+          "end": 192.58,
+          "match": "edited",
+          "confidence": 0.833
+        },
+        {
+          "text": "Just",
+          "start": 194,
+          "end": 194.12,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "like",
+          "start": 194.18,
+          "end": 194.34,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "me,",
+          "start": 194.4,
+          "end": 194.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you're",
+          "start": 194.64,
+          "end": 194.82,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 195.64,
+          "end": 195.69,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "lone",
+          "start": 195.78,
+          "end": 196.04,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "wolf.",
+          "start": 196.22,
+          "end": 196.68,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "Tell",
+          "start": 198.68,
+          "end": 198.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "me,",
+          "start": 198.82,
+          "end": 198.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "does",
+          "start": 198.96,
+          "end": 199.12,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "one",
+          "start": 199.18,
+          "end": 199.32,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "choose",
+          "start": 199.78,
+          "end": 200.28,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "to",
+          "start": 201.12,
+          "end": 201.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "be",
+          "start": 201.24,
+          "end": 201.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "alone?",
+          "start": 201.42,
+          "end": 201.8,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "No,",
+          "start": 203,
+          "end": 203.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "one",
+          "start": 203.44,
+          "end": 203.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "doesn't.",
+          "start": 203.66,
+          "end": 204.02,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "One",
+          "start": 205.2,
+          "end": 205.28,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "doesn't",
+          "start": 205.32,
+          "end": 205.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "even",
+          "start": 205.54,
+          "end": 205.72,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "choose",
+          "start": 205.78,
+          "end": 206.22,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 206.28,
+          "end": 206.34,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "be",
+          "start": 206.38,
+          "end": 206.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 206.54,
+          "end": 206.59,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "wolf.",
+          "start": 206.64,
+          "end": 207.02,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Or",
+          "start": 209.98,
+          "end": 210.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "does",
+          "start": 210.16,
+          "end": 210.32,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "one?",
+          "start": 210.38,
+          "end": 210.54,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 215.46,
+      "end": 218.86,
+      "words": [
+        {
+          "text": "Well,",
+          "start": 215.46,
+          "end": 215.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Mr...",
+          "start": 216.08,
+          "end": 216.58,
+          "match": "fuzzy",
+          "confidence": 0.333
+        },
+        {
+          "text": "Hector.",
+          "start": 218.24,
+          "end": 218.86,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 218.9,
+      "end": 219.62,
+      "words": [
+        {
+          "text": "Victor,",
+          "start": 218.9,
+          "end": 219.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Victor.",
+          "start": 219.34,
+          "end": 219.62,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 220.04,
+      "end": 228.78,
+      "words": [
+        {
+          "text": "I",
+          "start": 220.04,
+          "end": 220.09,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "don't",
+          "start": 220.14,
+          "end": 220.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "know",
+          "start": 220.28,
+          "end": 220.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "what",
+          "start": 220.5,
+          "end": 220.64,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you're",
+          "start": 220.7,
+          "end": 220.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "on",
+          "start": 220.92,
+          "end": 221.02,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "about,",
+          "start": 221.08,
+          "end": 221.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "but",
+          "start": 221.92,
+          "end": 222.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I'm",
+          "start": 222.16,
+          "end": 222.44,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "just",
+          "start": 222.52,
+          "end": 222.78,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "a",
+          "start": 222.88,
+          "end": 222.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "sheep",
+          "start": 223.2,
+          "end": 223.56,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "minding",
+          "start": 223.64,
+          "end": 224.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "its",
+          "start": 224.12,
+          "end": 224.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "own",
+          "start": 224.32,
+          "end": 224.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "business.",
+          "start": 224.72,
+          "end": 225.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "And",
+          "start": 226.62,
+          "end": 226.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 226.86,
+          "end": 227.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "suggest",
+          "start": 227.14,
+          "end": 227.8,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 227.88,
+          "end": 228.02,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "do",
+          "start": 228.08,
+          "end": 228.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 228.26,
+          "end": 228.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "same.",
+          "start": 228.44,
+          "end": 228.78,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 229.44,
+      "end": 237.3,
+      "words": [
+        {
+          "text": "No,",
+          "start": 229.44,
+          "end": 229.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "no,",
+          "start": 229.86,
+          "end": 229.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "no,",
+          "start": 229.96,
+          "end": 230.02,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "no,",
+          "start": 230.08,
+          "end": 230.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Franck,",
+          "start": 230.4,
+          "end": 230.62,
+          "match": "edited",
+          "confidence": 0.833
+        },
+        {
+          "text": "wait,",
+          "start": 230.68,
+          "end": 230.82,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "wait,",
+          "start": 230.94,
+          "end": 231.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "wait.",
+          "start": 231.1,
+          "end": 231.32,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "No,",
+          "start": 232,
+          "end": 232.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "this",
+          "start": 232.68,
+          "end": 232.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "is",
+          "start": 232.82,
+          "end": 232.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "not",
+          "start": 232.96,
+          "end": 233.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 234.06,
+          "end": 234.12,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "way.",
+          "start": 234.16,
+          "end": 234.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Just",
+          "start": 234.62,
+          "end": 234.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "give",
+          "start": 234.76,
+          "end": 234.82,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "me",
+          "start": 234.86,
+          "end": 234.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "one",
+          "start": 235.06,
+          "end": 235.22,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "minute",
+          "start": 236.04,
+          "end": 236.24,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "of",
+          "start": 236.3,
+          "end": 236.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "your",
+          "start": 236.42,
+          "end": 236.56,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "precious",
+          "start": 236.6,
+          "end": 236.94,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "time.",
+          "start": 237.02,
+          "end": 237.3,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 238.54,
+      "end": 240.14,
+      "words": [
+        {
+          "text": "Precious",
+          "start": 238.54,
+          "end": 239.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "time?",
+          "start": 239.48,
+          "end": 240.14,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 242.1,
+      "end": 293.34,
+      "words": [
+        {
+          "text": "Yeah,",
+          "start": 242.1,
+          "end": 242.2,
+          "match": "fuzzy",
+          "confidence": 0.25
+        },
+        {
+          "text": "just",
+          "start": 242.26,
+          "end": 242.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "give",
+          "start": 242.38,
+          "end": 242.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "me",
+          "start": 242.5,
+          "end": 242.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "one",
+          "start": 242.8,
+          "end": 243,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "minute.",
+          "start": 243.28,
+          "end": 243.58,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "You",
+          "start": 244.24,
+          "end": 244.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "would",
+          "start": 244.34,
+          "end": 244.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 244.5,
+          "end": 244.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "one",
+          "start": 244.86,
+          "end": 245.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "more",
+          "start": 245.1,
+          "end": 245.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "minute,",
+          "start": 245.3,
+          "end": 245.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "wouldn't",
+          "start": 245.6,
+          "end": 245.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you?",
+          "start": 245.86,
+          "end": 245.98,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Okay,",
+          "start": 248.4,
+          "end": 248.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "half.",
+          "start": 248.62,
+          "end": 248.86,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Half",
+          "start": 250.1,
+          "end": 250.26,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "a",
+          "start": 250.32,
+          "end": 250.37,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "minute.",
+          "start": 250.4,
+          "end": 250.58,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "I",
+          "start": 265.62,
+          "end": 265.68,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "knew",
+          "start": 265.94,
+          "end": 266.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "it.",
+          "start": 266.14,
+          "end": 266.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 268.08,
+          "end": 268.13,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "knew",
+          "start": 268.72,
+          "end": 268.88,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "it.",
+          "start": 268.92,
+          "end": 269.14,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "Ah,",
+          "start": 270.38,
+          "end": 270.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 270.68,
+          "end": 270.86,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "will",
+          "start": 270.88,
+          "end": 271.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "not",
+          "start": 271.12,
+          "end": 271.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "regret",
+          "start": 271.4,
+          "end": 271.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "this.",
+          "start": 271.8,
+          "end": 272.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "The",
+          "start": 272.76,
+          "end": 272.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "adventures",
+          "start": 272.98,
+          "end": 273.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 273.84,
+          "end": 273.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "will",
+          "start": 274,
+          "end": 274.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have,",
+          "start": 274.18,
+          "end": 274.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "all",
+          "start": 275.84,
+          "end": 276.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 276.12,
+          "end": 276.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "lives",
+          "start": 276.26,
+          "end": 276.7,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "you",
+          "start": 277.02,
+          "end": 277.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "ever",
+          "start": 277.36,
+          "end": 277.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "wanted,",
+          "start": 277.68,
+          "end": 278.02,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "all",
+          "start": 279.58,
+          "end": 279.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you've",
+          "start": 279.78,
+          "end": 279.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "been",
+          "start": 279.96,
+          "end": 280.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "missing.",
+          "start": 280.22,
+          "end": 280.68,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Here,",
+          "start": 281.74,
+          "end": 281.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "this",
+          "start": 282.5,
+          "end": 282.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "is",
+          "start": 282.68,
+          "end": 282.82,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 283.5,
+          "end": 283.56,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "best",
+          "start": 283.6,
+          "end": 283.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "product",
+          "start": 283.94,
+          "end": 284.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 284.3,
+          "end": 284.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 284.44,
+          "end": 284.64,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "in",
+          "start": 285.28,
+          "end": 285.4,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "store:",
+          "start": 285.5,
+          "end": 285.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "variable",
+          "start": 287.18,
+          "end": 287.5,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "spin",
+          "start": 287.58,
+          "end": 287.9,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "speed,",
+          "start": 288.1,
+          "end": 288.36,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "excellent",
+          "start": 288.58,
+          "end": 289,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "tumble",
+          "start": 289.06,
+          "end": 289.3,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "performance",
+          "start": 289.34,
+          "end": 289.88,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "in",
+          "start": 289.92,
+          "end": 290.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "one",
+          "start": 290.16,
+          "end": 290.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "handy",
+          "start": 291.06,
+          "end": 291.4,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "device.",
+          "start": 291.72,
+          "end": 292.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Squeaky",
+          "start": 292.3,
+          "end": 292.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "clean.",
+          "start": 292.8,
+          "end": 293.34,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 297.18,
+      "end": 306.62,
+      "words": [
+        {
+          "text": "Well,",
+          "start": 297.18,
+          "end": 297.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "this",
+          "start": 299.08,
+          "end": 299.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "better",
+          "start": 299.28,
+          "end": 299.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "be",
+          "start": 299.52,
+          "end": 299.64,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "good.",
+          "start": 299.7,
+          "end": 300.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "It",
+          "start": 301.58,
+          "end": 301.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "took",
+          "start": 301.74,
+          "end": 301.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "me",
+          "start": 301.96,
+          "end": 302.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "ages",
+          "start": 302.16,
+          "end": 302.5,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "to",
+          "start": 302.56,
+          "end": 302.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "tie",
+          "start": 302.76,
+          "end": 303.02,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that",
+          "start": 303.08,
+          "end": 303.34,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "rope",
+          "start": 303.44,
+          "end": 303.8,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "with",
+          "start": 304.92,
+          "end": 305.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "my",
+          "start": 305.16,
+          "end": 305.32,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "fucking",
+          "start": 305.6,
+          "end": 306,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "hooves.",
+          "start": 306.06,
+          "end": 306.62,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 307.4,
+      "end": 314.32,
+      "words": [
+        {
+          "text": "No",
+          "start": 307.4,
+          "end": 307.5,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "more",
+          "start": 307.54,
+          "end": 307.64,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "need",
+          "start": 307.68,
+          "end": 307.8,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "for",
+          "start": 307.84,
+          "end": 307.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "hooves.",
+          "start": 307.94,
+          "end": 308.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "No",
+          "start": 309.24,
+          "end": 309.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "more",
+          "start": 309.42,
+          "end": 309.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "sheepy",
+          "start": 309.82,
+          "end": 310.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "business.",
+          "start": 310.14,
+          "end": 310.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Time",
+          "start": 313.72,
+          "end": 313.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "flies.",
+          "start": 313.96,
+          "end": 314.32,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 314.68,
+      "end": 320.92,
+      "words": [
+        {
+          "text": "Wait,",
+          "start": 314.68,
+          "end": 314.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "wait,",
+          "start": 314.92,
+          "end": 315.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "wait,",
+          "start": 315.18,
+          "end": 315.4,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "wait,",
+          "start": 315.54,
+          "end": 315.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "wait,",
+          "start": 315.9,
+          "end": 316.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "wait.",
+          "start": 316.34,
+          "end": 316.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "How",
+          "start": 316.92,
+          "end": 317.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "does",
+          "start": 317.26,
+          "end": 317.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "this",
+          "start": 317.6,
+          "end": 317.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "thing",
+          "start": 318.16,
+          "end": 318.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "work?",
+          "start": 318.52,
+          "end": 318.8,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 318.88,
+          "end": 318.93,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "soft"
+          ]
+        },
+        {
+          "text": "mean,",
+          "start": 318.96,
+          "end": 319.1,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "soft"
+          ]
+        },
+        {
+          "text": "how",
+          "start": 319.48,
+          "end": 319.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "do",
+          "start": 319.72,
+          "end": 319.82,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 319.92,
+          "end": 319.97,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "make",
+          "start": 320.02,
+          "end": 320.22,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "it",
+          "start": 320.28,
+          "end": 320.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "work?",
+          "start": 320.56,
+          "end": 320.92,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 321.14,
+      "end": 323.9,
+      "words": [
+        {
+          "text": "No,",
+          "start": 321.14,
+          "end": 321.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 321.32,
+          "end": 321.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "don't.",
+          "start": 321.44,
+          "end": 321.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 322.72,
+          "end": 322.77,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "just",
+          "start": 322.82,
+          "end": 322.94,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "turned",
+          "start": 323.02,
+          "end": 323.16,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "it",
+          "start": 323.2,
+          "end": 323.26,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "on",
+          "start": 323.34,
+          "end": 323.48,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "for",
+          "start": 323.54,
+          "end": 323.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you.",
+          "start": 323.78,
+          "end": 323.9,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 326.2,
+      "end": 330.22,
+      "words": [
+        {
+          "text": "When",
+          "start": 326.2,
+          "end": 326.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "can",
+          "start": 326.5,
+          "end": 326.64,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 326.74,
+          "end": 326.8,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "go?",
+          "start": 326.86,
+          "end": 327.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Where",
+          "start": 329.06,
+          "end": 329.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "can",
+          "start": 329.58,
+          "end": 329.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 329.92,
+          "end": 329.98,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "go?",
+          "start": 330.04,
+          "end": 330.22,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 330.26,
+      "end": 336.88,
+      "words": [
+        {
+          "text": "We",
+          "start": 330.26,
+          "end": 330.34,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "will",
+          "start": 330.38,
+          "end": 330.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "pick",
+          "start": 330.54,
+          "end": 330.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 330.78,
+          "end": 330.86,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "up.",
+          "start": 330.94,
+          "end": 331.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Don't",
+          "start": 331.46,
+          "end": 331.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "worry.",
+          "start": 331.62,
+          "end": 331.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Just",
+          "start": 332.34,
+          "end": 332.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "stay",
+          "start": 332.76,
+          "end": 332.94,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "here,",
+          "start": 333,
+          "end": 333.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "in",
+          "start": 333.68,
+          "end": 333.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "this",
+          "start": 333.8,
+          "end": 334.02,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "exact",
+          "start": 334.08,
+          "end": 334.4,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "place.",
+          "start": 334.92,
+          "end": 335.18,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "Don't",
+          "start": 335.26,
+          "end": 335.4,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "move.",
+          "start": 335.44,
+          "end": 335.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Just",
+          "start": 336.42,
+          "end": 336.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "wait.",
+          "start": 336.6,
+          "end": 336.88,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 338.5,
+      "end": 350.36,
+      "words": [
+        {
+          "text": "That's",
+          "start": 338.5,
+          "end": 338.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "it?",
+          "start": 338.82,
+          "end": 339.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Hey!",
+          "start": 341.14,
+          "end": 341.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Hey!",
+          "start": 342.72,
+          "end": 343.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Wait,",
+          "start": 344.36,
+          "end": 344.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "mister!",
+          "start": 345.12,
+          "end": 345.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Casper!",
+          "start": 347.28,
+          "end": 347.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Hector,",
+          "start": 349.34,
+          "end": 349.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "whatever!",
+          "start": 349.78,
+          "end": 350.36,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "soft"
+          ]
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "horizontal",
+      "description": "TV/desktop",
+      "aspect": "16:9",
+      "rules": {
+        "maxCharsPerLine": 42,
+        "maxLines": 2,
+        "maxCps": 17,
+        "minDuration": 1,
+        "maxDuration": 7
+      },
+      "cues": [
+        {
+          "start": 38.649,
+          "end": 39.649,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                0,
+                2
+              ],
+              "text": "Hey! Hey, no!"
+            }
+          ]
+        },
+        {
+          "start": 42.8,
+          "end": 45.76,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                3,
+                3
+              ],
+              "text": "No!"
+            },
+            {
+              "words": [
+                4,
+                5
+              ],
+              "text": "No! No!"
+            }
+          ]
+        },
+        {
+          "start": 46.78,
+          "end": 47.78,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                6,
+                6
+              ],
+              "text": "No!"
+            }
+          ]
+        },
+        {
+          "start": 140.1,
+          "end": 141.1,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                7,
+                8
+              ],
+              "text": "Excuse me?"
+            }
+          ]
+        },
+        {
+          "start": 142.04,
+          "end": 143.2,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                9,
+                10
+              ],
+              "text": "Excuse me,"
+            },
+            {
+              "words": [
+                11,
+                11
+              ],
+              "text": "sir?"
+            }
+          ]
+        },
+        {
+          "start": 144.4,
+          "end": 145.4,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                12,
+                13
+              ],
+              "text": "Excuse me?"
+            }
+          ]
+        },
+        {
+          "start": 146.9,
+          "end": 148.56,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                14,
+                16
+              ],
+              "text": "Oh, come on."
+            }
+          ]
+        },
+        {
+          "start": 150.44,
+          "end": 151.793,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                17,
+                21
+              ],
+              "text": "You have a moment, sir?"
+            }
+          ]
+        },
+        {
+          "start": 152.44,
+          "end": 156.44,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                22,
+                27
+              ],
+              "text": "I'm kind of in the middle"
+            },
+            {
+              "words": [
+                28,
+                33
+              ],
+              "text": "of something here, yes, thank you."
+            }
+          ]
+        },
+        {
+          "start": 156.88,
+          "end": 159.057,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                34,
+                41
+              ],
+              "text": "I've come a long way for you, Franck."
+            }
+          ]
+        },
+        {
+          "start": 169.42,
+          "end": 170.479,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                42,
+                45
+              ],
+              "text": "My name is Victor."
+            }
+          ]
+        },
+        {
+          "start": 172.54,
+          "end": 173.54,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                46,
+                46
+              ],
+              "text": "Hi."
+            }
+          ]
+        },
+        {
+          "start": 174.98,
+          "end": 175.98,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                47,
+                49
+              ],
+              "text": "And you are..."
+            }
+          ]
+        },
+        {
+          "start": 177.86,
+          "end": 178.86,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                50,
+                52
+              ],
+              "text": "you are Franck."
+            }
+          ]
+        },
+        {
+          "start": 180.5,
+          "end": 183.736,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                53,
+                58
+              ],
+              "text": "But you are so much more"
+            },
+            {
+              "words": [
+                59,
+                64
+              ],
+              "text": "than just a sheep, aren't you?"
+            }
+          ]
+        },
+        {
+          "start": 184.74,
+          "end": 185.74,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                65,
+                66
+              ],
+              "text": "Oh yeah?"
+            }
+          ]
+        },
+        {
+          "start": 186.76,
+          "end": 188.02,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                67,
+                70
+              ],
+              "text": "How would you know?"
+            }
+          ]
+        },
+        {
+          "start": 190.38,
+          "end": 192.851,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                71,
+                77
+              ],
+              "text": "Look at you. You're an adventurer, Franck."
+            }
+          ]
+        },
+        {
+          "start": 194,
+          "end": 196.68,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                78,
+                81
+              ],
+              "text": "Just like me, you're"
+            },
+            {
+              "words": [
+                82,
+                84
+              ],
+              "text": "a lone wolf."
+            }
+          ]
+        },
+        {
+          "start": 198.68,
+          "end": 201.8,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                85,
+                89
+              ],
+              "text": "Tell me, does one choose"
+            },
+            {
+              "words": [
+                90,
+                92
+              ],
+              "text": "to be alone?"
+            }
+          ]
+        },
+        {
+          "start": 203,
+          "end": 204.02,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                93,
+                95
+              ],
+              "text": "No, one doesn't."
+            }
+          ]
+        },
+        {
+          "start": 205.2,
+          "end": 207.377,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                96,
+                103
+              ],
+              "text": "One doesn't even choose to be a wolf."
+            }
+          ]
+        },
+        {
+          "start": 209.98,
+          "end": 210.98,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                104,
+                106
+              ],
+              "text": "Or does one?"
+            }
+          ]
+        },
+        {
+          "start": 215.46,
+          "end": 216.58,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                107,
+                108
+              ],
+              "text": "Well, Mr..."
+            }
+          ]
+        },
+        {
+          "start": 218.24,
+          "end": 218.9,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                109,
+                109
+              ],
+              "text": "Hector."
+            }
+          ]
+        },
+        {
+          "start": 218.9,
+          "end": 219.9,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                110,
+                111
+              ],
+              "text": "Victor, Victor."
+            }
+          ]
+        },
+        {
+          "start": 220.04,
+          "end": 221.92,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                112,
+                118
+              ],
+              "text": "I don't know what you're on about,"
+            }
+          ]
+        },
+        {
+          "start": 221.92,
+          "end": 225.3,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                119,
+                123
+              ],
+              "text": "but I'm just a sheep"
+            },
+            {
+              "words": [
+                124,
+                127
+              ],
+              "text": "minding its own business."
+            }
+          ]
+        },
+        {
+          "start": 226.62,
+          "end": 228.78,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                128,
+                134
+              ],
+              "text": "And I suggest you do the same."
+            }
+          ]
+        },
+        {
+          "start": 229.44,
+          "end": 231.852,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                135,
+                142
+              ],
+              "text": "No, no, no, no, Franck, wait, wait, wait."
+            }
+          ]
+        },
+        {
+          "start": 232,
+          "end": 234.38,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                143,
+                146
+              ],
+              "text": "No, this is not"
+            },
+            {
+              "words": [
+                147,
+                148
+              ],
+              "text": "the way."
+            }
+          ]
+        },
+        {
+          "start": 234.62,
+          "end": 237.326,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                149,
+                152
+              ],
+              "text": "Just give me one"
+            },
+            {
+              "words": [
+                153,
+                157
+              ],
+              "text": "minute of your precious time."
+            }
+          ]
+        },
+        {
+          "start": 238.54,
+          "end": 240.14,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                158,
+                159
+              ],
+              "text": "Precious time?"
+            }
+          ]
+        },
+        {
+          "start": 242.1,
+          "end": 245.6,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                160,
+                165
+              ],
+              "text": "Yeah, just give me one minute."
+            },
+            {
+              "words": [
+                166,
+                171
+              ],
+              "text": "You would have one more minute,"
+            }
+          ]
+        },
+        {
+          "start": 245.6,
+          "end": 246.6,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                172,
+                173
+              ],
+              "text": "wouldn't you?"
+            }
+          ]
+        },
+        {
+          "start": 248.4,
+          "end": 249.4,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                174,
+                175
+              ],
+              "text": "Okay, half."
+            }
+          ]
+        },
+        {
+          "start": 250.1,
+          "end": 251.1,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                176,
+                178
+              ],
+              "text": "Half a minute."
+            }
+          ]
+        },
+        {
+          "start": 265.62,
+          "end": 266.62,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                179,
+                181
+              ],
+              "text": "I knew it."
+            }
+          ]
+        },
+        {
+          "start": 268.08,
+          "end": 269.14,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                182,
+                182
+              ],
+              "text": "I"
+            },
+            {
+              "words": [
+                183,
+                184
+              ],
+              "text": "knew it."
+            }
+          ]
+        },
+        {
+          "start": 270.38,
+          "end": 274.52,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                185,
+                190
+              ],
+              "text": "Ah, you will not regret this."
+            },
+            {
+              "words": [
+                191,
+                195
+              ],
+              "text": "The adventures you will have,"
+            }
+          ]
+        },
+        {
+          "start": 275.84,
+          "end": 278.02,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                196,
+                201
+              ],
+              "text": "all the lives you ever wanted,"
+            }
+          ]
+        },
+        {
+          "start": 279.58,
+          "end": 280.992,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                202,
+                205
+              ],
+              "text": "all you've been missing."
+            }
+          ]
+        },
+        {
+          "start": 281.74,
+          "end": 282.82,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                206,
+                206
+              ],
+              "text": "Here,"
+            },
+            {
+              "words": [
+                207,
+                208
+              ],
+              "text": "this is"
+            }
+          ]
+        },
+        {
+          "start": 283.5,
+          "end": 285.84,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                209,
+                213
+              ],
+              "text": "the best product we have"
+            },
+            {
+              "words": [
+                214,
+                215
+              ],
+              "text": "in store:"
+            }
+          ]
+        },
+        {
+          "start": 287.18,
+          "end": 288.36,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                216,
+                218
+              ],
+              "text": "variable spin speed,"
+            }
+          ]
+        },
+        {
+          "start": 288.58,
+          "end": 293.34,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                219,
+                223
+              ],
+              "text": "excellent tumble performance in one"
+            },
+            {
+              "words": [
+                224,
+                227
+              ],
+              "text": "handy device. Squeaky clean."
+            }
+          ]
+        },
+        {
+          "start": 297.18,
+          "end": 298.18,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                228,
+                228
+              ],
+              "text": "Well,"
+            }
+          ]
+        },
+        {
+          "start": 299.08,
+          "end": 300.257,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                229,
+                232
+              ],
+              "text": "this better be good."
+            }
+          ]
+        },
+        {
+          "start": 301.58,
+          "end": 303.8,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                233,
+                240
+              ],
+              "text": "It took me ages to tie that rope"
+            }
+          ]
+        },
+        {
+          "start": 304.92,
+          "end": 306.62,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                241,
+                244
+              ],
+              "text": "with my fucking hooves."
+            }
+          ]
+        },
+        {
+          "start": 307.4,
+          "end": 308.812,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                245,
+                249
+              ],
+              "text": "No more need for hooves."
+            }
+          ]
+        },
+        {
+          "start": 309.24,
+          "end": 310.652,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                250,
+                253
+              ],
+              "text": "No more sheepy business."
+            }
+          ]
+        },
+        {
+          "start": 313.72,
+          "end": 314.68,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                254,
+                255
+              ],
+              "text": "Time flies."
+            }
+          ]
+        },
+        {
+          "start": 314.68,
+          "end": 316.739,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                256,
+                261
+              ],
+              "text": "Wait, wait, wait, wait, wait, wait."
+            }
+          ]
+        },
+        {
+          "start": 316.92,
+          "end": 320.92,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                262,
+                266
+              ],
+              "text": "How does this thing work?"
+            },
+            {
+              "words": [
+                267,
+                274
+              ],
+              "text": "I mean, how do I make it work?"
+            }
+          ]
+        },
+        {
+          "start": 321.14,
+          "end": 323.9,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                275,
+                277
+              ],
+              "text": "No, you don't."
+            },
+            {
+              "words": [
+                278,
+                284
+              ],
+              "text": "I just turned it on for you."
+            }
+          ]
+        },
+        {
+          "start": 326.2,
+          "end": 327.24,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                285,
+                288
+              ],
+              "text": "When can I go?"
+            }
+          ]
+        },
+        {
+          "start": 329.06,
+          "end": 330.22,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                289,
+                292
+              ],
+              "text": "Where can I go?"
+            }
+          ]
+        },
+        {
+          "start": 330.26,
+          "end": 332.202,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                293,
+                299
+              ],
+              "text": "We will pick you up. Don't worry."
+            }
+          ]
+        },
+        {
+          "start": 332.34,
+          "end": 335.26,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                300,
+                302
+              ],
+              "text": "Just stay here,"
+            },
+            {
+              "words": [
+                303,
+                306
+              ],
+              "text": "in this exact place."
+            }
+          ]
+        },
+        {
+          "start": 335.26,
+          "end": 336.88,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                307,
+                308
+              ],
+              "text": "Don't move."
+            },
+            {
+              "words": [
+                309,
+                310
+              ],
+              "text": "Just wait."
+            }
+          ]
+        },
+        {
+          "start": 338.5,
+          "end": 339.5,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                311,
+                312
+              ],
+              "text": "That's it?"
+            }
+          ]
+        },
+        {
+          "start": 341.14,
+          "end": 342.14,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                313,
+                313
+              ],
+              "text": "Hey!"
+            }
+          ]
+        },
+        {
+          "start": 342.72,
+          "end": 343.72,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                314,
+                314
+              ],
+              "text": "Hey!"
+            }
+          ]
+        },
+        {
+          "start": 344.36,
+          "end": 345.76,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                315,
+                316
+              ],
+              "text": "Wait, mister!"
+            }
+          ]
+        },
+        {
+          "start": 347.28,
+          "end": 348.28,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                317,
+                317
+              ],
+              "text": "Casper!"
+            }
+          ]
+        },
+        {
+          "start": 349.34,
+          "end": 350.36,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                318,
+                319
+              ],
+              "text": "Hector, whatever!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vertical",
+      "description": "Phone",
+      "aspect": "9:16",
+      "rules": {
+        "maxCharsPerLine": 22,
+        "maxLines": 2,
+        "maxCps": 15,
+        "minDuration": 0.8,
+        "maxDuration": 5
+      },
+      "cues": [
+        {
+          "start": 38.649,
+          "end": 39.516,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                0,
+                2
+              ],
+              "text": "Hey! Hey, no!"
+            }
+          ]
+        },
+        {
+          "start": 42.8,
+          "end": 45.76,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                3,
+                3
+              ],
+              "text": "No!"
+            },
+            {
+              "words": [
+                4,
+                5
+              ],
+              "text": "No! No!"
+            }
+          ]
+        },
+        {
+          "start": 46.78,
+          "end": 47.58,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                6,
+                6
+              ],
+              "text": "No!"
+            }
+          ]
+        },
+        {
+          "start": 140.1,
+          "end": 140.9,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                7,
+                8
+              ],
+              "text": "Excuse me?"
+            }
+          ]
+        },
+        {
+          "start": 142.04,
+          "end": 143.2,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                9,
+                10
+              ],
+              "text": "Excuse me,"
+            },
+            {
+              "words": [
+                11,
+                11
+              ],
+              "text": "sir?"
+            }
+          ]
+        },
+        {
+          "start": 144.4,
+          "end": 145.2,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                12,
+                13
+              ],
+              "text": "Excuse me?"
+            }
+          ]
+        },
+        {
+          "start": 146.9,
+          "end": 148.56,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                14,
+                16
+              ],
+              "text": "Oh, come on."
+            }
+          ]
+        },
+        {
+          "start": 150.44,
+          "end": 151.974,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                17,
+                18
+              ],
+              "text": "You have"
+            },
+            {
+              "words": [
+                19,
+                21
+              ],
+              "text": "a moment, sir?"
+            }
+          ]
+        },
+        {
+          "start": 152.44,
+          "end": 153.78,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                22,
+                23
+              ],
+              "text": "I'm kind"
+            },
+            {
+              "words": [
+                24,
+                27
+              ],
+              "text": "of in the middle"
+            }
+          ]
+        },
+        {
+          "start": 153.78,
+          "end": 156.44,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                28,
+                30
+              ],
+              "text": "of something here,"
+            },
+            {
+              "words": [
+                31,
+                33
+              ],
+              "text": "yes, thank you."
+            }
+          ]
+        },
+        {
+          "start": 156.88,
+          "end": 159.347,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                34,
+                38
+              ],
+              "text": "I've come a long way"
+            },
+            {
+              "words": [
+                39,
+                41
+              ],
+              "text": "for you, Franck."
+            }
+          ]
+        },
+        {
+          "start": 169.42,
+          "end": 170.62,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                42,
+                45
+              ],
+              "text": "My name is Victor."
+            }
+          ]
+        },
+        {
+          "start": 172.54,
+          "end": 173.34,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                46,
+                46
+              ],
+              "text": "Hi."
+            }
+          ]
+        },
+        {
+          "start": 174.98,
+          "end": 175.914,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                47,
+                49
+              ],
+              "text": "And you are..."
+            }
+          ]
+        },
+        {
+          "start": 177.86,
+          "end": 178.86,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                50,
+                52
+              ],
+              "text": "you are Franck."
+            }
+          ]
+        },
+        {
+          "start": 180.5,
+          "end": 181.86,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                53,
+                57
+              ],
+              "text": "But you are so much"
+            }
+          ]
+        },
+        {
+          "start": 181.86,
+          "end": 184.194,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                58,
+                60
+              ],
+              "text": "more than just"
+            },
+            {
+              "words": [
+                61,
+                64
+              ],
+              "text": "a sheep, aren't you?"
+            }
+          ]
+        },
+        {
+          "start": 184.74,
+          "end": 185.54,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                65,
+                66
+              ],
+              "text": "Oh yeah?"
+            }
+          ]
+        },
+        {
+          "start": 186.76,
+          "end": 188.027,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                67,
+                70
+              ],
+              "text": "How would you know?"
+            }
+          ]
+        },
+        {
+          "start": 190.38,
+          "end": 192.22,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                71,
+                73
+              ],
+              "text": "Look at you."
+            },
+            {
+              "words": [
+                74,
+                76
+              ],
+              "text": "You're an adventurer,"
+            }
+          ]
+        },
+        {
+          "start": 192.22,
+          "end": 193.02,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                77,
+                77
+              ],
+              "text": "Franck."
+            }
+          ]
+        },
+        {
+          "start": 194,
+          "end": 196.68,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                78,
+                81
+              ],
+              "text": "Just like me, you're"
+            },
+            {
+              "words": [
+                82,
+                84
+              ],
+              "text": "a lone wolf."
+            }
+          ]
+        },
+        {
+          "start": 198.68,
+          "end": 201.8,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                85,
+                88
+              ],
+              "text": "Tell me, does one"
+            },
+            {
+              "words": [
+                89,
+                92
+              ],
+              "text": "choose to be alone?"
+            }
+          ]
+        },
+        {
+          "start": 203,
+          "end": 204.067,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                93,
+                95
+              ],
+              "text": "No, one doesn't."
+            }
+          ]
+        },
+        {
+          "start": 205.2,
+          "end": 207.667,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                96,
+                98
+              ],
+              "text": "One doesn't even"
+            },
+            {
+              "words": [
+                99,
+                103
+              ],
+              "text": "choose to be a wolf."
+            }
+          ]
+        },
+        {
+          "start": 209.98,
+          "end": 210.78,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                104,
+                106
+              ],
+              "text": "Or does one?"
+            }
+          ]
+        },
+        {
+          "start": 215.46,
+          "end": 216.58,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                107,
+                108
+              ],
+              "text": "Well, Mr..."
+            }
+          ]
+        },
+        {
+          "start": 218.24,
+          "end": 218.9,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                109,
+                109
+              ],
+              "text": "Hector."
+            }
+          ]
+        },
+        {
+          "start": 218.9,
+          "end": 219.9,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                110,
+                111
+              ],
+              "text": "Victor, Victor."
+            }
+          ]
+        },
+        {
+          "start": 220.04,
+          "end": 221.92,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                112,
+                114
+              ],
+              "text": "I don't know"
+            },
+            {
+              "words": [
+                115,
+                118
+              ],
+              "text": "what you're on about,"
+            }
+          ]
+        },
+        {
+          "start": 221.92,
+          "end": 222.78,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                119,
+                121
+              ],
+              "text": "but I'm just"
+            }
+          ]
+        },
+        {
+          "start": 222.88,
+          "end": 225.3,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                122,
+                124
+              ],
+              "text": "a sheep minding"
+            },
+            {
+              "words": [
+                125,
+                127
+              ],
+              "text": "its own business."
+            }
+          ]
+        },
+        {
+          "start": 226.62,
+          "end": 228.78,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                128,
+                130
+              ],
+              "text": "And I suggest"
+            },
+            {
+              "words": [
+                131,
+                134
+              ],
+              "text": "you do the same."
+            }
+          ]
+        },
+        {
+          "start": 229.44,
+          "end": 230.94,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                135,
+                138
+              ],
+              "text": "No, no, no, no,"
+            },
+            {
+              "words": [
+                139,
+                140
+              ],
+              "text": "Franck, wait,"
+            }
+          ]
+        },
+        {
+          "start": 230.94,
+          "end": 232.18,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                141,
+                142
+              ],
+              "text": "wait, wait."
+            },
+            {
+              "words": [
+                143,
+                143
+              ],
+              "text": "No,"
+            }
+          ]
+        },
+        {
+          "start": 232.68,
+          "end": 234.38,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                144,
+                146
+              ],
+              "text": "this is not"
+            },
+            {
+              "words": [
+                147,
+                148
+              ],
+              "text": "the way."
+            }
+          ]
+        },
+        {
+          "start": 234.62,
+          "end": 236.3,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                149,
+                152
+              ],
+              "text": "Just give me one"
+            },
+            {
+              "words": [
+                153,
+                153
+              ],
+              "text": "minute"
+            }
+          ]
+        },
+        {
+          "start": 236.3,
+          "end": 237.767,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                154,
+                157
+              ],
+              "text": "of your precious time."
+            }
+          ]
+        },
+        {
+          "start": 238.54,
+          "end": 240.14,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                158,
+                159
+              ],
+              "text": "Precious time?"
+            }
+          ]
+        },
+        {
+          "start": 242.1,
+          "end": 244.1,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                160,
+                162
+              ],
+              "text": "Yeah, just give"
+            },
+            {
+              "words": [
+                163,
+                165
+              ],
+              "text": "me one minute."
+            }
+          ]
+        },
+        {
+          "start": 244.24,
+          "end": 245.6,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                166,
+                169
+              ],
+              "text": "You would have one"
+            },
+            {
+              "words": [
+                170,
+                171
+              ],
+              "text": "more minute,"
+            }
+          ]
+        },
+        {
+          "start": 245.6,
+          "end": 246.467,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                172,
+                173
+              ],
+              "text": "wouldn't you?"
+            }
+          ]
+        },
+        {
+          "start": 248.4,
+          "end": 249.2,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                174,
+                175
+              ],
+              "text": "Okay, half."
+            }
+          ]
+        },
+        {
+          "start": 250.1,
+          "end": 251.034,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                176,
+                178
+              ],
+              "text": "Half a minute."
+            }
+          ]
+        },
+        {
+          "start": 265.62,
+          "end": 266.42,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                179,
+                181
+              ],
+              "text": "I knew it."
+            }
+          ]
+        },
+        {
+          "start": 268.08,
+          "end": 269.14,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                182,
+                182
+              ],
+              "text": "I"
+            },
+            {
+              "words": [
+                183,
+                184
+              ],
+              "text": "knew it."
+            }
+          ]
+        },
+        {
+          "start": 270.38,
+          "end": 272.314,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                185,
+                188
+              ],
+              "text": "Ah, you will not"
+            },
+            {
+              "words": [
+                189,
+                190
+              ],
+              "text": "regret this."
+            }
+          ]
+        },
+        {
+          "start": 272.76,
+          "end": 274.694,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                191,
+                192
+              ],
+              "text": "The adventures"
+            },
+            {
+              "words": [
+                193,
+                195
+              ],
+              "text": "you will have,"
+            }
+          ]
+        },
+        {
+          "start": 275.84,
+          "end": 278.02,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                196,
+                198
+              ],
+              "text": "all the lives"
+            },
+            {
+              "words": [
+                199,
+                201
+              ],
+              "text": "you ever wanted,"
+            }
+          ]
+        },
+        {
+          "start": 279.58,
+          "end": 281.18,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                202,
+                203
+              ],
+              "text": "all you've"
+            },
+            {
+              "words": [
+                204,
+                205
+              ],
+              "text": "been missing."
+            }
+          ]
+        },
+        {
+          "start": 281.74,
+          "end": 282.82,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                206,
+                206
+              ],
+              "text": "Here,"
+            },
+            {
+              "words": [
+                207,
+                208
+              ],
+              "text": "this is"
+            }
+          ]
+        },
+        {
+          "start": 283.5,
+          "end": 285.84,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                209,
+                211
+              ],
+              "text": "the best product"
+            },
+            {
+              "words": [
+                212,
+                215
+              ],
+              "text": "we have in store:"
+            }
+          ]
+        },
+        {
+          "start": 287.18,
+          "end": 288.58,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                216,
+                218
+              ],
+              "text": "variable spin speed,"
+            }
+          ]
+        },
+        {
+          "start": 288.58,
+          "end": 290.914,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                219,
+                220
+              ],
+              "text": "excellent tumble"
+            },
+            {
+              "words": [
+                221,
+                223
+              ],
+              "text": "performance in one"
+            }
+          ]
+        },
+        {
+          "start": 291.06,
+          "end": 293.34,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                224,
+                225
+              ],
+              "text": "handy device."
+            },
+            {
+              "words": [
+                226,
+                227
+              ],
+              "text": "Squeaky clean."
+            }
+          ]
+        },
+        {
+          "start": 297.18,
+          "end": 297.98,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                228,
+                228
+              ],
+              "text": "Well,"
+            }
+          ]
+        },
+        {
+          "start": 299.08,
+          "end": 300.414,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                229,
+                232
+              ],
+              "text": "this better be good."
+            }
+          ]
+        },
+        {
+          "start": 301.58,
+          "end": 303.8,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                233,
+                238
+              ],
+              "text": "It took me ages to tie"
+            },
+            {
+              "words": [
+                239,
+                240
+              ],
+              "text": "that rope"
+            }
+          ]
+        },
+        {
+          "start": 304.92,
+          "end": 306.62,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                241,
+                243
+              ],
+              "text": "with my fucking"
+            },
+            {
+              "words": [
+                244,
+                244
+              ],
+              "text": "hooves."
+            }
+          ]
+        },
+        {
+          "start": 307.4,
+          "end": 308.84,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                245,
+                246
+              ],
+              "text": "No more"
+            },
+            {
+              "words": [
+                247,
+                249
+              ],
+              "text": "need for hooves."
+            }
+          ]
+        },
+        {
+          "start": 309.24,
+          "end": 310.84,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                250,
+                251
+              ],
+              "text": "No more"
+            },
+            {
+              "words": [
+                252,
+                253
+              ],
+              "text": "sheepy business."
+            }
+          ]
+        },
+        {
+          "start": 313.72,
+          "end": 314.52,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                254,
+                255
+              ],
+              "text": "Time flies."
+            }
+          ]
+        },
+        {
+          "start": 314.68,
+          "end": 316.92,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                256,
+                258
+              ],
+              "text": "Wait, wait, wait,"
+            },
+            {
+              "words": [
+                259,
+                261
+              ],
+              "text": "wait, wait, wait."
+            }
+          ]
+        },
+        {
+          "start": 316.92,
+          "end": 319.12,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                262,
+                264
+              ],
+              "text": "How does this"
+            },
+            {
+              "words": [
+                265,
+                268
+              ],
+              "text": "thing work? I mean,"
+            }
+          ]
+        },
+        {
+          "start": 319.48,
+          "end": 320.947,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                269,
+                274
+              ],
+              "text": "how do I make it work?"
+            }
+          ]
+        },
+        {
+          "start": 321.14,
+          "end": 322.074,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                275,
+                277
+              ],
+              "text": "No, you don't."
+            }
+          ]
+        },
+        {
+          "start": 322.72,
+          "end": 324.587,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                278,
+                280
+              ],
+              "text": "I just turned"
+            },
+            {
+              "words": [
+                281,
+                284
+              ],
+              "text": "it on for you."
+            }
+          ]
+        },
+        {
+          "start": 326.2,
+          "end": 327.24,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                285,
+                288
+              ],
+              "text": "When can I go?"
+            }
+          ]
+        },
+        {
+          "start": 329.06,
+          "end": 330.22,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                289,
+                292
+              ],
+              "text": "Where can I go?"
+            }
+          ]
+        },
+        {
+          "start": 330.26,
+          "end": 331.46,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                293,
+                297
+              ],
+              "text": "We will pick you up."
+            }
+          ]
+        },
+        {
+          "start": 331.46,
+          "end": 333.327,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                298,
+                299
+              ],
+              "text": "Don't worry."
+            },
+            {
+              "words": [
+                300,
+                302
+              ],
+              "text": "Just stay here,"
+            }
+          ]
+        },
+        {
+          "start": 333.68,
+          "end": 335.26,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                303,
+                305
+              ],
+              "text": "in this exact"
+            },
+            {
+              "words": [
+                306,
+                306
+              ],
+              "text": "place."
+            }
+          ]
+        },
+        {
+          "start": 335.26,
+          "end": 336.88,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                307,
+                308
+              ],
+              "text": "Don't move."
+            },
+            {
+              "words": [
+                309,
+                310
+              ],
+              "text": "Just wait."
+            }
+          ]
+        },
+        {
+          "start": 338.5,
+          "end": 339.3,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                311,
+                312
+              ],
+              "text": "That's it?"
+            }
+          ]
+        },
+        {
+          "start": 341.14,
+          "end": 341.94,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                313,
+                313
+              ],
+              "text": "Hey!"
+            }
+          ]
+        },
+        {
+          "start": 342.72,
+          "end": 343.52,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                314,
+                314
+              ],
+              "text": "Hey!"
+            }
+          ]
+        },
+        {
+          "start": 344.36,
+          "end": 345.76,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                315,
+                316
+              ],
+              "text": "Wait, mister!"
+            }
+          ]
+        },
+        {
+          "start": 347.28,
+          "end": 348.08,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                317,
+                317
+              ],
+              "text": "Casper!"
+            }
+          ]
+        },
+        {
+          "start": 349.34,
+          "end": 350.474,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                318,
+                319
+              ],
+              "text": "Hector, whatever!"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "words": [
+        41,
+        41
+      ],
+      "from": "Frank.",
+      "to": "Franck.",
+      "reason": "brand"
+    },
+    {
+      "words": [
+        52,
+        52
+      ],
+      "from": "Frank.",
+      "to": "Franck.",
+      "reason": "brand"
+    },
+    {
+      "words": [
+        77,
+        77
+      ],
+      "from": "Frank.",
+      "to": "Franck.",
+      "reason": "brand"
+    },
+    {
+      "words": [
+        139,
+        139
+      ],
+      "from": "Frank,",
+      "to": "Franck,",
+      "reason": "brand"
+    }
+  ],
+  "meta": {
+    "context": "Cosmos Laundromat: First Cycle (2015), a Blender Institute animated short film: on a desolate island, Franck, a suicidal sheep, meets Victor, a mysterious salesman who offers him the gift of a lifetime.",
+    "contextSource": "user",
+    "textRetries": [
+      {
+        "start": 0,
+        "end": 730.56,
+        "reason": "the text provider returned no text where the engines heard 328 words",
+        "loudnorm": true,
+        "language": "en",
+        "attempts": [
+          {
+            "audio": "chunk",
+            "prompt": "context",
+            "words": 0
+          },
+          {
+            "audio": "speech",
+            "start": 38.68,
+            "end": 350.86,
+            "prompt": "names",
+            "words": 320
+          }
+        ],
+        "attempt": 2,
+        "result": "retry"
+      }
+    ],
+    "timingRetries": [
+      {
+        "start": 0,
+        "end": 39.18,
+        "words": 2,
+        "provider": "elevenlabs:scribe_v2",
+        "heard": 0,
+        "result": "none"
+      },
+      {
+        "start": 0,
+        "end": 39.18,
+        "words": 2,
+        "provider": "azure-speech:fast",
+        "heard": 0,
+        "result": "none"
+      }
+    ],
+    "style": {
+      "numbers": "auto",
+      "currency": "auto"
+    },
+    "linebreaks": "rules",
+    "rules": "1",
+    "languageData": "f6e9d67319028070",
+    "models": {
+      "text": "azure-openai:gpt-transcribe",
+      "timing": "azure-speech:fast",
+      "llm": "azure-openai:gpt-6.1-sol",
+      "second": "elevenlabs:scribe_v2"
+    },
+    "generator": "overtone-captions@0.1.0",
+    "createdAt": "2026-10-28T14:48:04.797Z"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "$comment": "Non-speech clips: audio in which no words should be captioned, and one clip of music followed by speech. Sources, licenses and the metric: DATASETS.md (Non-speech set). Fetch with: node bench/fetch.mjs --clips bench/clips.nonspeech.json, after the official set (music-then-speech reuses fleurs-nl). Score with bench/score-nonspeech.mjs.",
+  "audioFormat": "flac",
+  "clips": [
+    {
+      "id": "silence-60",
+      "source": "synthetic",
+      "lavfi": "anullsrc=r=16000:cl=mono",
+      "seconds": 60,
+      "language": "en",
+      "nonSpeech": true,
+      "kind": "digital silence",
+      "context": "A recording."
+    },
+    {
+      "id": "noise-white-60",
+      "source": "synthetic",
+      "lavfi": "anoisesrc=r=16000:color=white:amplitude=0.03:seed=1",
+      "seconds": 60,
+      "language": "en",
+      "nonSpeech": true,
+      "kind": "white noise, amplitude 0.03 (about -30 dBFS)",
+      "context": "A recording."
+    },
+    {
+      "id": "noise-pink-60",
+      "source": "synthetic",
+      "lavfi": "anoisesrc=r=16000:color=pink:amplitude=0.03:seed=1",
+      "seconds": 60,
+      "language": "en",
+      "nonSpeech": true,
+      "kind": "pink noise, amplitude 0.03 (about -30 dBFS)",
+      "context": "A recording."
+    },
+    {
+      "id": "hum-60",
+      "source": "synthetic",
+      "lavfi": "aevalsrc=0.05*sin(2*PI*50*t)+0.03*sin(2*PI*100*t)+0.02*sin(2*PI*150*t):s=16000",
+      "seconds": 60,
+      "language": "en",
+      "nonSpeech": true,
+      "kind": "50 Hz mains hum with two harmonics",
+      "context": "A recording."
+    },
+    {
+      "id": "spring",
+      "source": "commons",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Spring_-_Blender_Open_Movie.webm",
+      "sha1": "1019c65769c155771bc178a10372e958ce4ee1fc",
+      "language": "en",
+      "nonSpeech": true,
+      "kind": "animated film without dialogue: music and effects",
+      "context": "Spring, a Blender Studio animated short film without dialogue: a shepherd girl and her dog face ancient spirits.",
+      "license": "CC BY 4.0",
+      "attribution": "Andy Goralczyk / Blender Foundation, studio.blender.org"
+    },
+    {
+      "id": "music-then-speech",
+      "source": "concat",
+      "parts": [{ "clip": "spring", "start": 0, "end": 60 }, { "clip": "fleurs-nl" }],
+      "language": "nl",
+      "kind": "60 s of film music and effects, then Dutch read speech (the fleurs-nl clip)",
+      "context": "Dutch read speech: unrelated sentences from news and encyclopedia articles."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "_source": "The last NDJSON line of a streamed POST /api/chat on a local Ollama 0.40.6 (recorded 2026-10-17); earlier lines carry message.content pieces with done: false",
+  "model": "qwen3:8b",
+  "created_at": "2026-10-17T22:54:35.21537Z",
+  "message": { "role": "assistant", "content": "" },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 816685625,
+  "load_duration": 14497375,
+  "prompt_eval_count": 1234,
+  "prompt_eval_cached_count": 1,
+  "prompt_eval_duration": 270202000,
+  "eval_count": 56,
+  "eval_duration": 192288000
+}

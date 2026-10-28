@@ -1,0 +1,39 @@
+node_modules/
+.env*
+!.env.example
+.overtone/
+dist/
+
+# Media and package tarballs
+*.mp4
+*.m4v
+*.mov
+*.webm
+*.mkv
+*.avi
+*.wav
+*.m4a
+*.mp3
+*.aac
+*.flac
+*.ogg
+*.tgz
+
+.DS_Store
+*.tsbuildinfo
+
+# Package copies of the root LICENSE (written by prepack)
+packages/*/LICENSE
+
+# Local tooling and internal design/plan docs (kept on disk, not in the repo)
+.claude/
+docs/superpowers/
+
+# Built demo site (npm run site:build)
+site/dist/
+
+# HTTP recordings (OVERTONE_RECORD_HTTP=recordings, see docs/contributing/providers.md); they hold transcripts
+recordings/
+
+# Scratch folder of the no-keys example in the README
+/try/

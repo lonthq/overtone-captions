@@ -1,0 +1,22 @@
+{
+  "language": "en",
+  "horizontal": [
+    "0.500 4.080 S1 Every year, one in five drivers / has some kind of car damage.",
+    "4.700 8.057 S1 With DriveCover from Lumora, / you're insured from day one,",
+    "8.057 9.760 S1 for just $12 a month.",
+    "10.400 11.479 S2 And the best part?",
+    "11.706 13.706 S2 You can claim directly in the app.",
+    "14.100 17.023 S1 So remember: DriveCover. Drive worry-free."
+  ],
+  "vertical": [
+    "0.500 2.486 S1 Every year, / one in five drivers",
+    "2.486 4.353 S1 has some kind / of car damage.",
+    "4.700 6.449 S1 With DriveCover / from Lumora,",
+    "6.449 8.057 S1 you're insured / from day one,",
+    "8.057 9.760 S1 for just $12 a month.",
+    "10.400 11.600 S2 And the best part?",
+    "11.706 13.973 S2 You can claim / directly in the app.",
+    "14.100 14.900 S1 So remember:",
+    "15.103 17.037 S1 DriveCover. / Drive worry-free."
+  ]
+}

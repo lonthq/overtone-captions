@@ -1,0 +1,11 @@
+{
+  "_source": "Shape of POST /v1/chat/completions (OpenAI API reference, 'The chat completion object'). Ollama's OpenAI-compatible API answers in the same shape (openai/openai.go, ToChatCompletion).",
+  "id": "chatcmpl-conformance",
+  "object": "chat.completion",
+  "created": 1760000000,
+  "model": "gpt-6.1-sol",
+  "choices": [
+    { "index": 0, "message": { "role": "assistant", "content": "{\"edits\":[{\"first\":3,\"last\":3,\"to\":\"Maya!\",\"reason\":\"brand\"}]}", "refusal": null }, "finish_reason": "stop" }
+  ],
+  "usage": { "prompt_tokens": 1234, "completion_tokens": 56, "total_tokens": 1290 }
+}

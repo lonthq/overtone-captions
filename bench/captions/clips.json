@@ -1,0 +1,46 @@
+{
+  "$comment": "Clips of the caption readability benchmark. Sources, licenses and caveats: README.md (Datasets). fetch.mjs downloads them into data/ (git-ignored).",
+  "clips": [
+    {
+      "id": "tears-of-steel",
+      "title": "Tears of Steel (Blender Foundation open movie, 2012)",
+      "kind": "film, English dialogue, 4+ speakers, music and effects",
+      "language": "en",
+      "context": "Tears of Steel, a Blender Foundation science-fiction short film set in a future Amsterdam: a group of scientists and warriors (Thom, Celia, Barley, Vivienne) tries to stop a robot attack by recreating a breakup scene",
+      "media": {
+        "url": "https://download.blender.org/demo/movies/ToS/TOS_DVDSTEREOMIX.aif",
+        "note": "the official DVD stereo mix of the whole film (dialogue, music and effects), 211 MB; only the 16 kHz mono WAV is kept"
+      },
+      "license": "CC BY 3.0 (film; Blender Foundation, mango.blender.org).",
+      "attribution": "(CC) Blender Foundation | mango.blender.org"
+    },
+    {
+      "id": "nasa-oravec",
+      "title": "Surprisingly STEM: Space Tire Engineer (NASA, 2023)",
+      "kind": "interview-style documentary, 1 main speaker, English",
+      "language": "en",
+      "context": "NASA video series Surprisingly STEM: research engineer Heather Oravec at NASA Glenn Research Center talks about designing airless tires for lunar and Mars rovers and testing them in simulated lunar soil",
+      "media": {
+        "url": "https://images-assets.nasa.gov/video/SurprisinglySTEM_HeatherOravec_Social_jsc2023m000129/SurprisinglySTEM_HeatherOravec_Social_jsc2023m000129~mobile.mp4",
+        "page": "https://images.nasa.gov/details/SurprisinglySTEM_HeatherOravec_Social_jsc2023m000129",
+        "note": "the smallest official rendition (~mobile.mp4, 12 MB); only the 16 kHz mono WAV is kept"
+      },
+      "license": "NASA media: generally not subject to copyright in the United States (NASA media usage guidelines). No endorsement implied.",
+      "attribution": "NASA"
+    },
+    {
+      "id": "nasa-ayers",
+      "title": "Connecting Classrooms to Space: Ham Radio Explainer by NASA Astronaut Nichole Ayers (NASA, 2025)",
+      "kind": "talk to camera, 1 main speaker plus radio call signs, English",
+      "language": "en",
+      "context": "NASA astronaut Nichole Ayers on the International Space Station explains how schools and organizations set up a live amateur (ham) radio contact with the station through the ARISS program",
+      "media": {
+        "url": "https://images-assets.nasa.gov/video/jsc2025m000040_Connecting_Classrooms_to_Space-Ham_Radio_Explainer_by_NASA_Astronaut_Nichole_Ayers/jsc2025m000040_Connecting_Classrooms_to_Space-Ham_Radio_Explainer_by_NASA_Astronaut_Nichole_Ayers~mobile.mp4",
+        "page": "https://images.nasa.gov/details/jsc2025m000040_Connecting_Classrooms_to_Space-Ham_Radio_Explainer_by_NASA_Astronaut_Nichole_Ayers",
+        "note": "the smallest official rendition (~mobile.mp4, 9 MB); only the 16 kHz mono WAV is kept"
+      },
+      "license": "NASA media: generally not subject to copyright in the United States (NASA media usage guidelines). No endorsement implied.",
+      "attribution": "NASA"
+    }
+  ]
+}

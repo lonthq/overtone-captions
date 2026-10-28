@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overtone demo</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/node_modules/video.js/dist/video-js.css">
+  <!-- The style packs are added by /examples/styles/packs.js. -->
+  <link rel="stylesheet" href="/packages/videojs/dist/themes/base.css">
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; padding: 24px; background: #111318; color: #e8e8ee; font: 15px/1.5 system-ui, sans-serif; }
+    h1 { margin: 0 0 4px; }
+    p { max-width: 75ch; color: #a8a8b8; }
+    code { background: #22252e; border-radius: 4px; padding: 1px 5px; }
+    label { display: inline-flex; gap: 8px; align-items: center; margin: 8px 20px 20px 0; }
+    .players { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+    .players figure { margin: 0; }
+    [hidden] { display: none !important; }
+    #clip-switch a[aria-current] { color: #e8e8ee; font-weight: 600; text-decoration: none; }
+    .landscape { flex: 1 1 560px; max-width: 860px; }
+    .portrait { flex: 0 0 300px; }
+    .crop video.vjs-tech { object-fit: cover; }
+    figcaption { margin-top: 6px; font-size: 13px; color: #8a8a9a; }
+    a { color: #9fd4ff; }
+    #load-error { margin: 0 0 20px; padding: 10px 14px; border: 1px solid #7a5a2a; border-radius: 8px; background: #2b2318; color: #f2dfc0; }
+    kbd { padding: 1px 6px; border: 1px solid #4a4e5c; border-radius: 4px; background: #22252e; font: 12px/1.4 ui-monospace, monospace; }
+  </style>
+</head>
+<body>
+  <h1>Overtone demo</h1>
+  <p>
+    <span id="intro-nasa" hidden>The player loads <code>examples/output/nasa/nasa-dutton.overtone.json</code>, a real run of the
+    pipeline on a NASA interview (see <code>examples/output/README.md</code>). The video streams from NASA
+    and is not part of this repository.</span>
+    <span id="intro-tears-of-steel">The players load <code>examples/output/tears-of-steel/</code>, a real run of the
+    pipeline on <a href="https://mango.blender.org/">Tears of Steel</a> (2012), a live-action science-fiction short.
+    The video streams from Blender (download.blender.org) and is not part of this repository. Film:
+    (CC) Blender Foundation | mango.blender.org, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</span>
+    <span id="intro-elephants-dream" hidden>The players load <code>examples/output/elephants-dream/</code>, a real run of
+    the pipeline on <a href="https://orange.blender.org/">Elephants Dream</a> (2006), an animated short with two
+    main characters, Proog and Emo. The video streams from Blender (download.blender.org) and is not part of this
+    repository. Film: (c) copyright 2006, Blender Foundation / Netherlands Media Art Institute /
+    www.elephantsdream.org, <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>.</span>
+    <span id="intro-cosmos-laundromat" hidden>The players load <code>examples/output/cosmos-laundromat/</code>, a real run
+    of the pipeline on <a href="https://gooseberry.blender.org/">Cosmos Laundromat</a> (2015), an animated short in
+    which a sheep named Franck meets a salesman named Victor; the dialogue starts at 2:20. The video streams from
+    Blender (download.blender.org) and is not part of this repository. Film: (CC) Blender Foundation |
+    gooseberry.blender.org, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</span>
+    The CC button (or press <kbd>C</kbd> after clicking a player) cycles <strong>off → styled → plain → off</strong>:
+    styled shows the word highlights, plain shows the same captions without them, and your choice is remembered.
+    See also the <a href="/examples/styles/">style gallery</a> of every style pack.
+  </p>
+  <p id="clip-switch">
+    Clip:
+    Blender open movies: <a id="link-tears-of-steel" href="?">Tears of Steel</a> ·
+    <a id="link-elephants-dream" href="?clip=elephants-dream">Elephants Dream</a> ·
+    <a id="link-cosmos-laundromat" href="?clip=cosmos-laundromat">Cosmos Laundromat</a> ·
+    <a id="link-nasa" href="?clip=nasa">NASA interview</a>
+  </p>
+  <label>Theme
+    <select id="theme">
+      <option value="clean">Clean</option>
+    </select>
+  </label>
+  <label><input type="checkbox" id="speakers"> Speaker names</label>
+  <p id="load-error" role="alert" hidden>The video did not load from <span id="load-error-host"></span> after two tries.
+    <a id="load-error-retry">Reload the page</a>, or watch another clip: <span id="load-error-clips"></span>.</p>
+  <main class="players">
+    <figure class="landscape">
+      <video id="player-16x9" class="video-js" controls playsinline preload="auto"></video>
+      <figcaption>16:9 · horizontal profile</figcaption>
+    </figure>
+    <figure class="portrait" id="portrait">
+      <video id="player-9x16" class="video-js" controls playsinline preload="auto"></video>
+      <figcaption>9:16 · vertical profile (widescreen video center-cropped)</figcaption>
+    </figure>
+  </main>
+  <script src="/node_modules/video.js/dist/video.min.js"></script>
+  <script src="/packages/videojs/dist/index.global.js"></script>
+  <script src="/examples/styles/packs.js"></script>
+  <script src="media-retry.js"></script>
+  <script src="demo.js"></script>
+</body>
+</html>

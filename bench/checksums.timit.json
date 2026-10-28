@@ -1,0 +1,22 @@
+{
+  "timit-dr1-dr2": {
+    "audioPcmSha256": "7a283ae699a236f6402c455c122e65b3483e1518bfe12999968c44bf8e2a2674",
+    "refSha256": "359290a605770a9244cf390d6ff5b7056f591dadf8ed0c32bd5a87e3d0663b16",
+    "seconds": 123.419
+  },
+  "timit-dr3-dr4": {
+    "audioPcmSha256": "33984f31060a0a452cf4200ccf05b42788a4a32ecdd554ee538c85d8f779d451",
+    "refSha256": "b891bfd16b93b09455cc53d22c8439cc94fb5502d7529a42895ae0a915457dc4",
+    "seconds": 133.359
+  },
+  "timit-dr5-dr6": {
+    "audioPcmSha256": "73a54c906842d851ca7626b4c9bc7b1ae97d6c56ca9da0d523e7cf82962d92cc",
+    "refSha256": "b20b1a3de2f1953d2e98e7ba47a6a4e710d9eb1d4e8faab4f41d6b408936e5cb",
+    "seconds": 146.76
+  },
+  "timit-dr7-dr8": {
+    "audioPcmSha256": "e4b0bb4ca9fca55f24b7edfb96bcf14719e1c49c85043d3868eaacbaec348532",
+    "refSha256": "fb00e8caa8791bc967a0bd757d1930cc93db16fedfe3f11365e89b37ebe7595c",
+    "seconds": 133.359
+  }
+}

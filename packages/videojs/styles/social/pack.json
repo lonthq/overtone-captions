@@ -1,0 +1,10 @@
+{
+  "$schema": "../pack.schema.json",
+  "name": "social",
+  "title": "Social",
+  "description": "For vertical clips: large, heavy text without a box and a yellow marker behind key words. The spoken word grows; styled words grow more and lift, emphasis also tilts.",
+  "author": "Overtone maintainers",
+  "license": "MIT",
+  "tags": ["social"],
+  "contrast": "No box: a black outline of three centered shadows plus a drop shadow. Text against the outline is 11.4:1 or more; key words are #111 on yellow (13.2:1)."
+}

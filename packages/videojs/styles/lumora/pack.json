@@ -1,0 +1,10 @@
+{
+  "$schema": "../pack.schema.json",
+  "name": "lumora",
+  "title": "Lumora (brand example)",
+  "description": "Example brand pack for the fictional insurer Lumora: a deep violet box, the brand's amber for names and the key-word marker, rounder corners.",
+  "author": "Overtone maintainers",
+  "license": "MIT",
+  "tags": ["brand", "example"],
+  "contrast": "86% violet box. Worst case over a white frame: text 10.1:1, amber brand names 5.9:1, lowest is the dimmed soft text at 5.0:1."
+}

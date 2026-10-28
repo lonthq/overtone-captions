@@ -1,0 +1,11 @@
+{
+  "_source": "Shape of POST /speechtotext/transcriptions:transcribe?api-version=2025-10-15 (Azure AI Speech Fast Transcription reference): phrases with speaker, locale and words in milliseconds.",
+  "durationMilliseconds": 4000,
+  "combinedPhrases": [{ "text": "Hi Maya. Hello Tom." }],
+  "phrases": [
+    { "speaker": 1, "offsetMilliseconds": 2000, "durationMilliseconds": 900, "text": "Hello Tom.", "locale": "en-US", "confidence": 0.9,
+      "words": [{ "text": "Hello", "offsetMilliseconds": 2000, "durationMilliseconds": 400 }, { "text": "Tom.", "offsetMilliseconds": 2500, "durationMilliseconds": 400 }] },
+    { "speaker": 0, "offsetMilliseconds": 0, "durationMilliseconds": 900, "text": "Hi Maya.", "locale": "en-US", "confidence": 0.95,
+      "words": [{ "text": "Hi", "offsetMilliseconds": 0, "durationMilliseconds": 400 }, { "text": "Maya.", "offsetMilliseconds": 500, "durationMilliseconds": 400 }] }
+  ]
+}

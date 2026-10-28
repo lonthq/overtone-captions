@@ -1,0 +1,6026 @@
+{
+  "format": "overtone",
+  "version": 1,
+  "language": "en",
+  "duration": 734.093,
+  "speakers": [
+    {
+      "id": "S5"
+    },
+    {
+      "id": "S1"
+    },
+    {
+      "id": "S2",
+      "label": "Celia",
+      "role": "Robotics student"
+    },
+    {
+      "id": "S3",
+      "label": "Thom",
+      "role": "Celia's former boyfriend"
+    },
+    {
+      "id": "S4"
+    },
+    {
+      "id": "S6",
+      "label": "Barley"
+    },
+    {
+      "id": "S7"
+    },
+    {
+      "id": "S8"
+    },
+    {
+      "id": "S9"
+    },
+    {
+      "id": "S10"
+    }
+  ],
+  "turns": [
+    {
+      "speaker": "S5",
+      "start": 2.36,
+      "end": 3.1,
+      "words": [
+        {
+          "text": "Roger,",
+          "start": 2.36,
+          "end": 2.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Roger.",
+          "start": 2.76,
+          "end": 3.1,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 4.76,
+      "end": 9.62,
+      "words": [
+        {
+          "text": "We",
+          "start": 4.76,
+          "end": 4.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 4.96,
+          "end": 5.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "main",
+          "start": 5.3,
+          "end": 5.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "engine",
+          "start": 5.54,
+          "end": 5.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "start.",
+          "start": 6,
+          "end": 6.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Four,",
+          "start": 6.9,
+          "end": 7.26,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "three,",
+          "start": 7.56,
+          "end": 7.86,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "two,",
+          "start": 8.42,
+          "end": 8.68,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "one.",
+          "start": 9.38,
+          "end": 9.62,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S5",
+      "start": 10.6,
+      "end": 11.08,
+      "words": [
+        {
+          "text": "Now.",
+          "start": 10.6,
+          "end": 11.08,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 23.24,
+      "end": 24.34,
+      "words": [
+        {
+          "text": "You're",
+          "start": 23.24,
+          "end": 23.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 23.44,
+          "end": 23.49,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "jerk,",
+          "start": 23.7,
+          "end": 23.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Thom!",
+          "start": 24.08,
+          "end": 24.34,
+          "match": "edited",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "speaker": "S3",
+      "start": 24.52,
+      "end": 30.08,
+      "words": [
+        {
+          "text": "Look,",
+          "start": 24.52,
+          "end": 24.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Celia,",
+          "start": 24.92,
+          "end": 25.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 25.38,
+          "end": 25.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 25.52,
+          "end": 25.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 25.74,
+          "end": 25.82,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "follow",
+          "start": 25.9,
+          "end": 26.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "our",
+          "start": 26.2,
+          "end": 26.34,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "passions.",
+          "start": 26.42,
+          "end": 27.02,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "You",
+          "start": 27.38,
+          "end": 27.44,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 27.5,
+          "end": 27.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "your",
+          "start": 27.64,
+          "end": 27.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "robotics",
+          "start": 27.78,
+          "end": 28.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "and",
+          "start": 28.3,
+          "end": 28.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 28.44,
+          "end": 28.49,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "just",
+          "start": 28.52,
+          "end": 28.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "want",
+          "start": 28.66,
+          "end": 28.78,
+          "match": "split",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 28.78,
+          "end": 28.84,
+          "match": "split",
+          "confidence": 1
+        },
+        {
+          "text": "be",
+          "start": 28.88,
+          "end": 29.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "awesome",
+          "start": 29.24,
+          "end": 29.5,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "in",
+          "start": 29.54,
+          "end": 29.6,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "space.",
+          "start": 29.72,
+          "end": 30.08,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 30.7,
+      "end": 34.36,
+      "words": [
+        {
+          "text": "Why",
+          "start": 30.7,
+          "end": 30.86,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "don’t",
+          "start": 30.9,
+          "end": 31.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 31.14,
+          "end": 31.22,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "just",
+          "start": 31.3,
+          "end": 31.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "admit",
+          "start": 31.54,
+          "end": 31.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that",
+          "start": 31.9,
+          "end": 32.02,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you’re",
+          "start": 32.08,
+          "end": 32.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "freaked",
+          "start": 32.64,
+          "end": 32.98,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "out",
+          "start": 33.04,
+          "end": 33.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "by",
+          "start": 33.22,
+          "end": 33.34,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "my",
+          "start": 33.4,
+          "end": 33.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "robot",
+          "start": 33.64,
+          "end": 34.04,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "hand?",
+          "start": 34.1,
+          "end": 34.36,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S3",
+      "start": 34.8,
+      "end": 42.88,
+      "words": [
+        {
+          "text": "I’m",
+          "start": 34.8,
+          "end": 34.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "not",
+          "start": 34.94,
+          "end": 35.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "freaked",
+          "start": 35.12,
+          "end": 35.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "out",
+          "start": 35.36,
+          "end": 35.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "by",
+          "start": 35.56,
+          "end": 35.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "it.",
+          "start": 35.78,
+          "end": 36.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "It’s…",
+          "start": 36.67,
+          "end": 37.01,
+          "match": "interpolated",
+          "confidence": 0
+        },
+        {
+          "text": "All",
+          "start": 37.64,
+          "end": 37.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "right,",
+          "start": 37.76,
+          "end": 37.94,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "fine.",
+          "start": 38.06,
+          "end": 38.44,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I’m",
+          "start": 38.7,
+          "end": 38.82,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "freaked",
+          "start": 38.9,
+          "end": 39.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "out.",
+          "start": 39.3,
+          "end": 39.44,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I’m",
+          "start": 39.48,
+          "end": 39.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "having",
+          "start": 39.56,
+          "end": 39.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "nightmares",
+          "start": 39.8,
+          "end": 40.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that",
+          "start": 40.2,
+          "end": 40.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I’m",
+          "start": 40.3,
+          "end": 40.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "being",
+          "start": 40.42,
+          "end": 40.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "chased",
+          "start": 40.66,
+          "end": 40.86,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "by",
+          "start": 40.9,
+          "end": 40.98,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "these",
+          "start": 41,
+          "end": 41.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "giant",
+          "start": 41.2,
+          "end": 41.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "robotic",
+          "start": 41.56,
+          "end": 42.08,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "claws",
+          "start": 42.14,
+          "end": 42.5,
+          "match": "edited",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "of",
+          "start": 42.54,
+          "end": 42.62,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "death.",
+          "start": 42.74,
+          "end": 42.88,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 42.9,
+      "end": 45.06,
+      "words": [
+        {
+          "text": "Oh,",
+          "start": 42.9,
+          "end": 42.95,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "whatever,",
+          "start": 42.95,
+          "end": 43.06,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "Thom!",
+          "start": 43.12,
+          "end": 43.48,
+          "match": "edited",
+          "confidence": 0.75
+        },
+        {
+          "text": "We’re",
+          "start": 44.36,
+          "end": 44.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "done.",
+          "start": 44.66,
+          "end": 45.06,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S4",
+      "start": 50.14,
+      "end": 53.68,
+      "words": [
+        {
+          "text": "Robot’s",
+          "start": 50.14,
+          "end": 50.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "memory",
+          "start": 50.64,
+          "end": 51.12,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "synced",
+          "start": 51.32,
+          "end": 51.68,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "and",
+          "start": 52.26,
+          "end": 52.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "locked.",
+          "start": 53.34,
+          "end": 53.68,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S5",
+      "start": 60.96,
+      "end": 62.4,
+      "words": [
+        {
+          "text": "This",
+          "start": 60.96,
+          "end": 61.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "is",
+          "start": 61.18,
+          "end": 61.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "pretty",
+          "start": 61.46,
+          "end": 61.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "freaky.",
+          "start": 61.88,
+          "end": 62.4,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S6",
+      "start": 117.76,
+      "end": 118.54,
+      "words": [
+        {
+          "text": "Shouldn’t",
+          "start": 117.76,
+          "end": 117.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 117.98,
+          "end": 118.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "be",
+          "start": 118.08,
+          "end": 118.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "down",
+          "start": 118.2,
+          "end": 118.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "there?",
+          "start": 118.4,
+          "end": 118.54,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S5",
+      "start": 131.4,
+      "end": 198.28,
+      "words": [
+        {
+          "text": "I",
+          "start": 131.4,
+          "end": 131.45,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "heard",
+          "start": 131.46,
+          "end": 131.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 131.64,
+          "end": 131.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "guys",
+          "start": 131.76,
+          "end": 131.98,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "talking",
+          "start": 132.04,
+          "end": 132.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "last",
+          "start": 132.34,
+          "end": 132.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "night.",
+          "start": 132.58,
+          "end": 132.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "It’s",
+          "start": 136.5,
+          "end": 136.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "not",
+          "start": 136.64,
+          "end": 136.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "my",
+          "start": 136.82,
+          "end": 136.98,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "fault,",
+          "start": 137.04,
+          "end": 137.28,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 137.36,
+          "end": 137.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "know.",
+          "start": 137.46,
+          "end": 137.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Are",
+          "start": 191.44,
+          "end": 191.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 191.58,
+          "end": 191.68,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "ready?",
+          "start": 191.71,
+          "end": 192.15,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Of",
+          "start": 192.15,
+          "end": 192.23,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "course",
+          "start": 192.71,
+          "end": 193.06,
+          "match": "edited",
+          "confidence": 1
+        },
+        {
+          "text": "you’re",
+          "start": 193.06,
+          "end": 193.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "ready,",
+          "start": 193.24,
+          "end": 193.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you’re",
+          "start": 193.66,
+          "end": 193.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 193.88,
+          "end": 193.93,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "rock",
+          "start": 193.96,
+          "end": 194.12,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "star.",
+          "start": 194.2,
+          "end": 194.62,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "How’s",
+          "start": 197.22,
+          "end": 197.34,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "it",
+          "start": 197.38,
+          "end": 197.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "looking,",
+          "start": 197.52,
+          "end": 197.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Barley?",
+          "start": 197.8,
+          "end": 198.28,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S6",
+      "start": 198.9,
+      "end": 200.46,
+      "words": [
+        {
+          "text": "We",
+          "start": 198.9,
+          "end": 199.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "should",
+          "start": 199.18,
+          "end": 199.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 199.4,
+          "end": 199.56,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "about",
+          "start": 199.62,
+          "end": 199.86,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "ten",
+          "start": 199.9,
+          "end": 200.06,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "minutes.",
+          "start": 200.12,
+          "end": 200.46,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S5",
+      "start": 201.82,
+      "end": 202.88,
+      "words": [
+        {
+          "text": "Well,",
+          "start": 201.82,
+          "end": 201.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that’s",
+          "start": 202.06,
+          "end": 202.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "perfect.",
+          "start": 202.36,
+          "end": 202.88,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S6",
+      "start": 203.68,
+      "end": 204.58,
+      "words": [
+        {
+          "text": "We’re",
+          "start": 203.68,
+          "end": 203.8,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "on",
+          "start": 203.9,
+          "end": 204.06,
+          "match": "edited",
+          "confidence": 0.5
+        },
+        {
+          "text": "one.",
+          "start": 204.32,
+          "end": 204.58,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S7",
+      "start": 205.3,
+      "end": 206.56,
+      "words": [
+        {
+          "text": "All",
+          "start": 205.3,
+          "end": 205.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "systems",
+          "start": 205.6,
+          "end": 206.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "go.",
+          "start": 206.14,
+          "end": 206.56,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S6",
+      "start": 206.62,
+      "end": 214.18,
+      "words": [
+        {
+          "text": "Yeah,",
+          "start": 206.62,
+          "end": 206.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you,",
+          "start": 206.82,
+          "end": 206.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "go!",
+          "start": 207.12,
+          "end": 207.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Go!",
+          "start": 208.06,
+          "end": 208.68,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Move",
+          "start": 210.16,
+          "end": 210.26,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "your",
+          "start": 210.3,
+          "end": 210.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "asses.",
+          "start": 210.66,
+          "end": 211.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Go,",
+          "start": 211.22,
+          "end": 211.42,
+          "match": "edited",
+          "confidence": 1
+        },
+        {
+          "text": "go,",
+          "start": 211.52,
+          "end": 211.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "go!",
+          "start": 211.8,
+          "end": 212.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 213.22,
+          "end": 213.27,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "love",
+          "start": 213.48,
+          "end": 213.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "it!",
+          "start": 213.84,
+          "end": 214.18,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S5",
+      "start": 214.26,
+      "end": 294.43,
+      "words": [
+        {
+          "text": "Come",
+          "start": 214.26,
+          "end": 214.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "on!",
+          "start": 214.62,
+          "end": 214.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Go!",
+          "start": 215.48,
+          "end": 215.64,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "That’s",
+          "start": 222.96,
+          "end": 223.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "nice.",
+          "start": 223.32,
+          "end": 223.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Nothing",
+          "start": 224.72,
+          "end": 225,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 225.04,
+          "end": 225.12,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "worry",
+          "start": 225.16,
+          "end": 225.32,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "about,",
+          "start": 225.38,
+          "end": 225.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Thom.",
+          "start": 225.68,
+          "end": 225.98,
+          "match": "edited",
+          "confidence": 0.75
+        },
+        {
+          "text": "Thom,",
+          "start": 230.76,
+          "end": 230.98,
+          "match": "edited",
+          "confidence": 0.75
+        },
+        {
+          "text": "there",
+          "start": 232.16,
+          "end": 232.32,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "she",
+          "start": 232.38,
+          "end": 232.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "is.",
+          "start": 232.6,
+          "end": 232.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Now,",
+          "start": 233.72,
+          "end": 233.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 234.595,
+          "end": 235.105,
+          "match": "edited",
+          "confidence": 0
+        },
+        {
+          "text": "love",
+          "start": 235.8,
+          "end": 236.02,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "her.",
+          "start": 236.06,
+          "end": 236.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "She’s",
+          "start": 237.56,
+          "end": 237.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "your",
+          "start": 237.74,
+          "end": 237.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "passion.",
+          "start": 237.98,
+          "end": 238.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Be",
+          "start": 239.78,
+          "end": 239.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "tender",
+          "start": 239.96,
+          "end": 240.22,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "to",
+          "start": 240.28,
+          "end": 240.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "her.",
+          "start": 240.42,
+          "end": 240.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Be",
+          "start": 241.56,
+          "end": 241.64,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "honest.",
+          "start": 241.68,
+          "end": 242.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Be",
+          "start": 243.74,
+          "end": 243.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "tender.",
+          "start": 243.9,
+          "end": 244.32,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Remind",
+          "start": 245.6,
+          "end": 246.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "her",
+          "start": 246.08,
+          "end": 246.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "what",
+          "start": 247.1,
+          "end": 247.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "love",
+          "start": 247.34,
+          "end": 247.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "is.",
+          "start": 247.7,
+          "end": 247.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "And…",
+          "start": 294.38,
+          "end": 294.43,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S4",
+      "start": 294.43,
+      "end": 298.34,
+      "words": [
+        {
+          "text": "action!",
+          "start": 294.43,
+          "end": 295.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Memory",
+          "start": 296.8,
+          "end": 297.08,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "override",
+          "start": 297.16,
+          "end": 297.54,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "in",
+          "start": 297.58,
+          "end": 297.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "progress.",
+          "start": 297.72,
+          "end": 298.34,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S5",
+      "start": 299.3,
+      "end": 300.52,
+      "words": [
+        {
+          "text": "You’re",
+          "start": 299.3,
+          "end": 299.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 299.54,
+          "end": 299.59,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "jerk,",
+          "start": 299.76,
+          "end": 300.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Thom.",
+          "start": 300.18,
+          "end": 300.52,
+          "match": "edited",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "speaker": "S4",
+      "start": 302.2,
+      "end": 303.04,
+      "words": [
+        {
+          "text": "Oh,",
+          "start": 302.2,
+          "end": 302.42,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "soft"
+          ]
+        },
+        {
+          "text": "sorry.",
+          "start": 302.56,
+          "end": 303.04,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "soft"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S3",
+      "start": 303.8,
+      "end": 327.72,
+      "words": [
+        {
+          "text": "Sorry.",
+          "start": 303.8,
+          "end": 304.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Sorry.",
+          "start": 305.2,
+          "end": 305.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Look,",
+          "start": 316.04,
+          "end": 316.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Celia,",
+          "start": 316.3,
+          "end": 316.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 318.42,
+          "end": 318.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 318.56,
+          "end": 318.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 318.8,
+          "end": 318.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "follow",
+          "start": 318.98,
+          "end": 319.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "our",
+          "start": 319.36,
+          "end": 319.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "passions.",
+          "start": 319.58,
+          "end": 320.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "You",
+          "start": 321.46,
+          "end": 321.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 321.6,
+          "end": 321.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "your",
+          "start": 321.8,
+          "end": 321.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "robotics",
+          "start": 321.98,
+          "end": 322.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "and…",
+          "start": 325.18,
+          "end": 325.28,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 325.98,
+          "end": 326.03,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "just",
+          "start": 326.08,
+          "end": 326.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "want",
+          "start": 326.3,
+          "end": 326.433,
+          "match": "split",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 326.433,
+          "end": 326.5,
+          "match": "split",
+          "confidence": 1
+        },
+        {
+          "text": "be",
+          "start": 326.56,
+          "end": 326.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "awesome",
+          "start": 326.78,
+          "end": 327.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "in",
+          "start": 327.1,
+          "end": 327.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "space.",
+          "start": 327.32,
+          "end": 327.72,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S6",
+      "start": 339.12,
+      "end": 341.92,
+      "words": [
+        {
+          "text": "Okay,",
+          "start": 339.12,
+          "end": 339.27,
+          "match": "edited",
+          "confidence": 0.364
+        },
+        {
+          "text": "they're",
+          "start": 339.27,
+          "end": 339.42,
+          "match": "edited",
+          "confidence": 0.364
+        },
+        {
+          "text": "coming.",
+          "start": 339.48,
+          "end": 339.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Two",
+          "start": 340.38,
+          "end": 340.5,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "minutes",
+          "start": 340.54,
+          "end": 340.76,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "left.",
+          "start": 340.84,
+          "end": 341.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Two",
+          "start": 341.48,
+          "end": 341.64,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "minutes.",
+          "start": 341.7,
+          "end": 341.92,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S5",
+      "start": 342.94,
+      "end": 343.7,
+      "words": [
+        {
+          "text": "Speed",
+          "start": 342.94,
+          "end": 343.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "it",
+          "start": 343.16,
+          "end": 343.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "up,",
+          "start": 343.3,
+          "end": 343.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Thom!",
+          "start": 343.46,
+          "end": 343.7,
+          "match": "edited",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 344.96,
+      "end": 349.96,
+      "words": [
+        {
+          "text": "Vivacissimo!",
+          "start": 344.96,
+          "end": 346.04,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "Why",
+          "start": 347.06,
+          "end": 347.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "don’t",
+          "start": 347.2,
+          "end": 347.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 347.42,
+          "end": 347.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "just",
+          "start": 347.58,
+          "end": 347.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "admit",
+          "start": 347.8,
+          "end": 348.02,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that",
+          "start": 348.08,
+          "end": 348.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you’re",
+          "start": 348.22,
+          "end": 348.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "freaked",
+          "start": 348.46,
+          "end": 348.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "out",
+          "start": 348.74,
+          "end": 348.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "by",
+          "start": 348.9,
+          "end": 349.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "my",
+          "start": 349.08,
+          "end": 349.22,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "robot",
+          "start": 349.26,
+          "end": 349.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "hand?",
+          "start": 349.66,
+          "end": 349.96,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S3",
+      "start": 356.92,
+      "end": 362.96,
+      "words": [
+        {
+          "text": "Listen,",
+          "start": 356.92,
+          "end": 357.12,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Celia,",
+          "start": 357.24,
+          "end": 357.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 358.2,
+          "end": 358.25,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "was",
+          "start": 358.32,
+          "end": 358.44,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "young",
+          "start": 358.56,
+          "end": 358.82,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "and",
+          "start": 360.04,
+          "end": 360.12,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 360.16,
+          "end": 360.21,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "dick,",
+          "start": 360.36,
+          "end": 360.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "but",
+          "start": 361.26,
+          "end": 361.32,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that's",
+          "start": 361.34,
+          "end": 361.48,
+          "match": "edited",
+          "confidence": 0.571
+        },
+        {
+          "text": "no",
+          "start": 361.52,
+          "end": 361.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "reason",
+          "start": 361.66,
+          "end": 361.86,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 361.9,
+          "end": 361.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "destroy",
+          "start": 362,
+          "end": 362.38,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "the",
+          "start": 362.42,
+          "end": 362.52,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "world.",
+          "start": 362.58,
+          "end": 362.96,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S8",
+      "start": 365.088,
+      "end": 365.808,
+      "words": [
+        {
+          "text": "Why",
+          "start": 365.088,
+          "end": 365.188,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "does",
+          "start": 365.208,
+          "end": 365.308,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "he",
+          "start": 365.328,
+          "end": 365.408,
+          "match": "edited",
+          "confidence": 0.667
+        },
+        {
+          "text": "do",
+          "start": 365.448,
+          "end": 365.548,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "this?",
+          "start": 365.608,
+          "end": 365.808,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S5",
+      "start": 367.148,
+      "end": 373.888,
+      "words": [
+        {
+          "text": "We",
+          "start": 367.148,
+          "end": 367.228,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "already",
+          "start": 367.288,
+          "end": 367.668,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "tried",
+          "start": 367.748,
+          "end": 367.988,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that",
+          "start": 368.028,
+          "end": 368.168,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "one!",
+          "start": 368.228,
+          "end": 368.528,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Abort!",
+          "start": 371.988,
+          "end": 372.528,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "Cut!",
+          "start": 373.468,
+          "end": 373.888,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S3",
+      "start": 374.208,
+      "end": 381.408,
+      "words": [
+        {
+          "text": "Whoa!",
+          "start": 374.208,
+          "end": 374.528,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "No!",
+          "start": 380.848,
+          "end": 380.898,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "No!",
+          "start": 380.967,
+          "end": 381.408,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S5",
+      "start": 383.628,
+      "end": 384.948,
+      "words": [
+        {
+          "text": "You",
+          "start": 383.628,
+          "end": 383.868,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "broke",
+          "start": 383.948,
+          "end": 384.248,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "my",
+          "start": 384.308,
+          "end": 384.488,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "heart.",
+          "start": 384.548,
+          "end": 384.948,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S3",
+      "start": 386.148,
+      "end": 386.508,
+      "words": [
+        {
+          "text": "I",
+          "start": 386.148,
+          "end": 386.228,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "know.",
+          "start": 386.268,
+          "end": 386.508,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 387.228,
+      "end": 392.128,
+      "words": [
+        {
+          "text": "You",
+          "start": 387.228,
+          "end": 387.348,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "forgot",
+          "start": 387.408,
+          "end": 387.868,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "me",
+          "start": 387.928,
+          "end": 388.068,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "on",
+          "start": 388.128,
+          "end": 388.248,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Earth.",
+          "start": 388.308,
+          "end": 388.648,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 389.508,
+          "end": 389.558,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "know.",
+          "start": 389.558,
+          "end": 389.768,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 390.628,
+          "end": 390.708,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "should",
+          "start": 390.768,
+          "end": 391.008,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "just",
+          "start": 391.088,
+          "end": 391.468,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "crush",
+          "start": 391.548,
+          "end": 391.868,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "you!",
+          "start": 391.908,
+          "end": 392.128,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S3",
+      "start": 407.468,
+      "end": 408.228,
+      "words": [
+        {
+          "text": "I’m…",
+          "start": 407.468,
+          "end": 407.628,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I’m",
+          "start": 407.708,
+          "end": 407.768,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "sorry.",
+          "start": 407.848,
+          "end": 408.228,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S5",
+      "start": 410.388,
+      "end": 411.128,
+      "words": [
+        {
+          "text": "Good",
+          "start": 410.388,
+          "end": 410.548,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "ad",
+          "start": 410.628,
+          "end": 410.768,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "lib.",
+          "start": 410.808,
+          "end": 411.128,
+          "match": "edited",
+          "confidence": 0.667
+        }
+      ]
+    },
+    {
+      "speaker": "S4",
+      "start": 419.388,
+      "end": 422.888,
+      "words": [
+        {
+          "text": "Not",
+          "start": 419.388,
+          "end": 419.488,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "my",
+          "start": 419.528,
+          "end": 419.648,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "fault.",
+          "start": 419.708,
+          "end": 420.048,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "This",
+          "start": 422.368,
+          "end": 422.528,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "soft"
+          ]
+        },
+        {
+          "text": "time.",
+          "start": 422.568,
+          "end": 422.888,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "soft"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S6",
+      "start": 428.608,
+      "end": 431.406,
+      "words": [
+        {
+          "text": "Quiet",
+          "start": 428.608,
+          "end": 428.868,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "on",
+          "start": 428.908,
+          "end": 429.028,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "set.",
+          "start": 429.128,
+          "end": 429.668,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "We're",
+          "start": 430.287,
+          "end": 430.388,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "out",
+          "start": 430.388,
+          "end": 430.438,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "of",
+          "start": 430.468,
+          "end": 430.528,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "time.",
+          "start": 430.588,
+          "end": 430.808,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "We're",
+          "start": 430.848,
+          "end": 430.968,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "out",
+          "start": 431.008,
+          "end": 431.058,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "of",
+          "start": 431.088,
+          "end": 431.138,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "time!",
+          "start": 431.138,
+          "end": 431.406,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S4",
+      "start": 504.068,
+      "end": 505.688,
+      "words": [
+        {
+          "text": "Memory",
+          "start": 504.068,
+          "end": 504.328,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "override",
+          "start": 504.388,
+          "end": 504.668,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "at",
+          "start": 504.708,
+          "end": 504.808,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "90%.",
+          "start": 505.068,
+          "end": 505.688,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S9",
+      "start": 506.528,
+      "end": 508.368,
+      "words": [
+        {
+          "text": "Captain,",
+          "start": 506.528,
+          "end": 506.908,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 507.328,
+          "end": 507.408,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 507.468,
+          "end": 507.648,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 507.688,
+          "end": 507.768,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "abort!",
+          "start": 507.848,
+          "end": 508.368,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "emphasis"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S3",
+      "start": 519.228,
+      "end": 520.468,
+      "words": [
+        {
+          "text": "The",
+          "start": 519.228,
+          "end": 519.308,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "world’s",
+          "start": 519.348,
+          "end": 519.648,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "changed,",
+          "start": 519.708,
+          "end": 519.948,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "Celia.",
+          "start": 520.028,
+          "end": 520.468,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S10",
+      "start": 535.148,
+      "end": 536.148,
+      "words": [
+        {
+          "text": "Maybe",
+          "start": 535.148,
+          "end": 535.428,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 535.468,
+          "end": 535.548,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "can",
+          "start": 535.608,
+          "end": 535.748,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "too.",
+          "start": 535.828,
+          "end": 536.148,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S4",
+      "start": 538.268,
+      "end": 539.408,
+      "words": [
+        {
+          "text": "Memory",
+          "start": 538.268,
+          "end": 538.508,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "override",
+          "start": 538.568,
+          "end": 538.848,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "complete.",
+          "start": 538.908,
+          "end": 539.408,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S5",
+      "start": 559.208,
+      "end": 563.528,
+      "words": [
+        {
+          "text": "You",
+          "start": 559.208,
+          "end": 559.258,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "know,",
+          "start": 559.288,
+          "end": 559.468,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "there’s",
+          "start": 561.988,
+          "end": 562.168,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 562.228,
+          "end": 562.278,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "lesson",
+          "start": 562.308,
+          "end": 562.588,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 562.628,
+          "end": 562.728,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "be",
+          "start": 562.788,
+          "end": 562.838,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "learned",
+          "start": 562.868,
+          "end": 563.068,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "from",
+          "start": 563.108,
+          "end": 563.248,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "this.",
+          "start": 563.308,
+          "end": 563.528,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S8",
+      "start": 565.988,
+      "end": 566.808,
+      "words": [
+        {
+          "text": "Could've",
+          "start": 565.988,
+          "end": 566.228,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "gone",
+          "start": 566.268,
+          "end": 566.468,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "worse.",
+          "start": 566.528,
+          "end": 566.808,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "horizontal",
+      "description": "TV/desktop",
+      "aspect": "16:9",
+      "rules": {
+        "maxCharsPerLine": 42,
+        "maxLines": 2,
+        "maxCps": 17,
+        "minDuration": 1,
+        "maxDuration": 7
+      },
+      "cues": [
+        {
+          "start": 2.36,
+          "end": 3.36,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                0,
+                1
+              ],
+              "text": "Roger, Roger."
+            }
+          ]
+        },
+        {
+          "start": 4.76,
+          "end": 6.38,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                2,
+                6
+              ],
+              "text": "We have main engine start."
+            }
+          ]
+        },
+        {
+          "start": 6.9,
+          "end": 9.62,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                7,
+                8
+              ],
+              "text": "Four, three,"
+            },
+            {
+              "words": [
+                9,
+                10
+              ],
+              "text": "two, one."
+            }
+          ]
+        },
+        {
+          "start": 10.6,
+          "end": 11.6,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                11,
+                11
+              ],
+              "text": "Now."
+            }
+          ]
+        },
+        {
+          "start": 23.24,
+          "end": 24.417,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                12,
+                15
+              ],
+              "text": "You're a jerk, Thom!"
+            }
+          ]
+        },
+        {
+          "start": 24.52,
+          "end": 27.109,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                16,
+                17
+              ],
+              "text": "Look, Celia,"
+            },
+            {
+              "words": [
+                18,
+                23
+              ],
+              "text": "we have to follow our passions."
+            }
+          ]
+        },
+        {
+          "start": 27.38,
+          "end": 30.7,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                24,
+                27
+              ],
+              "text": "You have your robotics"
+            },
+            {
+              "words": [
+                28,
+                36
+              ],
+              "text": "and I just want to be awesome in space."
+            }
+          ]
+        },
+        {
+          "start": 30.7,
+          "end": 34.583,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                37,
+                43
+              ],
+              "text": "Why don’t you just admit that you’re"
+            },
+            {
+              "words": [
+                44,
+                49
+              ],
+              "text": "freaked out by my robot hand?"
+            }
+          ]
+        },
+        {
+          "start": 34.8,
+          "end": 36.33,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                50,
+                55
+              ],
+              "text": "I’m not freaked out by it."
+            }
+          ]
+        },
+        {
+          "start": 36.67,
+          "end": 40.2,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                56,
+                59
+              ],
+              "text": "It’s… All right, fine."
+            },
+            {
+              "words": [
+                60,
+                65
+              ],
+              "text": "I’m freaked out. I’m having nightmares"
+            }
+          ]
+        },
+        {
+          "start": 40.2,
+          "end": 42.9,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                66,
+                71
+              ],
+              "text": "that I’m being chased by these"
+            },
+            {
+              "words": [
+                72,
+                76
+              ],
+              "text": "giant robotic claws of death."
+            }
+          ]
+        },
+        {
+          "start": 42.9,
+          "end": 45.06,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                77,
+                79
+              ],
+              "text": "Oh, whatever, Thom!"
+            },
+            {
+              "words": [
+                80,
+                81
+              ],
+              "text": "We’re done."
+            }
+          ]
+        },
+        {
+          "start": 50.14,
+          "end": 53.68,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                82,
+                84
+              ],
+              "text": "Robot’s memory synced"
+            },
+            {
+              "words": [
+                85,
+                86
+              ],
+              "text": "and locked."
+            }
+          ]
+        },
+        {
+          "start": 60.96,
+          "end": 62.4,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                87,
+                90
+              ],
+              "text": "This is pretty freaky."
+            }
+          ]
+        },
+        {
+          "start": 117.76,
+          "end": 119.408,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                91,
+                95
+              ],
+              "text": "Shouldn’t you be down there?"
+            }
+          ]
+        },
+        {
+          "start": 131.4,
+          "end": 133.518,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                96,
+                102
+              ],
+              "text": "I heard you guys talking last night."
+            }
+          ]
+        },
+        {
+          "start": 136.5,
+          "end": 138.148,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                103,
+                108
+              ],
+              "text": "It’s not my fault, you know."
+            }
+          ]
+        },
+        {
+          "start": 191.44,
+          "end": 194.852,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                109,
+                115
+              ],
+              "text": "Are you ready? Of course you’re ready,"
+            },
+            {
+              "words": [
+                116,
+                119
+              ],
+              "text": "you’re a rock star."
+            }
+          ]
+        },
+        {
+          "start": 197.22,
+          "end": 198.691,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                120,
+                123
+              ],
+              "text": "How’s it looking, Barley?"
+            }
+          ]
+        },
+        {
+          "start": 198.9,
+          "end": 200.842,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                124,
+                129
+              ],
+              "text": "We should have about ten minutes."
+            }
+          ]
+        },
+        {
+          "start": 201.82,
+          "end": 203.056,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                130,
+                132
+              ],
+              "text": "Well, that’s perfect."
+            }
+          ]
+        },
+        {
+          "start": 203.68,
+          "end": 204.68,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                133,
+                135
+              ],
+              "text": "We’re on one."
+            }
+          ]
+        },
+        {
+          "start": 205.3,
+          "end": 206.56,
+          "speaker": "S7",
+          "lines": [
+            {
+              "words": [
+                136,
+                138
+              ],
+              "text": "All systems go."
+            }
+          ]
+        },
+        {
+          "start": 206.62,
+          "end": 208.68,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                139,
+                142
+              ],
+              "text": "Yeah, you, go! Go!"
+            }
+          ]
+        },
+        {
+          "start": 210.16,
+          "end": 211.22,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                143,
+                145
+              ],
+              "text": "Move your asses."
+            }
+          ]
+        },
+        {
+          "start": 211.22,
+          "end": 214.18,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                146,
+                148
+              ],
+              "text": "Go, go, go!"
+            },
+            {
+              "words": [
+                149,
+                151
+              ],
+              "text": "I love it!"
+            }
+          ]
+        },
+        {
+          "start": 214.26,
+          "end": 215.64,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                152,
+                153
+              ],
+              "text": "Come on!"
+            },
+            {
+              "words": [
+                154,
+                154
+              ],
+              "text": "Go!"
+            }
+          ]
+        },
+        {
+          "start": 222.96,
+          "end": 225.98,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                155,
+                156
+              ],
+              "text": "That’s nice."
+            },
+            {
+              "words": [
+                157,
+                161
+              ],
+              "text": "Nothing to worry about, Thom."
+            }
+          ]
+        },
+        {
+          "start": 230.76,
+          "end": 231.76,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                162,
+                162
+              ],
+              "text": "Thom,"
+            }
+          ]
+        },
+        {
+          "start": 232.16,
+          "end": 236.3,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                163,
+                165
+              ],
+              "text": "there she is."
+            },
+            {
+              "words": [
+                166,
+                169
+              ],
+              "text": "Now, you love her."
+            }
+          ]
+        },
+        {
+          "start": 237.56,
+          "end": 238.678,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                170,
+                172
+              ],
+              "text": "She’s your passion."
+            }
+          ]
+        },
+        {
+          "start": 239.78,
+          "end": 242.08,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                173,
+                176
+              ],
+              "text": "Be tender to her."
+            },
+            {
+              "words": [
+                177,
+                178
+              ],
+              "text": "Be honest."
+            }
+          ]
+        },
+        {
+          "start": 243.74,
+          "end": 244.74,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                179,
+                180
+              ],
+              "text": "Be tender."
+            }
+          ]
+        },
+        {
+          "start": 245.6,
+          "end": 247.92,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                181,
+                182
+              ],
+              "text": "Remind her"
+            },
+            {
+              "words": [
+                183,
+                185
+              ],
+              "text": "what love is."
+            }
+          ]
+        },
+        {
+          "start": 294.38,
+          "end": 294.43,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                186,
+                186
+              ],
+              "text": "And…"
+            }
+          ]
+        },
+        {
+          "start": 294.43,
+          "end": 295.43,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                187,
+                187
+              ],
+              "text": "action!"
+            }
+          ]
+        },
+        {
+          "start": 296.8,
+          "end": 298.448,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                188,
+                191
+              ],
+              "text": "Memory override in progress."
+            }
+          ]
+        },
+        {
+          "start": 299.3,
+          "end": 300.52,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                192,
+                195
+              ],
+              "text": "You’re a jerk, Thom."
+            }
+          ]
+        },
+        {
+          "start": 302.2,
+          "end": 303.2,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                196,
+                197
+              ],
+              "text": "Oh, sorry."
+            }
+          ]
+        },
+        {
+          "start": 303.8,
+          "end": 304.8,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                198,
+                198
+              ],
+              "text": "Sorry."
+            }
+          ]
+        },
+        {
+          "start": 305.2,
+          "end": 306.2,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                199,
+                199
+              ],
+              "text": "Sorry."
+            }
+          ]
+        },
+        {
+          "start": 316.04,
+          "end": 317.04,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                200,
+                201
+              ],
+              "text": "Look, Celia,"
+            }
+          ]
+        },
+        {
+          "start": 318.42,
+          "end": 320.244,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                202,
+                207
+              ],
+              "text": "we have to follow our passions."
+            }
+          ]
+        },
+        {
+          "start": 321.46,
+          "end": 322.755,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                208,
+                211
+              ],
+              "text": "You have your robotics"
+            }
+          ]
+        },
+        {
+          "start": 325.18,
+          "end": 327.72,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                212,
+                212
+              ],
+              "text": "and…"
+            },
+            {
+              "words": [
+                213,
+                220
+              ],
+              "text": "I just want to be awesome in space."
+            }
+          ]
+        },
+        {
+          "start": 339.12,
+          "end": 342.179,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                221,
+                223
+              ],
+              "text": "Okay, they're coming."
+            },
+            {
+              "words": [
+                224,
+                228
+              ],
+              "text": "Two minutes left. Two minutes."
+            }
+          ]
+        },
+        {
+          "start": 342.94,
+          "end": 343.999,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                229,
+                232
+              ],
+              "text": "Speed it up, Thom!"
+            }
+          ]
+        },
+        {
+          "start": 344.96,
+          "end": 346.04,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                233,
+                233
+              ],
+              "text": "Vivacissimo!"
+            }
+          ]
+        },
+        {
+          "start": 347.06,
+          "end": 350.943,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                234,
+                238
+              ],
+              "text": "Why don’t you just admit"
+            },
+            {
+              "words": [
+                239,
+                246
+              ],
+              "text": "that you’re freaked out by my robot hand?"
+            }
+          ]
+        },
+        {
+          "start": 356.92,
+          "end": 358.82,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                247,
+                248
+              ],
+              "text": "Listen, Celia,"
+            },
+            {
+              "words": [
+                249,
+                251
+              ],
+              "text": "I was young"
+            }
+          ]
+        },
+        {
+          "start": 360.04,
+          "end": 363.217,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                252,
+                254
+              ],
+              "text": "and a dick,"
+            },
+            {
+              "words": [
+                255,
+                262
+              ],
+              "text": "but that's no reason to destroy the world."
+            }
+          ]
+        },
+        {
+          "start": 365.088,
+          "end": 366.265,
+          "speaker": "S8",
+          "lines": [
+            {
+              "words": [
+                263,
+                267
+              ],
+              "text": "Why does he do this?"
+            }
+          ]
+        },
+        {
+          "start": 367.148,
+          "end": 368.678,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                268,
+                272
+              ],
+              "text": "We already tried that one!"
+            }
+          ]
+        },
+        {
+          "start": 371.988,
+          "end": 373.888,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                273,
+                273
+              ],
+              "text": "Abort!"
+            },
+            {
+              "words": [
+                274,
+                274
+              ],
+              "text": "Cut!"
+            }
+          ]
+        },
+        {
+          "start": 374.208,
+          "end": 375.208,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                275,
+                275
+              ],
+              "text": "Whoa!"
+            }
+          ]
+        },
+        {
+          "start": 380.848,
+          "end": 381.848,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                276,
+                277
+              ],
+              "text": "No! No!"
+            }
+          ]
+        },
+        {
+          "start": 383.628,
+          "end": 384.948,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                278,
+                281
+              ],
+              "text": "You broke my heart."
+            }
+          ]
+        },
+        {
+          "start": 386.148,
+          "end": 387.148,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                282,
+                283
+              ],
+              "text": "I know."
+            }
+          ]
+        },
+        {
+          "start": 387.228,
+          "end": 388.648,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                284,
+                288
+              ],
+              "text": "You forgot me on Earth."
+            }
+          ]
+        },
+        {
+          "start": 389.508,
+          "end": 392.128,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                289,
+                290
+              ],
+              "text": "I know."
+            },
+            {
+              "words": [
+                291,
+                295
+              ],
+              "text": "I should just crush you!"
+            }
+          ]
+        },
+        {
+          "start": 407.468,
+          "end": 408.468,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                296,
+                298
+              ],
+              "text": "I’m… I’m sorry."
+            }
+          ]
+        },
+        {
+          "start": 410.388,
+          "end": 411.388,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                299,
+                301
+              ],
+              "text": "Good ad lib."
+            }
+          ]
+        },
+        {
+          "start": 419.388,
+          "end": 420.388,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                302,
+                304
+              ],
+              "text": "Not my fault."
+            }
+          ]
+        },
+        {
+          "start": 422.368,
+          "end": 423.368,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                305,
+                306
+              ],
+              "text": "This time."
+            }
+          ]
+        },
+        {
+          "start": 428.608,
+          "end": 430.848,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                307,
+                309
+              ],
+              "text": "Quiet on set."
+            },
+            {
+              "words": [
+                310,
+                313
+              ],
+              "text": "We're out of time."
+            }
+          ]
+        },
+        {
+          "start": 430.848,
+          "end": 431.907,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                314,
+                317
+              ],
+              "text": "We're out of time!"
+            }
+          ]
+        },
+        {
+          "start": 504.068,
+          "end": 505.688,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                318,
+                321
+              ],
+              "text": "Memory override at 90%."
+            }
+          ]
+        },
+        {
+          "start": 506.528,
+          "end": 508.368,
+          "speaker": "S9",
+          "lines": [
+            {
+              "words": [
+                322,
+                322
+              ],
+              "text": "Captain,"
+            },
+            {
+              "words": [
+                323,
+                326
+              ],
+              "text": "we have to abort!"
+            }
+          ]
+        },
+        {
+          "start": 519.228,
+          "end": 520.817,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                327,
+                330
+              ],
+              "text": "The world’s changed, Celia."
+            }
+          ]
+        },
+        {
+          "start": 535.148,
+          "end": 536.148,
+          "speaker": "S10",
+          "lines": [
+            {
+              "words": [
+                331,
+                334
+              ],
+              "text": "Maybe we can too."
+            }
+          ]
+        },
+        {
+          "start": 538.268,
+          "end": 539.739,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                335,
+                337
+              ],
+              "text": "Memory override complete."
+            }
+          ]
+        },
+        {
+          "start": 559.208,
+          "end": 560.208,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                338,
+                339
+              ],
+              "text": "You know,"
+            }
+          ]
+        },
+        {
+          "start": 561.988,
+          "end": 564.4,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                340,
+                347
+              ],
+              "text": "there’s a lesson to be learned from this."
+            }
+          ]
+        },
+        {
+          "start": 565.988,
+          "end": 567.165,
+          "speaker": "S8",
+          "lines": [
+            {
+              "words": [
+                348,
+                350
+              ],
+              "text": "Could've gone worse."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vertical",
+      "description": "Phone",
+      "aspect": "9:16",
+      "rules": {
+        "maxCharsPerLine": 22,
+        "maxLines": 2,
+        "maxCps": 15,
+        "minDuration": 0.8,
+        "maxDuration": 5
+      },
+      "cues": [
+        {
+          "start": 2.36,
+          "end": 3.227,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                0,
+                1
+              ],
+              "text": "Roger, Roger."
+            }
+          ]
+        },
+        {
+          "start": 4.76,
+          "end": 6.494,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                2,
+                4
+              ],
+              "text": "We have main"
+            },
+            {
+              "words": [
+                5,
+                6
+              ],
+              "text": "engine start."
+            }
+          ]
+        },
+        {
+          "start": 6.9,
+          "end": 9.62,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                7,
+                8
+              ],
+              "text": "Four, three,"
+            },
+            {
+              "words": [
+                9,
+                10
+              ],
+              "text": "two, one."
+            }
+          ]
+        },
+        {
+          "start": 10.6,
+          "end": 11.4,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                11,
+                11
+              ],
+              "text": "Now."
+            }
+          ]
+        },
+        {
+          "start": 23.24,
+          "end": 24.52,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                12,
+                15
+              ],
+              "text": "You're a jerk, Thom!"
+            }
+          ]
+        },
+        {
+          "start": 24.52,
+          "end": 25.38,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                16,
+                17
+              ],
+              "text": "Look, Celia,"
+            }
+          ]
+        },
+        {
+          "start": 25.38,
+          "end": 27.38,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                18,
+                21
+              ],
+              "text": "we have to follow"
+            },
+            {
+              "words": [
+                22,
+                23
+              ],
+              "text": "our passions."
+            }
+          ]
+        },
+        {
+          "start": 27.38,
+          "end": 28.66,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                24,
+                27
+              ],
+              "text": "You have your robotics"
+            },
+            {
+              "words": [
+                28,
+                30
+              ],
+              "text": "and I just"
+            }
+          ]
+        },
+        {
+          "start": 28.66,
+          "end": 30.527,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                31,
+                34
+              ],
+              "text": "want to be awesome"
+            },
+            {
+              "words": [
+                35,
+                36
+              ],
+              "text": "in space."
+            }
+          ]
+        },
+        {
+          "start": 30.7,
+          "end": 31.9,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                37,
+                39
+              ],
+              "text": "Why don’t you"
+            },
+            {
+              "words": [
+                40,
+                41
+              ],
+              "text": "just admit"
+            }
+          ]
+        },
+        {
+          "start": 31.9,
+          "end": 34.634,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                42,
+                44
+              ],
+              "text": "that you’re freaked"
+            },
+            {
+              "words": [
+                45,
+                49
+              ],
+              "text": "out by my robot hand?"
+            }
+          ]
+        },
+        {
+          "start": 34.8,
+          "end": 37.01,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                50,
+                52
+              ],
+              "text": "I’m not freaked"
+            },
+            {
+              "words": [
+                53,
+                56
+              ],
+              "text": "out by it. It’s…"
+            }
+          ]
+        },
+        {
+          "start": 37.64,
+          "end": 38.7,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                57,
+                59
+              ],
+              "text": "All right, fine."
+            }
+          ]
+        },
+        {
+          "start": 38.7,
+          "end": 39.48,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                60,
+                62
+              ],
+              "text": "I’m freaked out."
+            }
+          ]
+        },
+        {
+          "start": 39.48,
+          "end": 40.9,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                63,
+                65
+              ],
+              "text": "I’m having nightmares"
+            },
+            {
+              "words": [
+                66,
+                69
+              ],
+              "text": "that I’m being chased"
+            }
+          ]
+        },
+        {
+          "start": 40.9,
+          "end": 42.9,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                70,
+                73
+              ],
+              "text": "by these giant robotic"
+            },
+            {
+              "words": [
+                74,
+                76
+              ],
+              "text": "claws of death."
+            }
+          ]
+        },
+        {
+          "start": 42.9,
+          "end": 45.06,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                77,
+                79
+              ],
+              "text": "Oh, whatever, Thom!"
+            },
+            {
+              "words": [
+                80,
+                81
+              ],
+              "text": "We’re done."
+            }
+          ]
+        },
+        {
+          "start": 50.14,
+          "end": 53.68,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                82,
+                84
+              ],
+              "text": "Robot’s memory synced"
+            },
+            {
+              "words": [
+                85,
+                86
+              ],
+              "text": "and locked."
+            }
+          ]
+        },
+        {
+          "start": 60.96,
+          "end": 62.427,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                87,
+                90
+              ],
+              "text": "This is pretty freaky."
+            }
+          ]
+        },
+        {
+          "start": 117.76,
+          "end": 119.627,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                91,
+                92
+              ],
+              "text": "Shouldn’t you"
+            },
+            {
+              "words": [
+                93,
+                95
+              ],
+              "text": "be down there?"
+            }
+          ]
+        },
+        {
+          "start": 131.4,
+          "end": 133.8,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                96,
+                99
+              ],
+              "text": "I heard you guys"
+            },
+            {
+              "words": [
+                100,
+                102
+              ],
+              "text": "talking last night."
+            }
+          ]
+        },
+        {
+          "start": 136.5,
+          "end": 138.367,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                103,
+                106
+              ],
+              "text": "It’s not my fault,"
+            },
+            {
+              "words": [
+                107,
+                108
+              ],
+              "text": "you know."
+            }
+          ]
+        },
+        {
+          "start": 191.44,
+          "end": 193.66,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                109,
+                112
+              ],
+              "text": "Are you ready? Of"
+            },
+            {
+              "words": [
+                113,
+                115
+              ],
+              "text": "course you’re ready,"
+            }
+          ]
+        },
+        {
+          "start": 193.66,
+          "end": 194.927,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                116,
+                119
+              ],
+              "text": "you’re a rock star."
+            }
+          ]
+        },
+        {
+          "start": 197.22,
+          "end": 198.887,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                120,
+                121
+              ],
+              "text": "How’s it"
+            },
+            {
+              "words": [
+                122,
+                123
+              ],
+              "text": "looking, Barley?"
+            }
+          ]
+        },
+        {
+          "start": 198.9,
+          "end": 201.1,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                124,
+                126
+              ],
+              "text": "We should have"
+            },
+            {
+              "words": [
+                127,
+                129
+              ],
+              "text": "about ten minutes."
+            }
+          ]
+        },
+        {
+          "start": 201.82,
+          "end": 203.22,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                130,
+                132
+              ],
+              "text": "Well, that’s perfect."
+            }
+          ]
+        },
+        {
+          "start": 203.68,
+          "end": 204.58,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                133,
+                135
+              ],
+              "text": "We’re on one."
+            }
+          ]
+        },
+        {
+          "start": 205.3,
+          "end": 206.56,
+          "speaker": "S7",
+          "lines": [
+            {
+              "words": [
+                136,
+                138
+              ],
+              "text": "All systems go."
+            }
+          ]
+        },
+        {
+          "start": 206.62,
+          "end": 208.68,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                139,
+                142
+              ],
+              "text": "Yeah, you, go! Go!"
+            }
+          ]
+        },
+        {
+          "start": 210.16,
+          "end": 211.22,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                143,
+                145
+              ],
+              "text": "Move your asses."
+            }
+          ]
+        },
+        {
+          "start": 211.22,
+          "end": 214.18,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                146,
+                148
+              ],
+              "text": "Go, go, go!"
+            },
+            {
+              "words": [
+                149,
+                151
+              ],
+              "text": "I love it!"
+            }
+          ]
+        },
+        {
+          "start": 214.26,
+          "end": 215.64,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                152,
+                153
+              ],
+              "text": "Come on!"
+            },
+            {
+              "words": [
+                154,
+                154
+              ],
+              "text": "Go!"
+            }
+          ]
+        },
+        {
+          "start": 222.96,
+          "end": 223.84,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                155,
+                156
+              ],
+              "text": "That’s nice."
+            }
+          ]
+        },
+        {
+          "start": 224.72,
+          "end": 226.654,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                157,
+                159
+              ],
+              "text": "Nothing to worry"
+            },
+            {
+              "words": [
+                160,
+                161
+              ],
+              "text": "about, Thom."
+            }
+          ]
+        },
+        {
+          "start": 230.76,
+          "end": 231.56,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                162,
+                162
+              ],
+              "text": "Thom,"
+            }
+          ]
+        },
+        {
+          "start": 232.16,
+          "end": 236.3,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                163,
+                165
+              ],
+              "text": "there she is."
+            },
+            {
+              "words": [
+                166,
+                169
+              ],
+              "text": "Now, you love her."
+            }
+          ]
+        },
+        {
+          "start": 237.56,
+          "end": 238.827,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                170,
+                172
+              ],
+              "text": "She’s your passion."
+            }
+          ]
+        },
+        {
+          "start": 239.78,
+          "end": 242.08,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                173,
+                176
+              ],
+              "text": "Be tender to her."
+            },
+            {
+              "words": [
+                177,
+                178
+              ],
+              "text": "Be honest."
+            }
+          ]
+        },
+        {
+          "start": 243.74,
+          "end": 244.54,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                179,
+                180
+              ],
+              "text": "Be tender."
+            }
+          ]
+        },
+        {
+          "start": 245.6,
+          "end": 247.92,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                181,
+                182
+              ],
+              "text": "Remind her"
+            },
+            {
+              "words": [
+                183,
+                185
+              ],
+              "text": "what love is."
+            }
+          ]
+        },
+        {
+          "start": 294.38,
+          "end": 294.43,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                186,
+                186
+              ],
+              "text": "And…"
+            }
+          ]
+        },
+        {
+          "start": 294.43,
+          "end": 295.23,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                187,
+                187
+              ],
+              "text": "action!"
+            }
+          ]
+        },
+        {
+          "start": 296.8,
+          "end": 298.667,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                188,
+                189
+              ],
+              "text": "Memory override"
+            },
+            {
+              "words": [
+                190,
+                191
+              ],
+              "text": "in progress."
+            }
+          ]
+        },
+        {
+          "start": 299.3,
+          "end": 300.634,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                192,
+                195
+              ],
+              "text": "You’re a jerk, Thom."
+            }
+          ]
+        },
+        {
+          "start": 302.2,
+          "end": 303.04,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                196,
+                197
+              ],
+              "text": "Oh, sorry."
+            }
+          ]
+        },
+        {
+          "start": 303.8,
+          "end": 304.6,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                198,
+                198
+              ],
+              "text": "Sorry."
+            }
+          ]
+        },
+        {
+          "start": 305.2,
+          "end": 306,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                199,
+                199
+              ],
+              "text": "Sorry."
+            }
+          ]
+        },
+        {
+          "start": 316.04,
+          "end": 316.84,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                200,
+                201
+              ],
+              "text": "Look, Celia,"
+            }
+          ]
+        },
+        {
+          "start": 318.42,
+          "end": 320.487,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                202,
+                205
+              ],
+              "text": "we have to follow"
+            },
+            {
+              "words": [
+                206,
+                207
+              ],
+              "text": "our passions."
+            }
+          ]
+        },
+        {
+          "start": 321.46,
+          "end": 322.927,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                208,
+                211
+              ],
+              "text": "You have your robotics"
+            }
+          ]
+        },
+        {
+          "start": 325.18,
+          "end": 326.3,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                212,
+                212
+              ],
+              "text": "and…"
+            },
+            {
+              "words": [
+                213,
+                214
+              ],
+              "text": "I just"
+            }
+          ]
+        },
+        {
+          "start": 326.3,
+          "end": 328.167,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                215,
+                218
+              ],
+              "text": "want to be awesome"
+            },
+            {
+              "words": [
+                219,
+                220
+              ],
+              "text": "in space."
+            }
+          ]
+        },
+        {
+          "start": 339.12,
+          "end": 340.38,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                221,
+                223
+              ],
+              "text": "Okay, they're coming."
+            }
+          ]
+        },
+        {
+          "start": 340.38,
+          "end": 342.38,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                224,
+                226
+              ],
+              "text": "Two minutes left."
+            },
+            {
+              "words": [
+                227,
+                228
+              ],
+              "text": "Two minutes."
+            }
+          ]
+        },
+        {
+          "start": 342.94,
+          "end": 344.14,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                229,
+                232
+              ],
+              "text": "Speed it up, Thom!"
+            }
+          ]
+        },
+        {
+          "start": 344.96,
+          "end": 346.04,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                233,
+                233
+              ],
+              "text": "Vivacissimo!"
+            }
+          ]
+        },
+        {
+          "start": 347.06,
+          "end": 348.08,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                234,
+                236
+              ],
+              "text": "Why don’t you"
+            },
+            {
+              "words": [
+                237,
+                238
+              ],
+              "text": "just admit"
+            }
+          ]
+        },
+        {
+          "start": 348.08,
+          "end": 350.814,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                239,
+                241
+              ],
+              "text": "that you’re freaked"
+            },
+            {
+              "words": [
+                242,
+                246
+              ],
+              "text": "out by my robot hand?"
+            }
+          ]
+        },
+        {
+          "start": 356.92,
+          "end": 358.82,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                247,
+                248
+              ],
+              "text": "Listen, Celia,"
+            },
+            {
+              "words": [
+                249,
+                251
+              ],
+              "text": "I was young"
+            }
+          ]
+        },
+        {
+          "start": 360.04,
+          "end": 360.84,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                252,
+                254
+              ],
+              "text": "and a dick,"
+            }
+          ]
+        },
+        {
+          "start": 361.26,
+          "end": 364.06,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                255,
+                258
+              ],
+              "text": "but that's no reason"
+            },
+            {
+              "words": [
+                259,
+                262
+              ],
+              "text": "to destroy the world."
+            }
+          ]
+        },
+        {
+          "start": 365.088,
+          "end": 366.422,
+          "speaker": "S8",
+          "lines": [
+            {
+              "words": [
+                263,
+                267
+              ],
+              "text": "Why does he do this?"
+            }
+          ]
+        },
+        {
+          "start": 367.148,
+          "end": 368.882,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                268,
+                269
+              ],
+              "text": "We already"
+            },
+            {
+              "words": [
+                270,
+                272
+              ],
+              "text": "tried that one!"
+            }
+          ]
+        },
+        {
+          "start": 371.988,
+          "end": 373.888,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                273,
+                273
+              ],
+              "text": "Abort!"
+            },
+            {
+              "words": [
+                274,
+                274
+              ],
+              "text": "Cut!"
+            }
+          ]
+        },
+        {
+          "start": 374.208,
+          "end": 375.008,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                275,
+                275
+              ],
+              "text": "Whoa!"
+            }
+          ]
+        },
+        {
+          "start": 380.848,
+          "end": 381.648,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                276,
+                277
+              ],
+              "text": "No! No!"
+            }
+          ]
+        },
+        {
+          "start": 383.628,
+          "end": 384.948,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                278,
+                281
+              ],
+              "text": "You broke my heart."
+            }
+          ]
+        },
+        {
+          "start": 386.148,
+          "end": 386.948,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                282,
+                283
+              ],
+              "text": "I know."
+            }
+          ]
+        },
+        {
+          "start": 387.228,
+          "end": 389.768,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                284,
+                285
+              ],
+              "text": "You forgot"
+            },
+            {
+              "words": [
+                286,
+                290
+              ],
+              "text": "me on Earth. I know."
+            }
+          ]
+        },
+        {
+          "start": 390.628,
+          "end": 392.228,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                291,
+                293
+              ],
+              "text": "I should just"
+            },
+            {
+              "words": [
+                294,
+                295
+              ],
+              "text": "crush you!"
+            }
+          ]
+        },
+        {
+          "start": 407.468,
+          "end": 408.468,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                296,
+                298
+              ],
+              "text": "I’m… I’m sorry."
+            }
+          ]
+        },
+        {
+          "start": 410.388,
+          "end": 411.188,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                299,
+                301
+              ],
+              "text": "Good ad lib."
+            }
+          ]
+        },
+        {
+          "start": 419.388,
+          "end": 420.255,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                302,
+                304
+              ],
+              "text": "Not my fault."
+            }
+          ]
+        },
+        {
+          "start": 422.368,
+          "end": 423.168,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                305,
+                306
+              ],
+              "text": "This time."
+            }
+          ]
+        },
+        {
+          "start": 428.608,
+          "end": 430.848,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                307,
+                309
+              ],
+              "text": "Quiet on set."
+            },
+            {
+              "words": [
+                310,
+                313
+              ],
+              "text": "We're out of time."
+            }
+          ]
+        },
+        {
+          "start": 430.848,
+          "end": 432.048,
+          "speaker": "S6",
+          "lines": [
+            {
+              "words": [
+                314,
+                317
+              ],
+              "text": "We're out of time!"
+            }
+          ]
+        },
+        {
+          "start": 504.068,
+          "end": 505.688,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                318,
+                319
+              ],
+              "text": "Memory override"
+            },
+            {
+              "words": [
+                320,
+                321
+              ],
+              "text": "at 90%."
+            }
+          ]
+        },
+        {
+          "start": 506.528,
+          "end": 508.368,
+          "speaker": "S9",
+          "lines": [
+            {
+              "words": [
+                322,
+                322
+              ],
+              "text": "Captain,"
+            },
+            {
+              "words": [
+                323,
+                326
+              ],
+              "text": "we have to abort!"
+            }
+          ]
+        },
+        {
+          "start": 519.228,
+          "end": 521.028,
+          "speaker": "S3",
+          "lines": [
+            {
+              "words": [
+                327,
+                328
+              ],
+              "text": "The world’s"
+            },
+            {
+              "words": [
+                329,
+                330
+              ],
+              "text": "changed, Celia."
+            }
+          ]
+        },
+        {
+          "start": 535.148,
+          "end": 536.282,
+          "speaker": "S10",
+          "lines": [
+            {
+              "words": [
+                331,
+                334
+              ],
+              "text": "Maybe we can too."
+            }
+          ]
+        },
+        {
+          "start": 538.268,
+          "end": 539.935,
+          "speaker": "S4",
+          "lines": [
+            {
+              "words": [
+                335,
+                335
+              ],
+              "text": "Memory"
+            },
+            {
+              "words": [
+                336,
+                337
+              ],
+              "text": "override complete."
+            }
+          ]
+        },
+        {
+          "start": 559.208,
+          "end": 560.008,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                338,
+                339
+              ],
+              "text": "You know,"
+            }
+          ]
+        },
+        {
+          "start": 561.988,
+          "end": 564.722,
+          "speaker": "S5",
+          "lines": [
+            {
+              "words": [
+                340,
+                343
+              ],
+              "text": "there’s a lesson to"
+            },
+            {
+              "words": [
+                344,
+                347
+              ],
+              "text": "be learned from this."
+            }
+          ]
+        },
+        {
+          "start": 565.988,
+          "end": 567.322,
+          "speaker": "S8",
+          "lines": [
+            {
+              "words": [
+                348,
+                350
+              ],
+              "text": "Could've gone worse."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "words": [
+        15,
+        15
+      ],
+      "from": "Tom!",
+      "to": "Thom!",
+      "reason": "brand"
+    },
+    {
+      "words": [
+        74,
+        74
+      ],
+      "from": "claws.",
+      "to": "claws",
+      "reason": "punctuation"
+    },
+    {
+      "words": [
+        79,
+        79
+      ],
+      "from": "Tom!",
+      "to": "Thom!",
+      "reason": "brand"
+    },
+    {
+      "words": [
+        113,
+        113
+      ],
+      "from": "Course",
+      "to": "course",
+      "reason": "punctuation"
+    },
+    {
+      "words": [
+        134,
+        134
+      ],
+      "from": "only",
+      "to": "on",
+      "reason": "correction"
+    },
+    {
+      "words": [
+        146,
+        146
+      ],
+      "from": "go,",
+      "to": "Go,",
+      "reason": "punctuation"
+    },
+    {
+      "words": [
+        161,
+        161
+      ],
+      "from": "Tom.",
+      "to": "Thom.",
+      "reason": "brand"
+    },
+    {
+      "words": [
+        162,
+        162
+      ],
+      "from": "Tom,",
+      "to": "Thom,",
+      "reason": "brand"
+    },
+    {
+      "words": [
+        167,
+        167
+      ],
+      "from": "you’ll",
+      "to": "you",
+      "reason": "correction"
+    },
+    {
+      "words": [
+        195,
+        195
+      ],
+      "from": "Tom.",
+      "to": "Thom.",
+      "reason": "brand"
+    },
+    {
+      "words": [
+        221,
+        222
+      ],
+      "from": "Get her",
+      "to": "Okay, they're",
+      "reason": "correction"
+    },
+    {
+      "words": [
+        232,
+        232
+      ],
+      "from": "Tom!",
+      "to": "Thom!",
+      "reason": "brand"
+    },
+    {
+      "words": [
+        256,
+        256
+      ],
+      "from": "there’s",
+      "to": "that's",
+      "reason": "correction"
+    },
+    {
+      "words": [
+        265,
+        265
+      ],
+      "from": "she",
+      "to": "he",
+      "reason": "correction"
+    },
+    {
+      "words": [
+        301,
+        301
+      ],
+      "from": "lip.",
+      "to": "lib.",
+      "reason": "correction"
+    }
+  ],
+  "meta": {
+    "context": "Tears of Steel (2012), a Blender Foundation live-action science-fiction short film: in a future Amsterdam, scientists try to stop an army of robots by recreating the moment Thom broke up with Celia, the robotics student with a robot hand who built them.",
+    "contextSource": "user",
+    "textVotes": [
+      {
+        "start": 2.36,
+        "end": 3.1,
+        "class": "c",
+        "from": "",
+        "heard": {
+          "azure-speech:fast": "",
+          "elevenlabs:scribe_v2": "Roger, Roger",
+          "relisten": ""
+        },
+        "to": "Roger, Roger.",
+        "result": "changed",
+        "basis": "Scribe hears a short launch-control reply; empty re-listen is not contrary evidence."
+      },
+      {
+        "start": 10.6,
+        "end": 11.08,
+        "class": "c",
+        "from": "",
+        "heard": {
+          "azure-speech:fast": "",
+          "elevenlabs:scribe_v2": "now.",
+          "relisten": ""
+        },
+        "to": "Now.",
+        "result": "changed",
+        "basis": "Scribe hears a countdown-ending command; empty re-listen is not contrary evidence."
+      },
+      {
+        "start": 23.24,
+        "end": 23.72,
+        "class": "b",
+        "from": "You",
+        "heard": {
+          "azure-speech:fast": "You're a",
+          "elevenlabs:scribe_v2": "You're a",
+          "relisten": "You jerked him."
+        },
+        "to": "You're a",
+        "result": "changed",
+        "basis": "Azure and Scribe agree."
+      },
+      {
+        "start": 42.54,
+        "end": 43.08,
+        "class": "c",
+        "from": "Oh, shut up,",
+        "heard": {
+          "azure-speech:fast": "Oh, whatever,",
+          "elevenlabs:scribe_v2": "of death. Oh, whatever,",
+          "relisten": "of death. Oh, shut it, Erdtum."
+        },
+        "to": "of death. Oh, whatever,",
+        "result": "changed",
+        "basis": "Scribe and re-listen support 'of death'; Azure and Scribe agree on 'Oh, whatever'."
+      },
+      {
+        "start": 192.15,
+        "end": 192.23,
+        "class": "c",
+        "from": "",
+        "heard": {
+          "azure-speech:fast": "Of",
+          "elevenlabs:scribe_v2": "",
+          "relisten": "Of"
+        },
+        "to": "Of",
+        "result": "changed",
+        "basis": "Azure and snippet re-listen agree."
+      },
+      {
+        "start": 208.59,
+        "end": 211.14,
+        "class": "b",
+        "from": "Go, you assholes,",
+        "heard": {
+          "azure-speech:fast": "Move your asses.",
+          "elevenlabs:scribe_v2": "Move your asses.",
+          "relisten": ""
+        },
+        "to": "Move your asses.",
+        "result": "changed",
+        "basis": "Azure and Scribe agree."
+      },
+      {
+        "start": 234.59,
+        "end": 235.62,
+        "class": "b",
+        "from": "you’ll",
+        "heard": {
+          "azure-speech:fast": "you",
+          "elevenlabs:scribe_v2": "you",
+          "relisten": "you'll"
+        },
+        "to": "you’ll",
+        "result": "rejected:relisten",
+        "basis": "you (Azure and Scribe agree; present-tense direction fits.)"
+      },
+      {
+        "start": 343.19,
+        "end": 346.04,
+        "class": "c",
+        "from": "We can see you!",
+        "heard": {
+          "azure-speech:fast": "Why",
+          "elevenlabs:scribe_v2": "Vivacissimo.",
+          "relisten": ""
+        },
+        "to": "Vivacissimo!",
+        "result": "changed",
+        "basis": "Scribe identifies the listed name; sound matches the garbled caption."
+      },
+      {
+        "start": 365.328,
+        "end": 365.47,
+        "class": "b",
+        "from": "she",
+        "heard": {
+          "azure-speech:fast": "he",
+          "elevenlabs:scribe_v2": "he",
+          "relisten": "she"
+        },
+        "to": "she",
+        "result": "rejected:relisten",
+        "basis": "he (Azure and Scribe agree; reaction to Thom's failed line fits.)"
+      },
+      {
+        "start": 371.988,
+        "end": 374.528,
+        "class": "c",
+        "from": "Come on! Tom!",
+        "heard": {
+          "azure-speech:fast": "",
+          "elevenlabs:scribe_v2": "Abort! Cut! Whoa!",
+          "relisten": ""
+        },
+        "to": "Abort! Cut! Whoa!",
+        "result": "changed",
+        "basis": "Scribe hears shouted commands fitting the failed reenactment."
+      },
+      {
+        "start": 410.388,
+        "end": 410.82,
+        "class": "c",
+        "from": "No dead",
+        "heard": {
+          "azure-speech:fast": "Who'd that",
+          "elevenlabs:scribe_v2": "Good ad",
+          "relisten": "Who'd ad-lib?"
+        },
+        "to": "Good ad",
+        "result": "changed",
+        "basis": "Scribe hears “Good ad lib”; other hearings also suggest “ad-lib.”"
+      },
+      {
+        "start": 428.53,
+        "end": 428.93,
+        "class": "b",
+        "from": "Wire",
+        "heard": {
+          "azure-speech:fast": "Quiet",
+          "elevenlabs:scribe_v2": "Quiet",
+          "relisten": ""
+        },
+        "to": "Quiet",
+        "result": "changed",
+        "basis": "Azure and Scribe agree on “Quiet on set.”"
+      },
+      {
+        "start": 430.21,
+        "end": 431.33,
+        "class": "b",
+        "from": "Right on time, right on",
+        "heard": {
+          "azure-speech:fast": "we're out of time we're out of",
+          "elevenlabs:scribe_v2": "We're out of time. We're out of",
+          "relisten": ""
+        },
+        "to": "We're out of time. We're out of",
+        "result": "changed",
+        "basis": "Azure and Scribe agree; fits the urgent abort warning."
+      },
+      {
+        "start": 565.988,
+        "end": 566.31,
+        "class": "b",
+        "from": "Coulda,",
+        "heard": {
+          "azure-speech:fast": "Could have",
+          "elevenlabs:scribe_v2": "Could've",
+          "relisten": ""
+        },
+        "to": "Could've",
+        "result": "changed",
+        "basis": "Azure and Scribe agree on “could have”; removes the erroneous comma."
+      }
+    ],
+    "style": {
+      "numbers": "auto",
+      "currency": "auto"
+    },
+    "linebreaks": "rules",
+    "rules": "1",
+    "languageData": "f6e9d67319028070",
+    "models": {
+      "text": "azure-openai:gpt-transcribe",
+      "timing": "azure-speech:fast",
+      "llm": "azure-openai:gpt-6.1-sol",
+      "second": "elevenlabs:scribe_v2"
+    },
+    "generator": "overtone-captions@0.1.0",
+    "createdAt": "2026-10-28T14:47:49.509Z"
+  }
+}

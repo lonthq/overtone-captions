@@ -1,0 +1,10 @@
+{
+  "$schema": "../pack.schema.json",
+  "name": "minimal",
+  "title": "Minimal",
+  "description": "Quiet captions for film, interviews and editorial video: no box, a thin outline, italic emphasis, heavier key words and faint tints for names and figures.",
+  "author": "Overtone maintainers",
+  "license": "MIT",
+  "tags": ["minimal", "editorial"],
+  "contrast": "No box: two thin centered black shadows outline the text, with a soft halo for bright video. Text against the outline is 12.4:1 or more (soft text, 78% white)."
+}

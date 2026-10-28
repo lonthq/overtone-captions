@@ -1,0 +1,42 @@
+{
+  "$comment": "Clips from the test sets of the Open ASR Leaderboard (LibriSpeech test-other, Earnings-22), reported in their own section of RESULTS.md. Not part of the official set (clips.json). Selection rules and licenses: DATASETS.md. The audio is stored as FLAC. Fetch with: node bench/fetch.mjs --clips bench/clips.standard.json (checksums in bench/checksums.standard.json).",
+  "audioFormat": "flac",
+  "clips": [
+    {
+      "id": "libri-other-7018-75788",
+      "source": "librispeech-pc",
+      "split": "test-other",
+      "hfConfig": "other",
+      "speaker": 7018,
+      "chapter": 75788,
+      "first": 0,
+      "last": 17,
+      "hfRowOffset": 135,
+      "gap": 0.3,
+      "wordTimes": "mfa",
+      "language": "en",
+      "kind": "read speech (audiobook, harder test-other half), 1 speaker",
+      "context": "Audiobook: a chapter of a story read aloud by one narrator."
+    },
+    {
+      "id": "earnings22-4423872",
+      "source": "earnings22",
+      "file": "4423872",
+      "start": 2405,
+      "end": 2645,
+      "language": "en",
+      "kind": "earnings call (Chile), 2 speakers",
+      "context": "Earnings call of a Chilean bank: a manager answers an analyst's question about spreads, fees and the loan portfolio."
+    },
+    {
+      "id": "earnings22-4351517",
+      "source": "earnings22",
+      "file": "4351517",
+      "start": 910,
+      "end": 1150,
+      "language": "en",
+      "kind": "earnings call (Indonesia), 5 speakers",
+      "context": "Earnings call of an Indonesian telecom company: an operator, analysts' questions and management's answers."
+    }
+  ]
+}

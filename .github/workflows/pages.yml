@@ -1,0 +1,64 @@
+name: Pages
+
+# Builds the site (`npm run site:build`) and deploys it to GitHub Pages.
+# Enable once: Settings → Pages → Build and deployment → Source: "GitHub Actions".
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# A newer push waits instead of cancelling a deployment in progress.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      # For the hero clip (Chrome is preinstalled; webp is a fallback encoder). If recording fails, the build uses
+      # site/assets/hero.webp.
+      - name: Install ffmpeg and webp tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg webp
+          google-chrome --version
+
+      - run: npm ci
+
+      - id: pages
+        uses: actions/configure-pages@v6
+
+      # Under the repository's Pages path, with a freshly recorded hero clip (WebP + MP4, build output only).
+      - name: Build packages and site
+        run: npm run site:build -- --record
+        env:
+          SITE_BASE: ${{ steps.pages.outputs.base_path }}/
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

@@ -1,0 +1,6 @@
+{
+  "_source": "Shape of POST /v1/audio/transcriptions with response_format=json (OpenAI API reference, 'The transcription object (JSON)'): text plus token usage. `languages` is what gpt-transcribe returns (read by OpenAITextProvider).",
+  "text": "Every year, one in five drivers has some kind of car damage.",
+  "languages": [{ "code": "en" }],
+  "usage": { "type": "tokens", "input_tokens": 152, "input_token_details": { "text_tokens": 22, "audio_tokens": 130 }, "output_tokens": 15, "total_tokens": 167 }
+}

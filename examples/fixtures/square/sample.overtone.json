@@ -1,0 +1,435 @@
+{
+  "format": "overtone",
+  "version": 1,
+  "language": "en",
+  "duration": 18,
+  "speakers": [
+    {
+      "id": "S1",
+      "label": "Maya",
+      "role": "host"
+    },
+    {
+      "id": "S2",
+      "label": "Tom"
+    }
+  ],
+  "turns": [
+    {
+      "speaker": "S1",
+      "start": 0.5,
+      "end": 9.76,
+      "words": [
+        {
+          "text": "Every",
+          "start": 0.5,
+          "end": 0.823,
+          "classes": [
+            "soft"
+          ]
+        },
+        {
+          "text": "year,",
+          "start": 0.853,
+          "end": 1.123
+        },
+        {
+          "text": "one",
+          "start": 1.335,
+          "end": 1.541
+        },
+        {
+          "text": "in",
+          "start": 1.571,
+          "end": 1.726
+        },
+        {
+          "text": "five",
+          "start": 1.756,
+          "end": 2.014
+        },
+        {
+          "text": "drivers",
+          "start": 2.044,
+          "end": 2.456
+        },
+        {
+          "text": "has",
+          "start": 2.486,
+          "end": 2.693
+        },
+        {
+          "text": "some",
+          "start": 2.723,
+          "end": 2.98
+        },
+        {
+          "text": "kind",
+          "start": 3.01,
+          "end": 3.268
+        },
+        {
+          "text": "of",
+          "start": 3.298,
+          "end": 3.453
+        },
+        {
+          "text": "car",
+          "start": 3.483,
+          "end": 3.689
+        },
+        {
+          "text": "damage.",
+          "start": 3.719,
+          "end": 4.08
+        },
+        {
+          "text": "With",
+          "start": 4.7,
+          "end": 4.96
+        },
+        {
+          "text": "DriveCover",
+          "start": 4.99,
+          "end": 5.561,
+          "match": "merge",
+          "confidence": 0.91,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "from",
+          "start": 5.591,
+          "end": 5.851
+        },
+        {
+          "text": "Lumora,",
+          "start": 5.881,
+          "end": 6.245,
+          "match": "fuzzy",
+          "confidence": 0.78
+        },
+        {
+          "text": "you're",
+          "start": 6.449,
+          "end": 6.73
+        },
+        {
+          "text": "insured",
+          "start": 6.76,
+          "end": 7.134
+        },
+        {
+          "text": "from",
+          "start": 7.164,
+          "end": 7.398
+        },
+        {
+          "text": "day",
+          "start": 7.428,
+          "end": 7.615
+        },
+        {
+          "text": "one,",
+          "start": 7.645,
+          "end": 7.832
+        },
+        {
+          "text": "for",
+          "start": 8.057,
+          "end": 8.283
+        },
+        {
+          "text": "just",
+          "start": 8.313,
+          "end": 8.596
+        },
+        {
+          "text": "$12",
+          "start": 8.626,
+          "end": 9.248,
+          "match": "edited",
+          "classes": [
+            "number",
+            "key"
+          ]
+        },
+        {
+          "text": "a",
+          "start": 9.278,
+          "end": 9.391,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "month.",
+          "start": 9.421,
+          "end": 9.76,
+          "classes": [
+            "key"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 10.4,
+      "end": 13.41,
+      "words": [
+        {
+          "text": "And",
+          "start": 10.4,
+          "end": 10.62
+        },
+        {
+          "text": "the",
+          "start": 10.65,
+          "end": 10.87
+        },
+        {
+          "text": "best",
+          "start": 10.9,
+          "end": 11.174
+        },
+        {
+          "text": "part?",
+          "start": 11.204,
+          "end": 11.479
+        },
+        {
+          "text": "You",
+          "start": 11.706,
+          "end": 11.885
+        },
+        {
+          "text": "can",
+          "start": 11.915,
+          "end": 12.095
+        },
+        {
+          "text": "claim",
+          "start": 12.125,
+          "end": 12.394
+        },
+        {
+          "text": "directly",
+          "start": 12.424,
+          "end": 12.827,
+          "classes": [
+            "emphasis"
+          ]
+        },
+        {
+          "text": "in",
+          "start": 12.857,
+          "end": 12.991
+        },
+        {
+          "text": "the",
+          "start": 13.021,
+          "end": 13.201
+        },
+        {
+          "text": "app.",
+          "start": 13.231,
+          "end": 13.41
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 14.1,
+      "end": 17.023,
+      "words": [
+        {
+          "text": "So",
+          "start": 14.1,
+          "end": 14.283
+        },
+        {
+          "text": "remember:",
+          "start": 14.313,
+          "end": 14.862
+        },
+        {
+          "text": "DriveCover.",
+          "start": 15.103,
+          "end": 15.801
+        },
+        {
+          "text": "Drive",
+          "start": 16.065,
+          "end": 16.413
+        },
+        {
+          "text": "worry-free.",
+          "start": 16.443,
+          "end": 17.023
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "1x1",
+      "description": "1:1",
+      "aspect": "1:1",
+      "rules": {
+        "maxCharsPerLine": 32,
+        "maxLines": 2,
+        "maxCps": 16,
+        "minDuration": 0.9,
+        "maxDuration": 6
+      },
+      "cues": [
+        {
+          "start": 0.5,
+          "end": 4.25,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                0,
+                5
+              ],
+              "text": "Every year, one in five drivers"
+            },
+            {
+              "words": [
+                6,
+                11
+              ],
+              "text": "has some kind of car damage."
+            }
+          ]
+        },
+        {
+          "start": 4.7,
+          "end": 6.449,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                12,
+                15
+              ],
+              "text": "With DriveCover from Lumora,"
+            }
+          ]
+        },
+        {
+          "start": 6.449,
+          "end": 9.76,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                16,
+                20
+              ],
+              "text": "you're insured from day one,"
+            },
+            {
+              "words": [
+                21,
+                25
+              ],
+              "text": "for just $12 a month."
+            }
+          ]
+        },
+        {
+          "start": 10.4,
+          "end": 11.525,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                26,
+                29
+              ],
+              "text": "And the best part?"
+            }
+          ]
+        },
+        {
+          "start": 11.706,
+          "end": 13.831,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                30,
+                32
+              ],
+              "text": "You can claim"
+            },
+            {
+              "words": [
+                33,
+                36
+              ],
+              "text": "directly in the app."
+            }
+          ]
+        },
+        {
+          "start": 14.1,
+          "end": 17.023,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                37,
+                39
+              ],
+              "text": "So remember: DriveCover."
+            },
+            {
+              "words": [
+                40,
+                41
+              ],
+              "text": "Drive worry-free."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "words": [
+        13,
+        13
+      ],
+      "from": "Drive Cover",
+      "to": "DriveCover",
+      "reason": "brand"
+    },
+    {
+      "words": [
+        23,
+        23
+      ],
+      "from": "twelve dollars",
+      "to": "$12",
+      "reason": "style"
+    }
+  ],
+  "meta": {
+    "title": "Lumora DriveCover (sample)",
+    "context": "Fictional promotional clip for DriveCover, the car insurance product of Lumora Insurance",
+    "style": {
+      "numbers": "digits",
+      "currency": "symbol"
+    },
+    "generator": "overtone-captions@0.1.0",
+    "createdAt": "2026-10-18T17:56:07.521Z",
+    "linebreaks": "rules",
+    "rules": "1",
+    "languageData": "e76200dc1f891fe6"
+  }
+}

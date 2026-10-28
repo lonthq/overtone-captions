@@ -1,0 +1,97 @@
+{
+ "corrections": [
+  {
+   "edits": [
+    {
+     "first": 13,
+     "last": 14,
+     "to": "DriveCover",
+     "reason": "brand",
+     "sure": true,
+     "note": ""
+    }
+   ],
+   "speakers": [
+    {
+     "id": "S1",
+     "label": "Maya",
+     "role": "host"
+    },
+    {
+     "id": "S2",
+     "label": "Tom",
+     "role": ""
+    }
+   ]
+  }
+ ],
+ "styling": [
+  {
+   "styles": [
+    {
+     "first": 13,
+     "last": 13,
+     "classes": [
+      "brand"
+     ]
+    },
+    {
+     "first": 39,
+     "last": 39,
+     "classes": [
+      "brand"
+     ]
+    },
+    {
+     "first": 23,
+     "last": 25,
+     "classes": [
+      "number",
+      "key"
+     ]
+    },
+    {
+     "first": 28,
+     "last": 28,
+     "classes": [
+      "emphasis"
+     ]
+    }
+   ]
+  }
+ ],
+ "linebreaks-horizontal": [
+  {
+   "cueStarts": [
+    0,
+    12,
+    21,
+    26,
+    37
+   ],
+   "lineStarts": [
+    6,
+    16,
+    30
+   ]
+  }
+ ],
+ "linebreaks-vertical": [
+  {
+   "cueStarts": [],
+   "lineStarts": []
+  }
+ ],
+ "choose": [
+  {
+   "spans": [
+    {
+     "id": "0",
+     "decision": "keep",
+     "text": "Lumora,",
+     "basis": "Snippet re-listen confirms Lumora; Azure hears a similar pronunciation."
+    }
+   ]
+  }
+ ]
+}

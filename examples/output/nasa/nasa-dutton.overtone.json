@@ -1,0 +1,6268 @@
+{
+  "format": "overtone",
+  "version": 1,
+  "language": "en",
+  "duration": 145.499,
+  "speakers": [
+    {
+      "id": "S1",
+      "label": "Allard Beutel",
+      "role": "NASA public affairs officer"
+    },
+    {
+      "id": "S2",
+      "label": "Jim Dutton",
+      "role": "Astronaut"
+    }
+  ],
+  "turns": [
+    {
+      "speaker": "S1",
+      "start": 0.48,
+      "end": 11.54,
+      "words": [
+        {
+          "text": "To",
+          "start": 0.48,
+          "end": 0.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "help",
+          "start": 0.58,
+          "end": 0.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "us",
+          "start": 0.96,
+          "end": 1.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "walk",
+          "start": 1.24,
+          "end": 1.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "through",
+          "start": 1.48,
+          "end": 1.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "what",
+          "start": 2.78,
+          "end": 2.86,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "they're",
+          "start": 2.9,
+          "end": 2.98,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "doing",
+          "start": 3,
+          "end": 3.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "now,",
+          "start": 3.22,
+          "end": 3.34,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "what",
+          "start": 3.38,
+          "end": 3.46,
+          "match": "fuzzy",
+          "confidence": 0.25
+        },
+        {
+          "text": "the",
+          "start": 3.48,
+          "end": 3.53,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "crew",
+          "start": 3.56,
+          "end": 3.68,
+          "match": "split",
+          "confidence": 0.833
+        },
+        {
+          "text": "is",
+          "start": 3.68,
+          "end": 3.74,
+          "match": "split",
+          "confidence": 0.833
+        },
+        {
+          "text": "up",
+          "start": 3.78,
+          "end": 3.86,
+          "match": "fuzzy",
+          "confidence": 0
+        },
+        {
+          "text": "to,",
+          "start": 3.86,
+          "end": 3.98,
+          "match": "fuzzy",
+          "confidence": 0
+        },
+        {
+          "text": "we're",
+          "start": 4.019,
+          "end": 4.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "joined",
+          "start": 4.18,
+          "end": 4.4,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "right",
+          "start": 4.44,
+          "end": 4.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "now",
+          "start": 4.6,
+          "end": 4.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "by",
+          "start": 4.78,
+          "end": 4.94,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Colonel",
+          "start": 6.56,
+          "end": 6.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Jim",
+          "start": 6.8,
+          "end": 6.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Dutton,",
+          "start": 6.96,
+          "end": 7.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "who's",
+          "start": 7.22,
+          "end": 7.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "one",
+          "start": 7.6,
+          "end": 7.68,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "of",
+          "start": 7.7,
+          "end": 7.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "our",
+          "start": 7.8,
+          "end": 7.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "astronauts,",
+          "start": 7.94,
+          "end": 8.32,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "part",
+          "start": 8.48,
+          "end": 8.56,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "of",
+          "start": 8.58,
+          "end": 8.63,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 8.64,
+          "end": 8.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "2004",
+          "start": 8.76,
+          "end": 9.4,
+          "match": "merge",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "class.",
+          "start": 9.5,
+          "end": 9.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Jim,",
+          "start": 10.78,
+          "end": 10.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "thank",
+          "start": 10.94,
+          "end": 11.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 11.1,
+          "end": 11.15,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "for",
+          "start": 11.15,
+          "end": 11.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "joining",
+          "start": 11.24,
+          "end": 11.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "us.",
+          "start": 11.46,
+          "end": 11.54,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 11.92,
+      "end": 13.1,
+      "words": [
+        {
+          "text": "It's",
+          "start": 11.92,
+          "end": 11.98,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "great",
+          "start": 12.02,
+          "end": 12.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 12.18,
+          "end": 12.23,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "be",
+          "start": 12.26,
+          "end": 12.34,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "here,",
+          "start": 12.38,
+          "end": 12.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Allard.",
+          "start": 12.54,
+          "end": 12.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Thanks.",
+          "start": 12.86,
+          "end": 13.1,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 13.64,
+      "end": 18.68,
+      "words": [
+        {
+          "text": "Well,",
+          "start": 13.64,
+          "end": 13.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "if",
+          "start": 13.78,
+          "end": 13.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 13.88,
+          "end": 13.93,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "wouldn't",
+          "start": 13.96,
+          "end": 14.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "mind,",
+          "start": 14.1,
+          "end": 14.28,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we've",
+          "start": 14.36,
+          "end": 14.41,
+          "match": "fuzzy",
+          "confidence": 0
+        },
+        {
+          "text": "got",
+          "start": 14.41,
+          "end": 14.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 14.46,
+          "end": 14.51,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "couple",
+          "start": 14.52,
+          "end": 14.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "minutes",
+          "start": 14.7,
+          "end": 14.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "before",
+          "start": 15.86,
+          "end": 15.98,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 16,
+          "end": 16.059,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "see",
+          "start": 16.1,
+          "end": 16.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 16.2,
+          "end": 16.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "crew,",
+          "start": 16.3,
+          "end": 16.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "why",
+          "start": 16.52,
+          "end": 16.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "don't",
+          "start": 16.64,
+          "end": 16.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 16.84,
+          "end": 16.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "walk",
+          "start": 17.14,
+          "end": 17.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "us",
+          "start": 17.3,
+          "end": 17.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "through",
+          "start": 17.4,
+          "end": 17.56,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you?",
+          "start": 18.52,
+          "end": 18.68,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 20.38,
+      "end": 38.9,
+      "words": [
+        {
+          "text": "Okay.",
+          "start": 20.38,
+          "end": 20.64,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "A",
+          "start": 20.78,
+          "end": 20.83,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "little",
+          "start": 20.86,
+          "end": 20.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "about",
+          "start": 20.98,
+          "end": 21.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "me:",
+          "start": 21.24,
+          "end": 21.4,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 21.94,
+          "end": 21.99,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "grew",
+          "start": 22.04,
+          "end": 22.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "up",
+          "start": 22.18,
+          "end": 22.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "in",
+          "start": 22.3,
+          "end": 22.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Eugene,",
+          "start": 22.42,
+          "end": 22.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Oregon.",
+          "start": 22.74,
+          "end": 23.12,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 23.36,
+          "end": 23.41,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "joined",
+          "start": 23.48,
+          "end": 23.64,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 23.66,
+          "end": 23.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Astronaut",
+          "start": 23.78,
+          "end": 24.1,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "Corps",
+          "start": 24.2,
+          "end": 24.36,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "about",
+          "start": 24.4,
+          "end": 24.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "four",
+          "start": 24.62,
+          "end": 24.74,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "years",
+          "start": 24.82,
+          "end": 24.98,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "ago,",
+          "start": 25.02,
+          "end": 25.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "as",
+          "start": 25.2,
+          "end": 25.28,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 25.3,
+          "end": 25.4,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "said,",
+          "start": 25.44,
+          "end": 25.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "May",
+          "start": 26.1,
+          "end": 26.22,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "of",
+          "start": 26.26,
+          "end": 26.34,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "2004,",
+          "start": 26.38,
+          "end": 27.18,
+          "match": "merge",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "with",
+          "start": 28.04,
+          "end": 28.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 28.26,
+          "end": 28.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "class",
+          "start": 29.12,
+          "end": 29.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 29.4,
+          "end": 29.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "affectionately",
+          "start": 29.52,
+          "end": 30.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "call",
+          "start": 30.1,
+          "end": 30.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 30.3,
+          "end": 30.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Peacocks.",
+          "start": 30.42,
+          "end": 30.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "And",
+          "start": 32.52,
+          "end": 32.86,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "my",
+          "start": 33.28,
+          "end": 33.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "background",
+          "start": 33.58,
+          "end": 33.94,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "is",
+          "start": 33.98,
+          "end": 34.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "with",
+          "start": 34.12,
+          "end": 34.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 34.24,
+          "end": 34.29,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Air",
+          "start": 34.32,
+          "end": 34.4,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "Force.",
+          "start": 34.5,
+          "end": 34.7,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "I",
+          "start": 34.78,
+          "end": 34.83,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "was",
+          "start": 34.83,
+          "end": 34.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 34.94,
+          "end": 34.99,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "test",
+          "start": 35.02,
+          "end": 35.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "pilot,",
+          "start": 35.26,
+          "end": 35.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "and",
+          "start": 35.92,
+          "end": 36.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "before",
+          "start": 36.18,
+          "end": 36.44,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that",
+          "start": 36.5,
+          "end": 36.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 36.74,
+          "end": 36.82,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "flew",
+          "start": 36.88,
+          "end": 37.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "as",
+          "start": 37.14,
+          "end": 37.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "an",
+          "start": 37.24,
+          "end": 37.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "operational",
+          "start": 37.36,
+          "end": 37.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "pilot",
+          "start": 37.82,
+          "end": 38.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "in",
+          "start": 38.06,
+          "end": 38.11,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 38.12,
+          "end": 38.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "F-15",
+          "start": 38.24,
+          "end": 38.62,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "Eagle.",
+          "start": 38.68,
+          "end": 38.9,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 40.62,
+      "end": 47.48,
+      "words": [
+        {
+          "text": "I",
+          "start": 40.62,
+          "end": 40.67,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 40.7,
+          "end": 40.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to—you",
+          "start": 40.9,
+          "end": 41.86,
+          "match": "merge",
+          "confidence": 0.833
+        },
+        {
+          "text": "opened",
+          "start": 42.12,
+          "end": 42.28,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "it",
+          "start": 42.3,
+          "end": 42.35,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "up,",
+          "start": 42.38,
+          "end": 42.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 42.54,
+          "end": 42.59,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 42.62,
+          "end": 42.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 42.78,
+          "end": 42.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "ask.",
+          "start": 42.88,
+          "end": 43.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "This",
+          "start": 43.12,
+          "end": 43.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "is",
+          "start": 43.22,
+          "end": 43.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "what",
+          "start": 43.32,
+          "end": 43.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "happened:",
+          "start": 43.46,
+          "end": 43.64,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 44.26,
+          "end": 44.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "classes",
+          "start": 44.44,
+          "end": 44.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "give",
+          "start": 45.04,
+          "end": 45.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "themselves",
+          "start": 45.16,
+          "end": 45.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "different",
+          "start": 45.52,
+          "end": 45.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "names,",
+          "start": 45.78,
+          "end": 46.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "and",
+          "start": 46.1,
+          "end": 46.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Peacock.",
+          "start": 46.28,
+          "end": 46.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Why",
+          "start": 46.88,
+          "end": 47.02,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 47.06,
+          "end": 47.11,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Peacock?",
+          "start": 47.16,
+          "end": 47.48,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 47.94,
+      "end": 102.44,
+      "words": [
+        {
+          "text": "Well,",
+          "start": 47.94,
+          "end": 48.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 48.12,
+          "end": 48.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "didn't",
+          "start": 48.22,
+          "end": 48.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "give",
+          "start": 48.4,
+          "end": 48.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "ourselves",
+          "start": 48.52,
+          "end": 48.86,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that",
+          "start": 48.9,
+          "end": 49,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "name.",
+          "start": 49.08,
+          "end": 49.32,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Although",
+          "start": 50.06,
+          "end": 50.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I'll",
+          "start": 50.52,
+          "end": 50.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "say",
+          "start": 50.68,
+          "end": 50.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 51.54,
+          "end": 51.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "took",
+          "start": 51.68,
+          "end": 51.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "it",
+          "start": 51.82,
+          "end": 51.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "over",
+          "start": 51.94,
+          "end": 52.12,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "an",
+          "start": 52.18,
+          "end": 52.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "alternative",
+          "start": 52.3,
+          "end": 52.8,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that",
+          "start": 52.84,
+          "end": 52.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 52.96,
+          "end": 53.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "preferred",
+          "start": 53.1,
+          "end": 53.5,
+          "match": "edited",
+          "confidence": 1
+        },
+        {
+          "text": "Peacock",
+          "start": 54.04,
+          "end": 54.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 54.54,
+          "end": 54.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 54.72,
+          "end": 54.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "other",
+          "start": 54.84,
+          "end": 54.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "one.",
+          "start": 55,
+          "end": 55.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "But",
+          "start": 56.32,
+          "end": 56.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "when",
+          "start": 57.08,
+          "end": 57.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 57.22,
+          "end": 57.32,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "first",
+          "start": 57.38,
+          "end": 57.56,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "came",
+          "start": 57.62,
+          "end": 57.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "in,",
+          "start": 57.82,
+          "end": 57.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 57.98,
+          "end": 58.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "were",
+          "start": 58.1,
+          "end": 58.22,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "told",
+          "start": 58.26,
+          "end": 58.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "as",
+          "start": 58.52,
+          "end": 58.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 58.64,
+          "end": 58.69,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "class",
+          "start": 58.72,
+          "end": 59,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that",
+          "start": 59.04,
+          "end": 59.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 59.14,
+          "end": 59.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "would",
+          "start": 59.24,
+          "end": 59.32,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "not",
+          "start": 59.34,
+          "end": 59.48,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "fly",
+          "start": 59.54,
+          "end": 59.74,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "on",
+          "start": 59.82,
+          "end": 60.22,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 60.28,
+          "end": 60.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "shuttle,",
+          "start": 60.4,
+          "end": 60.68,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "based",
+          "start": 61.26,
+          "end": 61.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "on",
+          "start": 61.6,
+          "end": 61.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 61.74,
+          "end": 61.79,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "way",
+          "start": 61.82,
+          "end": 61.94,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "things",
+          "start": 61.98,
+          "end": 62.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "were",
+          "start": 62.18,
+          "end": 62.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "going",
+          "start": 62.28,
+          "end": 62.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "and",
+          "start": 62.8,
+          "end": 62.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "how",
+          "start": 62.94,
+          "end": 63.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "it",
+          "start": 63.08,
+          "end": 63.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "looked",
+          "start": 63.22,
+          "end": 63.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "with",
+          "start": 63.92,
+          "end": 64.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 64.08,
+          "end": 64.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "number",
+          "start": 64.18,
+          "end": 64.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "of",
+          "start": 64.44,
+          "end": 64.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "crew",
+          "start": 64.8,
+          "end": 64.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "members",
+          "start": 64.959,
+          "end": 65.239,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "or",
+          "start": 65.519,
+          "end": 65.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "astronauts",
+          "start": 65.74,
+          "end": 66.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "who",
+          "start": 66.12,
+          "end": 66.17,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "had",
+          "start": 66.18,
+          "end": 66.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "not",
+          "start": 66.28,
+          "end": 66.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "flown",
+          "start": 66.48,
+          "end": 66.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "yet.",
+          "start": 66.78,
+          "end": 67.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "And",
+          "start": 67.64,
+          "end": 67.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "so",
+          "start": 68.86,
+          "end": 69.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "there",
+          "start": 69.16,
+          "end": 69.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "was",
+          "start": 69.26,
+          "end": 69.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "also",
+          "start": 69.44,
+          "end": 69.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 69.72,
+          "end": 69.77,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "lot",
+          "start": 69.8,
+          "end": 69.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "of",
+          "start": 70,
+          "end": 70.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "pomp",
+          "start": 70.22,
+          "end": 70.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "and",
+          "start": 70.44,
+          "end": 70.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "circumstance",
+          "start": 70.58,
+          "end": 71.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "about",
+          "start": 71.22,
+          "end": 71.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "our",
+          "start": 71.42,
+          "end": 71.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "arrival",
+          "start": 71.56,
+          "end": 71.94,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "because",
+          "start": 72,
+          "end": 72.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "of",
+          "start": 72.36,
+          "end": 72.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 72.52,
+          "end": 72.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "new",
+          "start": 72.92,
+          "end": 73.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "vision",
+          "start": 73.1,
+          "end": 73.34,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "for",
+          "start": 73.38,
+          "end": 73.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "going",
+          "start": 73.5,
+          "end": 73.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "back",
+          "start": 73.72,
+          "end": 73.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 73.94,
+          "end": 74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 74.04,
+          "end": 74.09,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Moon.",
+          "start": 74.14,
+          "end": 74.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "And",
+          "start": 74.48,
+          "end": 74.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "so",
+          "start": 75.42,
+          "end": 75.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 75.78,
+          "end": 75.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "were",
+          "start": 75.92,
+          "end": 76.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "labeled",
+          "start": 76.26,
+          "end": 76.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Peacocks",
+          "start": 76.56,
+          "end": 77,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "because",
+          "start": 77.06,
+          "end": 77.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we're",
+          "start": 77.84,
+          "end": 77.94,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "all",
+          "start": 78,
+          "end": 78.14,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "show",
+          "start": 78.2,
+          "end": 78.64,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "and",
+          "start": 78.7,
+          "end": 78.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 78.82,
+          "end": 78.9,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "don't",
+          "start": 78.94,
+          "end": 79.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "fly.",
+          "start": 79.18,
+          "end": 79.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "So",
+          "start": 80.3,
+          "end": 80.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "I",
+          "start": 80.68,
+          "end": 80.73,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "think",
+          "start": 80.74,
+          "end": 80.86,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 80.88,
+          "end": 80.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "can,",
+          "start": 81,
+          "end": 81.14,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "you",
+          "start": 81.52,
+          "end": 81.57,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "soft"
+          ]
+        },
+        {
+          "text": "know,",
+          "start": 81.6,
+          "end": 81.66,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "soft"
+          ]
+        },
+        {
+          "text": "take",
+          "start": 81.74,
+          "end": 81.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "pride",
+          "start": 81.92,
+          "end": 82.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "in",
+          "start": 82.12,
+          "end": 82.17,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that",
+          "start": 82.2,
+          "end": 82.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "now",
+          "start": 82.36,
+          "end": 82.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that",
+          "start": 82.56,
+          "end": 82.82,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we've",
+          "start": 82.86,
+          "end": 83,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "got",
+          "start": 83.02,
+          "end": 83.12,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "our",
+          "start": 83.16,
+          "end": 83.26,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "first",
+          "start": 83.32,
+          "end": 83.5,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "classmate",
+          "start": 83.56,
+          "end": 84.08,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "on",
+          "start": 84.12,
+          "end": 84.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "this",
+          "start": 84.24,
+          "end": 84.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "flight,",
+          "start": 84.48,
+          "end": 84.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Aki",
+          "start": 84.88,
+          "end": 85.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Hoshide,",
+          "start": 85.1,
+          "end": 85.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 86.36,
+          "end": 86.56,
+          "match": "fuzzy",
+          "confidence": 0
+        },
+        {
+          "text": "Japanese",
+          "start": 86.8,
+          "end": 87.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "astronaut,",
+          "start": 87.28,
+          "end": 87.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "and",
+          "start": 88.32,
+          "end": 88.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we're",
+          "start": 89.48,
+          "end": 89.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "going",
+          "start": 89.6,
+          "end": 89.714,
+          "match": "split",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 89.714,
+          "end": 89.764,
+          "match": "split",
+          "confidence": 1
+        },
+        {
+          "text": "start",
+          "start": 89.82,
+          "end": 90,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "seeing",
+          "start": 90.06,
+          "end": 90.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 90.2,
+          "end": 90.25,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "lot",
+          "start": 90.26,
+          "end": 90.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "more",
+          "start": 90.4,
+          "end": 90.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "of",
+          "start": 90.52,
+          "end": 90.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "our",
+          "start": 90.62,
+          "end": 90.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "classmates",
+          "start": 90.74,
+          "end": 91.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "on",
+          "start": 91.32,
+          "end": 91.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "shuttle",
+          "start": 91.84,
+          "end": 92.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "flights.",
+          "start": 92.12,
+          "end": 92.4,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "And",
+          "start": 92.48,
+          "end": 92.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "they're",
+          "start": 92.66,
+          "end": 92.8,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "trying",
+          "start": 92.84,
+          "end": 93,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 93.02,
+          "end": 93.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "get",
+          "start": 93.12,
+          "end": 93.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "actually",
+          "start": 93.46,
+          "end": 93.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "all",
+          "start": 93.76,
+          "end": 93.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 93.94,
+          "end": 94.02,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "rookies",
+          "start": 94.28,
+          "end": 94.62,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "in",
+          "start": 94.66,
+          "end": 94.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 94.74,
+          "end": 94.8,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "office,",
+          "start": 94.88,
+          "end": 95.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 95.14,
+          "end": 95.2,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "unflown",
+          "start": 95.26,
+          "end": 95.6,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "astronauts,",
+          "start": 95.68,
+          "end": 96.16,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "up",
+          "start": 96.66,
+          "end": 96.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "in",
+          "start": 96.8,
+          "end": 96.86,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "one",
+          "start": 98.1,
+          "end": 98.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "mode",
+          "start": 98.24,
+          "end": 98.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "or",
+          "start": 98.42,
+          "end": 98.47,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "another,",
+          "start": 98.5,
+          "end": 98.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "most",
+          "start": 98.8,
+          "end": 99.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "on",
+          "start": 99.1,
+          "end": 99.22,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "shuttle,",
+          "start": 99.28,
+          "end": 99.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "before",
+          "start": 101.36,
+          "end": 101.6,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 101.64,
+          "end": 101.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "retire",
+          "start": 101.76,
+          "end": 102.08,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "the",
+          "start": 102.12,
+          "end": 102.2,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "shuttle.",
+          "start": 102.24,
+          "end": 102.44,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 102.5,
+      "end": 107.22,
+      "words": [
+        {
+          "text": "As",
+          "start": 102.5,
+          "end": 102.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 102.6,
+          "end": 102.65,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "way",
+          "start": 102.66,
+          "end": 102.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 102.74,
+          "end": 102.79,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "get",
+          "start": 102.8,
+          "end": 102.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "experience",
+          "start": 102.92,
+          "end": 103.34,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 103.38,
+          "end": 103.43,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "be",
+          "start": 103.44,
+          "end": 103.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "ready",
+          "start": 103.54,
+          "end": 103.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "for,",
+          "start": 103.78,
+          "end": 104.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "obviously,",
+          "start": 104.26,
+          "end": 104.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 104.56,
+          "end": 104.64,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Constellation",
+          "start": 104.88,
+          "end": 105.3,
+          "match": "edited",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "program,",
+          "start": 105.34,
+          "end": 105.66,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "the",
+          "start": 105.76,
+          "end": 105.82,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Orion",
+          "start": 106.1,
+          "end": 106.38,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "capsule",
+          "start": 106.46,
+          "end": 106.76,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "and",
+          "start": 106.78,
+          "end": 106.83,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "spacecraft.",
+          "start": 106.88,
+          "end": 107.22,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 107.3,
+      "end": 116.36,
+      "words": [
+        {
+          "text": "Exactly.",
+          "start": 107.3,
+          "end": 107.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "We're",
+          "start": 107.74,
+          "end": 107.8,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "going",
+          "start": 107.82,
+          "end": 107.891,
+          "match": "split",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 107.891,
+          "end": 107.941,
+          "match": "split",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 107.941,
+          "end": 108.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 108.1,
+          "end": 108.15,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "five-year,",
+          "start": 108.46,
+          "end": 108.9,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "roughly,",
+          "start": 108.96,
+          "end": 109.34,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "soft"
+          ]
+        },
+        {
+          "text": "delay",
+          "start": 109.4,
+          "end": 109.76,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "between",
+          "start": 109.8,
+          "end": 110.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "shuttle",
+          "start": 110.22,
+          "end": 110.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "and",
+          "start": 111.14,
+          "end": 111.4,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "bringing",
+          "start": 111.6,
+          "end": 111.82,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Orion",
+          "start": 111.88,
+          "end": 112.2,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "online,",
+          "start": 112.26,
+          "end": 112.68,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "so",
+          "start": 112.82,
+          "end": 112.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 113,
+          "end": 113.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "want",
+          "start": 113.1,
+          "end": 113.22,
+          "match": "split",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 113.22,
+          "end": 113.28,
+          "match": "split",
+          "confidence": 1
+        },
+        {
+          "text": "carry",
+          "start": 113.32,
+          "end": 113.48,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "as",
+          "start": 113.52,
+          "end": 113.62,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "much",
+          "start": 113.66,
+          "end": 113.8,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "experience",
+          "start": 113.84,
+          "end": 114.26,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "as",
+          "start": 114.32,
+          "end": 114.38,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "we",
+          "start": 114.42,
+          "end": 114.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "can",
+          "start": 114.56,
+          "end": 114.74,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "over",
+          "start": 114.82,
+          "end": 114.98,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "into",
+          "start": 115.02,
+          "end": 115.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Constellation.",
+          "start": 115.6,
+          "end": 116.36,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 117.42,
+      "end": 123.78,
+      "words": [
+        {
+          "text": "As",
+          "start": 117.42,
+          "end": 117.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 117.5,
+          "end": 117.55,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "matter",
+          "start": 117.56,
+          "end": 117.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "of",
+          "start": 117.68,
+          "end": 117.73,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "fact,",
+          "start": 117.76,
+          "end": 117.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "NASA",
+          "start": 117.94,
+          "end": 118.14,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "is",
+          "start": 118.18,
+          "end": 118.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "also",
+          "start": 118.3,
+          "end": 118.56,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "right",
+          "start": 119.72,
+          "end": 119.8,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "now",
+          "start": 119.84,
+          "end": 119.94,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "actively",
+          "start": 120.02,
+          "end": 120.28,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "looking,",
+          "start": 120.32,
+          "end": 120.5,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "at",
+          "start": 120.52,
+          "end": 120.57,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "least",
+          "start": 120.58,
+          "end": 120.7,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "for",
+          "start": 120.72,
+          "end": 120.77,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "another",
+          "start": 120.78,
+          "end": 121,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "month",
+          "start": 121.04,
+          "end": 121.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "or",
+          "start": 121.22,
+          "end": 121.3,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "so,",
+          "start": 121.36,
+          "end": 121.52,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "for",
+          "start": 122.26,
+          "end": 122.44,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 122.68,
+          "end": 122.73,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "2009",
+          "start": 122.84,
+          "end": 123.42,
+          "match": "merge",
+          "confidence": 1,
+          "classes": [
+            "number"
+          ]
+        },
+        {
+          "text": "class.",
+          "start": 123.48,
+          "end": 123.78,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 123.96,
+      "end": 124.4,
+      "words": [
+        {
+          "text": "That's",
+          "start": 123.96,
+          "end": 124.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "correct.",
+          "start": 124.18,
+          "end": 124.4,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S1",
+      "start": 124.64,
+      "end": 127.92,
+      "words": [
+        {
+          "text": "I",
+          "start": 124.64,
+          "end": 124.69,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "think",
+          "start": 124.7,
+          "end": 124.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "pretty",
+          "start": 125.22,
+          "end": 125.34,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "probably",
+          "start": 125.44,
+          "end": 125.64,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "safe",
+          "start": 125.78,
+          "end": 125.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 125.96,
+          "end": 126.04,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "say",
+          "start": 126.08,
+          "end": 126.2,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that",
+          "start": 126.24,
+          "end": 126.32,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "that",
+          "start": 126.52,
+          "end": 126.72,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "class",
+          "start": 126.76,
+          "end": 126.98,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "will",
+          "start": 127,
+          "end": 127.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "not",
+          "start": 127.08,
+          "end": 127.22,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "fly",
+          "start": 127.26,
+          "end": 127.4,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "on",
+          "start": 127.42,
+          "end": 127.47,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 127.5,
+          "end": 127.56,
+          "match": "fuzzy",
+          "confidence": 0
+        },
+        {
+          "text": "shuttle.",
+          "start": 127.6,
+          "end": 127.92,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    },
+    {
+      "speaker": "S2",
+      "start": 128.16,
+      "end": 142.96,
+      "words": [
+        {
+          "text": "That's",
+          "start": 128.16,
+          "end": 128.34,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "true.",
+          "start": 128.38,
+          "end": 128.539,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "They",
+          "start": 128.84,
+          "end": 128.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "are",
+          "start": 129.039,
+          "end": 129.22,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "being",
+          "start": 129.419,
+          "end": 129.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "brought",
+          "start": 129.62,
+          "end": 129.8,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "in",
+          "start": 129.84,
+          "end": 129.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 130,
+          "end": 130.28,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "actually",
+          "start": 130.38,
+          "end": 130.66,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "fly",
+          "start": 130.699,
+          "end": 130.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "on",
+          "start": 130.9,
+          "end": 130.979,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "station",
+          "start": 131.06,
+          "end": 131.42,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "during",
+          "start": 131.92,
+          "end": 132.08,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 132.12,
+          "end": 132.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "interim",
+          "start": 132.2,
+          "end": 132.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "before",
+          "start": 132.54,
+          "end": 132.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Constellation",
+          "start": 133.36,
+          "end": 133.9,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "and",
+          "start": 133.92,
+          "end": 133.98,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "then",
+          "start": 134.02,
+          "end": 134.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "obviously",
+          "start": 134.18,
+          "end": 134.56,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "carry",
+          "start": 134.62,
+          "end": 134.78,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "on",
+          "start": 134.84,
+          "end": 134.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "into",
+          "start": 135.02,
+          "end": 135.24,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "Constellation.",
+          "start": 135.28,
+          "end": 136.02,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "brand"
+          ]
+        },
+        {
+          "text": "So,",
+          "start": 136.1,
+          "end": 136.22,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "yeah,",
+          "start": 136.74,
+          "end": 136.82,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "it's",
+          "start": 136.86,
+          "end": 136.96,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "very",
+          "start": 136.98,
+          "end": 137.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "exciting.",
+          "start": 137.12,
+          "end": 137.48,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "It'll",
+          "start": 137.52,
+          "end": 137.68,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "be",
+          "start": 137.72,
+          "end": 137.88,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 137.98,
+          "end": 138.12,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "five-year",
+          "start": 138.18,
+          "end": 138.48,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key",
+            "number"
+          ]
+        },
+        {
+          "text": "gap,",
+          "start": 138.58,
+          "end": 138.84,
+          "match": "exact",
+          "confidence": 1,
+          "classes": [
+            "key"
+          ]
+        },
+        {
+          "text": "which",
+          "start": 138.88,
+          "end": 139,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "is",
+          "start": 139.04,
+          "end": 139.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "a",
+          "start": 139.16,
+          "end": 139.21,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "very",
+          "start": 139.22,
+          "end": 139.34,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "long",
+          "start": 139.42,
+          "end": 139.58,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "gap,",
+          "start": 139.66,
+          "end": 139.92,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "and",
+          "start": 139.98,
+          "end": 140.18,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "it's",
+          "start": 140.5,
+          "end": 140.64,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "going",
+          "start": 140.66,
+          "end": 140.717,
+          "match": "split",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 140.717,
+          "end": 140.767,
+          "match": "split",
+          "confidence": 1
+        },
+        {
+          "text": "be",
+          "start": 140.78,
+          "end": 140.84,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "great",
+          "start": 140.88,
+          "end": 141.06,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "to",
+          "start": 141.1,
+          "end": 141.16,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "have",
+          "start": 141.22,
+          "end": 141.4,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "some",
+          "start": 141.84,
+          "end": 141.94,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "new",
+          "start": 141.98,
+          "end": 142.1,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "folks",
+          "start": 142.16,
+          "end": 142.36,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "in",
+          "start": 142.4,
+          "end": 142.46,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "the",
+          "start": 142.48,
+          "end": 142.54,
+          "match": "exact",
+          "confidence": 1
+        },
+        {
+          "text": "office.",
+          "start": 142.64,
+          "end": 142.96,
+          "match": "exact",
+          "confidence": 1
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "horizontal",
+      "description": "TV/desktop",
+      "aspect": "16:9",
+      "rules": {
+        "maxCharsPerLine": 42,
+        "maxLines": 2,
+        "maxCps": 17,
+        "minDuration": 1,
+        "maxDuration": 7
+      },
+      "cues": [
+        {
+          "start": 0.48,
+          "end": 1.833,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                0,
+                4
+              ],
+              "text": "To help us walk through"
+            }
+          ]
+        },
+        {
+          "start": 2.78,
+          "end": 6.16,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                5,
+                11
+              ],
+              "text": "what they're doing now, what the crew"
+            },
+            {
+              "words": [
+                12,
+                19
+              ],
+              "text": "is up to, we're joined right now by"
+            }
+          ]
+        },
+        {
+          "start": 6.56,
+          "end": 8.48,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                20,
+                22
+              ],
+              "text": "Colonel Jim Dutton,"
+            },
+            {
+              "words": [
+                23,
+                27
+              ],
+              "text": "who's one of our astronauts,"
+            }
+          ]
+        },
+        {
+          "start": 8.48,
+          "end": 11.657,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                28,
+                32
+              ],
+              "text": "part of the 2004 class."
+            },
+            {
+              "words": [
+                33,
+                38
+              ],
+              "text": "Jim, thank you for joining us."
+            }
+          ]
+        },
+        {
+          "start": 11.92,
+          "end": 13.64,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                39,
+                45
+              ],
+              "text": "It's great to be here, Allard. Thanks."
+            }
+          ]
+        },
+        {
+          "start": 13.64,
+          "end": 14.36,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                46,
+                50
+              ],
+              "text": "Well, if you wouldn't mind,"
+            }
+          ]
+        },
+        {
+          "start": 14.36,
+          "end": 16.52,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                51,
+                55
+              ],
+              "text": "we've got a couple minutes"
+            },
+            {
+              "words": [
+                56,
+                60
+              ],
+              "text": "before we see the crew,"
+            }
+          ]
+        },
+        {
+          "start": 16.52,
+          "end": 18.68,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                61,
+                66
+              ],
+              "text": "why don't you walk us through"
+            },
+            {
+              "words": [
+                67,
+                67
+              ],
+              "text": "you?"
+            }
+          ]
+        },
+        {
+          "start": 20.38,
+          "end": 23.36,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                68,
+                72
+              ],
+              "text": "Okay. A little about me:"
+            },
+            {
+              "words": [
+                73,
+                78
+              ],
+              "text": "I grew up in Eugene, Oregon."
+            }
+          ]
+        },
+        {
+          "start": 23.36,
+          "end": 27.831,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                79,
+                85
+              ],
+              "text": "I joined the Astronaut Corps about four"
+            },
+            {
+              "words": [
+                86,
+                93
+              ],
+              "text": "years ago, as you said, May of 2004,"
+            }
+          ]
+        },
+        {
+          "start": 28.04,
+          "end": 31.04,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                94,
+                95
+              ],
+              "text": "with the"
+            },
+            {
+              "words": [
+                96,
+                101
+              ],
+              "text": "class we affectionately call the Peacocks."
+            }
+          ]
+        },
+        {
+          "start": 32.52,
+          "end": 34.78,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                102,
+                109
+              ],
+              "text": "And my background is with the Air Force."
+            }
+          ]
+        },
+        {
+          "start": 34.78,
+          "end": 39.78,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                110,
+                119
+              ],
+              "text": "I was a test pilot, and before that I flew"
+            },
+            {
+              "words": [
+                120,
+                127
+              ],
+              "text": "as an operational pilot in the F-15 Eagle."
+            }
+          ]
+        },
+        {
+          "start": 40.62,
+          "end": 43.12,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                128,
+                137
+              ],
+              "text": "I have to—you opened it up, I have to ask."
+            }
+          ]
+        },
+        {
+          "start": 43.12,
+          "end": 46.88,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                138,
+                144
+              ],
+              "text": "This is what happened: the classes give"
+            },
+            {
+              "words": [
+                145,
+                149
+              ],
+              "text": "themselves different names, and Peacock."
+            }
+          ]
+        },
+        {
+          "start": 46.88,
+          "end": 47.88,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                150,
+                152
+              ],
+              "text": "Why a Peacock?"
+            }
+          ]
+        },
+        {
+          "start": 47.94,
+          "end": 50.06,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                153,
+                159
+              ],
+              "text": "Well, we didn't give ourselves that name."
+            }
+          ]
+        },
+        {
+          "start": 50.06,
+          "end": 52.84,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                160,
+                162
+              ],
+              "text": "Although I'll say"
+            },
+            {
+              "words": [
+                163,
+                168
+              ],
+              "text": "we took it over an alternative"
+            }
+          ]
+        },
+        {
+          "start": 52.84,
+          "end": 55.37,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                169,
+                171
+              ],
+              "text": "that we preferred"
+            },
+            {
+              "words": [
+                172,
+                176
+              ],
+              "text": "Peacock to the other one."
+            }
+          ]
+        },
+        {
+          "start": 56.32,
+          "end": 57.98,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                177,
+                177
+              ],
+              "text": "But"
+            },
+            {
+              "words": [
+                178,
+                182
+              ],
+              "text": "when we first came in,"
+            }
+          ]
+        },
+        {
+          "start": 57.98,
+          "end": 59.04,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                183,
+                188
+              ],
+              "text": "we were told as a class"
+            }
+          ]
+        },
+        {
+          "start": 59.04,
+          "end": 62.8,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                189,
+                196
+              ],
+              "text": "that we would not fly on the shuttle,"
+            },
+            {
+              "words": [
+                197,
+                203
+              ],
+              "text": "based on the way things were going"
+            }
+          ]
+        },
+        {
+          "start": 62.8,
+          "end": 65.519,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                204,
+                207
+              ],
+              "text": "and how it looked"
+            },
+            {
+              "words": [
+                208,
+                213
+              ],
+              "text": "with the number of crew members"
+            }
+          ]
+        },
+        {
+          "start": 65.519,
+          "end": 67.64,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                214,
+                220
+              ],
+              "text": "or astronauts who had not flown yet."
+            }
+          ]
+        },
+        {
+          "start": 67.64,
+          "end": 72,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                221,
+                229
+              ],
+              "text": "And so there was also a lot of pomp"
+            },
+            {
+              "words": [
+                230,
+                234
+              ],
+              "text": "and circumstance about our arrival"
+            }
+          ]
+        },
+        {
+          "start": 72,
+          "end": 74.48,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                235,
+                239
+              ],
+              "text": "because of the new vision"
+            },
+            {
+              "words": [
+                240,
+                245
+              ],
+              "text": "for going back to the Moon."
+            }
+          ]
+        },
+        {
+          "start": 74.48,
+          "end": 77.06,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                246,
+                246
+              ],
+              "text": "And"
+            },
+            {
+              "words": [
+                247,
+                251
+              ],
+              "text": "so we were labeled Peacocks"
+            }
+          ]
+        },
+        {
+          "start": 77.06,
+          "end": 81.74,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                252,
+                259
+              ],
+              "text": "because we're all show and we don't fly."
+            },
+            {
+              "words": [
+                260,
+                266
+              ],
+              "text": "So I think we can, you know,"
+            }
+          ]
+        },
+        {
+          "start": 81.74,
+          "end": 84.88,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                267,
+                274
+              ],
+              "text": "take pride in that now that we've got"
+            },
+            {
+              "words": [
+                275,
+                280
+              ],
+              "text": "our first classmate on this flight,"
+            }
+          ]
+        },
+        {
+          "start": 84.88,
+          "end": 87.7,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                281,
+                282
+              ],
+              "text": "Aki Hoshide,"
+            },
+            {
+              "words": [
+                283,
+                285
+              ],
+              "text": "a Japanese astronaut,"
+            }
+          ]
+        },
+        {
+          "start": 88.32,
+          "end": 92.48,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                286,
+                293
+              ],
+              "text": "and we're going to start seeing a lot"
+            },
+            {
+              "words": [
+                294,
+                300
+              ],
+              "text": "more of our classmates on shuttle flights."
+            }
+          ]
+        },
+        {
+          "start": 92.48,
+          "end": 95.14,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                301,
+                306
+              ],
+              "text": "And they're trying to get actually"
+            },
+            {
+              "words": [
+                307,
+                312
+              ],
+              "text": "all the rookies in the office,"
+            }
+          ]
+        },
+        {
+          "start": 95.14,
+          "end": 96.86,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                313,
+                315
+              ],
+              "text": "the unflown astronauts,"
+            },
+            {
+              "words": [
+                316,
+                317
+              ],
+              "text": "up in"
+            }
+          ]
+        },
+        {
+          "start": 98.1,
+          "end": 100.277,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                318,
+                324
+              ],
+              "text": "one mode or another, most on shuttle,"
+            }
+          ]
+        },
+        {
+          "start": 101.36,
+          "end": 102.5,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                325,
+                329
+              ],
+              "text": "before we retire the shuttle."
+            }
+          ]
+        },
+        {
+          "start": 102.5,
+          "end": 105.76,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                330,
+                338
+              ],
+              "text": "As a way to get experience to be ready"
+            },
+            {
+              "words": [
+                339,
+                343
+              ],
+              "text": "for, obviously, the Constellation program,"
+            }
+          ]
+        },
+        {
+          "start": 105.76,
+          "end": 107.3,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                344,
+                348
+              ],
+              "text": "the Orion capsule and spacecraft."
+            }
+          ]
+        },
+        {
+          "start": 107.3,
+          "end": 108.96,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                349,
+                355
+              ],
+              "text": "Exactly. We're going to have a five-year,"
+            }
+          ]
+        },
+        {
+          "start": 108.96,
+          "end": 112.68,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                356,
+                359
+              ],
+              "text": "roughly, delay between shuttle"
+            },
+            {
+              "words": [
+                360,
+                363
+              ],
+              "text": "and bringing Orion online,"
+            }
+          ]
+        },
+        {
+          "start": 112.82,
+          "end": 117.02,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                364,
+                371
+              ],
+              "text": "so we want to carry as much experience"
+            },
+            {
+              "words": [
+                372,
+                377
+              ],
+              "text": "as we can over into Constellation."
+            }
+          ]
+        },
+        {
+          "start": 117.42,
+          "end": 119.32,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                378,
+                385
+              ],
+              "text": "As a matter of fact, NASA is also"
+            }
+          ]
+        },
+        {
+          "start": 119.72,
+          "end": 120.52,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                386,
+                389
+              ],
+              "text": "right now actively looking,"
+            }
+          ]
+        },
+        {
+          "start": 120.52,
+          "end": 123.78,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                390,
+                396
+              ],
+              "text": "at least for another month or so,"
+            },
+            {
+              "words": [
+                397,
+                400
+              ],
+              "text": "for a 2009 class."
+            }
+          ]
+        },
+        {
+          "start": 123.96,
+          "end": 124.64,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                401,
+                402
+              ],
+              "text": "That's correct."
+            }
+          ]
+        },
+        {
+          "start": 124.64,
+          "end": 128.16,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                403,
+                409
+              ],
+              "text": "I think pretty probably safe to say"
+            },
+            {
+              "words": [
+                410,
+                418
+              ],
+              "text": "that that class will not fly on a shuttle."
+            }
+          ]
+        },
+        {
+          "start": 128.16,
+          "end": 131.92,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                419,
+                424
+              ],
+              "text": "That's true. They are being brought"
+            },
+            {
+              "words": [
+                425,
+                430
+              ],
+              "text": "in to actually fly on station"
+            }
+          ]
+        },
+        {
+          "start": 131.92,
+          "end": 133.92,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                431,
+                435
+              ],
+              "text": "during the interim before Constellation"
+            }
+          ]
+        },
+        {
+          "start": 133.92,
+          "end": 136.1,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                436,
+                439
+              ],
+              "text": "and then obviously carry"
+            },
+            {
+              "words": [
+                440,
+                442
+              ],
+              "text": "on into Constellation."
+            }
+          ]
+        },
+        {
+          "start": 136.1,
+          "end": 137.52,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                443,
+                443
+              ],
+              "text": "So,"
+            },
+            {
+              "words": [
+                444,
+                447
+              ],
+              "text": "yeah, it's very exciting."
+            }
+          ]
+        },
+        {
+          "start": 137.52,
+          "end": 139.98,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                448,
+                452
+              ],
+              "text": "It'll be a five-year gap,"
+            },
+            {
+              "words": [
+                453,
+                458
+              ],
+              "text": "which is a very long gap,"
+            }
+          ]
+        },
+        {
+          "start": 139.98,
+          "end": 143.745,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                459,
+                466
+              ],
+              "text": "and it's going to be great to have"
+            },
+            {
+              "words": [
+                467,
+                472
+              ],
+              "text": "some new folks in the office."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vertical",
+      "description": "Phone",
+      "aspect": "9:16",
+      "rules": {
+        "maxCharsPerLine": 22,
+        "maxLines": 2,
+        "maxCps": 15,
+        "minDuration": 0.8,
+        "maxDuration": 5
+      },
+      "cues": [
+        {
+          "start": 0.48,
+          "end": 2.014,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                0,
+                2
+              ],
+              "text": "To help us"
+            },
+            {
+              "words": [
+                3,
+                4
+              ],
+              "text": "walk through"
+            }
+          ]
+        },
+        {
+          "start": 2.78,
+          "end": 3.68,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                5,
+                7
+              ],
+              "text": "what they're doing"
+            },
+            {
+              "words": [
+                8,
+                11
+              ],
+              "text": "now, what the crew"
+            }
+          ]
+        },
+        {
+          "start": 3.68,
+          "end": 6.014,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                12,
+                16
+              ],
+              "text": "is up to, we're joined"
+            },
+            {
+              "words": [
+                17,
+                19
+              ],
+              "text": "right now by"
+            }
+          ]
+        },
+        {
+          "start": 6.56,
+          "end": 7.7,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                20,
+                22
+              ],
+              "text": "Colonel Jim Dutton,"
+            },
+            {
+              "words": [
+                23,
+                24
+              ],
+              "text": "who's one"
+            }
+          ]
+        },
+        {
+          "start": 7.7,
+          "end": 8.48,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                25,
+                27
+              ],
+              "text": "of our astronauts,"
+            }
+          ]
+        },
+        {
+          "start": 8.48,
+          "end": 10.014,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                28,
+                28
+              ],
+              "text": "part"
+            },
+            {
+              "words": [
+                29,
+                32
+              ],
+              "text": "of the 2004 class."
+            }
+          ]
+        },
+        {
+          "start": 10.78,
+          "end": 11.92,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                33,
+                35
+              ],
+              "text": "Jim, thank you"
+            },
+            {
+              "words": [
+                36,
+                38
+              ],
+              "text": "for joining us."
+            }
+          ]
+        },
+        {
+          "start": 11.92,
+          "end": 13.64,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                39,
+                43
+              ],
+              "text": "It's great to be here,"
+            },
+            {
+              "words": [
+                44,
+                45
+              ],
+              "text": "Allard. Thanks."
+            }
+          ]
+        },
+        {
+          "start": 13.64,
+          "end": 14.36,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                46,
+                46
+              ],
+              "text": "Well,"
+            },
+            {
+              "words": [
+                47,
+                50
+              ],
+              "text": "if you wouldn't mind,"
+            }
+          ]
+        },
+        {
+          "start": 14.36,
+          "end": 15.86,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                51,
+                52
+              ],
+              "text": "we've got"
+            },
+            {
+              "words": [
+                53,
+                55
+              ],
+              "text": "a couple minutes"
+            }
+          ]
+        },
+        {
+          "start": 15.86,
+          "end": 16.84,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                56,
+                58
+              ],
+              "text": "before we see"
+            },
+            {
+              "words": [
+                59,
+                62
+              ],
+              "text": "the crew, why don't"
+            }
+          ]
+        },
+        {
+          "start": 16.84,
+          "end": 18.68,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                63,
+                66
+              ],
+              "text": "you walk us through"
+            },
+            {
+              "words": [
+                67,
+                67
+              ],
+              "text": "you?"
+            }
+          ]
+        },
+        {
+          "start": 20.38,
+          "end": 21.94,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                68,
+                68
+              ],
+              "text": "Okay."
+            },
+            {
+              "words": [
+                69,
+                72
+              ],
+              "text": "A little about me:"
+            }
+          ]
+        },
+        {
+          "start": 21.94,
+          "end": 23.36,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                73,
+                75
+              ],
+              "text": "I grew up"
+            },
+            {
+              "words": [
+                76,
+                78
+              ],
+              "text": "in Eugene, Oregon."
+            }
+          ]
+        },
+        {
+          "start": 23.36,
+          "end": 24.4,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                79,
+                80
+              ],
+              "text": "I joined"
+            },
+            {
+              "words": [
+                81,
+                83
+              ],
+              "text": "the Astronaut Corps"
+            }
+          ]
+        },
+        {
+          "start": 24.4,
+          "end": 25.2,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                84,
+                87
+              ],
+              "text": "about four years ago,"
+            }
+          ]
+        },
+        {
+          "start": 25.2,
+          "end": 27.18,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                88,
+                90
+              ],
+              "text": "as you said,"
+            },
+            {
+              "words": [
+                91,
+                93
+              ],
+              "text": "May of 2004,"
+            }
+          ]
+        },
+        {
+          "start": 28.04,
+          "end": 29.4,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                94,
+                95
+              ],
+              "text": "with the"
+            },
+            {
+              "words": [
+                96,
+                96
+              ],
+              "text": "class"
+            }
+          ]
+        },
+        {
+          "start": 29.4,
+          "end": 31.8,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                97,
+                98
+              ],
+              "text": "we affectionately"
+            },
+            {
+              "words": [
+                99,
+                101
+              ],
+              "text": "call the Peacocks."
+            }
+          ]
+        },
+        {
+          "start": 32.52,
+          "end": 34.78,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                102,
+                104
+              ],
+              "text": "And my background"
+            },
+            {
+              "words": [
+                105,
+                109
+              ],
+              "text": "is with the Air Force."
+            }
+          ]
+        },
+        {
+          "start": 34.78,
+          "end": 35.92,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                110,
+                114
+              ],
+              "text": "I was a test pilot,"
+            }
+          ]
+        },
+        {
+          "start": 35.92,
+          "end": 37.82,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                115,
+                119
+              ],
+              "text": "and before that I flew"
+            },
+            {
+              "words": [
+                120,
+                122
+              ],
+              "text": "as an operational"
+            }
+          ]
+        },
+        {
+          "start": 37.82,
+          "end": 39.42,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                123,
+                123
+              ],
+              "text": "pilot"
+            },
+            {
+              "words": [
+                124,
+                127
+              ],
+              "text": "in the F-15 Eagle."
+            }
+          ]
+        },
+        {
+          "start": 40.62,
+          "end": 43.12,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                128,
+                131
+              ],
+              "text": "I have to—you opened"
+            },
+            {
+              "words": [
+                132,
+                137
+              ],
+              "text": "it up, I have to ask."
+            }
+          ]
+        },
+        {
+          "start": 43.12,
+          "end": 45.16,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                138,
+                141
+              ],
+              "text": "This is what happened:"
+            },
+            {
+              "words": [
+                142,
+                144
+              ],
+              "text": "the classes give"
+            }
+          ]
+        },
+        {
+          "start": 45.16,
+          "end": 46.88,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                145,
+                146
+              ],
+              "text": "themselves different"
+            },
+            {
+              "words": [
+                147,
+                149
+              ],
+              "text": "names, and Peacock."
+            }
+          ]
+        },
+        {
+          "start": 46.88,
+          "end": 47.814,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                150,
+                152
+              ],
+              "text": "Why a Peacock?"
+            }
+          ]
+        },
+        {
+          "start": 47.94,
+          "end": 50.06,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                153,
+                156
+              ],
+              "text": "Well, we didn't give"
+            },
+            {
+              "words": [
+                157,
+                159
+              ],
+              "text": "ourselves that name."
+            }
+          ]
+        },
+        {
+          "start": 50.06,
+          "end": 51.94,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                160,
+                162
+              ],
+              "text": "Although I'll say"
+            },
+            {
+              "words": [
+                163,
+                165
+              ],
+              "text": "we took it"
+            }
+          ]
+        },
+        {
+          "start": 51.94,
+          "end": 54.04,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                166,
+                168
+              ],
+              "text": "over an alternative"
+            },
+            {
+              "words": [
+                169,
+                171
+              ],
+              "text": "that we preferred"
+            }
+          ]
+        },
+        {
+          "start": 54.04,
+          "end": 55.707,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                172,
+                172
+              ],
+              "text": "Peacock"
+            },
+            {
+              "words": [
+                173,
+                176
+              ],
+              "text": "to the other one."
+            }
+          ]
+        },
+        {
+          "start": 56.32,
+          "end": 57.98,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                177,
+                177
+              ],
+              "text": "But"
+            },
+            {
+              "words": [
+                178,
+                182
+              ],
+              "text": "when we first came in,"
+            }
+          ]
+        },
+        {
+          "start": 57.98,
+          "end": 59.04,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                183,
+                185
+              ],
+              "text": "we were told"
+            },
+            {
+              "words": [
+                186,
+                188
+              ],
+              "text": "as a class"
+            }
+          ]
+        },
+        {
+          "start": 59.04,
+          "end": 61.26,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                189,
+                192
+              ],
+              "text": "that we would not"
+            },
+            {
+              "words": [
+                193,
+                196
+              ],
+              "text": "fly on the shuttle,"
+            }
+          ]
+        },
+        {
+          "start": 61.26,
+          "end": 62.8,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                197,
+                200
+              ],
+              "text": "based on the way"
+            },
+            {
+              "words": [
+                201,
+                203
+              ],
+              "text": "things were going"
+            }
+          ]
+        },
+        {
+          "start": 62.8,
+          "end": 63.92,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                204,
+                207
+              ],
+              "text": "and how it looked"
+            }
+          ]
+        },
+        {
+          "start": 63.92,
+          "end": 65.519,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                208,
+                210
+              ],
+              "text": "with the number"
+            },
+            {
+              "words": [
+                211,
+                213
+              ],
+              "text": "of crew members"
+            }
+          ]
+        },
+        {
+          "start": 65.519,
+          "end": 67.64,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                214,
+                215
+              ],
+              "text": "or astronauts"
+            },
+            {
+              "words": [
+                216,
+                220
+              ],
+              "text": "who had not flown yet."
+            }
+          ]
+        },
+        {
+          "start": 67.64,
+          "end": 70.44,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                221,
+                223
+              ],
+              "text": "And so there"
+            },
+            {
+              "words": [
+                224,
+                229
+              ],
+              "text": "was also a lot of pomp"
+            }
+          ]
+        },
+        {
+          "start": 70.44,
+          "end": 72,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                230,
+                231
+              ],
+              "text": "and circumstance"
+            },
+            {
+              "words": [
+                232,
+                234
+              ],
+              "text": "about our arrival"
+            }
+          ]
+        },
+        {
+          "start": 72,
+          "end": 73.72,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                235,
+                238
+              ],
+              "text": "because of the new"
+            },
+            {
+              "words": [
+                239,
+                241
+              ],
+              "text": "vision for going"
+            }
+          ]
+        },
+        {
+          "start": 73.72,
+          "end": 76.56,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                242,
+                246
+              ],
+              "text": "back to the Moon. And"
+            },
+            {
+              "words": [
+                247,
+                250
+              ],
+              "text": "so we were labeled"
+            }
+          ]
+        },
+        {
+          "start": 76.56,
+          "end": 78.7,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                251,
+                252
+              ],
+              "text": "Peacocks because"
+            },
+            {
+              "words": [
+                253,
+                255
+              ],
+              "text": "we're all show"
+            }
+          ]
+        },
+        {
+          "start": 78.7,
+          "end": 81.14,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                256,
+                259
+              ],
+              "text": "and we don't fly."
+            },
+            {
+              "words": [
+                260,
+                264
+              ],
+              "text": "So I think we can,"
+            }
+          ]
+        },
+        {
+          "start": 81.52,
+          "end": 82.56,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                265,
+                266
+              ],
+              "text": "you know,"
+            },
+            {
+              "words": [
+                267,
+                271
+              ],
+              "text": "take pride in that now"
+            }
+          ]
+        },
+        {
+          "start": 82.56,
+          "end": 84.12,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                272,
+                274
+              ],
+              "text": "that we've got"
+            },
+            {
+              "words": [
+                275,
+                277
+              ],
+              "text": "our first classmate"
+            }
+          ]
+        },
+        {
+          "start": 84.12,
+          "end": 84.88,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                278,
+                280
+              ],
+              "text": "on this flight,"
+            }
+          ]
+        },
+        {
+          "start": 84.88,
+          "end": 87.7,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                281,
+                282
+              ],
+              "text": "Aki Hoshide,"
+            },
+            {
+              "words": [
+                283,
+                285
+              ],
+              "text": "a Japanese astronaut,"
+            }
+          ]
+        },
+        {
+          "start": 88.32,
+          "end": 90.4,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                286,
+                288
+              ],
+              "text": "and we're going"
+            },
+            {
+              "words": [
+                289,
+                293
+              ],
+              "text": "to start seeing a lot"
+            }
+          ]
+        },
+        {
+          "start": 90.4,
+          "end": 92.48,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                294,
+                297
+              ],
+              "text": "more of our classmates"
+            },
+            {
+              "words": [
+                298,
+                300
+              ],
+              "text": "on shuttle flights."
+            }
+          ]
+        },
+        {
+          "start": 92.48,
+          "end": 93.94,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                301,
+                303
+              ],
+              "text": "And they're trying"
+            },
+            {
+              "words": [
+                304,
+                307
+              ],
+              "text": "to get actually all"
+            }
+          ]
+        },
+        {
+          "start": 93.94,
+          "end": 95.14,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                308,
+                309
+              ],
+              "text": "the rookies"
+            },
+            {
+              "words": [
+                310,
+                312
+              ],
+              "text": "in the office,"
+            }
+          ]
+        },
+        {
+          "start": 95.14,
+          "end": 97.074,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                313,
+                314
+              ],
+              "text": "the unflown"
+            },
+            {
+              "words": [
+                315,
+                317
+              ],
+              "text": "astronauts, up in"
+            }
+          ]
+        },
+        {
+          "start": 98.1,
+          "end": 100.567,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                318,
+                321
+              ],
+              "text": "one mode or another,"
+            },
+            {
+              "words": [
+                322,
+                324
+              ],
+              "text": "most on shuttle,"
+            }
+          ]
+        },
+        {
+          "start": 101.36,
+          "end": 102.5,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                325,
+                327
+              ],
+              "text": "before we retire"
+            },
+            {
+              "words": [
+                328,
+                329
+              ],
+              "text": "the shuttle."
+            }
+          ]
+        },
+        {
+          "start": 102.5,
+          "end": 103.78,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                330,
+                334
+              ],
+              "text": "As a way to get"
+            },
+            {
+              "words": [
+                335,
+                338
+              ],
+              "text": "experience to be ready"
+            }
+          ]
+        },
+        {
+          "start": 103.78,
+          "end": 104.56,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                339,
+                340
+              ],
+              "text": "for, obviously,"
+            }
+          ]
+        },
+        {
+          "start": 104.56,
+          "end": 105.76,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                341,
+                342
+              ],
+              "text": "the Constellation"
+            },
+            {
+              "words": [
+                343,
+                343
+              ],
+              "text": "program,"
+            }
+          ]
+        },
+        {
+          "start": 105.76,
+          "end": 107.3,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                344,
+                346
+              ],
+              "text": "the Orion capsule"
+            },
+            {
+              "words": [
+                347,
+                348
+              ],
+              "text": "and spacecraft."
+            }
+          ]
+        },
+        {
+          "start": 107.3,
+          "end": 108.96,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                349,
+                351
+              ],
+              "text": "Exactly. We're going"
+            },
+            {
+              "words": [
+                352,
+                355
+              ],
+              "text": "to have a five-year,"
+            }
+          ]
+        },
+        {
+          "start": 108.96,
+          "end": 110.96,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                356,
+                356
+              ],
+              "text": "roughly,"
+            },
+            {
+              "words": [
+                357,
+                359
+              ],
+              "text": "delay between shuttle"
+            }
+          ]
+        },
+        {
+          "start": 111.14,
+          "end": 112.82,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                360,
+                361
+              ],
+              "text": "and bringing"
+            },
+            {
+              "words": [
+                362,
+                363
+              ],
+              "text": "Orion online,"
+            }
+          ]
+        },
+        {
+          "start": 112.82,
+          "end": 114.32,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                364,
+                368
+              ],
+              "text": "so we want to carry"
+            },
+            {
+              "words": [
+                369,
+                371
+              ],
+              "text": "as much experience"
+            }
+          ]
+        },
+        {
+          "start": 114.32,
+          "end": 116.587,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                372,
+                375
+              ],
+              "text": "as we can over"
+            },
+            {
+              "words": [
+                376,
+                377
+              ],
+              "text": "into Constellation."
+            }
+          ]
+        },
+        {
+          "start": 117.42,
+          "end": 119.32,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                378,
+                382
+              ],
+              "text": "As a matter of fact,"
+            },
+            {
+              "words": [
+                383,
+                385
+              ],
+              "text": "NASA is also"
+            }
+          ]
+        },
+        {
+          "start": 119.72,
+          "end": 120.52,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                386,
+                387
+              ],
+              "text": "right now"
+            },
+            {
+              "words": [
+                388,
+                389
+              ],
+              "text": "actively looking,"
+            }
+          ]
+        },
+        {
+          "start": 120.52,
+          "end": 122.26,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                390,
+                393
+              ],
+              "text": "at least for another"
+            },
+            {
+              "words": [
+                394,
+                396
+              ],
+              "text": "month or so,"
+            }
+          ]
+        },
+        {
+          "start": 122.26,
+          "end": 123.78,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                397,
+                400
+              ],
+              "text": "for a 2009 class."
+            }
+          ]
+        },
+        {
+          "start": 123.96,
+          "end": 124.64,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                401,
+                402
+              ],
+              "text": "That's correct."
+            }
+          ]
+        },
+        {
+          "start": 124.64,
+          "end": 126.24,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                403,
+                405
+              ],
+              "text": "I think pretty"
+            },
+            {
+              "words": [
+                406,
+                409
+              ],
+              "text": "probably safe to say"
+            }
+          ]
+        },
+        {
+          "start": 126.24,
+          "end": 127,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                410,
+                412
+              ],
+              "text": "that that class"
+            }
+          ]
+        },
+        {
+          "start": 127,
+          "end": 128.16,
+          "speaker": "S1",
+          "lines": [
+            {
+              "words": [
+                413,
+                415
+              ],
+              "text": "will not fly"
+            },
+            {
+              "words": [
+                416,
+                418
+              ],
+              "text": "on a shuttle."
+            }
+          ]
+        },
+        {
+          "start": 128.16,
+          "end": 129.62,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                419,
+                420
+              ],
+              "text": "That's true."
+            },
+            {
+              "words": [
+                421,
+                423
+              ],
+              "text": "They are being"
+            }
+          ]
+        },
+        {
+          "start": 129.62,
+          "end": 131.92,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                424,
+                427
+              ],
+              "text": "brought in to actually"
+            },
+            {
+              "words": [
+                428,
+                430
+              ],
+              "text": "fly on station"
+            }
+          ]
+        },
+        {
+          "start": 131.92,
+          "end": 133.92,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                431,
+                433
+              ],
+              "text": "during the interim"
+            },
+            {
+              "words": [
+                434,
+                435
+              ],
+              "text": "before Constellation"
+            }
+          ]
+        },
+        {
+          "start": 133.92,
+          "end": 134.84,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                436,
+                437
+              ],
+              "text": "and then"
+            },
+            {
+              "words": [
+                438,
+                439
+              ],
+              "text": "obviously carry"
+            }
+          ]
+        },
+        {
+          "start": 134.84,
+          "end": 136.1,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                440,
+                442
+              ],
+              "text": "on into Constellation."
+            }
+          ]
+        },
+        {
+          "start": 136.1,
+          "end": 137.52,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                443,
+                444
+              ],
+              "text": "So, yeah,"
+            },
+            {
+              "words": [
+                445,
+                447
+              ],
+              "text": "it's very exciting."
+            }
+          ]
+        },
+        {
+          "start": 137.52,
+          "end": 139.16,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                448,
+                451
+              ],
+              "text": "It'll be a five-year"
+            },
+            {
+              "words": [
+                452,
+                454
+              ],
+              "text": "gap, which is"
+            }
+          ]
+        },
+        {
+          "start": 139.16,
+          "end": 139.98,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                455,
+                458
+              ],
+              "text": "a very long gap,"
+            }
+          ]
+        },
+        {
+          "start": 139.98,
+          "end": 141.1,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                459,
+                461
+              ],
+              "text": "and it's going"
+            },
+            {
+              "words": [
+                462,
+                464
+              ],
+              "text": "to be great"
+            }
+          ]
+        },
+        {
+          "start": 141.1,
+          "end": 143.567,
+          "speaker": "S2",
+          "lines": [
+            {
+              "words": [
+                465,
+                469
+              ],
+              "text": "to have some new folks"
+            },
+            {
+              "words": [
+                470,
+                472
+              ],
+              "text": "in the office."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "edits": [
+    {
+      "words": [
+        171,
+        171
+      ],
+      "from": "preferred,",
+      "to": "preferred",
+      "reason": "punctuation"
+    },
+    {
+      "words": [
+        342,
+        342
+      ],
+      "from": "constellation",
+      "to": "Constellation",
+      "reason": "punctuation"
+    }
+  ],
+  "meta": {
+    "context": "NASA Kennedy Space Center interview (2008): NASA public affairs officer Allard Beutel interviews astronaut Jim Dutton about the STS-124 Space Shuttle Discovery mission.",
+    "contextSource": "user",
+    "textVotes": [
+      {
+        "start": 14.36,
+        "end": 14.79,
+        "class": "c",
+        "from": "you've",
+        "heard": {
+          "azure-speech:fast": "we've",
+          "elevenlabs:scribe_v2": "you",
+          "relisten": "we"
+        },
+        "to": "we've",
+        "result": "changed",
+        "basis": "Azure and snippet re-listen support 'we' rather than 'you'."
+      },
+      {
+        "start": 26.38,
+        "end": 28.5,
+        "class": "c",
+        "from": "2004, with a",
+        "heard": {
+          "azure-speech:fast": "2004, with",
+          "elevenlabs:scribe_v2": "two thousand and four, with the",
+          "relisten": "2004, with the"
+        },
+        "to": "2004, with the",
+        "result": "changed",
+        "basis": "Scribe and snippet re-listen agree on 'with the'."
+      },
+      {
+        "start": 98.1,
+        "end": 98.45,
+        "class": "c",
+        "from": "motor",
+        "heard": {
+          "azure-speech:fast": "mode",
+          "elevenlabs:scribe_v2": "one mode",
+          "relisten": "mode"
+        },
+        "to": "mode",
+        "result": "changed",
+        "basis": "Azure, Scribe and re-listen agree on 'mode'."
+      },
+      {
+        "start": 130.9,
+        "end": 131,
+        "class": "b",
+        "from": "in",
+        "heard": {
+          "azure-speech:fast": "on",
+          "elevenlabs:scribe_v2": "on",
+          "relisten": "on"
+        },
+        "to": "on",
+        "result": "changed",
+        "basis": "Azure and ElevenLabs agree on “on”; fits flying on station."
+      }
+    ],
+    "style": {
+      "numbers": "auto",
+      "currency": "auto"
+    },
+    "linebreaks": "rules",
+    "rules": "1",
+    "languageData": "f6e9d67319028070",
+    "models": {
+      "text": "azure-openai:gpt-transcribe",
+      "timing": "azure-speech:fast",
+      "llm": "azure-openai:gpt-6.1-sol",
+      "second": "elevenlabs:scribe_v2"
+    },
+    "generator": "overtone-captions@0.1.0",
+    "createdAt": "2026-10-28T14:48:57.690Z"
+  }
+}

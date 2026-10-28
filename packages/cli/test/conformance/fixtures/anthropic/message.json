@@ -1,0 +1,11 @@
+{
+  "_source": "A Messages API response (Anthropic API reference, 'Messages'); the conformance kit streams it as server-sent events in the documented order (message_start, content_block_start, content_block_delta, content_block_stop, message_delta, message_stop).",
+  "id": "msg_conformance",
+  "type": "message",
+  "role": "assistant",
+  "model": "claude-opus-5-5",
+  "content": [{ "type": "text", "text": "{\"edits\":[{\"first\":3,\"last\":3,\"to\":\"Maya!\",\"reason\":\"brand\"}]}" }],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": { "input_tokens": 1100, "cache_creation_input_tokens": 0, "cache_read_input_tokens": 134, "output_tokens": 56 }
+}

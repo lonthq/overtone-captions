@@ -1,0 +1,138 @@
+/*
+ * Style pack "social" (vertical clips): heavy text without a box, highlighted key words, and in styled mode the
+ * spoken word grows; styled words grow more and lift, emphasis words also tilt.
+ */
+.ot-layer.ot-theme-social {
+  --ot-font-size: 3.6cqw;
+  --ot-font-weight: 800;
+  --ot-line-height: 1.2;
+  --ot-bg: transparent;
+  --ot-padding: 0 0.15em;
+  /* Outline plus drop shadow: legible on bright video without a box. */
+  --ot-shadow: 0 0 0.06em #000, 0 0 0.06em #000, 0 0 0.12em #000, 0 0.05em 0.2em rgb(0 0 0 / 0.9);
+  --ot-bottom: 16%;
+  --ot-speaker-color: #7cf3c8;
+  --ot-brand-color: #7cf3c8;
+  --ot-emphasis-color: #ffd400;
+  --ot-key-color: #111;
+  --ot-key-highlight: #ffd400;
+  --ot-number-color: #8ad4ff;
+  --ot-soft-color: rgb(255 255 255 / 0.75);
+  /* Spoken-word motion. The scales are as large as the margins allow: a long word ("Constellation.") still keeps
+     0.1em from its neighbors, and most of the space inside a key-word strip. */
+  --ot-pop-scale: 1.07;
+  --ot-pack-grow: 1.04;
+  --ot-pack-strip-grow: 1.03;
+  --ot-pack-lift: -0.05em;
+  --ot-pack-tilt: -2deg;
+}
+
+/* Heavier text is wider: 5% smaller in tall layouts. */
+.ot-layer.ot-theme-social.ot-tall {
+  --ot-scale: 0.95;
+}
+
+/* Scaling needs a box; the margin leaves room to grow; the bottom-center origin keeps the word off the line below. */
+.ot-theme-social .ot-word {
+  display: inline-block;
+  margin: 0 0.06em;
+  transform-origin: 50% 100%;
+  transition: transform 0.12s ease-out;
+}
+
+.ot-theme-social.ot-mode-styled .ot-key {
+  padding: 0 0.12em;
+  text-shadow: none;
+}
+
+/* Every spoken word grows a little; plain mode stays still. */
+.ot-theme-social.ot-mode-styled .ot-word.ot-active {
+  transform: scale(var(--ot-pack-grow));
+}
+
+/* Styled words grow more and lift slightly. */
+.ot-theme-social.ot-mode-styled .ot-active:is(.ot-emphasis, .ot-key, .ot-brand, .ot-number) {
+  transform: translateY(var(--ot-pack-lift)) scale(var(--ot-pop-scale));
+}
+
+/* Emphasis words also tilt, to the side --ot-turn gives. */
+.ot-theme-social.ot-mode-styled .ot-emphasis.ot-active {
+  transform: translateY(var(--ot-pack-lift)) scale(var(--ot-pop-scale)) rotate(calc(var(--ot-pack-tilt) * var(--ot-turn)));
+}
+
+/*
+ * Adjacent key words form one strip: the space inside the first box (data-joined) needs white-space: pre in an
+ * inline-block, and the margins and padding between the boxes go.
+ */
+.ot-theme-social .ot-word[data-joined] {
+  white-space: pre;
+}
+
+.ot-theme-social.ot-mode-styled .ot-word[data-joined] {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.ot-theme-social.ot-mode-styled .ot-word[data-joined] + .ot-word {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Square inner corners (round ones leave a notch); a short shadow under the next box covers sub-pixel hairlines. */
+.ot-theme-social.ot-mode-styled .ot-key[data-joined] {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0.06em 0 0 var(--ot-key-highlight);
+}
+
+.ot-theme-social.ot-mode-styled .ot-word[data-joined] + .ot-key {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/*
+ * In a strip the marker stays put and only the spoken word's .ot-text pops, by the smaller --ot-pack-strip-grow:
+ * only a space separates strip words.
+ */
+.ot-theme-social .ot-text {
+  display: inline-block;
+  transform-origin: 50% 100%;
+  transition: transform 0.12s ease-out;
+}
+
+.ot-theme-social.ot-mode-styled .ot-key.ot-active[data-joined],
+.ot-theme-social.ot-mode-styled .ot-word[data-joined] + .ot-key.ot-active {
+  transform: none;
+}
+
+.ot-theme-social.ot-mode-styled .ot-key.ot-active[data-joined] > .ot-text,
+.ot-theme-social.ot-mode-styled .ot-word[data-joined] + .ot-key.ot-active > .ot-text {
+  transform: translateY(var(--ot-pack-lift)) scale(var(--ot-pack-strip-grow));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ot-theme-social .ot-word {
+    transition: none;
+  }
+
+  .ot-theme-social .ot-text {
+    transition: none;
+  }
+
+  .ot-theme-social.ot-mode-styled .ot-word.ot-active {
+    transform: none;
+  }
+
+  .ot-theme-social.ot-mode-styled .ot-active:is(.ot-emphasis, .ot-key, .ot-brand, .ot-number) {
+    transform: none;
+  }
+
+  .ot-theme-social.ot-mode-styled .ot-emphasis.ot-active {
+    transform: none;
+  }
+
+  .ot-theme-social.ot-mode-styled .ot-key.ot-active[data-joined] > .ot-text,
+  .ot-theme-social.ot-mode-styled .ot-word[data-joined] + .ot-key.ot-active > .ot-text {
+    transform: none;
+  }
+}

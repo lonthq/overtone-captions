@@ -1,0 +1,285 @@
+{
+ "durationMilliseconds": 18000,
+ "combinedPhrases": [
+  {
+   "text": "Every year, um, one in five drivers has some kind of car damage. With Drive Cover from Lamora, you're insured from day one, for just 12 dollars a month. And the best part? You can claim directly in the app. So remember, drive cover. Drive worry free."
+  }
+ ],
+ "phrases": [
+  {
+   "speaker": 0,
+   "offsetMilliseconds": 500,
+   "durationMilliseconds": 3793,
+   "locale": "en-US",
+   "confidence": 0.93,
+   "text": "Every year, um, one in five drivers has some kind of car damage.",
+   "words": [
+    {
+     "text": "Every",
+     "offsetMilliseconds": 500,
+     "durationMilliseconds": 309
+    },
+    {
+     "text": "year,",
+     "offsetMilliseconds": 849,
+     "durationMilliseconds": 265
+    },
+    {
+     "text": "um,",
+     "offsetMilliseconds": 1154,
+     "durationMilliseconds": 177
+    },
+    {
+     "text": "one",
+     "offsetMilliseconds": 1371,
+     "durationMilliseconds": 221
+    },
+    {
+     "text": "in",
+     "offsetMilliseconds": 1632,
+     "durationMilliseconds": 177
+    },
+    {
+     "text": "five",
+     "offsetMilliseconds": 1849,
+     "durationMilliseconds": 265
+    },
+    {
+     "text": "drivers",
+     "offsetMilliseconds": 2154,
+     "durationMilliseconds": 398
+    },
+    {
+     "text": "has",
+     "offsetMilliseconds": 2592,
+     "durationMilliseconds": 221
+    },
+    {
+     "text": "some",
+     "offsetMilliseconds": 2853,
+     "durationMilliseconds": 265
+    },
+    {
+     "text": "kind",
+     "offsetMilliseconds": 3158,
+     "durationMilliseconds": 265
+    },
+    {
+     "text": "of",
+     "offsetMilliseconds": 3463,
+     "durationMilliseconds": 177
+    },
+    {
+     "text": "car",
+     "offsetMilliseconds": 3680,
+     "durationMilliseconds": 221
+    },
+    {
+     "text": "damage.",
+     "offsetMilliseconds": 3941,
+     "durationMilliseconds": 352
+    }
+   ]
+  },
+  {
+   "speaker": 0,
+   "offsetMilliseconds": 4700,
+   "durationMilliseconds": 5273,
+   "locale": "en-US",
+   "confidence": 0.93,
+   "text": "With Drive Cover from Lamora, you're insured from day one, for just 12 dollars a month.",
+   "words": [
+    {
+     "text": "With",
+     "offsetMilliseconds": 4700,
+     "durationMilliseconds": 283
+    },
+    {
+     "text": "Drive",
+     "offsetMilliseconds": 5023,
+     "durationMilliseconds": 330
+    },
+    {
+     "text": "Cover",
+     "offsetMilliseconds": 5393,
+     "durationMilliseconds": 330
+    },
+    {
+     "text": "from",
+     "offsetMilliseconds": 5763,
+     "durationMilliseconds": 283
+    },
+    {
+     "text": "Lamora,",
+     "offsetMilliseconds": 6086,
+     "durationMilliseconds": 378
+    },
+    {
+     "text": "you're",
+     "offsetMilliseconds": 6504,
+     "durationMilliseconds": 378
+    },
+    {
+     "text": "insured",
+     "offsetMilliseconds": 6922,
+     "durationMilliseconds": 425
+    },
+    {
+     "text": "from",
+     "offsetMilliseconds": 7387,
+     "durationMilliseconds": 283
+    },
+    {
+     "text": "day",
+     "offsetMilliseconds": 7710,
+     "durationMilliseconds": 236
+    },
+    {
+     "text": "one,",
+     "offsetMilliseconds": 7986,
+     "durationMilliseconds": 236
+    },
+    {
+     "text": "for",
+     "offsetMilliseconds": 8262,
+     "durationMilliseconds": 236
+    },
+    {
+     "text": "just",
+     "offsetMilliseconds": 8538,
+     "durationMilliseconds": 283
+    },
+    {
+     "text": "12",
+     "offsetMilliseconds": 8861,
+     "durationMilliseconds": 189
+    },
+    {
+     "text": "dollars",
+     "offsetMilliseconds": 9090,
+     "durationMilliseconds": 330
+    },
+    {
+     "text": "a",
+     "offsetMilliseconds": 9460,
+     "durationMilliseconds": 142
+    },
+    {
+     "text": "month.",
+     "offsetMilliseconds": 9642,
+     "durationMilliseconds": 331
+    }
+   ]
+  },
+  {
+   "speaker": 1,
+   "offsetMilliseconds": 10400,
+   "durationMilliseconds": 3347,
+   "locale": "en-US",
+   "confidence": 0.93,
+   "text": "And the best part? You can claim directly in the app.",
+   "words": [
+    {
+     "text": "And",
+     "offsetMilliseconds": 10400,
+     "durationMilliseconds": 234
+    },
+    {
+     "text": "the",
+     "offsetMilliseconds": 10674,
+     "durationMilliseconds": 234
+    },
+    {
+     "text": "best",
+     "offsetMilliseconds": 10948,
+     "durationMilliseconds": 281
+    },
+    {
+     "text": "part?",
+     "offsetMilliseconds": 11269,
+     "durationMilliseconds": 281
+    },
+    {
+     "text": "You",
+     "offsetMilliseconds": 11590,
+     "durationMilliseconds": 234
+    },
+    {
+     "text": "can",
+     "offsetMilliseconds": 11864,
+     "durationMilliseconds": 234
+    },
+    {
+     "text": "claim",
+     "offsetMilliseconds": 12138,
+     "durationMilliseconds": 327
+    },
+    {
+     "text": "directly",
+     "offsetMilliseconds": 12505,
+     "durationMilliseconds": 468
+    },
+    {
+     "text": "in",
+     "offsetMilliseconds": 13013,
+     "durationMilliseconds": 187
+    },
+    {
+     "text": "the",
+     "offsetMilliseconds": 13240,
+     "durationMilliseconds": 234
+    },
+    {
+     "text": "app.",
+     "offsetMilliseconds": 13514,
+     "durationMilliseconds": 233
+    }
+   ]
+  },
+  {
+   "speaker": 0,
+   "offsetMilliseconds": 14100,
+   "durationMilliseconds": 3126,
+   "locale": "en-US",
+   "confidence": 0.93,
+   "text": "So remember, drive cover. Drive worry free.",
+   "words": [
+    {
+     "text": "So",
+     "offsetMilliseconds": 14100,
+     "durationMilliseconds": 240
+    },
+    {
+     "text": "remember,",
+     "offsetMilliseconds": 14380,
+     "durationMilliseconds": 601
+    },
+    {
+     "text": "drive",
+     "offsetMilliseconds": 15021,
+     "durationMilliseconds": 421
+    },
+    {
+     "text": "cover.",
+     "offsetMilliseconds": 15482,
+     "durationMilliseconds": 421
+    },
+    {
+     "text": "Drive",
+     "offsetMilliseconds": 15943,
+     "durationMilliseconds": 421
+    },
+    {
+     "text": "worry",
+     "offsetMilliseconds": 16404,
+     "durationMilliseconds": 421
+    },
+    {
+     "text": "free.",
+     "offsetMilliseconds": 16865,
+     "durationMilliseconds": 361
+    }
+   ]
+  }
+ ]
+}

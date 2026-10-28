@@ -1,0 +1,63 @@
+name: Provider
+description: Propose a new speech or LLM provider, or a change to an existing one
+labels: [provider]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Start with [Add a provider](https://github.com/lonthq/overtone-captions/blob/main/docs/contributing/providers.md): the roles, the provider contract and the conformance tests.
+        Do not paste API keys, `.env` contents or private recordings.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What would you like to do?
+      options:
+        - Add a new provider
+        - Change or fix an existing provider
+    validations:
+      required: true
+  - type: input
+    id: service
+    attributes:
+      label: Service and id
+      description: The service and a lowercase id, for example "Deepgram (deepgram)". For a change, the existing id (openai, azure-openai, anthropic, azure-speech, azure-mai, elevenlabs, whisper-cpp, ollama).
+    validations:
+      required: true
+  - type: checkboxes
+    id: roles
+    attributes:
+      label: Roles
+      description: The roles the service would serve. The guide says what each role must return.
+      options:
+        - label: text (the words)
+        - label: timing (word times and speakers)
+        - label: llm (the editor and chooser; needs structured JSON output)
+        - label: The text role also returns word timings, so it can serve `--timing same`
+  - type: dropdown
+    id: runs
+    attributes:
+      label: Where does it run?
+      options:
+        - Cloud API
+        - Local (binary or server on the user's machine)
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: API details
+      description: Links to the official API docs, authentication, languages, limits (file size, duration) and pricing.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this provider?
+      description: What it does better or differently (accuracy, languages, diarization, price, privacy).
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to open a pull request for this, with recorded fixtures for the conformance tests

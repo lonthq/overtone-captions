@@ -1,0 +1,382 @@
+1
+00:00:02,360 --> 00:00:03,227
+Roger, Roger.
+
+2
+00:00:04,760 --> 00:00:06,494
+We have main
+engine start.
+
+3
+00:00:06,900 --> 00:00:09,620
+Four, three,
+two, one.
+
+4
+00:00:10,600 --> 00:00:11,400
+Now.
+
+5
+00:00:23,240 --> 00:00:24,520
+You're a jerk, Thom!
+
+6
+00:00:24,520 --> 00:00:25,380
+Look, Celia,
+
+7
+00:00:25,380 --> 00:00:27,380
+we have to follow
+our passions.
+
+8
+00:00:27,380 --> 00:00:28,660
+You have your robotics
+and I just
+
+9
+00:00:28,660 --> 00:00:30,527
+want to be awesome
+in space.
+
+10
+00:00:30,700 --> 00:00:31,900
+Why don’t you
+just admit
+
+11
+00:00:31,900 --> 00:00:34,634
+that you’re freaked
+out by my robot hand?
+
+12
+00:00:34,800 --> 00:00:37,010
+I’m not freaked
+out by it. It’s…
+
+13
+00:00:37,640 --> 00:00:38,700
+All right, fine.
+
+14
+00:00:38,700 --> 00:00:39,480
+I’m freaked out.
+
+15
+00:00:39,480 --> 00:00:40,900
+I’m having nightmares
+that I’m being chased
+
+16
+00:00:40,900 --> 00:00:42,900
+by these giant robotic
+claws of death.
+
+17
+00:00:42,900 --> 00:00:45,060
+Oh, whatever, Thom!
+We’re done.
+
+18
+00:00:50,140 --> 00:00:53,680
+Robot’s memory synced
+and locked.
+
+19
+00:01:00,960 --> 00:01:02,427
+This is pretty freaky.
+
+20
+00:01:57,760 --> 00:01:59,627
+Shouldn’t you
+be down there?
+
+21
+00:02:11,400 --> 00:02:13,800
+I heard you guys
+talking last night.
+
+22
+00:02:16,500 --> 00:02:18,367
+It’s not my fault,
+you know.
+
+23
+00:03:11,440 --> 00:03:13,660
+Are you ready? Of
+course you’re ready,
+
+24
+00:03:13,660 --> 00:03:14,927
+you’re a rock star.
+
+25
+00:03:17,220 --> 00:03:18,887
+How’s it
+looking, Barley?
+
+26
+00:03:18,900 --> 00:03:21,100
+We should have
+about ten minutes.
+
+27
+00:03:21,820 --> 00:03:23,220
+Well, that’s perfect.
+
+28
+00:03:23,680 --> 00:03:24,580
+We’re on one.
+
+29
+00:03:25,300 --> 00:03:26,560
+All systems go.
+
+30
+00:03:26,620 --> 00:03:28,680
+Yeah, you, go! Go!
+
+31
+00:03:30,160 --> 00:03:31,220
+Move your asses.
+
+32
+00:03:31,220 --> 00:03:34,180
+Go, go, go!
+I love it!
+
+33
+00:03:34,260 --> 00:03:35,640
+Come on!
+Go!
+
+34
+00:03:42,960 --> 00:03:43,840
+That’s nice.
+
+35
+00:03:44,720 --> 00:03:46,654
+Nothing to worry
+about, Thom.
+
+36
+00:03:50,760 --> 00:03:51,560
+Thom,
+
+37
+00:03:52,160 --> 00:03:56,300
+there she is.
+Now, you love her.
+
+38
+00:03:57,560 --> 00:03:58,827
+She’s your passion.
+
+39
+00:03:59,780 --> 00:04:02,080
+Be tender to her.
+Be honest.
+
+40
+00:04:03,740 --> 00:04:04,540
+Be tender.
+
+41
+00:04:05,600 --> 00:04:07,920
+Remind her
+what love is.
+
+42
+00:04:54,380 --> 00:04:54,430
+And…
+
+43
+00:04:54,430 --> 00:04:55,230
+action!
+
+44
+00:04:56,800 --> 00:04:58,667
+Memory override
+in progress.
+
+45
+00:04:59,300 --> 00:05:00,634
+You’re a jerk, Thom.
+
+46
+00:05:02,200 --> 00:05:03,040
+Oh, sorry.
+
+47
+00:05:03,800 --> 00:05:04,600
+Sorry.
+
+48
+00:05:05,200 --> 00:05:06,000
+Sorry.
+
+49
+00:05:16,040 --> 00:05:16,840
+Look, Celia,
+
+50
+00:05:18,420 --> 00:05:20,487
+we have to follow
+our passions.
+
+51
+00:05:21,460 --> 00:05:22,927
+You have your robotics
+
+52
+00:05:25,180 --> 00:05:26,300
+and…
+I just
+
+53
+00:05:26,300 --> 00:05:28,167
+want to be awesome
+in space.
+
+54
+00:05:39,120 --> 00:05:40,380
+Okay, they're coming.
+
+55
+00:05:40,380 --> 00:05:42,380
+Two minutes left.
+Two minutes.
+
+56
+00:05:42,940 --> 00:05:44,140
+Speed it up, Thom!
+
+57
+00:05:44,960 --> 00:05:46,040
+Vivacissimo!
+
+58
+00:05:47,060 --> 00:05:48,080
+Why don’t you
+just admit
+
+59
+00:05:48,080 --> 00:05:50,814
+that you’re freaked
+out by my robot hand?
+
+60
+00:05:56,920 --> 00:05:58,820
+Listen, Celia,
+I was young
+
+61
+00:06:00,040 --> 00:06:00,840
+and a dick,
+
+62
+00:06:01,260 --> 00:06:04,060
+but that's no reason
+to destroy the world.
+
+63
+00:06:05,088 --> 00:06:06,422
+Why does he do this?
+
+64
+00:06:07,148 --> 00:06:08,882
+We already
+tried that one!
+
+65
+00:06:11,988 --> 00:06:13,888
+Abort!
+Cut!
+
+66
+00:06:14,208 --> 00:06:15,008
+Whoa!
+
+67
+00:06:20,848 --> 00:06:21,648
+No! No!
+
+68
+00:06:23,628 --> 00:06:24,948
+You broke my heart.
+
+69
+00:06:26,148 --> 00:06:26,948
+I know.
+
+70
+00:06:27,228 --> 00:06:29,768
+You forgot
+me on Earth. I know.
+
+71
+00:06:30,628 --> 00:06:32,228
+I should just
+crush you!
+
+72
+00:06:47,468 --> 00:06:48,468
+I’m… I’m sorry.
+
+73
+00:06:50,388 --> 00:06:51,188
+Good ad lib.
+
+74
+00:06:59,388 --> 00:07:00,255
+Not my fault.
+
+75
+00:07:02,368 --> 00:07:03,168
+This time.
+
+76
+00:07:08,608 --> 00:07:10,848
+Quiet on set.
+We're out of time.
+
+77
+00:07:10,848 --> 00:07:12,048
+We're out of time!
+
+78
+00:08:24,068 --> 00:08:25,688
+Memory override
+at 90%.
+
+79
+00:08:26,528 --> 00:08:28,368
+Captain,
+we have to abort!
+
+80
+00:08:39,228 --> 00:08:41,028
+The world’s
+changed, Celia.
+
+81
+00:08:55,148 --> 00:08:56,282
+Maybe we can too.
+
+82
+00:08:58,268 --> 00:08:59,935
+Memory
+override complete.
+
+83
+00:09:19,208 --> 00:09:20,008
+You know,
+
+84
+00:09:21,988 --> 00:09:24,722
+there’s a lesson to
+be learned from this.
+
+85
+00:09:25,988 --> 00:09:27,322
+Could've gone worse.

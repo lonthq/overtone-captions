@@ -1,0 +1,4 @@
+{
+  "_source": "An authentication error body. Real OpenAI masks the key; this one echoes it on purpose ($SECRET is replaced by the test) to prove that errors are redacted.",
+  "error": { "message": "Incorrect API key provided: $SECRET.", "type": "invalid_request_error", "param": null, "code": "invalid_api_key" }
+}

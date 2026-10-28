@@ -1,0 +1,16 @@
+{
+  "language": "en",
+  "horizontal": [
+    "24.490 27.079 S3 Look, Celia, / we have to follow our passions.",
+    "27.290 30.650 S3 You have your robotics, / and I just want to be awesome in space.",
+    "30.650 34.533 S2 Why don't you just admit / that you're freaked out by my robot hand?"
+  ],
+  "vertical": [
+    "24.490 25.370 S3 Look, Celia,",
+    "25.370 27.290 S3 we have to follow / our passions.",
+    "27.290 28.290 S3 You have / your robotics,",
+    "28.290 30.650 S3 and I just want to / be awesome in space.",
+    "30.650 31.890 S2 Why don't you / just admit",
+    "31.890 34.624 S2 that you're freaked / out by my robot hand?"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "silence-60": {
+    "audioPcmSha256": "124617c1f65e92d3bc895fbd869e4bb16a30754b198f59e6e973949b9aaa1b01",
+    "refSha256": "44db7b32d695eaea801b0b651745671f39e8953572231c29c3d10495dcd26beb",
+    "seconds": 60
+  },
+  "noise-white-60": {
+    "audioPcmSha256": "578c1579b89d486465d97ed2c6147524061bea6ab377f923c13bd4010e39a5c6",
+    "refSha256": "db2b5b7be4bf45cae1e19cedc75079849c36410f11552abcb9b77d125ff63a35",
+    "seconds": 60
+  },
+  "noise-pink-60": {
+    "audioPcmSha256": "44e045ef021ec742002f23ad62580d209a5f9b162d247614fb586ad484f5d597",
+    "refSha256": "82c1c5c935eb2f15d2437a93c1f010870f5c05308a4ca0d652dc79ce09293e41",
+    "seconds": 60
+  },
+  "hum-60": {
+    "audioPcmSha256": "c1e9ddd246bae10c865321378bb966055be88113577101f5a7d8eb38414a84ee",
+    "refSha256": "e25413ec7c6145f9c6eb2296e84d2e1f563dc3eb732683770f5166222148edf5",
+    "seconds": 60
+  },
+  "spring": {
+    "audioPcmSha256": "500c5088e6fd22da64c94e7994db236df09347f2c9185a53b97f320636b9e1f1",
+    "refSha256": "8bdd049bbcadfb38d71f07b1bc07b39c595f6dbe1680a1b2911ea833a1a40ebd",
+    "seconds": 464.12
+  },
+  "music-then-speech": {
+    "audioPcmSha256": "cac22b0e646f9d37001145d37868fbb4a5f0c36a81d4270ea818a502e202c879",
+    "refSha256": "d7ec3af5608269a434431fdfd03d944cf7f85d017512e37ecc610d9cda62e5cb",
+    "seconds": 250.06
+  }
+}

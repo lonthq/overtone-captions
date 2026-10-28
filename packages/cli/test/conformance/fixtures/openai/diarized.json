@@ -1,0 +1,98 @@
+{
+ "_source": "Recorded 2026-10-17 with OVERTONE_RECORD_HTTP: gpt-4o-transcribe-diarize, response_format=diarized_json, chunking_strategy=auto, on examples/media/sample-16x9.mp4 (the 18 s sample ad). Times rounded to ms; nothing else changed.",
+ "text": "Every year, one in five drivers has some kind of car damage. With DriveCover from Lumora, you're insured from day one, for just twelve Euros a month. And the best part: you can claim directly in the app. So remember, DriveCover: drive worry-free.",
+ "task": "transcribe",
+ "duration": 18.005333333333333,
+ "segments": [
+  {
+   "type": "transcript.text.segment",
+   "text": " Every year,",
+   "speaker": "A",
+   "start": 0.45,
+   "end": 1.05,
+   "id": "seg_0"
+  },
+  {
+   "type": "transcript.text.segment",
+   "text": " one in five drivers has some kind of car damage.",
+   "speaker": "A",
+   "start": 1.35,
+   "end": 3.95,
+   "id": "seg_1"
+  },
+  {
+   "type": "transcript.text.segment",
+   "text": " With DriveCover from Lumora,",
+   "speaker": "A",
+   "start": 4.65,
+   "end": 6.15,
+   "id": "seg_2"
+  },
+  {
+   "type": "transcript.text.segment",
+   "text": " you're insured from day one,",
+   "speaker": "A",
+   "start": 6.45,
+   "end": 7.75,
+   "id": "seg_3"
+  },
+  {
+   "type": "transcript.text.segment",
+   "text": " for just twelve Euros a month.",
+   "speaker": "A",
+   "start": 8.05,
+   "end": 9.65,
+   "id": "seg_4"
+  },
+  {
+   "type": "transcript.text.segment",
+   "text": " And the best part:",
+   "speaker": "B",
+   "start": 10.35,
+   "end": 11.4,
+   "id": "seg_5"
+  },
+  {
+   "type": "transcript.text.segment",
+   "text": " you can claim directly in the app.",
+   "speaker": "B",
+   "start": 11.7,
+   "end": 13.5,
+   "id": "seg_6"
+  },
+  {
+   "type": "transcript.text.segment",
+   "text": " So remember,",
+   "speaker": "A",
+   "start": 14.05,
+   "end": 14.75,
+   "id": "seg_7"
+  },
+  {
+   "type": "transcript.text.segment",
+   "text": " DriveCover:",
+   "speaker": "A",
+   "start": 15.1,
+   "end": 15.7,
+   "id": "seg_8"
+  },
+  {
+   "type": "transcript.text.segment",
+   "text": " drive worry-free.",
+   "speaker": "A",
+   "start": 16.05,
+   "end": 16.85,
+   "id": "seg_9"
+  }
+ ],
+ "usage": {
+  "type": "tokens",
+  "total_tokens": 729,
+  "input_tokens": 180,
+  "input_token_details": {
+   "text_tokens": 0,
+   "audio_tokens": 180
+  },
+  "output_tokens": 549
+ }
+}

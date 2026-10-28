@@ -1,0 +1,176 @@
+{
+ "language_code": "eng",
+ "language_probability": 1,
+ "text": " нада dáng 崎lichem bru敦maтаж kreeg iero撸 ertet foremost ",
+ "words": [
+  {
+   "text": " ",
+   "start": 0.54,
+   "end": 0.56,
+   "type": "spacing",
+   "speaker_id": "speaker_0",
+   "logprob": -3.9389774799346924
+  },
+  {
+   "text": "нада",
+   "start": 1.84,
+   "end": 109.7,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "logprob": -5.881941795349121
+  },
+  {
+   "text": " ",
+   "start": 109.7,
+   "end": 110.4,
+   "type": "spacing",
+   "speaker_id": "speaker_0",
+   "logprob": -4.369755268096924
+  },
+  {
+   "text": "dáng",
+   "start": 112.58,
+   "end": 114.48,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "logprob": -4.369755268096924
+  },
+  {
+   "text": " ",
+   "start": 114.48,
+   "end": 114.48,
+   "type": "spacing",
+   "speaker_id": "speaker_0",
+   "logprob": -5.480273246765137
+  },
+  {
+   "text": "崎",
+   "start": 119,
+   "end": 119.08,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "logprob": -6.018106937408447
+  },
+  {
+   "text": "lichem",
+   "start": 119.32,
+   "end": 122.36,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "logprob": -4.5667805671691895
+  },
+  {
+   "text": " ",
+   "start": 122.36,
+   "end": 122.36,
+   "type": "spacing",
+   "speaker_id": "speaker_0",
+   "logprob": -5.832286834716797
+  },
+  {
+   "text": "bru",
+   "start": 125.82,
+   "end": 126,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "logprob": -5.832286834716797
+  },
+  {
+   "text": "敦",
+   "start": 136.74,
+   "end": 136.8,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "logprob": -5.744962692260742
+  },
+  {
+   "text": "maтаж",
+   "start": 151.74,
+   "end": 152.14,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "logprob": -5.384371089935303
+  },
+  {
+   "text": " ",
+   "start": 152.14,
+   "end": 152.14,
+   "type": "spacing",
+   "speaker_id": "speaker_0",
+   "logprob": -3.8259389400482178
+  },
+  {
+   "text": "kreeg",
+   "start": 154.82,
+   "end": 155.46,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "logprob": -3.8259389400482178
+  },
+  {
+   "text": " ",
+   "start": 155.46,
+   "end": 155.62,
+   "type": "spacing",
+   "speaker_id": "speaker_0",
+   "logprob": -2.6179070472717285
+  },
+  {
+   "text": "iero",
+   "start": 155.64,
+   "end": 158.04,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "logprob": -5.7024359703063965
+  },
+  {
+   "text": "撸",
+   "start": 161.64,
+   "end": 161.8,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "logprob": -4.090595245361328
+  },
+  {
+   "text": " ",
+   "start": 161.8,
+   "end": 162.54,
+   "type": "spacing",
+   "speaker_id": "speaker_0",
+   "logprob": -1.9772288799285889
+  },
+  {
+   "text": "ertet",
+   "start": 162.58,
+   "end": 193.28,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "logprob": -5.561373710632324
+  },
+  {
+   "text": " ",
+   "start": 193.28,
+   "end": 193.32,
+   "type": "spacing",
+   "speaker_id": "speaker_0",
+   "logprob": -5.451449394226074
+  },
+  {
+   "text": "foremost",
+   "start": 195.62,
+   "end": 196.06,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "logprob": -5.451449394226074
+  },
+  {
+   "text": " ",
+   "start": 196.06,
+   "end": 196.06,
+   "type": "spacing",
+   "speaker_id": "speaker_0",
+   "logprob": -4.611262321472168
+  }
+ ],
+ "audio_duration_secs": 196.5249375
+}

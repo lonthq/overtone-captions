@@ -1,0 +1,12 @@
+{
+  "fleurs-de": {
+    "audioPcmSha256": "332a5c503d7f92d771010b3fac7b03d0491994ced33cfb9804b34d0462e29dab",
+    "refSha256": "8262470579813c33a00f46f176a18e9160eec88e8d7d32c77fbe2f6e906297a0",
+    "seconds": 187.06
+  },
+  "fleurs-es": {
+    "audioPcmSha256": "b77d98df21701bac37c40c01ce31ea19d565dcb3981c45873365c9f5c91984e6",
+    "refSha256": "7cadbbc635f07dea6fadceff55623151ec9461389dcd41d589bb0fa80a40312f",
+    "seconds": 184.68
+  }
+}

@@ -1,0 +1,704 @@
+{
+ "params": {
+  "model": "ggml-base.bin",
+  "language": "auto",
+  "translate": false
+ },
+ "result": {
+  "language": "en"
+ },
+ "transcription": [
+  {
+   "timestamps": {
+    "from": "00:00:00,000",
+    "to": "00:00:04,800"
+   },
+   "offsets": {
+    "from": 0,
+    "to": 4800
+   },
+   "text": " Every year, one in five drivers has some kind of car damage.",
+   "tokens": [
+    {
+     "text": "[_BEG_]",
+     "offsets": {
+      "from": 0,
+      "to": 0
+     },
+     "id": 50364,
+     "p": 0.787221,
+     "t_dtw": -1
+    },
+    {
+     "text": " Every",
+     "offsets": {
+      "from": 400,
+      "to": 400
+     },
+     "id": 2048,
+     "p": 0.82847,
+     "t_dtw": -1
+    },
+    {
+     "text": " year",
+     "offsets": {
+      "from": 500,
+      "to": 720
+     },
+     "id": 1064,
+     "p": 0.997143,
+     "t_dtw": -1
+    },
+    {
+     "text": ",",
+     "offsets": {
+      "from": 720,
+      "to": 880
+     },
+     "id": 11,
+     "p": 0.912771,
+     "t_dtw": -1
+    },
+    {
+     "text": " one",
+     "offsets": {
+      "from": 880,
+      "to": 1080
+     },
+     "id": 472,
+     "p": 0.692426,
+     "t_dtw": -1
+    },
+    {
+     "text": " in",
+     "offsets": {
+      "from": 1280,
+      "to": 1280
+     },
+     "id": 294,
+     "p": 0.931647,
+     "t_dtw": -1
+    },
+    {
+     "text": " five",
+     "offsets": {
+      "from": 1340,
+      "to": 1600
+     },
+     "id": 1732,
+     "p": 0.715964,
+     "t_dtw": -1
+    },
+    {
+     "text": " drivers",
+     "offsets": {
+      "from": 1600,
+      "to": 2170
+     },
+     "id": 11590,
+     "p": 0.984581,
+     "t_dtw": -1
+    },
+    {
+     "text": " has",
+     "offsets": {
+      "from": 2170,
+      "to": 2410
+     },
+     "id": 575,
+     "p": 0.998342,
+     "t_dtw": -1
+    },
+    {
+     "text": " some",
+     "offsets": {
+      "from": 2410,
+      "to": 2620
+     },
+     "id": 512,
+     "p": 0.999321,
+     "t_dtw": -1
+    },
+    {
+     "text": " kind",
+     "offsets": {
+      "from": 2730,
+      "to": 3050
+     },
+     "id": 733,
+     "p": 0.997265,
+     "t_dtw": -1
+    },
+    {
+     "text": " of",
+     "offsets": {
+      "from": 3050,
+      "to": 3210
+     },
+     "id": 295,
+     "p": 0.995873,
+     "t_dtw": -1
+    },
+    {
+     "text": " car",
+     "offsets": {
+      "from": 3210,
+      "to": 3450
+     },
+     "id": 1032,
+     "p": 0.991357,
+     "t_dtw": -1
+    },
+    {
+     "text": " damage",
+     "offsets": {
+      "from": 3450,
+      "to": 3930
+     },
+     "id": 4344,
+     "p": 0.993701,
+     "t_dtw": -1
+    },
+    {
+     "text": ".",
+     "offsets": {
+      "from": 3980,
+      "to": 4800
+     },
+     "id": 13,
+     "p": 0.932696,
+     "t_dtw": -1
+    },
+    {
+     "text": "[_TT_240]",
+     "offsets": {
+      "from": 4800,
+      "to": 4800
+     },
+     "id": 50604,
+     "p": 0.195188,
+     "t_dtw": -1
+    }
+   ]
+  },
+  {
+   "timestamps": {
+    "from": "00:00:04,800",
+    "to": "00:00:10,520"
+   },
+   "offsets": {
+    "from": 4800,
+    "to": 10520
+   },
+   "text": " With drive cover from Lumora, you're insured from day one, for just 12 euros a month.",
+   "tokens": [
+    {
+     "text": " With",
+     "offsets": {
+      "from": 4800,
+      "to": 5060
+     },
+     "id": 2022,
+     "p": 0.994757,
+     "t_dtw": -1
+    },
+    {
+     "text": " drive",
+     "offsets": {
+      "from": 5300,
+      "to": 5380
+     },
+     "id": 3332,
+     "p": 0.528743,
+     "t_dtw": -1
+    },
+    {
+     "text": " cover",
+     "offsets": {
+      "from": 5380,
+      "to": 5700
+     },
+     "id": 2060,
+     "p": 0.969095,
+     "t_dtw": -1
+    },
+    {
+     "text": " from",
+     "offsets": {
+      "from": 5700,
+      "to": 5890
+     },
+     "id": 490,
+     "p": 0.99859,
+     "t_dtw": -1
+    },
+    {
+     "text": " Lum",
+     "offsets": {
+      "from": 6140,
+      "to": 6150
+     },
+     "id": 35978,
+     "p": 0.30401,
+     "t_dtw": -1
+    },
+    {
+     "text": "ora",
+     "offsets": {
+      "from": 6150,
+      "to": 6340
+     },
+     "id": 3252,
+     "p": 0.621636,
+     "t_dtw": -1
+    },
+    {
+     "text": ",",
+     "offsets": {
+      "from": 6340,
+      "to": 6470
+     },
+     "id": 11,
+     "p": 0.978136,
+     "t_dtw": -1
+    },
+    {
+     "text": " you",
+     "offsets": {
+      "from": 6470,
+      "to": 6660
+     },
+     "id": 291,
+     "p": 0.992782,
+     "t_dtw": -1
+    },
+    {
+     "text": "'re",
+     "offsets": {
+      "from": 6660,
+      "to": 6780
+     },
+     "id": 434,
+     "p": 0.986387,
+     "t_dtw": -1
+    },
+    {
+     "text": " ins",
+     "offsets": {
+      "from": 6870,
+      "to": 7040
+     },
+     "id": 1028,
+     "p": 0.775179,
+     "t_dtw": -1
+    },
+    {
+     "text": "ured",
+     "offsets": {
+      "from": 7040,
+      "to": 7220
+     },
+     "id": 3831,
+     "p": 0.988746,
+     "t_dtw": -1
+    },
+    {
+     "text": " from",
+     "offsets": {
+      "from": 7300,
+      "to": 7560
+     },
+     "id": 490,
+     "p": 0.998506,
+     "t_dtw": -1
+    },
+    {
+     "text": " day",
+     "offsets": {
+      "from": 7560,
+      "to": 7750
+     },
+     "id": 786,
+     "p": 0.712574,
+     "t_dtw": -1
+    },
+    {
+     "text": " one",
+     "offsets": {
+      "from": 7750,
+      "to": 8000
+     },
+     "id": 472,
+     "p": 0.853888,
+     "t_dtw": -1
+    },
+    {
+     "text": ",",
+     "offsets": {
+      "from": 8000,
+      "to": 8040
+     },
+     "id": 11,
+     "p": 0.410335,
+     "t_dtw": -1
+    },
+    {
+     "text": " for",
+     "offsets": {
+      "from": 8180,
+      "to": 8430
+     },
+     "id": 337,
+     "p": 0.986368,
+     "t_dtw": -1
+    },
+    {
+     "text": " just",
+     "offsets": {
+      "from": 8430,
+      "to": 8730
+     },
+     "id": 445,
+     "p": 0.999192,
+     "t_dtw": -1
+    },
+    {
+     "text": " 12",
+     "offsets": {
+      "from": 8780,
+      "to": 8860
+     },
+     "id": 2272,
+     "p": 0.901662,
+     "t_dtw": -1
+    },
+    {
+     "text": " euros",
+     "offsets": {
+      "from": 9510,
+      "to": 9720
+     },
+     "id": 14160,
+     "p": 0.460671,
+     "t_dtw": -1
+    },
+    {
+     "text": " a",
+     "offsets": {
+      "from": 9720,
+      "to": 9800
+     },
+     "id": 257,
+     "p": 0.996012,
+     "t_dtw": -1
+    },
+    {
+     "text": " month",
+     "offsets": {
+      "from": 9800,
+      "to": 10230
+     },
+     "id": 1618,
+     "p": 0.998776,
+     "t_dtw": -1
+    },
+    {
+     "text": ".",
+     "offsets": {
+      "from": 10230,
+      "to": 10520
+     },
+     "id": 13,
+     "p": 0.933316,
+     "t_dtw": -1
+    },
+    {
+     "text": "[_TT_526]",
+     "offsets": {
+      "from": 10520,
+      "to": 10520
+     },
+     "id": 50890,
+     "p": 0.18729,
+     "t_dtw": -1
+    }
+   ]
+  },
+  {
+   "timestamps": {
+    "from": "00:00:10,520",
+    "to": "00:00:14,160"
+   },
+   "offsets": {
+    "from": 10520,
+    "to": 14160
+   },
+   "text": " And the best part, you can claim directly in the air.",
+   "tokens": [
+    {
+     "text": " And",
+     "offsets": {
+      "from": 10520,
+      "to": 10750
+     },
+     "id": 400,
+     "p": 0.984958,
+     "t_dtw": -1
+    },
+    {
+     "text": " the",
+     "offsets": {
+      "from": 10980,
+      "to": 10980
+     },
+     "id": 264,
+     "p": 0.995767,
+     "t_dtw": -1
+    },
+    {
+     "text": " best",
+     "offsets": {
+      "from": 11030,
+      "to": 11290
+     },
+     "id": 1151,
+     "p": 0.994313,
+     "t_dtw": -1
+    },
+    {
+     "text": " part",
+     "offsets": {
+      "from": 11290,
+      "to": 11590
+     },
+     "id": 644,
+     "p": 0.999535,
+     "t_dtw": -1
+    },
+    {
+     "text": ",",
+     "offsets": {
+      "from": 11590,
+      "to": 11630
+     },
+     "id": 11,
+     "p": 0.857018,
+     "t_dtw": -1
+    },
+    {
+     "text": " you",
+     "offsets": {
+      "from": 11860,
+      "to": 11980
+     },
+     "id": 291,
+     "p": 0.994992,
+     "t_dtw": -1
+    },
+    {
+     "text": " can",
+     "offsets": {
+      "from": 11980,
+      "to": 12200
+     },
+     "id": 393,
+     "p": 0.99934,
+     "t_dtw": -1
+    },
+    {
+     "text": " claim",
+     "offsets": {
+      "from": 12200,
+      "to": 12600
+     },
+     "id": 3932,
+     "p": 0.977983,
+     "t_dtw": -1
+    },
+    {
+     "text": " directly",
+     "offsets": {
+      "from": 12600,
+      "to": 13140
+     },
+     "id": 3838,
+     "p": 0.998315,
+     "t_dtw": -1
+    },
+    {
+     "text": " in",
+     "offsets": {
+      "from": 13250,
+      "to": 13370
+     },
+     "id": 294,
+     "p": 0.996892,
+     "t_dtw": -1
+    },
+    {
+     "text": " the",
+     "offsets": {
+      "from": 13460,
+      "to": 13610
+     },
+     "id": 264,
+     "p": 0.99671,
+     "t_dtw": -1
+    },
+    {
+     "text": " air",
+     "offsets": {
+      "from": 13610,
+      "to": 13760
+     },
+     "id": 1988,
+     "p": 0.924366,
+     "t_dtw": -1
+    },
+    {
+     "text": ".",
+     "offsets": {
+      "from": 13900,
+      "to": 14160
+     },
+     "id": 13,
+     "p": 0.90864,
+     "t_dtw": -1
+    },
+    {
+     "text": "[_TT_708]",
+     "offsets": {
+      "from": 14160,
+      "to": 14160
+     },
+     "id": 51072,
+     "p": 0.12753,
+     "t_dtw": -1
+    }
+   ]
+  },
+  {
+   "timestamps": {
+    "from": "00:00:14,160",
+    "to": "00:00:17,040"
+   },
+   "offsets": {
+    "from": 14160,
+    "to": 17040
+   },
+   "text": " So remember, drive cover, drive worry free.",
+   "tokens": [
+    {
+     "text": " So",
+     "offsets": {
+      "from": 14160,
+      "to": 14300
+     },
+     "id": 407,
+     "p": 0.996291,
+     "t_dtw": -1
+    },
+    {
+     "text": " remember",
+     "offsets": {
+      "from": 14660,
+      "to": 14890
+     },
+     "id": 1604,
+     "p": 0.993987,
+     "t_dtw": -1
+    },
+    {
+     "text": ",",
+     "offsets": {
+      "from": 14890,
+      "to": 15030
+     },
+     "id": 11,
+     "p": 0.921753,
+     "t_dtw": -1
+    },
+    {
+     "text": " drive",
+     "offsets": {
+      "from": 15030,
+      "to": 15250
+     },
+     "id": 3332,
+     "p": 0.956116,
+     "t_dtw": -1
+    },
+    {
+     "text": " cover",
+     "offsets": {
+      "from": 15500,
+      "to": 15770
+     },
+     "id": 2060,
+     "p": 0.993062,
+     "t_dtw": -1
+    },
+    {
+     "text": ",",
+     "offsets": {
+      "from": 15770,
+      "to": 15840
+     },
+     "id": 11,
+     "p": 0.903756,
+     "t_dtw": -1
+    },
+    {
+     "text": " drive",
+     "offsets": {
+      "from": 15940,
+      "to": 16280
+     },
+     "id": 3332,
+     "p": 0.983648,
+     "t_dtw": -1
+    },
+    {
+     "text": " worry",
+     "offsets": {
+      "from": 16280,
+      "to": 16580
+     },
+     "id": 3292,
+     "p": 0.779905,
+     "t_dtw": -1
+    },
+    {
+     "text": " free",
+     "offsets": {
+      "from": 16660,
+      "to": 17000
+     },
+     "id": 1737,
+     "p": 0.917036,
+     "t_dtw": -1
+    },
+    {
+     "text": ".",
+     "offsets": {
+      "from": 17000,
+      "to": 17020
+     },
+     "id": 13,
+     "p": 0.753522,
+     "t_dtw": -1
+    },
+    {
+     "text": "[_TT_852]",
+     "offsets": {
+      "from": 17040,
+      "to": 17040
+     },
+     "id": 51216,
+     "p": 0.218971,
+     "t_dtw": -1
+    }
+   ]
+  }
+ ]
+}

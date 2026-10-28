@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Stage for record-clip.mjs (not part of the site), which calls prepare() and then run(). -->
+  <title>Overtone clip stage</title>
+  <link rel="stylesheet" href="%%BASE%%lib/video.js/video-js.css">
+  <link rel="stylesheet" href="%%BASE%%lib/videojs-overtone/themes/base.css">
+  <link rel="stylesheet" href="%%BASE%%lib/videojs-overtone/themes/social.css">
+  <style>
+    html, body { margin: 0; width: 1120px; height: 565px; overflow: hidden; background: #111318; color: #e8e8ee;
+      font: 15px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    .stage { position: relative; box-sizing: border-box; width: 1120px; height: 565px; padding: 22px 33px; }
+    header { display: flex; align-items: center; gap: 12px; height: 44px; margin-bottom: 14px; }
+    .brand { display: flex; align-items: center; gap: 10px; margin-right: auto; font-size: 20px; font-weight: 750; }
+    .brand svg { width: 28px; height: 28px; }
+    .brand small { margin-left: 6px; color: #8f93a3; font-size: 15px; font-weight: 500; }
+    .modes { display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: #1c1f27; }
+    .modes span { padding: 5px 14px; border-radius: 999px; color: #8f93a3; font-size: 14px; font-weight: 650; transition: background 0.2s, color 0.2s; }
+    .modes span::before { content: "CC "; opacity: 0.6; font-weight: 500; }
+    .modes span.on { background: #ffd400; color: #111; }
+    .players { display: flex; gap: 24px; align-items: flex-start; }
+    figure { margin: 0; }
+    figcaption { margin-top: 8px; color: #8f93a3; font-size: 13px; }
+    .wide { width: 782px; }
+    .tall { width: 248px; }
+    .video-js { border-radius: 10px; overflow: hidden; background: #000; }
+    .vjs-big-play-button, .vjs-loading-spinner, .vjs-poster, .vjs-text-track-display { display: none !important; }
+    .tall .vjs-control-bar { display: none !important; }
+    .crop video.vjs-tech { object-fit: cover; }
+    /* Keeps the CC button in view. */
+    .wide .vjs-control-bar { opacity: 1 !important; visibility: visible !important; }
+    .cursor { position: absolute; left: 700px; top: 520px; z-index: 10; width: 22px; height: 30px; pointer-events: none;
+      transition: left 0.55s cubic-bezier(.4,0,.2,1), top 0.55s cubic-bezier(.4,0,.2,1); }
+    .cursor svg { display: block; width: 22px; height: 30px; filter: drop-shadow(0 2px 3px rgb(0 0 0 / 0.6)); }
+    .cursor::after { content: ""; position: absolute; left: -14px; top: -14px; width: 28px; height: 28px; border: 2px solid #ffd400;
+      border-radius: 50%; opacity: 0; transform: scale(0.4); }
+    .cursor.click::after { animation: ring 0.45s ease-out; }
+    @keyframes ring { from { opacity: 1; transform: scale(0.4); } to { opacity: 0; transform: scale(1.4); } }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <header>
+      <div class="brand">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#20242d"/><rect x="6" y="13" width="20" height="4.5" rx="2.25" fill="#e8e8ee"/><rect x="6" y="20" width="8" height="4.5" rx="2.25" fill="#e8e8ee"/><rect x="15.5" y="20" width="10.5" height="4.5" rx="2.25" fill="#ffd400"/></svg>
+        Overtone <small>videojs-overtone · social style pack</small>
+      </div>
+      <div class="modes"><span data-mode="off">off</span><span data-mode="styled">styled</span><span data-mode="plain">plain</span></div>
+    </header>
+    <div class="players">
+      <figure class="wide"><video id="p-wide" class="video-js" muted playsinline preload="auto"></video><figcaption>16:9 · horizontal cut</figcaption></figure>
+      <figure class="tall"><video id="p-tall" class="video-js" muted playsinline preload="auto"></video><figcaption>9:16 · vertical cut</figcaption></figure>
+    </div>
+    <div class="cursor" id="cursor"><svg viewBox="0 0 22 30"><path d="M2 2 L2 24 L8 18.5 L12 28 L16 26.3 L12 17 L20 17 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+  </div>
+  <script src="%%BASE%%lib/video.js/video.min.js"></script>
+  <script src="%%BASE%%lib/videojs-overtone/index.global.js"></script>
+  <script>
+    // Tears of Steel (CC BY 3.0, Blender Foundation): the file the captions were made from. Declared video/mp4
+    // because Chrome answers "" to canPlayType('video/quicktime').
+    const VIDEO = 'https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov';
+    const CAPTIONS = '%%BASE%%examples/output/tears-of-steel/tears-of-steel.overtone.json';
+    // "No! No! You broke my heart. …": close-ups, so the center-cropped 9:16 player shows whole faces.
+    const START = 380.2;
+    const LENGTH = 12;
+    // Clip time (s) → CC mode; the loop ends where it starts.
+    const CLICKS = [{ at: 0.7, mode: 'styled' }, { at: 8.2, mode: 'plain' }, { at: 11.0, mode: 'off' }];
+
+    const players = [];
+    const controllers = [];
+    for (const [id, aspectRatio, crop] of [['p-wide', '16:9', false], ['p-tall', '9:16', true]]) {
+      const player = videojs(id, { fluid: true, aspectRatio, inactivityTimeout: 0, controls: true, muted: true,
+        sources: [{ src: VIDEO, type: 'video/mp4' }] });
+      if (crop) player.addClass('crop');
+      const controller = player.overtone({ src: CAPTIONS, theme: 'social', speakers: 'never' });
+      player.on('overtone:modechange', (event) => {
+        for (const other of controllers) if (other !== controller) other.setMode(event.mode);
+        showMode(event.mode);
+      });
+      players.push(player);
+      controllers.push(controller);
+    }
+    function showMode(mode) {
+      for (const pill of document.querySelectorAll('.modes span')) pill.classList.toggle('on', pill.dataset.mode === mode);
+    }
+    const once = (player, event) => new Promise((resolve) => player.one(event, resolve));
+    const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    /** Loads both players at START, buffered, with captions off and no toast showing. */
+    window.prepare = async () => {
+      await Promise.all(players.map((player) => new Promise((resolve) => player.ready(resolve))));
+      await Promise.all(controllers.map((controller) => controller.ready));
+      await Promise.all(players.map(async (player) => {
+        if (player.readyState() < 1) await once(player, 'loadedmetadata');
+        const seeked = once(player, 'seeked');
+        player.currentTime(START);
+        await seeked;
+      }));
+      // Buffer LENGTH + 1 s (at most 30 s of waiting), so playback does not stall.
+      const until = Date.now() + 30000;
+      const buffered = (player) => { const r = player.buffered(); return r.length && r.end(r.length - 1) >= START + LENGTH + 1; };
+      while (Date.now() < until && !players.every(buffered)) await wait(200);
+      for (const controller of controllers) controller.setMode('off');
+      showMode('off');
+      await wait(1900); // the "Captions off" toast fades out
+      return players.every(buffered);
+    };
+
+    const cursor = document.getElementById('cursor');
+    function pointAtCC() {
+      const button = document.querySelector('#p-wide .ot-captions-button').getBoundingClientRect();
+      cursor.style.left = `${button.left + button.width / 2 - 2}px`;
+      cursor.style.top = `${button.top + button.height / 2 - 2}px`;
+    }
+    function click() {
+      cursor.classList.remove('click');
+      void cursor.offsetWidth;
+      cursor.classList.add('click');
+      document.querySelector('#p-wide .ot-captions-button').click();
+    }
+
+    /** Plays LENGTH seconds; resolves to per-frame samples [wall-clock epoch seconds, clip time] for the recorder. */
+    window.run = () => new Promise((resolve, reject) => {
+      const video = players[0].tech(true).el();
+      const done = new Set();
+      const samples = [];
+      Promise.all(players.map((player) => player.play())).catch(reject);
+      const tick = () => {
+        const t = video.currentTime - START;
+        samples.push([Date.now() / 1000, t]);
+        for (const [index, { at }] of CLICKS.entries()) {
+          if (!done.has(`move${index}`) && t >= at - 0.65) { done.add(`move${index}`); pointAtCC(); }
+          if (!done.has(`click${index}`) && t >= at) { done.add(`click${index}`); click(); }
+        }
+        if (t >= LENGTH) {
+          for (const player of players) player.pause();
+          resolve({ samples });
+          return;
+        }
+        requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  </script>
+</body>
+</html>

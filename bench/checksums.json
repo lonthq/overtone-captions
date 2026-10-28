@@ -1,0 +1,22 @@
+{
+  "ami-es2004a": {
+    "audioPcmSha256": "6609b921cbb54f477c5d62e31687e70e9be3da1512905a09d24bf44e9df3d2cb",
+    "refSha256": "f1234458bf75ac257c93c5591f3ed26660eda4e2bf7da0eb647db2dd93e7b55b",
+    "seconds": 220
+  },
+  "ami-en2002a": {
+    "audioPcmSha256": "3de9bd8ebf559466141487e26ef098c91e5ad854c66d8906ba237ec40a6cc07f",
+    "refSha256": "785f3f27a4158e069f64b61927d217bc77b6b741ab87cef0eba4ff6c6a0c4573",
+    "seconds": 225
+  },
+  "libri-672-122797": {
+    "audioPcmSha256": "e3546e99ea6d6ce7f8b50d6ebc462db32ca4a972a930892d73202da2e927590d",
+    "refSha256": "3209dbc634461531687a11e6679f67cedb3c1d08a1a829c81e0fa56370269914",
+    "seconds": 196.525
+  },
+  "fleurs-nl": {
+    "audioPcmSha256": "68464c29b7e51e960d58e51f9cdf88eacf8f9e9976bb6baf94395b6f0b08f857",
+    "refSha256": "b6dcd0e051ebe7f210b192cb746ba7f17e3034fe9aed5a646d6457b2983cf6ab",
+    "seconds": 190.06
+  }
+}

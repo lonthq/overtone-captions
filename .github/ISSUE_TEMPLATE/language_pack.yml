@@ -1,0 +1,56 @@
+name: Language pack
+description: Add a language, or improve how Overtone handles one
+labels: [language-pack]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Start with [Add your language](https://github.com/lonthq/overtone-captions/blob/main/docs/contributing/languages.md): what a pack holds and how to test it.
+        Run `overtone languages` (or `overtone languages <code>`) to see what a pack covers today.
+  - type: input
+    id: language
+    attributes:
+      label: Language and code
+      description: For example "Swedish (sv)" or "Brazilian Portuguese (pt-BR)".
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What would you like to do?
+      options:
+        - Add a new language pack
+        - Improve an existing pack
+        - Report captions that are cut badly in this language
+    validations:
+      required: true
+  - type: checkboxes
+    id: sections
+    attributes:
+      label: Which levels?
+      description: The coverage levels from the guide. Check all that apply.
+      options:
+        - label: Detection (common words to recognize the language)
+        - label: Line cutting (words a caption line should not end on)
+        - label: Numbers (number words, decimal separator, currency and rates)
+  - type: textarea
+    id: examples
+    attributes:
+      label: Caption examples
+      description: A few real captions, cut the way you would cut them and the way Overtone cuts them. Plain text, no private recordings.
+      placeholder: |
+        good: Ik weet dat / niet zeker
+        bad:  Ik weet / dat niet zeker
+      render: text
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Where your word lists and rules come from (your own knowledge, a style guide, a dictionary).
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I speak this language fluently
+        - label: I would like to open a pull request for this

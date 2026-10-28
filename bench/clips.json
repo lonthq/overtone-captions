@@ -1,0 +1,52 @@
+{
+  "$comment": "Exact clip selection for the Overtone benchmark. See DATASETS.md. Times are seconds in the source recording.",
+  "clips": [
+    {
+      "id": "ami-es2004a",
+      "source": "ami",
+      "meeting": "ES2004a",
+      "start": 630,
+      "end": 850,
+      "language": "en",
+      "kind": "meeting (scenario), 4 speakers",
+      "context": "Recorded project meeting with four participants."
+    },
+    {
+      "id": "ami-en2002a",
+      "source": "ami",
+      "meeting": "EN2002a",
+      "start": 558,
+      "end": 783,
+      "language": "en",
+      "kind": "meeting (natural), 4 speakers",
+      "context": "Recorded informal meeting with four participants."
+    },
+    {
+      "id": "libri-672-122797",
+      "source": "librispeech-pc",
+      "split": "test-clean",
+      "speaker": 672,
+      "chapter": 122797,
+      "first": 0,
+      "last": 22,
+      "hfRowOffset": 1529,
+      "gap": 0.3,
+      "wordTimes": "mfa",
+      "language": "en",
+      "kind": "read speech (audiobook), 1 speaker",
+      "context": "Audiobook: a fairy tale read aloud by one narrator."
+    },
+    {
+      "id": "fleurs-nl",
+      "source": "fleurs",
+      "config": "nl_nl",
+      "split": "test",
+      "firstRow": 0,
+      "count": 18,
+      "gap": 0.5,
+      "language": "nl",
+      "kind": "read speech (Dutch), unrelated sentences",
+      "context": "Dutch read speech: unrelated sentences from news and encyclopedia articles."
+    }
+  ]
+}

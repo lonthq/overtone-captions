@@ -1,0 +1,9 @@
+{
+  "_source": "GET /api/tags on a local Ollama 0.40.6 (recorded 2026-10-17; digests and dates shortened), shape as in https://docs.ollama.com/api/tags",
+  "models": [
+    { "name": "qwen3:8b", "model": "qwen3:8b", "modified_at": "2026-10-17T17:22:37-05:00", "size": 5225388164, "digest": "500a1f067a9f",
+      "details": { "format": "gguf", "family": "qwen3", "parameter_size": "8.2B", "quantization_level": "Q4_K_M", "context_length": 40960 } },
+    { "name": "llama3.1:8b", "model": "llama3.1:8b", "modified_at": "2026-10-17T17:22:37-05:00", "size": 4920753328, "digest": "46e0c10c039e",
+      "details": { "format": "gguf", "family": "llama", "parameter_size": "8.0B", "quantization_level": "Q4_K_M" } }
+  ]
+}

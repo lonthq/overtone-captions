@@ -1,0 +1,33 @@
+{
+  "$comment": "Extra clips for experiments (not part of the official benchmark). Built like fleurs-nl in clips.json: FLEURS test split, rows from 0, the smallest count that reaches 180 s (nl_nl gives 18 by this rule), 0.5 s gaps, CC BY 4.0. The datasets server cannot serve these configs, so fetch.mjs reads the same rows from the raw archive (\"archive\": true; checked to give byte-identical audio for nl_nl). Fetch with: node bench/fetch.mjs --clips bench/clips.extra.json (checksums in bench/checksums.extra.json).",
+  "clips": [
+    {
+      "id": "fleurs-de",
+      "source": "fleurs",
+      "config": "de_de",
+      "split": "test",
+      "firstRow": 0,
+      "count": 12,
+      "gap": 0.5,
+      "archive": true,
+      "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+      "language": "de",
+      "kind": "read speech (German), unrelated sentences",
+      "context": "German read speech: unrelated sentences from news and encyclopedia articles."
+    },
+    {
+      "id": "fleurs-es",
+      "source": "fleurs",
+      "config": "es_419",
+      "split": "test",
+      "firstRow": 0,
+      "count": 16,
+      "gap": 0.5,
+      "archive": true,
+      "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+      "language": "es",
+      "kind": "read speech (Latin American Spanish), unrelated sentences",
+      "context": "Spanish read speech: unrelated sentences from news and encyclopedia articles."
+    }
+  ]
+}

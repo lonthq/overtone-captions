@@ -1,0 +1,46 @@
+name: Feature request
+description: Suggest an improvement or a new capability
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open questions and early ideas go to [Discussions](https://github.com/lonthq/overtone-captions/discussions).
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part?
+      options:
+        - Format (overtone-format)
+        - Video.js plugin or style packs (videojs-overtone)
+        - CLI pipeline (overtone-captions)
+        - Examples or demo
+        - Documentation
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would it solve?
+      description: What you are trying to do, and where you are stuck.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like?
+      description: The behavior, option or API you have in mind.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and workarounds
+      description: What you tried or considered instead.
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to work on this

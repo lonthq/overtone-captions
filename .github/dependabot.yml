@@ -1,0 +1,33 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
+    ignore:
+      # TypeScript 7 (the native compiler) and video.js 10 (a new major for the plugin to support) need work of
+      # their own; @types/node follows the oldest supported Node ("engines": ">=22.12"), not the newest; a new
+      # major of @anthropic-ai/sdk (1.0) is checked against the live API before the provider moves to it.
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
+      - dependency-name: video.js
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@anthropic-ai/sdk"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns:
+          - "*"

@@ -1,0 +1,65 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste API keys, `.env` contents or private recordings.
+        Report security problems privately in the Security tab (see SECURITY.md).
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where does it happen?
+      options:
+        - Format, validator or exporters (overtone-format)
+        - Video.js plugin or style packs (videojs-overtone)
+        - CLI pipeline (overtone-captions)
+        - Examples or demo
+        - Documentation
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you expected, and what you got.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The command, code or page you used. A small `.overtone.json` file or a few lines of transcript help.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output or error message
+      description: Console output, warnings or the CLI summary. Remove keys and private text first.
+      render: shell
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Package version or commit, for example 0.1.0.
+    validations:
+      required: true
+  - type: input
+    id: node
+    attributes:
+      label: Node.js version
+      description: Output of `node --version` (CLI and format).
+  - type: input
+    id: environment
+    attributes:
+      label: Browser, video.js version and OS
+      description: For plugin problems, for example "Safari 19 on iOS 19, video.js 8.24".
+  - type: input
+    id: providers
+    attributes:
+      label: Providers and models
+      description: For CLI problems, for example `--text azure-openai:... --llm anthropic`.

@@ -1,0 +1,13 @@
+{
+  "language": "en",
+  "horizontal": [
+    "0.500 2.210 S1 I think that we should go to",
+    "3.410 5.528 S1 the station before the train leaves,",
+    "6.550 8.433 S1 and then we can find the others."
+  ],
+  "vertical": [
+    "0.500 2.367 S1 I think / that we should go to",
+    "3.410 5.810 S1 the station before / the train leaves,",
+    "6.550 8.684 S1 and then we can find / the others."
+  ]
+}

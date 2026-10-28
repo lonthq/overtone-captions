@@ -1,0 +1,10 @@
+{
+  "$schema": "../pack.schema.json",
+  "name": "clean",
+  "title": "Clean",
+  "description": "The default for TV and desktop: a dark box behind each line, light tints for brand, emphasis and number words, bold key words and dimmed asides.",
+  "author": "Overtone maintainers",
+  "license": "MIT",
+  "tags": ["tv", "desktop"],
+  "contrast": "78% black box. Worst case over a white frame: white text 10.4:1, lowest is the dimmed soft text at 5.8:1."
+}

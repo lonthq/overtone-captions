@@ -1,0 +1,132 @@
+{
+  "$comment": "Regression gate baseline (packages/cli/test/bench-gate.test.ts). Update with BENCH_GATE_WRITE=1 npx vitest run packages/cli/test/bench-gate.test.ts after a reviewed change.",
+  "clips": {
+    "ami-en2002a": {
+      "wer": 0.3239,
+      "werFormatted": 0.4076,
+      "words.median": 0.05,
+      "words.p90": 0.11,
+      "words.within100": 0.8732,
+      "words.within250": 0.9827,
+      "words.matched": 694,
+      "output.fast": 70,
+      "speakers.accuracy": 0.9783
+    },
+    "ami-es2004a": {
+      "wer": 0.1372,
+      "werFormatted": 0.2221,
+      "words.median": 0.06,
+      "words.p90": 0.1,
+      "words.within100": 0.8882,
+      "words.within250": 0.9904,
+      "words.matched": 626,
+      "output.fast": 36,
+      "speakers.accuracy": 0.9872
+    },
+    "cosmos-laundromat": {
+      "words.median": 0,
+      "words.p90": 0,
+      "words.within100": 1,
+      "words.within250": 1,
+      "words.matched": 328,
+      "output.fast": 2
+    },
+    "elephants-dream": {
+      "words.median": 0,
+      "words.p90": 0,
+      "words.within100": 0.9973,
+      "words.within250": 1,
+      "words.matched": 366,
+      "output.fast": 0
+    },
+    "fleurs-de": {
+      "wer": 0.0306,
+      "werFormatted": 0.0512,
+      "output.fast": 7
+    },
+    "fleurs-es": {
+      "wer": 0.0107,
+      "werFormatted": 0.06,
+      "output.fast": 11
+    },
+    "fleurs-nl": {
+      "wer": 0.0274,
+      "werFormatted": 0.0412,
+      "output.fast": 20
+    },
+    "hum-60": {
+      "output.fast": 0,
+      "output.words": 0
+    },
+    "libri-672-122797": {
+      "wer": 0.0047,
+      "werFormatted": 0.1359,
+      "output.fast": 1,
+      "words.median": 0.0755,
+      "words.p90": 0.14,
+      "words.within100": 0.6792,
+      "words.within250": 0.9882,
+      "words.matched": 424
+    },
+    "libri-other-7018-75788": {
+      "wer": 0.0153,
+      "werFormatted": 0.0807,
+      "output.fast": 7
+    },
+    "music-then-speech": {
+      "wer": 0.0149,
+      "werFormatted": 0.032,
+      "output.fast": 20,
+      "output.early": 0,
+      "output.earlyNoSecond": 0
+    },
+    "nasa-ayers": {
+      "wer": 0.009,
+      "werFormatted": 0.0505,
+      "cues.median": 0.1265,
+      "cues.matched": 74,
+      "cues.over1s": 1,
+      "cues.over2s": 0,
+      "output.fast": 41
+    },
+    "nasa-oravec": {
+      "wer": 0.0158,
+      "werFormatted": 0.0564,
+      "cues.median": 0.154,
+      "cues.matched": 86,
+      "cues.over1s": 0,
+      "cues.over2s": 0,
+      "output.fast": 23
+    },
+    "noise-pink-60": {
+      "output.fast": 0,
+      "output.words": 0
+    },
+    "noise-white-60": {
+      "output.fast": 0,
+      "output.words": 0
+    },
+    "silence-60": {
+      "output.fast": 0,
+      "output.words": 0
+    },
+    "spring": {
+      "output.fast": 0,
+      "output.words": 0
+    },
+    "tears-of-steel": {
+      "wer": 0.1808,
+      "werFormatted": 0.2473,
+      "words.median": 0,
+      "words.p90": 0,
+      "words.within100": 0.991,
+      "words.within250": 0.997,
+      "words.matched": 332,
+      "cues.median": 0.29,
+      "cues.matched": 68,
+      "cues.over1s": 6,
+      "cues.over2s": 1,
+      "output.fast": 5
+    }
+  }
+}

@@ -1,0 +1,17 @@
+/*
+ * Style pack "minimal": no box, a thin dark outline and quiet class styling. For films, interviews and editorial
+ * video where captions should not draw attention.
+ */
+.ot-layer.ot-theme-minimal {
+  --ot-bg: transparent;
+  --ot-padding: 0 0.2em;
+  /* Two thin layers form the outline; halo and drop shadow keep it readable on bright video. */
+  --ot-shadow: 0 0 0.05em #000, 0 0 0.05em #000, 0 0 0.12em rgb(0 0 0 / 0.7), 0 0.04em 0.18em rgb(0 0 0 / 0.6);
+  --ot-speaker-color: #e6e6e6;
+  --ot-emphasis-style: italic;
+  --ot-key-weight: 700;
+  --ot-brand-color: #ffeccc;         /* warm white */
+  --ot-brand-weight: 600;
+  --ot-number-color: #ddf7ea;        /* cool white */
+  --ot-soft-color: rgb(255 255 255 / 0.78);
+}

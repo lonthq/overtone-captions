@@ -1,0 +1,10 @@
+{
+  "$schema": "../pack.schema.json",
+  "name": "my-pack",
+  "title": "My pack",
+  "description": "One or two sentences: the look, and the videos it is for.",
+  "author": "Your Name (https://example.com)",
+  "license": "MIT",
+  "tags": ["tv"],
+  "contrast": "How the text stays legible (box or outline) and the lowest ratio from npm run test:styles."
+}

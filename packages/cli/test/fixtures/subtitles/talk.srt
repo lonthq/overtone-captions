@@ -1,0 +1,28 @@
+﻿1
+00:00:00,500 --> 00:00:04,200
+Welcome back to the workshop. Today we
+look at how captions are cut for phones.
+
+2
+00:00:04,400 --> 00:00:08,900
+<i>Most subtitle files</i> were written for a wide
+screen, with lines of forty characters or more.
+
+3
+00:00:09,100 --> 00:00:12,600
+On a phone that becomes four or five short lines,
+and nobody can read that fast.
+
+4
+00:00:14,800 --> 00:00:18,300
+{\an8}So we re-cut them: shorter lines, shorter cues,
+and breaks that follow the sentence.
+
+5
+00:00:18,500 --> 00:00:21,000
+Tom &amp; Sarah tested it on 12 videos.
+
+6
+00:00:21,200 --> 00:00:24,900
+The result was easier to read, and nobody
+missed a word.

@@ -1,0 +1,2 @@
+# Media, API outputs and results (never commit these; bench/.gitignore covers data/ too)
+data/

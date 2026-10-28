@@ -1,0 +1,51 @@
+{
+  "name": "overtone-format",
+  "version": "0.1.0",
+  "description": "The Overtone caption format: types, JSON Schema, validator and VTT/SRT/TXT exporters",
+  "keywords": [
+    "captions",
+    "subtitles",
+    "transcript",
+    "webvtt",
+    "srt",
+    "json-schema",
+    "word-timing",
+    "overtone"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./schema.json": "./overtone.schema.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "overtone.schema.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepack": "node -e \"require('node:fs').copyFileSync('../../LICENSE', 'LICENSE')\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lonthq/overtone-captions.git",
+    "directory": "packages/format"
+  },
+  "homepage": "https://github.com/lonthq/overtone-captions#readme",
+  "bugs": {
+    "url": "https://github.com/lonthq/overtone-captions/issues"
+  }
+}

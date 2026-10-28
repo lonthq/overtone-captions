@@ -1,0 +1,31 @@
+/*
+ * Style pack "high-contrast" (accessibility): yellow on solid black, larger type, no motion. Classes differ without
+ * color: key words inverted, emphasis italic, brands extra bold.
+ */
+.ot-layer.ot-theme-high-contrast {
+  --ot-font-size: 3.9cqw;            /* about 15% above the default */
+  --ot-font-weight: 600;
+  --ot-line-height: 1.3;
+  --ot-color: #ffeb3b;               /* yellow on black: 17.2:1 */
+  --ot-bg: #000;                     /* solid */
+  --ot-radius: 0;
+  --ot-padding: 0.1em 0.45em;
+  --ot-speaker-color: #fff;
+  --ot-speaker-size: 0.75em;
+  --ot-emphasis-color: #fff;
+  --ot-emphasis-style: italic;
+  --ot-key-weight: 800;
+  --ot-key-color: #000;              /* inverted: black on yellow */
+  --ot-key-highlight: #ffeb3b;
+  --ot-brand-color: #fff;
+  --ot-brand-weight: 800;
+  --ot-number-color: #7df9ff;        /* cyan */
+  --ot-soft-color: #d0d0d0;          /* neutral gray, still 13.6:1 on black */
+  --ot-pop-scale: 1;
+  transition: none;                  /* no slide above the control bar */
+}
+
+/* 3.9cqw x 0.92 = 3.59cqw: above the default while 22-character lines still fit. */
+.ot-layer.ot-theme-high-contrast.ot-tall {
+  --ot-scale: 0.92;
+}

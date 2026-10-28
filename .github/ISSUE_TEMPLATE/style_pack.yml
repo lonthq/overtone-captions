@@ -1,0 +1,52 @@
+name: Style pack
+description: Propose a new caption style pack, or a change to an existing one
+labels: [style-pack]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Start with [Make a style pack](https://github.com/lonthq/overtone-captions/blob/main/docs/contributing/style-packs.md). A pack is one CSS file and a `pack.json`, checked by `npm run test:styles`.
+        Attach screenshots, not video files.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What would you like to do?
+      options:
+        - Add a new style pack
+        - Change an existing pack (clean, social, minimal, high-contrast, lumora)
+        - Report a rendering problem in a pack
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Pack name
+      description: Lowercase letters, digits and dashes, for example "newsroom". For a change, the existing pack's name.
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: What is it for?
+      description: The kind of video and screen, for example "cooking videos on a bright countertop, mostly vertical".
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Design
+      description: Font, colors, box or outline, how the semantic classes (emphasis, key, brand, number, soft) look, and any motion. Paste or drag screenshots here.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Accessibility
+      options:
+        - label: Every text color keeps at least 4.5:1 contrast against its box or outline
+        - label: Motion, if any, turns off under prefers-reduced-motion
+        - label: Plain mode stays plain (class styling only in styled mode)
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to open a pull request for this

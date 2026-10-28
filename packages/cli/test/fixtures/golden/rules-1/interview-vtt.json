@@ -1,0 +1,26 @@
+{
+  "language": "en",
+  "horizontal": [
+    "1.000 4.500 S1 Thanks for joining us. / How did the project start?",
+    "5.000 7.329 S2 It started with a question from a viewer:",
+    "7.329 9.977 S2 why are captions on my phone / so hard to read?",
+    "10.000 13.000 S1 And what did you find?",
+    "13.200 18.000 S2 That the lines were cut for television, / not for a screen in portrait mode.",
+    "18.500 19.438 S1 Makes sense.",
+    "19.438 20.000 S2 It does."
+  ],
+  "vertical": [
+    "1.000 2.615 S1 Thanks for joining us.",
+    "2.615 4.500 S1 How did / the project start?",
+    "5.000 6.553 S2 It started / with a question",
+    "6.553 7.329 S2 from a viewer:",
+    "7.329 8.953 S2 why are captions / on my phone",
+    "8.953 10.000 S2 so hard to read?",
+    "10.000 13.000 S1 And what did you find?",
+    "13.200 14.176 S2 That the lines",
+    "14.176 15.803 S2 were cut / for television,",
+    "15.803 18.070 S2 not for a screen / in portrait mode.",
+    "18.500 19.438 S1 Makes sense.",
+    "19.438 20.000 S2 It does."
+  ]
+}

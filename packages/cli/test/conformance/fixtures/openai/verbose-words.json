@@ -1,0 +1,238 @@
+{
+ "_source": "Recorded 2026-10-17 with OVERTONE_RECORD_HTTP: whisper-1, response_format=verbose_json, timestamp_granularities[]=word, on examples/media/sample-16x9.mp4 (the 18 s sample ad, 16 kHz WAV). Times rounded to ms; nothing else changed.",
+ "task": "transcribe",
+ "language": "english",
+ "duration": 18,
+ "text": "Every year, one in five drivers has some kind of car damage. With Drive Cover from Lumora, you're insured from day one, for just €12 a month. And the best part, you can claim directly in the app. So remember, drive cover, drive worry-free.",
+ "words": [
+  {
+   "word": "Every",
+   "start": 0,
+   "end": 0.78
+  },
+  {
+   "word": "year",
+   "start": 0.78,
+   "end": 1.08
+  },
+  {
+   "word": "one",
+   "start": 1.54,
+   "end": 1.58
+  },
+  {
+   "word": "in",
+   "start": 1.58,
+   "end": 1.82
+  },
+  {
+   "word": "five",
+   "start": 1.82,
+   "end": 2.06
+  },
+  {
+   "word": "drivers",
+   "start": 2.06,
+   "end": 2.42
+  },
+  {
+   "word": "has",
+   "start": 2.42,
+   "end": 2.68
+  },
+  {
+   "word": "some",
+   "start": 2.68,
+   "end": 2.9
+  },
+  {
+   "word": "kind",
+   "start": 2.9,
+   "end": 3.18
+  },
+  {
+   "word": "of",
+   "start": 3.18,
+   "end": 3.46
+  },
+  {
+   "word": "car",
+   "start": 3.46,
+   "end": 3.6
+  },
+  {
+   "word": "damage",
+   "start": 3.6,
+   "end": 4.04
+  },
+  {
+   "word": "With",
+   "start": 4.84,
+   "end": 4.92
+  },
+  {
+   "word": "Drive",
+   "start": 4.92,
+   "end": 5.24
+  },
+  {
+   "word": "Cover",
+   "start": 5.24,
+   "end": 5.46
+  },
+  {
+   "word": "from",
+   "start": 5.46,
+   "end": 5.74
+  },
+  {
+   "word": "Lumora",
+   "start": 5.74,
+   "end": 6.14
+  },
+  {
+   "word": "you're",
+   "start": 6.5,
+   "end": 6.82
+  },
+  {
+   "word": "insured",
+   "start": 6.82,
+   "end": 6.96
+  },
+  {
+   "word": "from",
+   "start": 6.96,
+   "end": 7.26
+  },
+  {
+   "word": "day",
+   "start": 7.26,
+   "end": 7.54
+  },
+  {
+   "word": "one",
+   "start": 7.54,
+   "end": 7.8
+  },
+  {
+   "word": "for",
+   "start": 8.08,
+   "end": 8.26
+  },
+  {
+   "word": "just",
+   "start": 8.26,
+   "end": 8.54
+  },
+  {
+   "word": "€12",
+   "start": 8.54,
+   "end": 9.04
+  },
+  {
+   "word": "a",
+   "start": 9.04,
+   "end": 9.74
+  },
+  {
+   "word": "month",
+   "start": 9.74,
+   "end": 9.74
+  },
+  {
+   "word": "And",
+   "start": 10.5,
+   "end": 10.56
+  },
+  {
+   "word": "the",
+   "start": 10.56,
+   "end": 10.74
+  },
+  {
+   "word": "best",
+   "start": 10.74,
+   "end": 10.98
+  },
+  {
+   "word": "part",
+   "start": 10.98,
+   "end": 11.42
+  },
+  {
+   "word": "you",
+   "start": 11.72,
+   "end": 11.86
+  },
+  {
+   "word": "can",
+   "start": 11.86,
+   "end": 12.12
+  },
+  {
+   "word": "claim",
+   "start": 12.12,
+   "end": 12.4
+  },
+  {
+   "word": "directly",
+   "start": 12.4,
+   "end": 12.9
+  },
+  {
+   "word": "in",
+   "start": 12.9,
+   "end": 13.16
+  },
+  {
+   "word": "the",
+   "start": 13.16,
+   "end": 13.26
+  },
+  {
+   "word": "app",
+   "start": 13.26,
+   "end": 13.54
+  },
+  {
+   "word": "So",
+   "start": 14.2,
+   "end": 14.42
+  },
+  {
+   "word": "remember",
+   "start": 14.42,
+   "end": 14.8
+  },
+  {
+   "word": "drive",
+   "start": 15.2,
+   "end": 15.38
+  },
+  {
+   "word": "cover",
+   "start": 15.38,
+   "end": 15.76
+  },
+  {
+   "word": "drive",
+   "start": 16.14,
+   "end": 16.38
+  },
+  {
+   "word": "worry",
+   "start": 16.38,
+   "end": 16.68
+  },
+  {
+   "word": "free",
+   "start": 16.68,
+   "end": 16.92
+  }
+ ],
+ "usage": {
+  "type": "duration",
+  "seconds": 18
+ }
+}

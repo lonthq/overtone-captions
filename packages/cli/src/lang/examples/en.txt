@@ -1,0 +1,76 @@
+# English caption examples. Format: docs/contributing/languages.md#write-caption-examples
+#
+#   good: a caption line / cut where a reader expects it
+#   bad:  the same words, / cut where it hurts       (one or more bad lines per good line)
+#   keep: words around [a phrase that never splits]
+#   profile: vertical | horizontal | 32x2 | none     (also checks line length and balance)
+#   glossary: DriveCover, Lumora                     (terms for the examples below)
+#
+# The "#" line right before an example is its title. Test: npm run test:lang
+
+# A clause word opens what follows: "walk through what | they're doing"
+good: To help us walk / through what they're doing now,
+bad:  To help us walk through what / they're doing now,
+
+# A subject pronoun stays with its verb: "a class we | affectionately call"
+good: with a class / we affectionately call the Peacocks.
+bad:  with a class we / affectionately call the Peacocks.
+
+# A contracted pronoun stays with its verb: "we're | joined"
+good: what the crew is up to, / we're joined right now by Colonel Jim Dutton,
+bad:  what the crew is up to, we're / joined right now by Colonel Jim Dutton,
+
+# A new sentence does not start at the end of a line: "That's correct. I | think"
+good: That's correct. / I think pretty probably safe to say
+bad:  That's correct. I / think pretty probably safe to say
+
+# The last word of a sentence stays with it: "the 2004 | class."
+good: who's one of our astronauts, / part of the 2004 class.
+bad:  who's one of our astronauts, part of the 2004 / class.
+
+# A line never ends on a preposition: "thank you for | joining us"
+good: Jim, thank you / for joining us.
+bad:  Jim, thank you for / joining us.
+
+# "and before that | I flew": a demonstrative after a preposition closes the phrase
+good: and before that / I flew as an operational pilot
+bad:  and before that I / flew as an operational pilot
+
+# A conjunction starts the next line: "a test pilot, and | before that"
+good: I was a test pilot, / and before that I flew
+bad:  I was a test pilot, and / before that I flew
+
+# An adjective stays with its noun: "an operational | pilot"
+good: I flew as an operational pilot / in the F-15 Eagle.
+bad:  I flew as an operational / pilot in the F-15 Eagle.
+
+# At phone width the pronoun still opens the second line (vertical: 22 characters, 2 lines)
+profile: vertical
+good: with a class / we affectionately
+bad:  with a class we / affectionately
+profile: none
+
+# A price stays with its rate: "€12 a month"
+keep: you're insured from day one, for just [€12 a month].
+
+# A ratio stays together: "one in five"
+keep: Every year, [one in five] drivers has some kind of car damage.
+
+# A name stays together, titles included
+keep: we're joined right now by [Colonel Jim Dutton],
+
+# A glossary term with a space stays together
+glossary: Lumora Insurance
+keep: With DriveCover from [Lumora Insurance], you're insured from day one.
+glossary:
+
+# A question may break after its auxiliary when the subject follows: "How did | the project start?"
+profile: vertical
+good: How did / the project start?
+bad:  How / did the project start?
+bad:  How did the / project start?
+profile: none
+
+# known issue: a number and the noun it counts: "about four | years ago" (from the NASA horizontal output)
+good: I joined the astronaut corps / about four years ago,
+bad:  I joined the astronaut corps about four / years ago,

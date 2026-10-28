@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/lonthq/overtone-captions/blob/main/packages/videojs/styles/pack.schema.json",
+  "title": "Overtone style pack",
+  "description": "pack.json of a caption style pack for videojs-overtone. See docs/contributing/style-packs.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "title", "description", "author", "license", "tags", "contrast"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "name": {
+      "description": "The theme name: the folder name, the CSS scope .ot-theme-<name> and the plugin option theme: '<name>'.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+      "maxLength": 32,
+      "not": { "enum": ["base", "packs"] }
+    },
+    "title": {
+      "description": "Short display name for the gallery and the demo's theme menu.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "description": {
+      "description": "One or two sentences: the look and what it is for.",
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 240
+    },
+    "author": {
+      "description": "Your name or handle, optionally with a URL: \"Jane Doe (https://example.com)\".",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "license": {
+      "description": "Packs in this repository are MIT licensed, like the rest of the project.",
+      "const": "MIT"
+    },
+    "tags": {
+      "description": "What the pack is for. Add a new tag to this list in the same pull request if none fits.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["tv", "desktop", "social", "brand", "accessibility", "minimal", "editorial", "example"] }
+    },
+    "contrast": {
+      "description": "How the pack keeps text legible, with the lowest ratio the tests report (npm run test:styles).",
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 300
+    }
+  }
+}

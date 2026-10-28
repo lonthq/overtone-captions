@@ -1,0 +1,33 @@
+/* Example brand theme for the fictional insurer "Lumora": CSS variables on `.ot-layer.ot-theme-lumora`. */
+.ot-layer.ot-theme-lumora {
+  --ot-font: 'Avenir Next', 'Segoe UI', system-ui, sans-serif; /* brand typeface */
+  --ot-font-weight: 600;                    /* body text */
+  --ot-color: #fdfbff;                      /* warm white */
+  --ot-bg: rgb(43 20 87 / 0.86);            /* deep violet */
+  --ot-radius: 0.35em;                      /* rounder than the default */
+  --ot-speaker-color: #ffb35c;              /* amber */
+  --ot-brand-color: #ffb35c;                /* amber */
+  --ot-brand-weight: 800;                   /* extra bold */
+  --ot-emphasis-color: #d4c4ff;             /* light violet */
+  --ot-emphasis-style: italic;              /* italic */
+  --ot-key-weight: 800;                     /* heavy */
+  --ot-key-color: #2b1457;                  /* dark violet on the marker */
+  --ot-key-highlight: #ffb35c;              /* amber marker */
+  --ot-number-color: #a4f0d0;               /* soft mint */
+  --ot-soft-color: rgb(253 251 255 / 0.62); /* dimmed */
+}
+
+/*
+ * Adjacent key words form one marker: square inner corners, and a short shadow under the next word covers
+ * sub-pixel hairlines.
+ */
+.ot-layer.ot-theme-lumora.ot-mode-styled .ot-key[data-joined] {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0.06em 0 0 var(--ot-key-highlight);
+}
+
+.ot-layer.ot-theme-lumora.ot-mode-styled .ot-key[data-joined] + .ot-key {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

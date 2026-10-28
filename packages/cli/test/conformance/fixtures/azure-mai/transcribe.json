@@ -1,0 +1,146 @@
+{
+ "_source": "recorded 2026-10-26: MAI-Transcribe-2 (Sweden Central Foundry resource), two synthetic voices, diarization + word timestamps + verbatim; https://learn.microsoft.com/azure/ai-services/speech-service/mai-transcribe",
+ "durationMilliseconds": 8950,
+ "combinedPhrases": [
+  {
+   "text": "Welcome back to the show. Today we talk about Overtone captions.\nThanks for having me. Um, I think captions should show every hesitation."
+  }
+ ],
+ "phrases": [
+  {
+   "speaker": 0,
+   "offsetMilliseconds": 120,
+   "durationMilliseconds": 3600,
+   "text": "Welcome back to the show. Today we talk about Overtone captions.",
+   "words": [
+    {
+     "text": "Welcome",
+     "offsetMilliseconds": 120,
+     "durationMilliseconds": 300
+    },
+    {
+     "text": "back",
+     "offsetMilliseconds": 480,
+     "durationMilliseconds": 140
+    },
+    {
+     "text": "to",
+     "offsetMilliseconds": 680,
+     "durationMilliseconds": 79
+    },
+    {
+     "text": "the",
+     "offsetMilliseconds": 800,
+     "durationMilliseconds": 99
+    },
+    {
+     "text": "show.",
+     "offsetMilliseconds": 960,
+     "durationMilliseconds": 320
+    },
+    {
+     "text": "Today",
+     "offsetMilliseconds": 1600,
+     "durationMilliseconds": 260
+    },
+    {
+     "text": "we",
+     "offsetMilliseconds": 1920,
+     "durationMilliseconds": 100
+    },
+    {
+     "text": "talk",
+     "offsetMilliseconds": 2120,
+     "durationMilliseconds": 160
+    },
+    {
+     "text": "about",
+     "offsetMilliseconds": 2360,
+     "durationMilliseconds": 180
+    },
+    {
+     "text": "Overtone",
+     "offsetMilliseconds": 2680,
+     "durationMilliseconds": 460
+    },
+    {
+     "text": "captions.",
+     "offsetMilliseconds": 3240,
+     "durationMilliseconds": 480
+    }
+   ],
+   "locale": "en",
+   "confidence": 0
+  },
+  {
+   "speaker": 1,
+   "offsetMilliseconds": 4120,
+   "durationMilliseconds": 4600,
+   "text": "Thanks for having me. Um, I think captions should show every hesitation.",
+   "words": [
+    {
+     "text": "Thanks",
+     "offsetMilliseconds": 4120,
+     "durationMilliseconds": 240
+    },
+    {
+     "text": "for",
+     "offsetMilliseconds": 4400,
+     "durationMilliseconds": 139
+    },
+    {
+     "text": "having",
+     "offsetMilliseconds": 4680,
+     "durationMilliseconds": 240
+    },
+    {
+     "text": "me.",
+     "offsetMilliseconds": 5000,
+     "durationMilliseconds": 280
+    },
+    {
+     "text": "Um,",
+     "offsetMilliseconds": 5560,
+     "durationMilliseconds": 359
+    },
+    {
+     "text": "I",
+     "offsetMilliseconds": 6160,
+     "durationMilliseconds": 59
+    },
+    {
+     "text": "think",
+     "offsetMilliseconds": 6320,
+     "durationMilliseconds": 160
+    },
+    {
+     "text": "captions",
+     "offsetMilliseconds": 6680,
+     "durationMilliseconds": 360
+    },
+    {
+     "text": "should",
+     "offsetMilliseconds": 7120,
+     "durationMilliseconds": 139
+    },
+    {
+     "text": "show",
+     "offsetMilliseconds": 7360,
+     "durationMilliseconds": 139
+    },
+    {
+     "text": "every",
+     "offsetMilliseconds": 7600,
+     "durationMilliseconds": 219
+    },
+    {
+     "text": "hesitation.",
+     "offsetMilliseconds": 7960,
+     "durationMilliseconds": 760
+    }
+   ],
+   "locale": "en",
+   "confidence": 0
+  }
+ ]
+}

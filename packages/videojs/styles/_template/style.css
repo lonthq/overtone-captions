@@ -1,0 +1,75 @@
+/*
+ * videojs-overtone style pack "my-pack": <one line: the look, and the videos it is for>.
+ *
+ * 1. Copy this folder to packages/videojs/styles/<your-pack>/ and replace every "my-pack" (here and in
+ *    pack.json) with <your-pack>.
+ * 2. Change the values below, uncomment what you need, delete the rest. Unset variables keep their
+ *    base.css default (shown in the comments).
+ * 3. Preview with `npm run styles:dev`, check with `npm run test:styles`.
+ * Guide: docs/contributing/style-packs.md
+ */
+.ot-layer.ot-theme-my-pack {
+  /* Text ----------------------------------------------------------------------------------------- */
+  --ot-color: #fff;                     /* caption text */
+  /* --ot-font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+  /*                                       system or locally installed fonts only, end with a generic family */
+  /* --ot-font-size: 3.4cqw; */         /* size for a 42-character line, in cqw; shorter lines scale up; not below 3.4cqw */
+  /* --ot-font-weight: 500; */
+  /* --ot-line-height: 1.25; */
+
+  /* Box behind each line ------------------------------------------------------------------------- */
+  --ot-bg: rgb(0 0 0 / 0.75);           /* at least 60% opaque, or transparent with an outline in --ot-shadow */
+  /* --ot-radius: 0.2em; */
+  /* --ot-padding: 0.08em 0.4em; */
+  /* --ot-shadow: none; */              /* text-shadow; without a box use an outline, e.g.
+                                           0 0 0.06em #000, 0 0 0.06em #000, 0 0.05em 0.2em rgb(0 0 0 / 0.9) */
+
+  /* Placement ------------------------------------------------------------------------------------ */
+  /* --ot-bottom: 6%; */                /* distance from the bottom of the video */
+  /* --ot-controls-offset: 30px; */     /* extra lift while the video.js control bar is visible */
+
+  /* Speaker names (only shown with the plugin option speakers: 'change' or 'always') -------------- */
+  /* --ot-speaker-color: #ffd866; */
+  /* --ot-speaker-size: 0.7em; */
+
+  /* Semantic classes: styled mode only. Each one must look different from plain text. -------------- */
+  --ot-emphasis-color: #ffe9a8;         /* emphasis: a word the speaker stresses */
+  /* --ot-emphasis-style: normal; */    /* e.g. italic */
+  /* --ot-key-weight: 700; */           /* key: the words that carry the message */
+  /* --ot-key-color: var(--ot-color); */
+  /* --ot-key-highlight: transparent; */ /* marker behind key words; pair it with a --ot-key-color that contrasts */
+  --ot-brand-color: #9fd4ff;            /* brand: company and product names */
+  /* --ot-brand-weight: var(--ot-font-weight); */
+  --ot-number-color: #a6f0c6;           /* number: prices, dates, figures */
+  /* --ot-number-variant: tabular-nums; */
+  --ot-soft-color: rgb(255 255 255 / 0.7); /* soft: asides and filler, dimmed but still at least 4.5:1 */
+
+  /* Motion --------------------------------------------------------------------------------------- */
+  /* --ot-pop-scale: 1; */              /* scale of the spoken word; needs a rule like social's, see the guide */
+
+  /* Pack-private values: name them --ot-pack-*, declare them here, use them in your own rules below. */
+  /* --ot-pack-underline: #ffe9a8; */
+}
+
+/* Optional: a factor for tall layouts (aspect below 1). Font size x scale stays at or above 3.4cqw. */
+/*
+.ot-layer.ot-theme-my-pack.ot-tall {
+  --ot-scale: 0.95;
+}
+*/
+
+/*
+ * Optional: rules for what variables cannot do. Scope every selector to .ot-theme-my-pack and put class
+ * styling under .ot-mode-styled, so plain mode stays plain. Use only base variables for color and background.
+ *
+ * .ot-theme-my-pack.ot-mode-styled .ot-emphasis {
+ *   text-decoration: underline 0.06em var(--ot-pack-underline);
+ *   text-underline-offset: 0.15em;
+ * }
+ *
+ * Motion (transition, animation, transform on .ot-active) needs a reduced-motion override:
+ *
+ * @media (prefers-reduced-motion: reduce) {
+ *   .ot-theme-my-pack .ot-word { transition: none; }
+ * }
+ */

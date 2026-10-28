@@ -1,0 +1,17 @@
+{
+  "libri-other-7018-75788": {
+    "audioPcmSha256": "464a2159cb047b8b025ab47a87c350df6967fcb04e892dec746ccefb349c95c6",
+    "refSha256": "3028f9fcdad5466b8877d7e91ee72022501d255c927244abf390078866009e4d",
+    "seconds": 191.145
+  },
+  "earnings22-4423872": {
+    "audioPcmSha256": "8ae9b847b515e4228938ffb7d63d7030b89f9561dcf0eaa73af0e9da333a4ad9",
+    "refSha256": "4c359a89a39d2737c94061936b4d9ef054100bb51f564397b92fcab16d34e1c7",
+    "seconds": 240
+  },
+  "earnings22-4351517": {
+    "audioPcmSha256": "3a80f6a66df992ce9e2f66e41b8f4a74ba6c4e0ea202f98eb251a969c4d931d0",
+    "refSha256": "5ff1cacd7fcc699b65a4596d1e4c08511e3dfcff2ad92913288852f0c6433074",
+    "seconds": 240
+  }
+}

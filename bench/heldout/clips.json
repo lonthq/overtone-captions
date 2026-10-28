@@ -1,0 +1,128 @@
+{
+  "$comment": "Held-out clip list (bench/heldout/PROTOCOL.md). DRAFT: frozen when the own recordings are added and the file is committed, before any system runs. Media are in data/ (git-ignored); cut with cut.mjs.",
+  "status": "draft",
+  "clips": [
+    {
+      "id": "en-podcast",
+      "language": "en",
+      "genre": "interview or podcast, 7 speakers",
+      "source": {
+        "title": "NASA, Houston We Have a Podcast, episode 438: Crew-13",
+        "date": "2026-09-25",
+        "url": "https://www.nasa.gov/wp-content/uploads/2026/09/ep438-crew-13.mp3",
+        "page": "https://www.nasa.gov/podcasts/houston-we-have-a-podcast/crew-13/",
+        "terms": "NASA media, not copyrighted in the US; credit NASA, no endorsement"
+      },
+      "rule": "5 min from 10:00",
+      "downloaded": "2026-10-19",
+      "excerpt": {
+        "file": "data/clips/en-podcast.flac",
+        "sourceStart": 608.095,
+        "duration": 301.427,
+        "silenceThresholdDb": -35,
+        "sha256": "6a80efd49f4ba64e05eaeb782a46a3e1a1e3974a48fc4b03e6d63f235e139de9"
+      },
+      "referenceStart": "NASA's transcript on the episode page (near verbatim)"
+    },
+    {
+      "id": "en-briefing",
+      "language": "en",
+      "genre": "news conference with reporters' questions",
+      "source": {
+        "title": "NASA's SpaceX Crew-13 Flight News Conference",
+        "date": "2026-08-03",
+        "url": "https://images-assets.nasa.gov/video/iss075m262151759_NASA%E2%80%99s_SpaceX_Crew-13_Flight_News_Conference_260803/iss075m262151759_NASA%E2%80%99s_SpaceX_Crew-13_Flight_News_Conference_260803~large.mp4",
+        "duration": 3106.133,
+        "terms": "NASA media, not copyrighted in the US; credit NASA, no endorsement"
+      },
+      "rule": "5 min from the middle of the recording (1553 s)",
+      "downloaded": "2026-10-19",
+      "excerpt": {
+        "file": "data/clips/en-briefing.mp4",
+        "sourceStart": 1553.451,
+        "duration": 297.501,
+        "silenceThresholdDb": -35,
+        "sha256": "728a18a7e8f3502ea24e578a4234998da49d4b865e666d8cdba285d6cf1cd05d"
+      },
+      "notes": "NASA's caption file is a placeholder, so the Q&A start could not be located without listening; the rule was changed to the middle of the recording before any system ran. Check by listening that the excerpt is in the Q&A."
+    },
+    {
+      "id": "en-floor",
+      "language": "en",
+      "genre": "floor debate",
+      "source": {
+        "title": "US House floor, legislative day of September 14, 2026 (first day after Labor Day with a debate on a bill)",
+        "date": "2026-09-14",
+        "url": "https://houseliveprod-f9h4cpb9dyb8gegg.a01.azurefd.net/east/2026-09-14T11-51-56/manifest.m3u8",
+        "floorLog": "https://clerk.house.gov/floor/20260914.xml",
+        "terms": "public domain (17 U.S.C. 105, per the House record); no political use or commercial advertisement"
+      },
+      "rule": "5 min from the start of the first debate on a bill (H.R. 10159, 14:52:59 ET; stream time = 216.027 s + time since 12:00:00)",
+      "downloaded": "2026-10-19",
+      "excerpt": {
+        "file": "data/clips/en-floor.mp4",
+        "sourceStart": 10590.659,
+        "duration": 302.858,
+        "silenceThresholdDb": -35,
+        "sha256": "6c96c6633f9abd5848354a533219decdc4400d87bda517c2d5fd612cbb634b87"
+      },
+      "excerptStartClock": "14:52:54 ET",
+      "referenceStart": "Congressional Record (edited)"
+    },
+    {
+      "id": "nl-debate",
+      "language": "nl",
+      "genre": "debate with interruptions",
+      "source": {
+        "title": "Tweede Kamer, Algemene Politieke Beschouwingen, first day",
+        "date": "2026-09-16",
+        "url": "https://livestreaming.b67v2.tweedekamer.nl/2026-09-16/plenairezaal/index.m3u8?hd=1&subtitles=vod&keyframes=1&start=2026-09-16T10%3A21%3A00%2B0200&end=2026-09-16T10%3A29%3A00%2B0200",
+        "windowStartPdt": "2026-09-16T10:20:59.680+02:00",
+        "debate": "https://debatdirect.tweedekamer.nl/2026-09-16 (debate 92ba78fe-f2c6-4af7-8223-96d9407309bc)",
+        "terms": "Licentievoorwaarden Audiovisueel Materiaal Tweede Kamer: education and research use, credit the Tweede Kamer, no commercial use, delete the video within one month"
+      },
+      "rule": "5 min from the first interruption in the first group leader's speech (Debat Direct 'interrupter' event 10:22:01; video = event time + 2 s pdtOffset)",
+      "downloaded": "2026-10-19",
+      "deleteVideoBy": "2026-11-18",
+      "excerpt": {
+        "file": "data/clips/nl-debate.mp4",
+        "sourceStart": 43.437,
+        "duration": 335.329,
+        "silenceThresholdDb": -30,
+        "sha256": "597d664b18662c4adbe52155d648492fb33f1ba727162d32b13a21e78160a019"
+      },
+      "excerptStartClock": "10:21:41 CEST",
+      "referenceStart": "Handelingen (edited)",
+      "notes": "No silence at -35 dB near the nominal ends; -30 dB moved the start 20 s earlier, into the first speaker's speech."
+    }
+  ],
+  "pending": [
+    {
+      "id": "singularity",
+      "language": "none",
+      "genre": "music without speech",
+      "source": {
+        "title": "Blender Studio, Singularity",
+        "url": "https://studio.blender.org/films/singularity/",
+        "terms": "CC BY"
+      },
+      "rule": "the whole film"
+    },
+    {
+      "id": "en-vertical"
+    },
+    {
+      "id": "nl-vertical"
+    },
+    {
+      "id": "nl-interview"
+    },
+    {
+      "id": "nl-product"
+    },
+    {
+      "id": "music-speech"
+    }
+  ],
+  "reserve": []
+}

@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Overtone caption document",
+  "description": "Structure of a .overtone.json file (format version 1): required members, types, closed vocabularies, number ranges and the shape of word ranges. Unknown members are allowed everywhere. Every document that validate() in overtone-format accepts is accepted by this schema, but a document is valid only if validate() also accepts it, because it checks four kinds of semantic rules that this schema leaves out: (1) time precision: at most 3 decimals; (2) order: first <= last in word ranges, end >= start for turns and words, end > start for cues and windows, words in a turn and cues in a profile ordered and non-overlapping, lines in a cue ordered without shared words; (3) uniqueness: speaker ids and profile ids; (4) references: turn and cue speakers declared in speakers, every word of a cue spoken by the cue's speaker, word ranges within the document's words, and line text equal to the referenced words joined by single spaces. See Appendix A of the specification.",
+  "type": "object",
+  "required": ["format", "version", "language", "duration", "speakers", "turns", "profiles"],
+  "properties": {
+    "format": { "const": "overtone" },
+    "version": { "const": 1 },
+    "language": { "type": "string", "minLength": 1, "description": "BCP-47 language code" },
+    "duration": { "$ref": "#/$defs/time" },
+    "speakers": { "type": "array", "items": { "$ref": "#/$defs/speaker" } },
+    "turns": { "type": "array", "items": { "$ref": "#/$defs/turn" } },
+    "profiles": { "type": "array", "items": { "$ref": "#/$defs/profile" } },
+    "edits": { "type": "array", "items": { "$ref": "#/$defs/edit" } },
+    "meta": { "$ref": "#/$defs/meta" }
+  },
+  "$defs": {
+    "time": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Seconds from the start of the media. At most 3 decimals is checked by validate(), not here: multipleOf 0.001 is unreliable with binary floating point (it rejects 0.823) and cannot apply the specification's rounding tolerance."
+    },
+    "wordRange": {
+      "type": "array",
+      "description": "Inclusive [first, last] global word indices. validate() also checks first <= last and that last is less than the number of words.",
+      "prefixItems": [{ "type": "integer", "minimum": 0 }, { "type": "integer", "minimum": 0 }],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "styleClass": { "enum": ["emphasis", "key", "brand", "number", "soft"] },
+    "speaker": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "description": "Unique among the speakers (checked by validate())." },
+        "label": { "type": "string" },
+        "role": { "type": "string" }
+      }
+    },
+    "word": {
+      "type": "object",
+      "description": "validate() also checks end >= start, and start >= the end of the previous word in the turn.",
+      "required": ["text", "start", "end"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1, "pattern": "\\S" },
+        "start": { "$ref": "#/$defs/time" },
+        "end": { "$ref": "#/$defs/time" },
+        "classes": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/styleClass" } },
+        "match": { "enum": ["exact", "fuzzy", "split", "merge", "interpolated", "edited"] },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "turn": {
+      "type": "object",
+      "description": "validate() also checks end >= start.",
+      "required": ["speaker", "start", "end", "words"],
+      "properties": {
+        "speaker": { "type": "string", "minLength": 1, "description": "Id of a speaker in speakers (checked by validate())." },
+        "start": { "$ref": "#/$defs/time" },
+        "end": { "$ref": "#/$defs/time" },
+        "words": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/word" } }
+      }
+    },
+    "cueLine": {
+      "type": "object",
+      "description": "validate() also checks that the range starts after the previous line's range in the cue and that every referenced word belongs to the cue's speaker.",
+      "required": ["words", "text"],
+      "properties": {
+        "words": { "$ref": "#/$defs/wordRange" },
+        "text": { "type": "string", "description": "The referenced words joined by single spaces (checked by validate())." }
+      }
+    },
+    "cue": {
+      "type": "object",
+      "description": "validate() also checks end > start, and start >= the end of the previous cue in the profile.",
+      "required": ["start", "end", "speaker", "lines"],
+      "properties": {
+        "start": { "$ref": "#/$defs/time" },
+        "end": { "$ref": "#/$defs/time" },
+        "speaker": { "type": "string", "minLength": 1, "description": "Id of a speaker in speakers (checked by validate())." },
+        "lines": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/cueLine" } }
+      }
+    },
+    "rules": {
+      "type": "object",
+      "required": ["maxCharsPerLine", "maxLines"],
+      "properties": {
+        "maxCharsPerLine": { "type": "integer", "minimum": 1 },
+        "maxLines": { "type": "integer", "minimum": 1 },
+        "maxCps": { "type": "number", "exclusiveMinimum": 0 },
+        "minDuration": { "type": "number", "exclusiveMinimum": 0 },
+        "maxDuration": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "required": ["id", "aspect", "rules", "cues"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[A-Za-z0-9_-]+$", "description": "Unique among the profiles (checked by validate())." },
+        "description": { "type": "string" },
+        "aspect": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*:[1-9][0-9]*$",
+          "description": "The picture shape the cues are cut for, \"W:H\"."
+        },
+        "window": {
+          "type": "object",
+          "description": "validate() also checks end > start.",
+          "required": ["start", "end"],
+          "properties": { "start": { "$ref": "#/$defs/time" }, "end": { "$ref": "#/$defs/time" } }
+        },
+        "rules": { "$ref": "#/$defs/rules" },
+        "cues": { "type": "array", "items": { "$ref": "#/$defs/cue" } }
+      }
+    },
+    "edit": {
+      "type": "object",
+      "required": ["words", "from", "to", "reason"],
+      "properties": {
+        "words": { "$ref": "#/$defs/wordRange" },
+        "from": { "type": "string" },
+        "to": { "type": "string" },
+        "reason": { "enum": ["correction", "brand", "style", "punctuation", "split-word"] }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "context": { "type": "string" },
+        "style": {
+          "type": "object",
+          "properties": {
+            "numbers": { "enum": ["digits", "words", "auto"] },
+            "currency": { "enum": ["symbol", "code", "words", "auto"] },
+            "guide": { "type": "string" }
+          }
+        },
+        "models": {
+          "type": "object",
+          "properties": {
+            "text": { "type": "string" },
+            "timing": { "type": "string" },
+            "second": { "type": "string" },
+            "llm": { "type": "string" }
+          }
+        },
+        "generator": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    }
+  }
+}
