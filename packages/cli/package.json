@@ -37,8 +37,8 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.137.0",
     "commander": "^15.0.0",
-    "dotenv": "^18.0.8",
-    "openai": "^7.41.0",
+    "dotenv": "^18.0.9",
+    "openai": "^7.43.0",
     "overtone-format": "^0.1.0"
   },
   "repository": {
