@@ -32,9 +32,10 @@ describe('burn: audio copy per container', () => {
   });
 
   it.each([
-    ['mp4', ['aac', 'mp3', 'opus', 'alac', 'ac3', 'eac3', 'flac'], ['pcm_s16le', 'vorbis']],
+    // MP3 in MP4 plays no sound in QuickTime or Safari (Tears of Steel's track)
+    ['mp4', ['aac'], ['mp3', 'opus', 'alac', 'ac3', 'eac3', 'flac', 'pcm_s16le', 'vorbis']],
     ['mov', ['aac', 'mp3', 'alac', 'ac3', 'eac3'], ['opus', 'flac', 'pcm_s16le']],
-    ['m4v', ['aac', 'alac', 'ac3'], ['mp3', 'eac3', 'opus', 'flac']],
+    ['m4v', ['aac'], ['alac', 'ac3', 'mp3', 'eac3', 'opus', 'flac']],
   ] as const)('%s copies %j and re-encodes %j to AAC', (container, copied, reencoded) => {
     for (const c of copied) expect(audioArgs(c, container)).toEqual(['-c:a', 'copy']);
     for (const c of reencoded) expect(audioArgs(c, container)).toEqual(['-c:a', 'aac', '-b:a', '192k']);
@@ -42,10 +43,11 @@ describe('burn: audio copy per container', () => {
   });
 
   it('burnArgs decides by the container when given, else by the output name', () => {
-    expect(burnArgs({ media: 'in.mkv', list: 'l', output: 'o.mov', audioCodec: 'opus' })).toContain('aac');
-    expect(burnArgs({ media: 'in.mkv', list: 'l', output: 'o.mp4', audioCodec: 'opus' })).toContain('copy');
+    expect(burnArgs({ media: 'in.mkv', list: 'l', output: 'o.mov', audioCodec: 'mp3' })).toContain('copy');
+    expect(burnArgs({ media: 'in.mkv', list: 'l', output: 'o.mp4', audioCodec: 'mp3' })).not.toContain('copy');
     // a temporary name without the final extension: the container passed in decides, not the name
-    expect(burnArgs({ media: 'in.mkv', list: 'l', output: 'x.partial-123', audioCodec: 'eac3' })).toContain('copy');
+    expect(burnArgs({ media: 'in.mkv', list: 'l', output: 'x.partial-123', audioCodec: 'eac3' })).not.toContain('copy');
+    expect(burnArgs({ media: 'in.mkv', list: 'l', output: 'x.partial-123', audioCodec: 'eac3', container: 'mov' })).toContain('copy');
     const m4v = burnArgs({ media: 'in.mkv', list: 'l', output: 'x.partial-123', audioCodec: 'eac3', container: 'm4v' });
     expect(m4v).toEqual(expect.arrayContaining(['-c:a', 'aac']));
     expect(m4v).not.toContain('copy');

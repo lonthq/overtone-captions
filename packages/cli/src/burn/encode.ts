@@ -8,13 +8,14 @@ import type { FrameEntry } from './frames.js';
 export type Container = 'mp4' | 'mov' | 'm4v';
 
 /**
- * Audio codecs each container takes with `-c:a copy` (checked against ffmpeg 8.1); others are re-encoded to AAC.
- * mov refuses Opus and FLAC; ipod (.m4v) has no tag for MP3, E-AC-3, Opus or FLAC.
+ * Audio codecs copied with `-c:a copy` per container; others are re-encoded to AAC. MP4 and M4V copy only AAC: ffmpeg
+ * also muxes MP3, Opus, FLAC and AC-3 into them, but QuickTime, Safari and many upload sites then play no sound. mov
+ * keeps what QuickTime plays and ffmpeg muxes (checked against ffmpeg 8.1; mov refuses Opus and FLAC).
  */
 const COPY_AUDIO: Readonly<Record<Container, readonly string[]>> = {
-  mp4: ['aac', 'mp3', 'opus', 'alac', 'ac3', 'eac3', 'flac'],
+  mp4: ['aac'],
   mov: ['aac', 'mp3', 'alac', 'ac3', 'eac3'],
-  m4v: ['aac', 'alac', 'ac3'],
+  m4v: ['aac'],
 };
 
 /** The container for an output path's extension (any case); MP4 by default. */

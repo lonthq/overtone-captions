@@ -155,8 +155,8 @@ overtone burn talk.mp4 talk.overtone.json --style social -o talk.captioned.mp4
   `CHROME_PATH` for another binary). Nothing is downloaded.
 - Video: the source frame size after rotation (odd sizes get one pixel of padding), H.264 at CRF 18. Non-square
   pixels are not corrected. Cover art before the video stream is skipped.
-- Audio: the first audio track. Copied when the container can hold it (MP4: AAC, MP3, Opus, ALAC, AC-3, E-AC-3,
-  FLAC; `.mov` not Opus or FLAC; `.m4v` not Opus, FLAC, MP3 or E-AC-3), else AAC at 192 kbit/s.
+- Audio: the first audio track. `.mp4` and `.m4v` copy AAC and re-encode anything else to AAC at 192 kbit/s, since
+  many players play no sound from MP3, Opus or FLAC in an MP4. `.mov` also copies MP3, ALAC, AC-3 and E-AC-3.
 - Fonts: styles use system fonts, so output can differ between machines unless you pass `--font`.
 - Speed: one Chrome screenshot (about 50 ms) per caption change, plus one per frame (at most 60 per second) while a
   caption animates.

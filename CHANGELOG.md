@@ -8,6 +8,11 @@ changes. The three packages (`overtone-format`, `videojs-overtone`, `overtone-ca
 
 ## [Unreleased]
 
+### Fixed
+
+- `overtone burn` re-encodes the audio to AAC for `.mp4` and `.m4v` unless it already is AAC. It copied MP3, Opus,
+  FLAC and AC-3 tracks, which QuickTime, Safari and many upload sites play without sound.
+
 ## [0.1.0] - 2026-10-28
 
 The first public release.

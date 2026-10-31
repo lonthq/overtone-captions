@@ -28,10 +28,11 @@ describe('concatList', () => {
 });
 
 describe('audioArgs and burnArgs', () => {
-  it('copies MP4-compatible audio and re-encodes the rest', () => {
+  it('copies AAC into MP4 and re-encodes the rest', () => {
     expect(audioArgs('aac')).toEqual(['-c:a', 'copy']);
-    expect(audioArgs('eac3')).toEqual(['-c:a', 'copy']);
-    expect(audioArgs('flac')).toEqual(['-c:a', 'copy']);
+    expect(audioArgs('mp3')).toEqual(['-c:a', 'aac', '-b:a', '192k']);
+    expect(audioArgs('eac3')).toEqual(['-c:a', 'aac', '-b:a', '192k']);
+    expect(audioArgs('flac')).toEqual(['-c:a', 'aac', '-b:a', '192k']);
     expect(audioArgs('pcm_s16le')).toEqual(['-c:a', 'aac', '-b:a', '192k']);
     expect(audioArgs(undefined)).toEqual([]);
   });
