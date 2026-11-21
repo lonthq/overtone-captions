@@ -193,6 +193,11 @@ Give `--language` when you know it. Without it, gpt-transcribe can return nothin
 With an ElevenLabs key, the CLI waits for the language Scribe detects and sends it with the text request. Without
 one, it resends the empty part with the language the other engines heard, which bills it twice.
 
+With a Google Cloud service account (`GOOGLE_APPLICATION_CREDENTIALS` and `GOOGLE_CLOUD_PROJECT`), a run without
+`--language` first hears up to three 30 s samples with Google Chirp 3 and transcribes in the language they name
+(`--detect none` turns that off). The document stores the result in `meta.languageDetection`. Silent media and
+files without audio give an empty document without any paid call.
+
 For media in more than one language, list the candidates, main language first: `--language en,es`.
 [Language](https://github.com/lonthq/overtone-captions/blob/main/docs/cli/languages.md) covers detection,
 mixed-language media and language packs; `overtone languages` lists each pack's coverage.

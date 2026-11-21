@@ -16,7 +16,7 @@ import type { ExtractData, TimingData, TranscribeData } from './types.js';
 export const ANSWER_ERRORS: RequestOptions = { answerErrors: [IMPLAUSIBLE_TRANSCRIPT] };
 
 export interface TimingInput {
-  plan: Pick<Plan, 'forced' | 'candidates' | 'sel'>;
+  plan: Pick<Plan, 'forced' | 'candidates' | 'sel' | 'detected'>;
   providers: Providers;
   secondTiming?: TimingProvider;
   /** The run's second hearing (secondHearingOnce), shared with the transcribe stage. */
@@ -37,10 +37,10 @@ export interface SecondHearing {
  * sends that language to the text provider: gpt-transcribe returns no text at all for some media when it has to
  * detect the language itself.
  */
-export function secondHearingOnce(run: Run, provider: TimingProvider | undefined, audio: ExtractData, plan: Pick<Plan, 'forced' | 'candidates'>): SecondHearing | undefined {
+export function secondHearingOnce(run: Run, provider: TimingProvider | undefined, audio: ExtractData, plan: Pick<Plan, 'forced' | 'candidates' | 'detected'>): SecondHearing | undefined {
   if (!provider) return undefined;
   const cached = cachedTiming(provider, run.requests, 'timing');
-  const opts: TimingOptions = { language: plan.forced, ...(plan.candidates ? { languages: plan.candidates } : {}), phrases: run.cfg.glossary };
+  const opts: TimingOptions = { language: plan.forced ?? plan.detected?.language, ...(plan.candidates ? { languages: plan.candidates } : {}), phrases: run.cfg.glossary };
   let heard: Promise<TimingData | undefined> | undefined;
   return {
     id: provider.id,
@@ -70,11 +70,13 @@ export interface Hearings {
 
 export async function timingStage(run: Run, input: TimingInput): Promise<Hearings> {
   const { log } = run;
-  const { plan: { forced, candidates, sel }, providers, secondTiming, second: secondShared, audio, text } = input;
+  const { plan: { forced, candidates, sel, detected }, providers, secondTiming, second: secondShared, audio, text } = input;
   // Azure's automatic language ID covers only a few locales (no Dutch), so name the language whenever possible:
-  // --language > the text provider's language > a stopword guess on the text > none (the service detects).
-  const chosen = chooseLanguage(forced, text.chunks);
-  if (chosen) log.info(`  language: ${chosen.language} (${chosen.source})${candidates ? `; candidates: ${candidates.join(', ')}` : ''}`);
+  // --language > the language detected from the audio > the text provider's language > a stopword guess on the text >
+  // none (the service detects).
+  const chosen = chooseLanguage(forced, text.chunks, detected);
+  // the detection step already logged a detected language
+  if (chosen && chosen !== detected) log.info(`  language: ${chosen.language} (${chosen.source})${candidates ? `; candidates: ${candidates.join(', ')}` : ''}`);
   const timingProvider = cachedTiming(providers.timing, run.requests, 'timing');
   const timingOpts = { language: chosen?.language, ...(candidates ? { languages: candidates } : {}), phrases: run.cfg.glossary };
   const file: AudioFile = { path: audio.wav, duration: audio.duration };

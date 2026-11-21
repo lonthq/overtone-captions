@@ -3,7 +3,7 @@ import { createReadStream } from 'node:fs';
 import { mkdir, readFile, rm, stat, utimes } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 import { STAGES, type Stage } from './config.js';
-import type { LlmProvider, LlmRequest, TextOptions, TextProvider, TimingOptions, TimingProvider, TimingResult } from './providers/types.js';
+import type { LanguageProvider, LlmProvider, LlmRequest, TextOptions, TextProvider, TimingOptions, TimingProvider, TimingResult } from './providers/types.js';
 import { writeFileViaTemp } from './util/temp-file.js';
 
 /** SHA-256 of a file's bytes (streamed), hex. */
@@ -84,7 +84,7 @@ export class StageCache {
  */
 export const REQUEST_CACHE_VERSION = 1;
 
-export type RequestRole = 'text' | 'timing' | 'llm';
+export type RequestRole = 'text' | 'timing' | 'llm' | 'language';
 
 /**
  * `answerErrors`: error names that are the provider's answer, not a failure (Scribe hearing no plausible transcript in
@@ -297,6 +297,16 @@ export function cachedTiming(p: TimingProvider, cache: RequestCache, stage: Stag
       const { text: _text, ...timing } = res as TimingResult & { text?: string };
       return timing;
     },
+  };
+}
+
+/** A language provider answered from the request cache when the same sample was sent before. */
+export function cachedLanguage(p: LanguageProvider, cache: RequestCache, stage: Stage): LanguageProvider {
+  if (p.uncached) return p;
+  return {
+    id: p.id,
+    ...settingsOf(p),
+    detect: async (audio) => cache.run(stage, 'language', p.id, { ...settingsOf(p), audio: await cache.audio(audio.path) }, () => p.detect(audio)),
   };
 }
 

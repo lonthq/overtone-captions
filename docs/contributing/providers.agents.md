@@ -5,7 +5,7 @@ Background for humans: [providers.md](providers.md).
 ## Goal
 
 Add or fix one provider (`<id>`, lowercase, such as `deepgram`) that serves one or more roles (`text`, `timing`,
-`llm`), passes the conformance kit with recorded responses, and changes nothing else.
+`llm`, `language`), passes the conformance kit with recorded responses, and changes nothing else.
 
 ## Files to read
 

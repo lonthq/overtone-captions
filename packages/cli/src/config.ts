@@ -94,6 +94,8 @@ export interface FileConfig {
   timing?: string;
   /** The second hearing: "auto" (elevenlabs when ELEVENLABS_API_KEY is set), a provider, or "none" / false. */
   timingSecondOpinion?: string | false;
+  /** The language detector without --language: "auto" (google-chirp when its variables are set), a provider, or "none" / false. */
+  detect?: string | false;
   llm?: string;
   context?: string;
   contextFile?: string;
@@ -132,7 +134,7 @@ export interface FileConfig {
 
 /** Every FileConfig key, for the unknown-key warning; the type check below keeps it complete. */
 const FILE_KEYS = [
-  'local', 'text', 'timing', 'timingSecondOpinion', 'llm', 'context', 'contextFile', 'glossary', 'speakers', 'language',
+  'local', 'text', 'timing', 'timingSecondOpinion', 'detect', 'llm', 'context', 'contextFile', 'glossary', 'speakers', 'language',
   'inferContext', 'llmLinebreaks', 'rules', 'effort', 'languages', 'profiles', 'export', 'numbers', 'currency',
   'styleGuide', 'out', 'cacheDir', 'chunkMb', 'profileRules', 'styling', 'edits', 'twoPass', 'markUncertain',
   'normalizeLoudness',
@@ -148,6 +150,8 @@ export interface CliFlags {
   timing?: string;
   /** --timing-second-opinion: auto, none or a provider. */
   timingSecondOpinion?: string;
+  /** --detect: auto, none or a provider. */
+  detect?: string;
   llm?: string;
   context?: string;
   contextFile?: string;
@@ -195,6 +199,8 @@ export interface ResolvedConfig {
    * provider, or false. Local mode turns 'auto' off; `--local` also drops a cloud provider named only in the config file.
    */
   timingSecondOpinion: 'auto' | false | ModelSpec;
+  /** The language detector (pipeline/detect.ts): 'auto' (google-chirp when its variables are set), a provider, or false. Local mode turns 'auto' off. */
+  detect: 'auto' | false | ModelSpec;
   llm: ModelSpec;
   context?: string;
   glossary: string[];
@@ -310,6 +316,7 @@ export function validateFileConfig(raw: unknown, source = 'overtone.config.json'
     check(raw, key, key, (v) => typeof v === 'string' || isStrings(v), 'a string or an array of strings');
   }
   check(raw, 'timingSecondOpinion', 'timingSecondOpinion', (v) => typeof v === 'string' || v === false, '"auto", "none", false or a provider such as "elevenlabs"');
+  check(raw, 'detect', 'detect', (v) => typeof v === 'string' || v === false, '"auto", "none", false or a provider such as "google-chirp"');
   check(raw, 'speakers', 'speakers', (v) => typeof v === 'string' || (isObj(v) && Object.values(v).every((x) => typeof x === 'string')), 'a string like "S1=Sarah,S2=Tom" or an object of strings');
   const { min, max } = DEFAULTS.chunkMbRange;
   check(raw, 'chunkMb', 'chunkMb', (v) => isNum(v) && v >= min && v <= max, `a positive number from ${min} to ${max} (megabytes per uploaded audio chunk; default ${DEFAULTS.chunkMb})`);
@@ -578,6 +585,7 @@ export async function resolveConfig(flags: CliFlags, file: FileConfig, dirs: { c
     text: parseModelSpec(text),
     timing: parseModelSpec(timing),
     timingSecondOpinion: secondOpinion === 'auto' && offline ? false : secondOpinion,
+    detect: ((d) => (d === 'auto' && offline ? false : d))(parseDetect(flags.detect ?? file.detect)),
     llm: parseModelSpec(pick('llm')),
     context: context || undefined,
     glossary,
@@ -623,6 +631,16 @@ export function parseSecondOpinion(value: string | false | undefined, source: st
   if (v === 'auto' || v === '') return 'auto';
   if (v === 'none' || v === 'off' || v === 'false') return false;
   if (v === 'same') throw new UserError(`${source}: "same" is not a timing provider; use auto, none or a provider such as elevenlabs.`);
+  return parseModelSpec(value);
+}
+
+/** --detect / detect: "auto" (default), "none" / "off" / false, or a provider. */
+export function parseDetect(value: string | false | undefined): 'auto' | false | ModelSpec {
+  if (value === undefined) return 'auto';
+  if (value === false) return false;
+  const v = value.trim().toLowerCase();
+  if (v === 'auto' || v === '') return 'auto';
+  if (v === 'none' || v === 'off' || v === 'false') return false;
   return parseModelSpec(value);
 }
 

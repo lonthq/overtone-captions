@@ -12,7 +12,7 @@ import { assertNoInputOverwrite, baseName, plannedOutputs, type InputFile } from
 import { missingBinaries, probeMedia } from '../media/extract.js';
 import { probeVideo, type VideoInfo } from '../media/video.js';
 import { readTranscriptFile, textFileId, type TextFile } from '../providers/file.js';
-import { missingEnv, missingEnvError, preflight as providerPreflight, resolveSelection, resolveSelections, secondOpinionSelection, type Selections } from '../providers/registry.js';
+import { detectorSelection, missingEnv, missingEnvError, preflight as providerPreflight, preflightRole, resolveSelection, resolveSelections, secondOpinionSelection, type Selections } from '../providers/registry.js';
 import { mediaProfile } from '../segment/aspect.js';
 import { LATEST_RULESET } from '../segment/rulesets/index.js';
 import { canonicalLanguage } from '../text/detect.js';
@@ -31,6 +31,10 @@ export interface Plan {
   sel: Selections;
   /** The whole-file second hearing (--timing-second-opinion): times and text votes. */
   secondSel?: ModelSpec;
+  /** The language detector, when it will run: no --language, no candidates, no --text-file. */
+  detectSel?: ModelSpec;
+  /** The language the detector heard (set by runPipeline after the extract stage), and how it was found. */
+  detected?: { language: string; source: string };
   video?: VideoInfo;
   wantsMp4: boolean;
   /** The configured profiles, plus one for the media's own shape when none has its rules. */
@@ -56,16 +60,16 @@ export async function preflight(media: string, cfg: PipelineConfig, deps: Pipeli
   const { forced, candidates } = forcedLanguages(cfg);
   // per-language defaults: the text provider only for a language given up front; the LLM and effort once it is known
   const upfront = languageDefaultsFor(cfg, forced);
-  const { textFile, sel, secondSel } = await selectProviders(cfg, upfront, deps, env);
+  const { textFile, sel, secondSel, detectSel } = await selectProviders(cfg, upfront, deps, env);
   if (cfg.twoPass && (cfg.context || !cfg.inferContext)) log.warn('--two-pass has no effect with a given context or without context inference');
   else if (cfg.twoPass) log.warn('--two-pass: every chunk is transcribed twice, which doubles the transcription cost');
   const editor = localEditorWarning(sel.llm);
   if (editor) log.warn(editor);
-  await checkTools(sel, secondSel, textFile !== undefined, deps, env);
+  await checkTools(sel, secondSel, detectSel, textFile !== undefined, deps, env);
   const video = await probeInput(media, cfg, deps, env);
   const profiles = withMediaProfile(cfg, video, log);
   checkOutputs(media, cfg, profiles);
-  return { forced, candidates, upfront, textFile, sel, secondSel, video, wantsMp4: cfg.exports.includes('mp4'), profiles };
+  return { forced, candidates, upfront, textFile, sel, secondSel, detectSel, video, wantsMp4: cfg.exports.includes('mp4'), profiles };
 }
 
 /** The run's input files, which no output may overwrite: the media, the --text-file, the context and glossary files. */
@@ -102,8 +106,8 @@ export function forcedLanguages(cfg: PipelineConfig): Pick<Plan, 'forced' | 'can
   return { forced, candidates };
 }
 
-/** The run's text, timing and LLM providers and its second hearing (exported for tests). */
-export async function selectProviders(cfg: PipelineConfig, upfront: ResolvedLanguageDefaults | undefined, deps: PipelineDeps, env: NodeJS.ProcessEnv): Promise<Pick<Plan, 'textFile' | 'sel' | 'secondSel'>> {
+/** The run's text, timing and LLM providers, its second hearing and its language detector (exported for tests). */
+export async function selectProviders(cfg: PipelineConfig, upfront: ResolvedLanguageDefaults | undefined, deps: PipelineDeps, env: NodeJS.ProcessEnv): Promise<Pick<Plan, 'textFile' | 'sel' | 'secondSel' | 'detectSel'>> {
   const llmSpec = !cfg.explicit.llm && upfront?.llm ? upfront.llm : cfg.llm;
   // --text-file: the file's text replaces the text provider; the timing provider times it
   const textFile = cfg.textFile ? await readTranscriptFile(cfg.textFile, cfg.textFile, (m) => deps.log.warn(m)) : undefined;
@@ -119,22 +123,27 @@ export async function selectProviders(cfg: PipelineConfig, upfront: ResolvedLang
   const secondSel = deps.providers
     ? (deps.providers.secondTiming ? { provider: deps.providers.secondTiming.id, id: deps.providers.secondTiming.id } : undefined)
     : secondOpinionSelection(cfg.timingSecondOpinion, sel.timing, env, sel.text);
-  return { textFile, sel, secondSel };
+  const detects = cfg.language === undefined && !cfg.languageCandidates && !textFile;
+  const detectSel = !detects ? undefined : deps.providers
+    ? (deps.providers.language ? { provider: deps.providers.language.id, id: deps.providers.language.id } : undefined)
+    : detectorSelection(cfg.detect, env);
+  return { textFile, sel, secondSel, detectSel };
 }
 
 /** ffmpeg, the providers' keys, and local binaries, model files and servers (whisper.cpp, Ollama). */
-async function checkTools(sel: Selections, secondSel: ModelSpec | undefined, textFile: boolean, deps: PipelineDeps, env: NodeJS.ProcessEnv): Promise<void> {
+async function checkTools(sel: Selections, secondSel: ModelSpec | undefined, detectSel: ModelSpec | undefined, textFile: boolean, deps: PipelineDeps, env: NodeJS.ProcessEnv): Promise<void> {
   const { log } = deps;
   // the file's text needs no keys or checks; the other roles as usual
   const called = textFile ? { ...sel, text: { ...sel.text, same: true } } : sel;
   const bins = await (deps.checkBinaries ?? missingBinaries)();
   if (bins.length > 0) throw new UserError(`${bins.join(' and ')} not found on PATH; install ffmpeg (https://ffmpeg.org/download.html).`);
   if (deps.providers) return;
-  const missing = missingEnv([...(textFile ? [sel.timing, sel.llm] : [sel.text, sel.timing, sel.llm]), ...(secondSel ? [secondSel] : [])], env);
+  const missing = missingEnv([...(textFile ? [sel.timing, sel.llm] : [sel.text, sel.timing, sel.llm]), ...(secondSel ? [secondSel] : []), ...(detectSel ? [detectSel] : [])], env);
   if (missing.length > 0) throw missingEnvError(missing);
   // local binaries, model files and servers: fail before extracting anything
   await providerPreflight(called, env, { cwd: deps.cwd, log, deps: deps.providerDeps });
   if (secondSel) await providerPreflight({ text: { ...sel.text, same: true }, timing: secondSel, llm: { ...sel.llm, same: true } }, env, { cwd: deps.cwd, log, deps: deps.providerDeps });
+  if (detectSel) await preflightRole('language', detectSel, env, { cwd: deps.cwd, log, deps: deps.providerDeps });
 }
 
 /** The duration limit, the video stream, and for `--export mp4` Chrome, the ffmpeg version, the style and the font. */

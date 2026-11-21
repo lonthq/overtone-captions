@@ -60,9 +60,9 @@ export class UsageMeter {
     }
   };
 
-  /** Totals in role order (text, timing, llm), then by id. */
+  /** Totals in role order (language, text, timing, llm), then by id. */
   list(): UsageTotal[] {
-    const order: Role[] = ['text', 'timing', 'llm'];
+    const order: Role[] = ['language', 'text', 'timing', 'llm'];
     return [...this.totals.values()].sort((a, b) => order.indexOf(a.role) - order.indexOf(b.role) || a.id.localeCompare(b.id));
   }
 }

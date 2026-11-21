@@ -143,6 +143,29 @@ a snippet, it counts as no words heard and the run goes on. Healthy answers in t
 of 0.958–0.999 and no word longer than 1.6 s
 ([`src/providers/elevenlabs.ts`](../../packages/cli/src/providers/elevenlabs.ts)).
 
+## Google Chirp 3
+
+`google-chirp` serves one role, `language`: it hears the [audio samples](languages.md#detection-from-audio-samples)
+that detect the spoken language without `--language`. It cannot be a text, timing or LLM provider. `--detect auto`
+selects it when both required variables are set.
+
+| Variable | Meaning |
+|---|---|
+| `GOOGLE_APPLICATION_CREDENTIALS` | Path to a service account JSON key file. Relative paths start in the current folder |
+| `GOOGLE_CLOUD_PROJECT` | The Google Cloud project id, with the Cloud Speech-to-Text API enabled |
+| `GOOGLE_CHIRP_REGION` | `eu` (default) or `us`. Sets the host (`https://eu-speech.googleapis.com`) and the location in the request path |
+
+- One request per sample: Speech-to-Text v2 `Recognize` (synchronous), model `chirp_3`, `languageCodes: ["auto"]`,
+  the sample's audio sent inline. No storage bucket.
+- The CLI signs a token request with the service account's key and caches the access token for the run. No Google
+  SDK is needed.
+- Chirp returns no language confidence. The check is agreement: the samples must name the same language for
+  `sure`.
+- A missing variable, an unreadable key file or a bad region fails before any work, with the fix. A request that
+  still fails after the retries stops the run.
+- Price: about $0.016 per audio minute, Google's standard-tier list price as of November 2026
+  ([pricing](https://cloud.google.com/speech-to-text/pricing)). A run sends at most 90 s of audio.
+
 ## Anthropic
 
 Reasoning effort is sent as `output_config.effort` (without a hint: `medium`). The shared prompt prefix gets a

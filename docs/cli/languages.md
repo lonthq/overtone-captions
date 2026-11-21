@@ -15,7 +15,8 @@ Anything else is rejected before the run starts. A valid code is passed on as gi
 primary code (`nl`), Azure Speech a full locale (`nl` → `nl-NL`, `en` → `en-US`; `nl-BE` stays).
 
 Give `--language` when you know it: gpt-transcribe can return no text at all, and still bill it, when it has to
-detect the language itself. Without it, a second hearing (ElevenLabs Scribe) is sent first, without a language,
+detect the language itself. Without it, Overtone can [detect the language from audio samples](#detection-from-audio-samples)
+first. Without a language from the samples, a second hearing (ElevenLabs Scribe) is sent first, without a language,
 and the language it detects goes with every text request:
 `language: en (heard by elevenlabs:scribe_v2), sent with the text`.
 
@@ -28,6 +29,65 @@ For the timing provider and the document, the first source with an answer wins:
 
 The log shows the choice and its source (`language: nl (detected from the text)`), and the document's `language`
 stores it. With no answer from any source, it stores the locale Azure reported (`nl-NL`), or `und`.
+
+### Detection from audio samples
+
+Without `--language`, a language detector can hear a few samples of the audio before any other provider. The
+language it finds goes to every engine as if you had given it with `--language`: the text model, the timing
+provider, the second hearing, the language pack and `languages.<code>.llm` and `effort`.
+
+`--detect` (or `detect` in the [config file](config.md#keys)) selects the detector:
+
+| Value | Detector |
+|---|---|
+| `auto` (default) | [`google-chirp`](providers.md#google-chirp-3) when `GOOGLE_APPLICATION_CREDENTIALS` and `GOOGLE_CLOUD_PROJECT` are set, else none. None with `--local` or `"local": true` |
+| `google-chirp` | Google Chirp 3. Its variables must be set |
+| `none` (also `off`, `false`) | None: the language is detected as described above |
+
+Detection does not run with `--language` (one code or candidates such as `en,es`) or with `--text-file`.
+
+The samples:
+
+- Up to 45 s: the whole file is one sample. Up to 90 s: two 30 s samples, at the start and at the end. Longer:
+  three 30 s samples, centered at 15%, 50% and 85% of the duration.
+- A sample that falls in a silence moves to the nearest speech. Samples stay inside the file and never overlap.
+- A sample's language is the language with the most words in it. A sample with fewer than 5 words has no speech.
+
+| Case | What Overtone does | `verdict` |
+|---|---|---|
+| No audio track, or a peak below −50 dB (checked in both modes, also without a detector) | No paid calls. Writes a document with no turns and `language: "und"` | `silent` |
+| Every sample with speech names the same language, and at least two samples have speech (or the file is one sample) | Transcribes in that language | `sure` |
+| The samples disagree, or only one of several samples has speech | Transcribes in the language with the most words over all samples; a tie goes to the earliest sample | `unsure` |
+| Sound but no speech in any sample (music, noise) | No language from the samples; the engines detect it as described above | `none` |
+
+The log shows the result: `language: nl (detected from the audio by google-chirp:chirp_3, sure)`. For `unsure`
+it also lists each sample's language and word count.
+
+- `languages.<code>.text` does not follow a detected language: the text provider is chosen before the audio is
+  heard. `languages.<code>.llm` and `effort` do ([Per-language defaults](#per-language-defaults)).
+- A detector error stops the run with `error: …`, after the usual [retries](pipeline.md#retries-and-timeouts).
+  There is no silent fallback.
+- The samples are cached with the extract stage, so `--from-stage transcribe` does not send them again.
+
+The document stores the result in `meta.languageDetection`:
+
+```json
+"languageDetection": {
+  "verdict": "unsure",
+  "language": "nl",
+  "provider": "google-chirp:chirp_3",
+  "samples": [
+    { "start": 12.0, "end": 42.0, "language": "nl", "words": 71 },
+    { "start": 300.5, "end": 330.5, "language": "en", "words": 64 }
+  ]
+}
+```
+
+- `language` is left out for `none`, and a sample's `language` is left out when it had no speech.
+- For silent media the field is `{ "verdict": "silent" }`, in both modes. Otherwise it is only written when the
+  detector ran.
+- The document's `language` is the detected code for `sure` and `unsure`, `und` for `silent`, and the choice above
+  for `none`.
 
 ## Mixed-language media
 
@@ -59,9 +119,10 @@ code is checked like a single `--language`; `auto` cannot be in a list.
 }
 ```
 
-- `llm` and `effort` apply once the language is known: given, or detected after the transcribe stage (the log
-  shows `editor for nl: anthropic (languages.nl.llm)`).
-- `text` applies only when the language is given up front, since the text model runs before detection.
+- `llm` and `effort` apply once the language is known: given, detected from audio samples, or detected after the
+  transcribe stage (the log shows `editor for nl: anthropic (languages.nl.llm)`).
+- `text` applies only when the language is given up front, since the text model is chosen before detection. A
+  language detected from audio samples does not change it either.
 - An `nl-BE` entry wins over `nl`; `nl` also covers `nl-BE`.
 - `--text`, `--llm` and `--local` win over these entries. The entry's `effort` wins over the top-level `effort`.
 

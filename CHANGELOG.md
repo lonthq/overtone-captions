@@ -8,6 +8,12 @@ changes. The three packages (`overtone-format`, `videojs-overtone`, `overtone-ca
 
 ## [Unreleased]
 
+### Added
+
+- Language detection from audio samples with Google Chirp 3 (`--detect`, `meta.languageDetection`); silent media and
+  files without audio return an empty document without any paid call; the document stores the media's EBU R128
+  loudness (`meta.loudness`).
+
 ### Fixed
 
 - `overtone burn` re-encodes the audio to AAC for `.mp4` and `.m4v` unless it already is AAC. It copied MP3, Opus,

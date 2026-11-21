@@ -54,6 +54,7 @@ export function buildProgram(log: Logger = consoleLogger, opts: { cwd?: string }
     .option('--text <provider:model>', `text provider (default ${defaultSelectionId('text')})`)
     .option('--timing <provider[:mode]>', `timing + diarization provider (default ${DEFAULTS.timing}), or "same" to take the timings from the text provider`)
     .option('--timing-second-opinion <provider>', 'second hearing of the whole file (times and text votes): auto (default: elevenlabs when ELEVENLABS_API_KEY is set), none, or a provider')
+    .option('--detect <provider>', 'without --language: detect the spoken language from audio samples first: auto (default: google-chirp when GOOGLE_APPLICATION_CREDENTIALS and GOOGLE_CLOUD_PROJECT are set), none, or a provider')
     .option('--llm <provider:model>', `LLM editor (default ${defaultSelectionId('llm')})`)
     .option('--local', `local providers only, no keys: --text ${LOCAL_PRESET.text} --timing ${LOCAL_PRESET.timing} --llm ${resolveSelection(parseModelSpec(LOCAL_PRESET.llm), 'llm').id} (explicit flags win; a cloud timingSecondOpinion from the config file is turned off, --timing-second-opinion is still used; English runs download a pronunciation dictionary once)`)
     .option('--context <text>', 'what the media is about')

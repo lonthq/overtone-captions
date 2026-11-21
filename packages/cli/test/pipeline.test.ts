@@ -301,6 +301,8 @@ describe.skipIf(!hasFfmpeg)('runPipeline (ffmpeg, fake providers)', () => {
     expect(json.meta).toEqual({
       context: 'A greeting.',
       contextSource: 'user',
+      // the media's EBU R128 loudness (a generated sine tone)
+      loudness: expect.objectContaining({ standard: 'EBU R128 (ITU-R BS.1770)', integratedLufs: expect.any(Number) }),
       style: { numbers: 'auto', currency: 'auto' },
       // the default since rule set 1: captions and lines cut by the rules alone
       linebreaks: 'rules',

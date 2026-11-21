@@ -13,7 +13,7 @@ import type { ExtractData, TranscribeChunk, TranscribeData } from './types.js';
 export interface TextCalls {
   /** The upload chunks, or the whole WAV in one call for a provider with `input: 'wav'` (local engines). */
   pieces: AudioChunk[];
-  /** The forced language's primary code. */
+  /** The forced or detected language's primary code. */
   language?: string;
   /** The candidates' primary codes, main language first. */
   textLanguages?: string[];
@@ -26,8 +26,8 @@ export interface TextCalls {
   transcribe(at: 'transcribe' | 'timing', chunk: AudioChunk, prompt: string | undefined, path?: string, hint?: string): Promise<TranscribeChunk>;
 }
 
-export function textCalls(run: Run, provider: TextProvider, audio: ExtractData, plan: Pick<Plan, 'forced' | 'candidates'>): TextCalls {
-  const language = primary(plan.forced);
+export function textCalls(run: Run, provider: TextProvider, audio: ExtractData, plan: Pick<Plan, 'forced' | 'candidates' | 'detected'>): TextCalls {
+  const language = primary(plan.forced ?? plan.detected?.language);
   const textLanguages = plan.candidates ? [...new Set(plan.candidates.map((c) => primary(c)!))] : undefined;
   const textOpts = (prompt: string | undefined, hint?: string) => ({ language: language ?? hint, ...(textLanguages ? { languages: textLanguages } : {}), prompt, keywords: run.cfg.glossary });
   const pieces: AudioChunk[] = provider.input === 'wav' ? [{ path: audio.wav, index: 0, start: 0, end: audio.duration }] : audio.chunks;

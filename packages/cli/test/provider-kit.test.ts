@@ -40,7 +40,7 @@ describe('provider descriptors', () => {
 
   it('an id that is not registered is unknown, including prototype names', () => {
     expect(getProvider('constructor')).toBeUndefined();
-    expect(() => resolveSelection(spec('nope'), 'llm')).toThrow(/known: openai, azure-openai, anthropic, azure-speech, azure-mai, elevenlabs, whisper-cpp, ollama, recorded/);
+    expect(() => resolveSelection(spec('nope'), 'llm')).toThrow(/known: openai, azure-openai, anthropic, azure-speech, azure-mai, elevenlabs, google-chirp, whisper-cpp, ollama, recorded/);
   });
 
   it('registerProvider adds a provider and the returned function removes it again', () => {

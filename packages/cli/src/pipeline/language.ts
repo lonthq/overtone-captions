@@ -4,14 +4,16 @@ import { detectLanguage, normalizeLanguageCode } from '../text/detect.js';
 export const primary = (lang?: string) => lang?.split(/[-_]/)[0];
 
 /**
- * The language for the timing stage and the document: the forced one, else the text provider's most frequent, else a
- * stopword guess on the text; undefined when unsure.
+ * The language for the timing stage and the document: the forced one, else the language detected from the audio, else
+ * the text provider's most frequent, else a stopword guess on the text; undefined when unsure.
  */
 export function chooseLanguage(
   forced: string | undefined,
   chunks: ReadonlyArray<{ text: string; language?: string }>,
+  detected?: { language: string; source: string },
 ): { language: string; source: string } | undefined {
   if (forced) return { language: forced, source: '--language' };
+  if (detected) return detected;
   const counts = new Map<string, number>();
   for (const c of chunks) {
     const code = normalizeLanguageCode(c.language);

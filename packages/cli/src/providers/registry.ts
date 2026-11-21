@@ -6,6 +6,7 @@ import { anthropicProvider } from './anthropic.js';
 import { azureMaiProvider } from './azure-mai.js';
 import { azureSpeechProvider } from './azure-speech.js';
 import { elevenlabsProvider } from './elevenlabs.js';
+import { googleChirpProvider } from './google-chirp.js';
 import { recordingFetch } from './http-record.js';
 import {
   hasWordTimings,
@@ -28,7 +29,7 @@ import { ollamaProvider } from './ollama.js';
 import { azureOpenaiProvider, openaiProvider } from './openai.js';
 import { recordedProvider } from './recorded.js';
 import { withSchemaValidation } from './structured.js';
-import type { LlmProvider, TextProvider, TimingProvider } from './types.js';
+import type { LanguageProvider, LlmProvider, TextProvider, TimingProvider } from './types.js';
 import { whisperCppProvider } from './whisper-cpp.js';
 
 export type { ProviderDeps, Role } from './kit.js';
@@ -41,6 +42,7 @@ export const BUILTIN_PROVIDERS: readonly ProviderDescriptor[] = [
   azureSpeechProvider,
   azureMaiProvider,
   elevenlabsProvider,
+  googleChirpProvider,
   whisperCppProvider,
   ollamaProvider,
   recordedProvider,
@@ -147,8 +149,8 @@ export function missingEnvError(missing: readonly string[], forWhat = 'the selec
   ].join('\n'));
 }
 
-/** `secondTiming`: the optional second hearing (hearings.ts). */
-export interface Providers { text: TextProvider; timing: TimingProvider; llm: LlmProvider; secondTiming?: TimingProvider }
+/** `secondTiming`: the optional second hearing (hearings.ts). `language`: the optional detector (pipeline/detect.ts). */
+export interface Providers { text: TextProvider; timing: TimingProvider; llm: LlmProvider; secondTiming?: TimingProvider; language?: LanguageProvider }
 
 /** What `auto` picks as the second hearing when its key is set. */
 export const AUTO_SECOND_OPINION = { provider: 'elevenlabs', key: 'ELEVENLABS_API_KEY' } as const;
@@ -170,6 +172,23 @@ export function secondOpinionSelection(setting: 'auto' | false | ModelSpec, prim
     throw new UserError(`--timing-second-opinion ${sel.id} is the timing provider itself; choose another provider, or none.`);
   }
   return sel;
+}
+
+/** What `auto` picks as the language detector when all of its variables are set. */
+export const AUTO_DETECTOR = { provider: 'google-chirp', keys: ['GOOGLE_APPLICATION_CREDENTIALS', 'GOOGLE_CLOUD_PROJECT'] } as const;
+
+/** Resolves `--detect`. Undefined: no detection. */
+export function detectorSelection(setting: 'auto' | false | ModelSpec, env: NodeJS.ProcessEnv): ModelSpec | undefined {
+  if (setting === false) return undefined;
+  if (setting === 'auto') {
+    if (!AUTO_DETECTOR.keys.every((k) => env[k]?.trim())) return undefined;
+    return resolveSelection({ provider: AUTO_DETECTOR.provider, id: AUTO_DETECTOR.provider }, 'language');
+  }
+  const d = getProvider(setting.provider);
+  if (d && !d.roles.includes('language')) {
+    throw new UserError(`--detect ${setting.provider}: this provider cannot detect the language; use auto, none or ${AUTO_DETECTOR.provider}.`);
+  }
+  return resolveSelection(setting, 'language');
 }
 
 export interface CreateOptions {
@@ -216,6 +235,19 @@ function createDeps(role: Role, sel: ModelSpec, env: NodeJS.ProcessEnv, opts: Cr
   };
 }
 
+/** One role's preflight check (binaries, model files, local servers, credential files), redacted like createProvider. */
+export async function preflightRole(role: Role, s: ModelSpec, env: NodeJS.ProcessEnv, opts: CreateOptions): Promise<void> {
+  const d = getProvider(s.provider);
+  if (d) refuseUrlCredentials(d, env);
+  if (!d?.preflight) return;
+  try {
+    await d.preflight(env, s.model!, createDeps(role, s, env, opts));
+  } catch (err) {
+    // same redaction as createProvider
+    throw redactError(explainNetworkError(err, endpointVars(d)), secretValues(d, env));
+  }
+}
+
 /** Runs preflight checks (binaries, model files, local servers) once per provider and model. */
 export async function preflight(sel: Selections, env: NodeJS.ProcessEnv, opts: CreateOptions): Promise<void> {
   const done = new Set<string>();
@@ -223,15 +255,7 @@ export async function preflight(sel: Selections, env: NodeJS.ProcessEnv, opts: C
     const s = sel[role];
     if (s.same || done.has(s.id)) continue;
     done.add(s.id);
-    const d = getProvider(s.provider);
-    if (d) refuseUrlCredentials(d, env);
-    if (!d?.preflight) continue;
-    try {
-      await d.preflight(env, s.model!, createDeps(role, s, env, opts));
-    } catch (err) {
-      // same redaction as createProvider
-      throw redactError(explainNetworkError(err, endpointVars(d)), secretValues(d, env));
-    }
+    await preflightRole(role, s, env, opts);
   }
 }
 

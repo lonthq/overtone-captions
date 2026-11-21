@@ -5,7 +5,8 @@
  * Roles:
  * - `text`:   audio → the best possible transcript (no times needed);
  * - `timing`: 16 kHz WAV → timed words with speaker ids (S1, S2, …);
- * - `llm`:    system + user prompt and a JSON schema → a matching JSON value.
+ * - `llm`:    system + user prompt and a JSON schema → a matching JSON value;
+ * - `language`: a 16 kHz WAV sample → words heard per language (spoken language detection).
  *
  * Guide: docs/contributing/providers.md (humans), docs/contributing/providers.agents.md (agents).
  */
@@ -15,10 +16,10 @@ import type { Logger } from '../log.js';
 import { describeNetworkFailure, HttpError, isTimeout, networkFailure, type RetryOptions } from '../util/retry.js';
 import type { AnthropicLike } from './anthropic.js';
 import type { OpenAILike } from './openai.js';
-import type { LlmProvider, TextProvider, TimingProvider } from './types.js';
+import type { LanguageProvider, LlmProvider, TextProvider, TimingProvider } from './types.js';
 
-export type Role = 'text' | 'timing' | 'llm';
-export const ROLES: readonly Role[] = ['text', 'timing', 'llm'];
+export type Role = 'text' | 'timing' | 'llm' | 'language';
+export const ROLES: readonly Role[] = ['text', 'timing', 'llm', 'language'];
 
 /** An environment variable a provider reads, named `<PROVIDER>_<THING>` (OPENAI_API_KEY). */
 export interface EnvVar {
@@ -78,7 +79,7 @@ export interface CreateDeps extends ProviderDeps {
 /** Same as `create`'s, before any extraction or API call. */
 export type PreflightDeps = CreateDeps;
 
-export type AnyProvider = TextProvider | TimingProvider | LlmProvider;
+export type AnyProvider = TextProvider | TimingProvider | LlmProvider | LanguageProvider;
 
 export interface ProviderDescriptor {
   /** Lowercase id for selections (`--llm <id>:<model>`): letters, digits, '-'. */
@@ -453,7 +454,7 @@ export function explainNetworkError(err: unknown, vars: readonly string[] = []):
   return new Error(explained, { cause: err });
 }
 
-const METHOD: Record<Role, 'transcribe' | 'align' | 'complete'> = { text: 'transcribe', timing: 'align', llm: 'complete' };
+const METHOD: Record<Role, 'transcribe' | 'align' | 'complete' | 'detect'> = { text: 'transcribe', timing: 'align', llm: 'complete', language: 'detect' };
 
 /** Wraps a provider so its errors are redacted and explained (`explainNetworkError`). Keeps `id` and `input`. */
 export function withRedaction<P extends AnyProvider>(provider: P, role: Role, secrets: readonly string[], vars: readonly string[] = []): P {

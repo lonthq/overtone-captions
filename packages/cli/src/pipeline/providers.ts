@@ -1,7 +1,7 @@
 import { basename } from 'node:path';
 import { FileTextProvider } from '../providers/file.js';
 import { createProvider, createProviders, type CreateOptions, type Providers } from '../providers/registry.js';
-import type { TimingProvider } from '../providers/types.js';
+import type { LanguageProvider, TimingProvider } from '../providers/types.js';
 import { tokenizeDisplay } from '../text/normalize.js';
 import { UsageMeter } from '../usage.js';
 import type { Plan } from './preflight.js';
@@ -33,10 +33,14 @@ export function buildProviders(plan: Plan, deps: PipelineDeps, env: NodeJS.Proce
   };
   const fileText = textFile ? new FileTextProvider(textFile) : undefined;
   const built = deps.providers ?? createProviders(sel, env, createOpts, { text: fileText });
-  const providers: Providers = fileText ? { ...built, text: fileText } : built;
+  const base: Providers = fileText ? { ...built, text: fileText } : built;
   const secondTiming: TimingProvider | undefined = deps.providers
     ? deps.providers.secondTiming
     : secondSel ? (createProvider('timing', secondSel, env, createOpts) as TimingProvider) : undefined;
+  const language: LanguageProvider | undefined = deps.providers
+    ? deps.providers.language
+    : plan.detectSel ? (createProvider('language', plan.detectSel, env, createOpts) as LanguageProvider) : undefined;
+  const providers: Providers = { ...base, ...(language ? { language } : {}) };
   if (textFile) log.info(`  text: ${basename(textFile.path)} (${textFile.cues !== undefined ? `${textFile.cues} cues, ` : ''}${tokenizeDisplay(textFile.text).length} words; no text provider is called)`);
   return { providers, secondTiming, meter, createOpts };
 }

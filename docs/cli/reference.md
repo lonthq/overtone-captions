@@ -42,6 +42,7 @@ with the [CLI README](../../packages/cli/README.md). Other reference pages:
 | `--glossary <path>` | none | One term per line; blank lines and lines starting with `#` are skipped |
 | `--speakers <list>` | none | Pin speaker labels: `"S1=Sarah,S2=Tom"`. Wins over labels the LLM finds. Each id once, labels not empty |
 | `--language <code>` | `auto` | Spoken language, or candidates for mixed-language media (`en,es`, first is main). See [Language](languages.md) |
+| `--detect <provider>` | `auto` | Without `--language`: detect the language from audio samples first ([Detection from audio samples](languages.md#detection-from-audio-samples)). `auto`: `google-chirp` when `GOOGLE_APPLICATION_CREDENTIALS` and `GOOGLE_CLOUD_PROJECT` are set; none with `--local` or `"local": true`. `none` (also `off`, `false`): none. Or `google-chirp` |
 | `--profiles <ids>` | `horizontal,vertical` | Profiles to cut: names and aspects (`horizontal,1:1,4:5`). Without this flag or a `profiles` list in the config file, a video also gets a profile for its own shape ([Profiles](config.md#profiles)) |
 | `--export <formats>` | `json,vtt` | Any of `json`, `player`, `vtt`, `vtt-words`, `srt`, `txt`, `mp4` ([Output](#output)) |
 | `--burn-style <name\|path>` | `clean` | With `mp4`: as `burn --style` |
@@ -82,7 +83,7 @@ Add `--dry-run` to the real run's flags (`overtone transcribe talk.mp4 --dry-run
 | `not checked` | Local tools (whisper.cpp, Ollama), Chrome and ffmpeg 5.0+ for `mp4` |
 | `profiles`, `outputs` | Profiles (and one added for the media's shape) and every file path |
 | `cache` | The cache folder |
-| `estimated cost` | List-price estimate for the measured setups (the default, with or without the ElevenLabs second hearing, also on Azure OpenAI deployments named after the default models). Local runs are $0 |
+| `estimated cost` | List-price estimate for the measured setups (the default, with or without the ElevenLabs second hearing, also on Azure OpenAI deployments named after the default models). Local runs are $0. Language detection is noted (up to 90 s of audio), not priced |
 | `runnable` | `yes` when every checked prerequisite passed |
 
 A failed check (missing keys, no ffmpeg, media over 2 hours, `mp4` without video) exits with 1 after the plan,
@@ -239,6 +240,7 @@ times and speakers; context inference, the editor and line cutting run as usual.
 | `azure-mai` | text, timing | `AZURE_MAI_KEY`, and `AZURE_MAI_REGION` or `AZURE_MAI_ENDPOINT` | `mai-transcribe-2`, with word timings |
 | `elevenlabs` | text, timing | `ELEVENLABS_API_KEY` (speech-to-text permission is enough); optional `ELEVENLABS_BASE_URL`, `ELEVENLABS_TIMEOUT_SECONDS` | `scribe_v2`, with word timings |
 | `whisper-cpp` | text, timing | optional `WHISPER_CPP_BIN`, `WHISPER_CPP_MODEL`, `WHISPER_CPP_TDRZ`, `WHISPER_CPP_THREADS`, `WHISPER_CPP_ARGS` | `large-v3-turbo` (a model name such as `base` or `small.en-tdrz`, or a path to a ggml `.bin`), with word timings |
+| `google-chirp` | language | `GOOGLE_APPLICATION_CREDENTIALS`, `GOOGLE_CLOUD_PROJECT`; optional `GOOGLE_CHIRP_REGION` | `chirp_3` (the only model). Only for `--detect` ([Google Chirp 3](providers.md#google-chirp-3)) |
 | `ollama` | llm | optional `OLLAMA_BASE_URL`, `OLLAMA_API_KEY`, `OLLAMA_NUM_CTX`, `OLLAMA_MAX_TOKENS`, `OLLAMA_THINK`, `OLLAMA_RESPONSE_FORMAT` | `qwen3:8b` (any tag you pulled) |
 | `recorded:<dir>` | text, timing, llm | none | Replays recorded responses from `<dir>` (tests, demos) |
 
@@ -369,6 +371,8 @@ accepts them, since the format allows extra `meta` fields.
 | `timingRetries` | Snippets sent again for timing ([Timing](pipeline.md#timing)): `start`, `end` of the gap, the stretch's `words`, the `provider`, words `heard`, `result` (`heard`, `partial` or `none`) |
 | `textVotes` | Vote regions where the text changed or a change was rejected ([text vote](pipeline.md#the-text-vote)): `start`, `end`, `class` (`a`, `b`, `c`), `from`, `to`, `result` (`changed` or `rejected:<check>`: `empty`, `repeat`, `relisten`, `overlap`), what each engine and the re-listen `heard`, the chooser's `basis`, and `review` for a change no hearing heard |
 | `languagesHeard` | With candidate languages: share of speech per language as Azure reported it ([Mixed-language media](languages.md#mixed-language-media)) |
+| `languageDetection` | The language detected from audio samples, or `{ "verdict": "silent" }` for silent media: `verdict` (`sure`, `unsure`, `none`, `silent`), `language`, `provider`, and per sample `start`, `end`, `language`, `words` ([Detection from audio samples](languages.md#detection-from-audio-samples)) |
+| `loudness` | The loudness of the original audio ([below](#metaloudness)): `standard`, `integratedLufs`, `rangeLu`, `truePeakDbtp`, `samplePeakDbfs` |
 | `source`, `timing` | From `recut` of a subtitle file: `srt` or `vtt`, and `estimated-from-cues` |
 
 Examples:
@@ -379,6 +383,37 @@ Examples:
 "textRetries": [{ "start": 0, "end": 730.56, "reason": "the text provider returned no text where the engines heard 287 words", "loudnorm": true, "language": "en",
   "attempts": [{ "audio": "chunk", "prompt": "names", "words": 0 }, { "audio": "speech", "start": 139.54, "end": 350.82, "prompt": "names", "words": 311 }], "attempt": 2, "result": "retry" }]
 ```
+
+#### `meta.loudness`
+
+The loudness of the media's first audio track, measured on the original file (not on the 16 kHz mono WAV the
+providers hear) by ffmpeg's `ebur128` filter. Every run with an audio track stores it, silent media included.
+
+```json
+"loudness": {
+  "standard": "EBU R128 (ITU-R BS.1770)",
+  "integratedLufs": -18.2,
+  "rangeLu": 7.1,
+  "truePeakDbtp": -1.3,
+  "samplePeakDbfs": -1.6
+}
+```
+
+| Key | Unit | Meaning |
+|---|---|---|
+| `standard` | | Always `EBU R128 (ITU-R BS.1770)` |
+| `integratedLufs` | LUFS | Integrated loudness over the whole file |
+| `rangeLu` | LU | Loudness range: how much the level varies |
+| `truePeakDbtp` | dBTP | True peak, with 4× oversampling |
+| `samplePeakDbfs` | dBFS | Highest sample value |
+
+- A value that cannot be measured is left out: integrated loudness and range at −70 LUFS or below (silence), and
+  peaks of −inf. A file without an audio track has no `meta.loudness`.
+- A failed measurement never fails the run: the field is left out, with one debug line.
+- It is information only. Overtone never normalizes the audio by it, and `--normalize-loudness`
+  does not change it.
+- For orientation, common targets for integrated loudness: about −14 LUFS (YouTube, Spotify), −16 LUFS (Apple,
+  podcasts), −23 LUFS (EBU broadcast).
 
 ## Limits and inputs
 

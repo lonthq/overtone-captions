@@ -111,6 +111,13 @@ export interface TimingResult {
   /** Share of speech per language heard (primary codes, e.g. { en: 0.82, es: 0.18 }), if reported. */
   languagesHeard?: Record<string, number>;
 }
+/** What a language provider heard in one audio sample: words per primary language code ({ nl: 64, en: 3 }). */
+export interface LanguageResult { words: Record<string, number> }
+/** Hears which language is spoken in a short sample (pipeline/detect.ts); never a transcript for the captions. */
+export interface LanguageProvider extends CacheTraits {
+  readonly id: string;
+  detect(audio: AudioFile): Promise<LanguageResult>;
+}
 export interface LlmProvider extends CacheTraits {
   readonly id: string;
   complete<T>(req: LlmRequest): Promise<T>;

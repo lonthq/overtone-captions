@@ -8,10 +8,11 @@ import { UserError } from '../errors.js';
 import { missingBinaries, probeMedia } from '../media/extract.js';
 import { probeVideo, type VideoInfo } from '../media/video.js';
 import { assertNoInputOverwrite, baseName, plannedOutputs, type PlannedOutput } from '../output.js';
-import { AUTO_SECOND_OPINION, defaultSelectionId, getProvider, missingEnv, missingEnvError, resolveSelection } from '../providers/registry.js';
+import { AUTO_DETECTOR, AUTO_SECOND_OPINION, defaultSelectionId, getProvider, missingEnv, missingEnvError, resolveSelection } from '../providers/registry.js';
 import { mediaProfile } from '../segment/aspect.js';
 import { LATEST_RULESET } from '../segment/rulesets/index.js';
 import { clock, MAX_DURATION_SECONDS, tooLong } from './duration.js';
+import { SAMPLE_SECONDS } from './audio-language.js';
 import { forcedLanguages, runInputs, selectProviders } from './preflight.js';
 import type { PipelineConfig, PipelineDeps } from './types.js';
 
@@ -80,6 +81,7 @@ export function destination(provider: string, env: NodeJS.ProcessEnv): Destinati
     case 'elevenlabs': return custom('ELEVENLABS_BASE_URL', { name: 'ElevenLabs (api.elevenlabs.io)', cloud: true });
     case 'ollama': return custom('OLLAMA_BASE_URL', { name: 'Ollama on this machine (localhost:11434)', cloud: false });
     case 'whisper-cpp': return { name: 'whisper.cpp on this machine', cloud: false };
+    case 'google-chirp': return { name: 'Google Cloud Speech-to-Text (the region in GOOGLE_CHIRP_REGION, default eu)', cloud: true };
     case 'recorded': return { name: 'recorded responses (no network)', cloud: false };
     default: return { name: `${provider} (${getProvider(provider)?.description ?? 'unknown provider'})`, cloud: true };
   }
@@ -142,7 +144,7 @@ export async function planRun(
   const upfront = languageDefaultsFor(cfg, forced);
 
   // the providers: the same selection as the run (per-language text and LLM, --text-file, the second hearing)
-  const { textFile, sel, secondSel } = await selectProviders(cfg, upfront, deps as PipelineDeps, env);
+  const { textFile, sel, secondSel, detectSel } = await selectProviders(cfg, upfront, deps as PipelineDeps, env);
   const describe = (s: ModelSpec, role: 'text' | 'timing' | 'llm') => {
     const d = destination(s.provider, env);
     return `${s.id} (${d.cloud ? 'cloud' : 'local'}: ${d.name})${role === 'llm' && !cfg.explicit.llm && upfront?.llm ? ` (languages.${forced}.llm)` : ''}${role === 'text' && !cfg.explicit.text && upfront?.text && !textFile ? ` (languages.${forced}.text)` : ''}`;
@@ -158,7 +160,11 @@ export async function planRun(
       : `none (auto: ${AUTO_SECOND_OPINION.provider} already gives the ${sel.text.provider === AUTO_SECOND_OPINION.provider ? 'text' : 'timings'})`;
   } else second = 'none';
 
-  const language = candidates ? `${candidates.join(', ')} (given; main language ${candidates[0]})` : forced ? `${forced} (given)` : 'detected during the run';
+  const auto = cfg.detect === 'auto' ? ` (auto: ${AUTO_DETECTOR.keys.join(' and ')} are set)` : '';
+  const language = candidates ? `${candidates.join(', ')} (given; main language ${candidates[0]})`
+    : forced ? `${forced} (given)`
+    : detectSel ? `detected from audio samples by ${detectSel.id}${auto}`
+    : 'detected during the run';
   const languageOverrides: string[] = [];
   // Editors for some detected languages only: `languages.<code>.llm` applies after detection when no language is
   // given (`languages.<code>.text` does not: the text model runs before detection, editor.ts).
@@ -179,6 +185,7 @@ export async function planRun(
   // where the audio and the transcript go
   const uniq = (list: Destination[]) => [...new Map(list.map((d) => [d.name, d])).values()];
   const audioTo = uniq([
+    ...(detectSel ? [destination(detectSel.provider, env)] : []),
     ...(textFile ? [] : [destination(sel.text.provider, env)]),
     ...(sel.timing.same ? [] : [destination(sel.timing.provider, env)]),
     ...(secondSel ? [destination(secondSel.provider, env)] : []),
@@ -191,8 +198,8 @@ export async function planRun(
   ]);
 
   // keys, exactly as preflight checks them; local tools are not checked (no server request, no binary run)
-  const missing = missingEnv([...(textFile ? [sel.timing, sel.llm] : [sel.text, sel.timing, sel.llm]), ...(secondSel ? [secondSel] : [])], env);
-  const used = [...(textFile ? [] : [sel.text]), ...(sel.timing.same ? [] : [sel.timing]), sel.llm, ...(secondSel ? [secondSel] : [])];
+  const missing = missingEnv([...(textFile ? [sel.timing, sel.llm] : [sel.text, sel.timing, sel.llm]), ...(secondSel ? [secondSel] : []), ...(detectSel ? [detectSel] : [])], env);
+  const used = [...(textFile ? [] : [sel.text]), ...(sel.timing.same ? [] : [sel.timing]), sel.llm, ...(secondSel ? [secondSel] : []), ...(detectSel ? [detectSel] : [])];
   const unchecked = [...new Set(used.map((s) => LOCAL_TOOLS[s.provider]).filter((t): t is string => t !== undefined))];
 
   // ffmpeg and the media: duration (the 2-hour limit) and the video's shape (the media profile)
@@ -236,9 +243,10 @@ export async function planRun(
 
   if (missing.length > 0) problems.unshift(missingEnvError(missing).message);
   const cost = costEstimate(sel, secondSel, cfg, [...audioTo, ...transcriptTo], duration);
+  const withDetection = detectSel ? `${cost}; plus language detection: up to ${3 * SAMPLE_SECONDS} s of audio with ${detectSel.id} (not in this estimate)` : cost;
   return {
     media, duration, durationNote, video, ...files, text, timing, second, llm: describe(sel.llm, 'llm'), language, languageOverrides, context,
-    audioTo, transcriptTo, missing, unchecked, outputs, profiles, mediaProfileId, cacheDir: cfg.cacheDir, useCache: cfg.useCache, cost, problems,
+    audioTo, transcriptTo, missing, unchecked, outputs, profiles, mediaProfileId, cacheDir: cfg.cacheDir, useCache: cfg.useCache, cost: withDetection, problems,
   };
 }
 

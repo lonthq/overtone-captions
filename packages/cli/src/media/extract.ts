@@ -28,8 +28,8 @@ export const LOUDNORM_FILTER = 'loudnorm=I=-16:TP=-1.5:LRA=11';
 /** gpt-4o-transcribe-family models reject audio over 1500 s; stay below that per chunk. */
 export const DEFAULT_MAX_CHUNK_SECONDS = 1400;
 
-export async function run(cmd: string, args: readonly string[]): Promise<{ stdout: string; stderr: string }> {
-  const running = exec(cmd, [...args], { maxBuffer: 64 * 1024 * 1024 });
+export async function run(cmd: string, args: readonly string[], opts: { signal?: AbortSignal } = {}): Promise<{ stdout: string; stderr: string }> {
+  const running = exec(cmd, [...args], { maxBuffer: 64 * 1024 * 1024, ...(opts.signal ? { signal: opts.signal } : {}) });
   // SIGTERM reaches only this process; without this, ffmpeg keeps running and writing
   const forget = onInterrupt(() => running.child.kill('SIGKILL'));
   try {
@@ -75,6 +75,32 @@ export async function detectSilences(path: string, duration: number): Promise<Si
 }
 
 /**
+ * Below this peak (dBFS) the audio counts as silent: nothing is sent to any provider. Much lower than the chunking
+ * threshold (−35 dB), which very quiet speech can stay under.
+ */
+export const SILENT_MAX_VOLUME_DB = -50;
+/** The peak stored for digital silence or no samples (JSON cannot hold -Infinity). */
+export const MIN_DB = -200;
+
+/** `max_volume` from ffmpeg's volumedetect output; MIN_DB for -inf or none. */
+export function parseMaxVolume(stderr: string): number {
+  const m = /max_volume:\s*(-?inf|-?\d+(?:\.\d+)?)\s*dB/i.exec(stderr);
+  if (!m || /inf/i.test(m[1]!)) return MIN_DB;
+  return Math.max(MIN_DB, Number(m[1]));
+}
+
+/** The peak level of `path` in dBFS (one ffmpeg pass); `inputArgs` go after `-i path` (e.g. a stream map). */
+export async function maxVolume(path: string, inputArgs: readonly string[] = []): Promise<number> {
+  const { stderr } = await run('ffmpeg', ['-nostats', '-v', 'info', '-i', path, ...inputArgs, '-af', 'volumedetect', '-f', 'null', '-']);
+  return parseMaxVolume(stderr);
+}
+
+/** Nothing to transcribe: no audio track, or a peak below SILENT_MAX_VOLUME_DB. Unknown level: not silent. */
+export function isSilent(a: { maxVolume?: number; noAudio?: true }): boolean {
+  return a.noAudio === true || (a.maxVolume !== undefined && a.maxVolume < SILENT_MAX_VOLUME_DB);
+}
+
+/**
  * Transcribe the first audio track, the one `overtone burn` keeps and probeVideo reports. ffmpeg's own pick (default
  * track, else most channels) can be another language on a multi-language film.
  */
@@ -117,13 +143,18 @@ export async function probeMedia(media: string): Promise<number | undefined> {
   return Number.isFinite(d) && d > 0 ? d : undefined;
 }
 
-/** `duration` is the extracted WAV's length, which every chunk and time refers to. */
-export interface ExtractResult { duration: number; wav: string; chunks: AudioChunk[] }
+/**
+ * `duration` is the extracted WAV's length, which every chunk and time refers to. `maxVolume`: the WAV's peak in
+ * dBFS. `noAudio`: the file has no audio track (only with `allowNoAudio`; then `wav` is '' and there are no chunks).
+ */
+export interface ExtractResult { duration: number; wav: string; chunks: AudioChunk[]; maxVolume?: number; noAudio?: true }
 export interface ExtractOptions {
   chunkBytes: number;
   maxChunkSeconds?: number;
   /** Loudness-normalize the WAV and the compressed audio (LOUDNORM_FILTER). */
   normalizeLoudness?: boolean;
+  /** A file without an audio track gives a `noAudio` result (its container duration) instead of an error. */
+  allowNoAudio?: boolean;
 }
 
 /**
@@ -135,7 +166,10 @@ export async function extractAudio(media: string, dir: string, opts: ExtractOpti
   await mkdir(dir, { recursive: true });
   media = resolve(media);
   const { stdout: audioStreams } = await run('ffprobe', ['-v', 'error', '-select_streams', 'a', '-show_entries', 'stream=index', '-of', 'csv=p=0', media]);
-  if (audioStreams.trim() === '') throw new UserError(`${media} has no audio track.`);
+  if (audioStreams.trim() === '') {
+    if (!opts.allowNoAudio) throw new UserError(`${media} has no audio track.`);
+    return { duration: (await probeMedia(media)) ?? 0, wav: '', chunks: [], maxVolume: MIN_DB, noAudio: true };
+  }
   const pending: Array<{ tmp: string; final: string }> = [];
   const wav = join(dir, 'audio.wav');
   const compressed = join(dir, `audio.${COMPRESSED.ext}`);
@@ -148,6 +182,8 @@ export async function extractAudio(media: string, dir: string, opts: ExtractOpti
     await run('ffmpeg', ['-y', '-v', 'error', '-i', media, ...FIRST_AUDIO_ARGS, '-vn', ...filter, ...WAV_ARGS, wavTmp]);
     // measure the WAV, not the input: streamed WebM has no duration, ADTS only an estimate, and video can outlast audio
     const duration = await probeDuration(wavTmp);
+    // loudnorm lifts a noise floor above the threshold, so with it the level is read from the original track
+    const peak = opts.normalizeLoudness ? await maxVolume(media, [...FIRST_AUDIO_ARGS, '-vn']) : await maxVolume(wavTmp);
     await run('ffmpeg', ['-y', '-v', 'error', '-i', media, ...FIRST_AUDIO_ARGS, '-vn', ...filter, ...COMPRESSED.args, compressedTmp]);
     const size = (await stat(compressedTmp)).size;
     const maxSeconds = opts.maxChunkSeconds ?? DEFAULT_MAX_CHUNK_SECONDS;
@@ -166,7 +202,7 @@ export async function extractAudio(media: string, dir: string, opts: ExtractOpti
       }
     }
     for (const { tmp, final } of pending) await rename(tmp, final);
-    return { duration, wav, chunks };
+    return { duration, wav, chunks, maxVolume: peak };
   } finally {
     await Promise.all(pending.map(({ tmp }) => rm(tmp, { force: true })));
     forget();

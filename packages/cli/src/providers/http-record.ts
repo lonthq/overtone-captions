@@ -14,7 +14,32 @@ export interface RecordedExchange {
 /** Response headers to keep: content type and what the retry logic reads. */
 const KEEP_HEADERS = ['content-type', 'retry-after', 'retry-after-ms', 'x-should-retry'];
 
+/**
+ * Credential fields of token exchanges (OAuth 2.0: RFC 6749, RFC 7523 JWT bearer grants, OpenID Connect): their values
+ * are replaced in recorded JSON and form bodies, request and response, as they are no env variable to redact.
+ */
+export const CREDENTIAL_FIELDS: readonly string[] = ['access_token', 'refresh_token', 'id_token', 'assertion', 'client_secret'];
+const REDACTED_FIELD = 'REDACTED';
+
+/** A JSON value with every CREDENTIAL_FIELDS value replaced, at any depth. */
+export function redactCredentialFields(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(redactCredentialFields);
+  if (!value || typeof value !== 'object') return value;
+  return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, CREDENTIAL_FIELDS.includes(k) ? REDACTED_FIELD : redactCredentialFields(v)]));
+}
+
+/** An application/x-www-form-urlencoded body with every CREDENTIAL_FIELDS value replaced. */
+export function redactCredentialForm(body: string): string {
+  const form = new URLSearchParams(body);
+  if (!CREDENTIAL_FIELDS.some((f) => form.has(f))) return body;
+  for (const f of CREDENTIAL_FIELDS) if (form.has(f)) form.set(f, REDACTED_FIELD);
+  return form.toString();
+}
+
+const isForm = (contentType: string | null | undefined) => (contentType ?? '').toLowerCase().includes('application/x-www-form-urlencoded');
+
 function requestBody(body: unknown): unknown {
+  if (body instanceof URLSearchParams) return body.toString();
   if (typeof body !== 'string') return body === undefined || body === null ? undefined : '[binary or multipart body not recorded]';
   try {
     return JSON.parse(body) as unknown;
@@ -44,17 +69,21 @@ export function recordingFetch(dir: string, label: string, secrets: readonly str
       const v = res.headers.get(h);
       if (v !== null) headers[h] = v;
     }
-    let body: unknown = r(text);
+    let body: unknown = isForm(headers['content-type']) ? redactCredentialForm(r(text)) : r(text);
     if ((headers['content-type'] ?? '').includes('json')) {
       try {
-        body = JSON.parse(r(text)) as unknown;
+        body = redactCredentialFields(JSON.parse(r(text)));
       } catch {
         // keep the text
       }
     }
     const reqBody = requestBody(init?.body);
+    const formRequest = init?.body instanceof URLSearchParams || isForm(new Headers(init?.headers).get('content-type'));
+    const recordedReqBody = reqBody === undefined ? undefined : typeof reqBody === 'string'
+      ? (formRequest ? redactCredentialForm(r(reqBody)) : r(reqBody))
+      : redactCredentialFields(JSON.parse(r(JSON.stringify(reqBody))));
     const exchange: RecordedExchange = {
-      request: { method: init?.method ?? 'GET', url: r(url), ...(reqBody !== undefined ? { body: typeof reqBody === 'string' ? r(reqBody) : JSON.parse(r(JSON.stringify(reqBody))) as unknown } : {}) },
+      request: { method: init?.method ?? 'GET', url: r(url), ...(reqBody !== undefined ? { body: recordedReqBody } : {}) },
       response: { status: res.status, headers, body },
     };
     const n = (recorded.get(dir) ?? 0) + 1;

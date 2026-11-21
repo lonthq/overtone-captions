@@ -1,0 +1,9 @@
+{
+  "_source": "documented v2 RecognizeResponse shape, https://cloud.google.com/speech-to-text/v2/docs/reference/rest/v2/projects.locations.recognizers/recognize (checked 2026-11-20); made-up transcripts",
+  "results": [
+    { "alternatives": [{ "transcript": "goedemorgen allemaal en welkom bij de vergadering van vandaag", "confidence": 0 }], "resultEndOffset": "14.200s", "languageCode": "nl-NL" },
+    { "alternatives": [{ "transcript": "we beginnen met het eerste punt", "confidence": 0 }], "resultEndOffset": "21.900s", "languageCode": "nl-NL" },
+    { "alternatives": [{ "transcript": "thank you", "confidence": 0 }], "resultEndOffset": "23.100s", "languageCode": "en-US" }
+  ],
+  "metadata": { "totalBilledDuration": "30s" }
+}

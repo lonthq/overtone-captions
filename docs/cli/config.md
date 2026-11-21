@@ -43,6 +43,7 @@ Keys that match a `transcribe` flag:
 |---|---|---|
 | `text`, `timing`, `llm` | `--text`, `--timing`, `--llm` | `"provider[:model]"` |
 | `timingSecondOpinion` | `--timing-second-opinion` | `"auto"` (default), `"none"` or `false`, or a provider |
+| `detect` | `--detect` | `"auto"` (default), `"none"` or `false`, or `"google-chirp"` ([Detection from audio samples](languages.md#detection-from-audio-samples)) |
 | `local` | `--local` | boolean. Uses the [local mode](providers.md#local-mode) providers for every role that `text`, `timing` or `llm` leave unset |
 | `context`, `contextFile` | `--context`, `--context-file` | string |
 | `inferContext` | `--no-infer-context` | boolean (default `true`) |

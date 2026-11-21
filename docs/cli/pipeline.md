@@ -8,12 +8,29 @@ later one ([Cache](config.md#cache)).
 
 | Stage | What it does | Provider requests |
 |---|---|---|
-| `extract` | Audio from the media: a 16 kHz mono WAV and MP3 chunks | none |
+| `extract` | Audio from the media: a 16 kHz mono WAV and MP3 chunks, its peak level, and the [language from audio samples](#the-extract-stage) | language detector (without `--language`) |
 | `transcribe` | The text hearing | text model |
 | `timing` | Timing hearing, second hearing, [text base](#the-text-base), [context](#context), `--two-pass`, timing snippets | timing engines, text model, LLM |
 | `align` | Word times, speakers, the [text vote](#the-text-vote) | snippet re-listens, chooser |
 | `refine` | The [editor](#the-editor), speaker labels, [styling](#styling), [LLM line cutting](#llm-line-cutting) | LLM |
 | `export` | [Line cutting](#line-cutting) and the output files | none |
+
+### The extract stage
+
+1. Audio: ffmpeg writes the first audio track as a 16 kHz mono WAV and as MP3 chunks for the text model.
+2. Peak level: one `volumedetect` pass on the WAV (with `--normalize-loudness`, on the original audio track, since
+   `loudnorm` lifts a noise floor).
+3. Silent media: with no audio track, or a peak below −50 dB, the run stops here without any paid call. It writes a
+   document with no turns, `language: "und"` and `meta.languageDetection: { "verdict": "silent" }`, and caption
+   files without cues. With `--text-file`, a warning says the text was not used. The −50 dB threshold catches only
+   true silence: very quiet speech stays above it.
+4. Language detection: without `--language`, and with a detector, up to three 30 s samples go to the detector
+   ([Detection from audio samples](languages.md#detection-from-audio-samples)). These are the run's first paid
+   calls. They are cached with this stage, so `--from-stage transcribe` reuses them.
+
+Right after this stage, a separate ffmpeg process measures the loudness of the original audio
+([`meta.loudness`](reference.md#metaloudness)). It runs next to the paid calls, so it adds no waiting time, and the
+document waits for it. It is local, free and not cached.
 
 ## Hearings
 
@@ -33,8 +50,8 @@ Every engine mishears something, so several engines hear the same audio independ
 | Speakers from | Azure Speech | The engine that told more voices apart (Scribe on a tie) |
 | Text vote | Text against Azure (class c only) | Text against Azure and Scribe (classes a, b, c) |
 
-- Without `--language`, the second hearing goes first, and the language it detects goes with every text request
-  ([Language](languages.md#language-codes-and-detection)).
+- Without `--language` and without a language from audio samples, the second hearing goes first, and the language
+  it detects goes with every text request ([Language](languages.md#language-codes-and-detection)).
 - With `--timing same`, the text model's own word times are the timing hearing.
 - With `--text-file`, your text is kept as given and there is no text vote.
 - A failed second-hearing request is a warning: the run goes on with times and speakers from the timing hearing. An

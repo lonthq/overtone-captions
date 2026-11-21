@@ -26,17 +26,18 @@ export async function extractStage(run: Run): Promise<ExtractData> {
   // loudnorm only when set, so a run without it keeps its key and cached audio
   const extractKey = hashJson({ generator: run.generator, chunkBytes: cfg.chunkBytes, maxChunkSeconds, args: COMPRESSED.args, ...(normalizeLoudness ? { loudnorm: LOUDNORM_FILTER } : {}) });
   // The audio files are overwritten in place: drop extract.json first so an interrupted extraction is never trusted,
-  // and reuse an entry only when its files still have the recorded sizes.
+  // and reuse an entry only when its files still have the recorded sizes. An entry without the peak level (written
+  // before it was measured) cannot tell silent audio apart, so it is extracted again.
   const sizesMatch = async (d: ExtractData) => stableStringify(await fileSizes([d.wav, ...d.chunks.map((c) => c.path)])) === stableStringify(d.sizes ?? {});
   const extracted = await cache.read<ExtractData>('extract', extractKey);
   let audio: ExtractData;
-  if (extracted !== undefined && (await sizesMatch(extracted))) {
+  if (extracted !== undefined && (extracted.maxVolume !== undefined || extracted.noAudio) && (await sizesMatch(extracted))) {
     log.info(`[1/${STAGES.length}] extract: cached`);
     audio = extracted;
   } else {
     audio = await run.stage<ExtractData>('extract', async () => {
       await cache.remove('extract');
-      const res = await (deps.extractAudio ?? extractAudio)(run.media, cache.dir, { chunkBytes: cfg.chunkBytes, maxChunkSeconds, normalizeLoudness });
+      const res = await (deps.extractAudio ?? extractAudio)(run.media, cache.dir, { chunkBytes: cfg.chunkBytes, maxChunkSeconds, normalizeLoudness, allowNoAudio: true });
       const data = { ...res, sizes: await fileSizes([res.wav, ...res.chunks.map((c) => c.path)]) };
       await cache.write('extract', extractKey, data);
       return data;

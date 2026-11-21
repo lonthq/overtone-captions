@@ -13,6 +13,7 @@ AI agents: follow [providers.agents.md](providers.agents.md).
 | `text` | Compressed MP3 chunks (local engines: the whole 16 kHz WAV) and a prompt with context, glossary and style; later short WAV snippets for the text vote | The best transcript; word times optional | `--text <provider>[:<model>]` |
 | `timing` | The whole 16 kHz mono WAV with language and glossary, as the timing hearing or the second hearing; later short windows where no engine heard words | Timed words with speakers `S1`, `S2`, … | `--timing <provider>[:<model>]` |
 | `llm` | A system prompt, a user prompt and a JSON schema | A JSON value that matches the schema | `--llm <provider>[:<model>]` |
+| `language` | A WAV sample of up to 45 s, before the other providers, when no language is given | Words heard per language | `--detect <provider>[:<model>]` |
 
 The text hearing gives "$12" and "DriveCover"; the timing hearing knows that "twelve dollars" ran from 9.51 s to
 9.72 s. Code aligns the two. A text provider that also returns word times can serve both roles from one call with
@@ -48,10 +49,10 @@ export const deepgramProvider: ProviderDescriptor = defineProvider({
 |---|---|---|
 | `id` | yes | Lowercase letters, digits and `-`: what users type before the `:` |
 | `description` | yes | One line for `overtone providers` |
-| `roles` | yes | Any of `text`, `timing`, `llm` |
+| `roles` | yes | Any of `text`, `timing`, `llm`, `language` |
 | `env` | yes | Every variable the provider reads ([Environment variables](#environment-variables)) |
 | `defaults` | yes | Default model per role; leave a role out when there is none (Azure deployment names) |
-| `create(env, model, deps)` | yes | Returns an object with `transcribe` (text), `align` (timing) or `complete` (llm) for `deps.role` |
+| `create(env, model, deps)` | yes | Returns an object with `transcribe` (text), `align` (timing), `complete` (llm) or `detect` (language) for `deps.role` |
 | `modelHint` | no | What the model part means, for the error when it is missing |
 | `normalizeModel(model, role)` | no | Check or normalize the model part; throw a `UserError` for a bad one |
 | `wordTimings` | no | `true`, or a list of models, when the text role returns `words`: allows `--timing same` |
@@ -71,6 +72,9 @@ What each role returns:
   if present, is 0 to 1.
 - **llm**: the parsed JSON value. Do not validate it yourself: the registry wraps every LLM in
   `withSchemaValidation`, which checks the answer against the schema and retries once.
+- **language**: `{ words }`, the number of words heard per ISO 639-1 code (`{ "nl": 71, "en": 2 }`). The pipeline
+  decides the language from the samples. The conformance kit has no suite for this role yet; see
+  [`google-chirp.test.ts`](../../packages/cli/test/conformance/google-chirp.test.ts).
 
 The pipeline shapes every request. Send the text prompt as given: it already holds the context, glossary and style.
 The glossary also arrives as `keywords` (text) or `phrases` (timing) for services with a term list. Languages arrive
@@ -173,7 +177,9 @@ Fixtures are response bodies in `packages/cli/test/conformance/fixtures/<id>/`. 
 
 1. **A real exchange**, recorded once with your own key on a short clip. With `OVERTONE_RECORD_HTTP=<folder>`, every
    HTTP exchange is saved as `NNN-<provider>-<role>.json` (request URL and body, response status, relevant headers,
-   body), with secret variables replaced by `[redacted]`. Request headers are never saved.
+   body), with secret variables replaced by `[redacted]`. Request headers are never saved. In JSON and form
+   bodies, OAuth credential fields (`access_token`, `refresh_token`, `id_token`, `assertion`, `client_secret`) are
+   replaced by `REDACTED`.
 
    ```bash
    OVERTONE_RECORD_HTTP=recordings node packages/cli/dist/cli.js transcribe clip.mp4 --timing deepgram

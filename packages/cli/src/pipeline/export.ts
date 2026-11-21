@@ -4,11 +4,13 @@ import { assertValid, FORMAT_NAME, FORMAT_VERSION, roundTime, type OvertoneDocum
 import { burn } from '../burn/index.js';
 import { STAGES } from '../config.js';
 import { UserError } from '../errors.js';
+import type { Loudness } from '../media/loudness.js';
 import { baseName, writeOutputs } from '../output.js';
 import { runInputs } from './preflight.js';
 import { LATEST_RULESET, layoutMeta } from '../segment/rulesets/index.js';
 import { voteReview, type ReviewItem } from '../review.js';
 import { formatSummary } from '../summary.js';
+import type { LanguageDetection } from './audio-language.js';
 import type { Editor, MediaContext } from './editor.js';
 import type { Plan } from './preflight.js';
 import type { Run } from './run.js';
@@ -24,14 +26,15 @@ export interface ExportInput {
   refined: RefineData;
   editor: Editor;
   context: MediaContext;
+  /** The language detection (`meta.languageDetection`), when the detector ran. */
+  detection?: LanguageDetection;
+  /** The media's loudness (`meta.loudness`), when measured. */
+  loudness?: Loudness;
 }
 
-export async function exportStage(run: Run, input: ExportInput): Promise<{ doc: OvertoneDocument; written: string[]; summary: string; review: ReviewItem[] }> {
+/** Writes the caption files and, for `--export mp4`, the burned-in video. */
+export async function writeDocument(run: Run, plan: Pick<Plan, 'wantsMp4' | 'profiles'>, doc: OvertoneDocument): Promise<string[]> {
   const { cfg, deps, log, media } = run;
-  const { plan, refined, aligned } = input;
-  log.info(`[${STAGES.length}/${STAGES.length}] export …`);
-  const review = [...refined.review, ...voteReview(aligned.textVotes ?? [])].sort((a, b) => a.start - b.start);
-  const doc = buildDocument(run, input, review);
   const outDir = cfg.outDir ?? dirname(media);
   const written = await writeOutputs(doc, {
     base: baseName(media),
@@ -49,6 +52,16 @@ export async function exportStage(run: Run, input: ExportInput): Promise<{ doc: 
     });
     written.push(burned);
   }
+  return written;
+}
+
+export async function exportStage(run: Run, input: ExportInput): Promise<{ doc: OvertoneDocument; written: string[]; summary: string; review: ReviewItem[] }> {
+  const { log } = run;
+  const { plan, refined, aligned } = input;
+  log.info(`[${STAGES.length}/${STAGES.length}] export …`);
+  const review = [...refined.review, ...voteReview(aligned.textVotes ?? [])].sort((a, b) => a.start - b.start);
+  const doc = buildDocument(run, input, review);
+  const written = await writeDocument(run, plan, doc);
   const summary = formatSummary({
     words: doc.turns.flatMap((t) => t.words),
     edits: refined.edits.length,
@@ -61,7 +74,7 @@ export async function exportStage(run: Run, input: ExportInput): Promise<{ doc: 
 }
 
 /** The document, checked against the format (`meta` keys in a fixed order). */
-function buildDocument(run: Run, { plan: { sel }, audio, hearings: { languagesHeard, engines }, covered, aligned, refined, editor, context: { context } }: ExportInput, review: readonly ReviewItem[]): OvertoneDocument {
+function buildDocument(run: Run, { plan: { sel }, audio, hearings: { languagesHeard, engines }, covered, aligned, refined, editor, context: { context }, detection, loudness }: ExportInput, review: readonly ReviewItem[]): OvertoneDocument {
   const { cfg, deps } = run;
   const fallbacks = covered.fallbacks;
   const lastEnd = refined.turns.at(-1)?.end ?? 0;
@@ -83,6 +96,8 @@ function buildDocument(run: Run, { plan: { sel }, audio, hearings: { languagesHe
       ...(review.length > 0 ? { review } : {}),
       ...(run.refusals.length > 0 ? { refusals: run.refusals.map((r) => ({ ...r, start: roundTime(r.start), end: roundTime(r.end) })) } : {}),
       ...(languagesHeard ? { languagesHeard } : {}),
+      ...(detection ? { languageDetection: detection } : {}),
+      ...(loudness ? { loudness } : {}),
       style: cfg.style,
       linebreaks: cfg.llmLinebreaks === true ? 'llm' : 'rules',
       ...layoutMeta(cfg.ruleset ?? LATEST_RULESET, aligned.language),

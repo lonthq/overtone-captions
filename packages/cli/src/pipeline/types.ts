@@ -5,7 +5,8 @@ import type { burn } from '../burn/index.js';
 import type { ModelSpec, ResolvedConfig } from '../config.js';
 import type { Fallback } from '../hearings.js';
 import type { Logger } from '../log.js';
-import type { cutAudio, extractAudio, ExtractResult, normalizeLoudness } from '../media/extract.js';
+import type { cutAudio, detectSilences, extractAudio, ExtractResult, normalizeLoudness } from '../media/extract.js';
+import type { measureLoudness } from '../media/loudness.js';
 import type { VideoInfo } from '../media/video.js';
 import type { ExportOptions } from '../output.js';
 import type { ProviderDeps, Providers } from '../providers/registry.js';
@@ -39,6 +40,10 @@ export interface PipelineDeps {
   normalizeLoudness?: typeof normalizeLoudness;
   /** Cuts a snippet out of the WAV for re-listening (tests inject a fake). */
   cutAudio?: typeof cutAudio;
+  /** Silences in the WAV, for placing the language samples (tests inject a fake). */
+  detectSilences?: typeof detectSilences;
+  /** EBU R128 measurement of the media (tests inject a fake or a failure). */
+  measureLoudness?: typeof measureLoudness;
   /** Builds the LLM for `languages.<code>.llm` once the language is known. Default: the registry. Tests that pass `providers` pass this too. */
   createLlm?: (sel: ModelSpec) => LlmProvider;
   /** Input duration from ffprobe (tests inject a fake). */
