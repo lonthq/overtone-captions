@@ -1,7 +1,7 @@
 <h1 align="center">Overtone</h1>
 
 <p align="center">
-  <strong>Captions cut for every screen shape, from one file.</strong>
+  <strong>Reliable transcription, with captions cut for every screen shape from one file.</strong>
 </p>
 
 <p align="center">
