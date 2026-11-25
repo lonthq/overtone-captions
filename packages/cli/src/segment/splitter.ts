@@ -1,7 +1,7 @@
 import type { ProfileRules, WordRange } from 'overtone-format';
 import type { Lang } from '../lang/index.js';
 import { displayLength } from '../text/length.js';
-import { breakCost, clauseEndAt } from './groups.js';
+import { breakCost, clauseEndAt, sentenceEndAt } from './groups.js';
 import { hesitationWeight } from './pauses.js';
 import { LATEST_RULESET, type RuleSet } from './rulesets/index.js';
 
@@ -57,14 +57,20 @@ export function pauseAfter(ctx: Pick<SplitContext, 'starts' | 'ends' | 'untimed'
   return ctx.starts[i + 1] - ctx.ends[i];
 }
 
+/** True when word i ends a sentence followed by a pause of pauses.sentenceCue or longer (rule set 2 on). */
+export function sentencePauseAt(ctx: Pick<SplitContext, 'texts' | 'starts' | 'ends' | 'untimed' | 'ruleset'>, i: number): boolean {
+  const min = rulesetOf(ctx).pauses.sentenceCue;
+  return min !== undefined && i + 1 < ctx.starts.length && pauseAfter(ctx, i) >= min && sentenceEndAt(ctx.texts, i);
+}
+
 /** Seconds cue a..b may be on screen: up to the next word, at most layout.maxExtension past its last word (see timeCues). */
 function shownFor(ctx: SplitContext, a: number, b: number): number {
   return Math.min(ctx.ends[b] + rulesetOf(ctx).layout.maxExtension, b + 1 < ctx.starts.length ? ctx.starts[b + 1] : Infinity) - ctx.starts[a];
 }
 
 /**
- * Where a cue must end in block [from, to], indexed from `from`: after a pause of pauses.cue, except inside a `keep`
- * group. While a piece between two such pauses (or a pause and the block edge) would be shown under
+ * Where a cue must end in block [from, to], indexed from `from`: after a pause of pauses.cue, or a sentence end
+ * followed by a pause of pauses.sentenceCue (sentencePauseAt), except inside a `keep` group. While a piece between two such pauses (or a pause and the block edge) would be shown under
  * pauses.minShown, the shorter pause next to it is dropped (pauses.force pauses always stay).
  */
 export function pauseCueBreaks(ctx: SplitContext, from: number, to: number): Uint8Array {
@@ -72,7 +78,7 @@ export function pauseCueBreaks(ctx: SplitContext, from: number, to: number): Uin
   let breaks: number[] = [];
   for (let i = from; i < to; i++) {
     const gap = pauseAfter(ctx, i);
-    if (gap >= force || (gap >= cue && !ctx.keep[i])) breaks.push(i);
+    if (gap >= force || ((gap >= cue || sentencePauseAt(ctx, i)) && !ctx.keep[i])) breaks.push(i);
   }
   const soft = (i: number) => pauseAfter(ctx, i) < force;
   for (let changed = true; changed;) {

@@ -751,16 +751,18 @@ For each profile:
   its last word's `end`.
 - A cue MAY be extended past its last word to reach `minDuration` or `maxCps`, but not into the next cue and not
   past `duration`. An extension SHOULD NOT hide a pause the producer shows as a cue break. The reference producer
-  (rule set 1) extends by at most 1.5 s, never beyond `maxDuration`, and keeps at least 0.4 s blank before the next
-  cue when 1 s or more of silence follows the cue's last word. It never moves a cue's start, and closes gaps under
-  0.1 s between two cues of the same speaker (never across a speaker change).
+  (rule set 2) extends by at most 1.5 s, never beyond `maxDuration`, and keeps at least 0.4 s blank before the next
+  cue when 1 s or more of silence follows the cue's last word; after a sentence end followed by 0.55 s or more of
+  silence, it extends at most to the middle of that silence or to 0.4 s before the next cue, whichever is later. It
+  never moves a cue's start, and closes gaps under 0.1 s between two cues of the same speaker (never across a
+  speaker change).
 - Lines and cues SHOULD NOT break inside a group that belongs together: a name, a number with its unit or currency
   ("$12 a month", "one in five"), a glossary term. A line SHOULD NOT end on an article, preposition or auxiliary
   verb when the sentence continues. A cue SHOULD NOT end inside a short sentence that fits one cue, unless a pause
   follows the break.
 - Breaks SHOULD show the vocal situation: a long pause SHOULD start a new cue, and a shorter hesitation MAY show as
-  a line break. The reference producer (rule set 1) always starts a cue at a pause of 1.5 s, starts one at 1 s
-  unless a cue would then be on screen under 0.7 s, and treats pauses from 0.4 s as hesitations, weighted by
+  a line break. The reference producer (rule set 2) always starts a cue at a pause of 1.5 s, starts one at 1 s, or
+  at 0.55 s after a sentence end, unless a cue would then be on screen under 0.7 s, and treats pauses from 0.4 s as hesitations, weighted by
   length: a break before a pause of 0.6 s or more costs no more than a break after a comma.
 - `line.text` MUST be computed from the words (joined by single spaces), never typed separately.
 - Profiles with different aspects SHOULD be cut separately: a cut for a tall picture is not a re-wrapped cut for a

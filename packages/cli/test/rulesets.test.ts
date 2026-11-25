@@ -50,7 +50,7 @@ describe('rule sets', () => {
     expect(resolveRuleSet('latest').id).toBe(LATEST);
     expect(resolveRuleSet('1')).toBe(RULESETS['1']);
     expect(() => resolveRuleSet('7')).toThrow(UserError);
-    expect(() => resolveRuleSet('7')).toThrow(/Unknown rule set "7" in --rules; available: 1 or "latest" \(= 1\)/);
+    expect(() => resolveRuleSet('7')).toThrow(/Unknown rule set "7" in --rules; available: 1, 2 or "latest" \(= 2\)/);
     expect(() => resolveRuleSet('__proto__')).toThrow(UserError);
   });
 });
@@ -176,6 +176,37 @@ describe('rule set 1: main verbs and question heads may end a line', () => {
     const going = 'Where are we going after this?';
     expect(breakRule(2, 0, false, readability(going, off))).toBe('pronounEnd');
     expect(breakRule(2, 0, false, readability(going, one))).toBeUndefined();
+  });
+});
+
+describe('rule set 2: a sentence end before a pause of 0.55 s starts a cue', () => {
+  const H = { id: 'horizontal', ...DEFAULT_PROFILES.horizontal };
+  /** Words 0.3 s apart (0.25 s long), with `pause` s of silence after word `at` instead. */
+  const timed = (text: string, at: number, pause: number): SpeakerWord[] => {
+    let t = 0;
+    return tokenizeDisplay(text).map((w, k) => {
+      const word = { text: w, start: +t.toFixed(3), end: +(t + 0.25).toFixed(3), speaker: 'S1' };
+      t += 0.25 + (k === at ? pause : 0.05);
+      return word;
+    });
+  };
+  const TEXT = 'and she trusts her insurer more. In Lont Studio, you write it.';
+  const cut = (words: SpeakerWord[], ruleset: RuleSet, proposal?: { cueStarts: number[]; lineStarts: number[] }) =>
+    buildProfile(words, H, { language: 'en', glossary: [], duration: 10, ruleset, ...(proposal ? { proposal } : {}) }).profile.cues.map((c) => c.lines.map((l) => l.text).join(' / '));
+
+  it('ends the cue after "more." at 0.6 s; rule set 1 runs on into the next sentence', () => {
+    expect(cut(timed(TEXT, 5, 0.6), RULESETS['2'])[0]).toBe('and she trusts her insurer more.');
+    expect(cut(timed(TEXT, 5, 0.6), RULESETS['1'])[0]).toBe('and she trusts her insurer more. / In Lont Studio, you write it.');
+  });
+
+  it('cuts as rule set 1 after a shorter pause, or after a 0.6 s pause inside a sentence', () => {
+    for (const words of [timed(TEXT, 5, 0.5), timed(TEXT, 8, 0.6)]) expect(cut(words, RULESETS['2'])).toEqual(cut(words, RULESETS['1']));
+    expect(cut(timed(TEXT, 5, 0.5), RULESETS['2'])).toHaveLength(1);
+  });
+
+  it('rejects an LLM proposal that turns the pause into a line break', () => {
+    const words = timed(TEXT, 5, 0.6);
+    expect(cut(words, RULESETS['2'], { cueStarts: [0], lineStarts: [6] })[0]).toBe('and she trusts her insurer more.');
   });
 });
 

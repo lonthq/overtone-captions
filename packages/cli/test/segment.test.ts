@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest';
 import type { ResolvedProfile } from '../src/config.js';
 import { breakCost, noBreakAfter, numberGroupEnds, plain } from '../src/segment/groups.js';
 import { buildProfile, checkCues, timeCues } from '../src/segment/profile.js';
+import { RULESETS } from '../src/segment/rulesets/index.js';
 import { layoutLines, lineLength, splitBlock, type SplitContext } from '../src/segment/splitter.js';
 import { tokenizeDisplay } from '../src/text/normalize.js';
 import { flattenTurns, type SpeakerWord } from '../src/turns.js';
@@ -204,7 +205,8 @@ describe('buildProfile (deterministic)', () => {
     expect(cues.map((c) => [c.start, c.end])).toEqual([[2, 2.001], [2.001, 3.001]]);
   });
 
-  describe('holding a cue into the silence after it (minimum display time)', () => {
+  describe('holding a cue into the silence after it (minimum display time), rule set 1', () => {
+    const R1 = RULESETS['1'];
     // 60 characters: 3.53 s of reading time at 17 characters per second, spoken in 1 s
     const fast = (next: number, nextSpeaker = 'S1', match?: 'interpolated'): SpeakerWord[] => [
       { text: 'Everything we planned for this launch went', start: 0, end: 0.5, speaker: 'S1' },
@@ -214,21 +216,21 @@ describe('buildProfile (deterministic)', () => {
     const layouts = [{ lines: [[0, 1]] as Array<[number, number]> }, { lines: [[2, 2]] as Array<[number, number]> }];
 
     it('holds a fast cue at most 1.5 s past its last word', () => {
-      const cues = timeCues(layouts, fast(5), H.rules, 10);
+      const cues = timeCues(layouts, fast(5), H.rules, 10, undefined, 0, R1);
       expect(cues[0]).toMatchObject({ start: 0, end: 2.5 });
     });
 
     it('keeps 0.4 s of a pause of 1 s or more blank, also before another speaker', () => {
-      expect(timeCues(layouts, fast(2.2), H.rules, 10)[0]!.end).toBe(1.8);
-      expect(timeCues(layouts, fast(2.2, 'S2'), H.rules, 10)[0]!.end).toBe(1.8);
+      expect(timeCues(layouts, fast(2.2), H.rules, 10, undefined, 0, R1)[0]!.end).toBe(1.8);
+      expect(timeCues(layouts, fast(2.2, 'S2'), H.rules, 10, undefined, 0, R1)[0]!.end).toBe(1.8);
       // exactly 1 s of silence: 0.6 s of it is used, 0.4 s stays blank
-      expect(timeCues(layouts, fast(2), H.rules, 10)[0]!.end).toBe(1.6);
+      expect(timeCues(layouts, fast(2), H.rules, 10, undefined, 0, R1)[0]!.end).toBe(1.6);
     });
 
     it('may run up to the next cue after a pause under 1 s, or next to a word with an unknown time', () => {
-      expect(timeCues(layouts, fast(1.9), H.rules, 10)[0]!.end).toBe(1.9);
-      expect(timeCues(layouts, fast(1.9, 'S2'), H.rules, 10)[0]!.end).toBe(1.9);
-      expect(timeCues(layouts, fast(2.2, 'S1', 'interpolated'), H.rules, 10)[0]!.end).toBe(2.2);
+      expect(timeCues(layouts, fast(1.9), H.rules, 10, undefined, 0, R1)[0]!.end).toBe(1.9);
+      expect(timeCues(layouts, fast(1.9, 'S2'), H.rules, 10, undefined, 0, R1)[0]!.end).toBe(1.9);
+      expect(timeCues(layouts, fast(2.2, 'S1', 'interpolated'), H.rules, 10, undefined, 0, R1)[0]!.end).toBe(2.2);
     });
 
     it('holds only as long as needed, rounded up to the millisecond, and never moves a start', () => {
@@ -246,6 +248,33 @@ describe('buildProfile (deterministic)', () => {
       expect(timeCues(layouts.slice(0, 1), fast(5).slice(0, 2), H.rules, 1.7)[0]!.end).toBe(1.7);
       const long: SpeakerWord[] = [{ text: 'a', start: 0, end: 6.8, speaker: 'S1' }, { text: 'b', start: 9, end: 9.2, speaker: 'S1' }];
       expect(timeCues([{ lines: [[0, 0]] }, { lines: [[1, 1]] }], long, { ...H.rules, maxCps: 0.1 }, 10)[0]!.end).toBe(7);
+    });
+  });
+
+  describe('holding a cue after a sentence end, rule set 2', () => {
+    const R2 = RULESETS['2'];
+    // 60 characters: 3.53 s of reading time at 17 characters per second, spoken in 1 s
+    const fast = (last: string, next: number, nextSpeaker = 'S1'): SpeakerWord[] => [
+      { text: 'Everything we planned for this launch went', start: 0, end: 0.5, speaker: 'S1' },
+      { text: last, start: 0.55, end: 1, speaker: 'S1' },
+      { text: 'Next.', start: next, end: next + 0.4, speaker: nextSpeaker },
+    ];
+    const layouts = [{ lines: [[0, 1]] as Array<[number, number]> }, { lines: [[2, 2]] as Array<[number, number]> }];
+    const end = (words: SpeakerWord[]) => timeCues(layouts, words, H.rules, 10, undefined, 0, R2)[0]!.end;
+
+    it('holds the cue to the middle of a pause of 0.55 s or more, or to 0.4 s before the next cue if later', () => {
+      expect(end(fast('wrong at once.', 1.7))).toBe(1.35);
+      expect(end(fast('wrong at once.', 1.7, 'S2'))).toBe(1.35);
+      // 0.9 s of silence: 0.4 s before the next cue (1.5) comes after the middle (1.45)
+      expect(end(fast('wrong at once.', 1.9))).toBe(1.5);
+      // 2 s of silence: 0.4 s before the next cue (2.6) is past 1.5 s of hold, so the hold limit applies
+      expect(end(fast('wrong at once.', 3))).toBe(2.5);
+    });
+
+    it('holds as rule set 1 does after a shorter pause, or after a pause that does not follow a sentence end', () => {
+      expect(end(fast('wrong at once.', 1.5))).toBe(1.5);
+      expect(end(fast('wrong at once,', 1.7))).toBe(1.7);
+      expect(end(fast('wrong at once,', 2.2))).toBe(1.8);
     });
   });
 

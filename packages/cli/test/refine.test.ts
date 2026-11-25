@@ -6,6 +6,7 @@ import { assertSupportedSchema } from '../src/providers/structured.js';
 import { refine, type RefineOptions } from '../src/refine/llm-steps.js';
 import { CORRECTIONS_SCHEMA, LINEBREAKS_SCHEMA, STYLING_SCHEMA } from '../src/refine/schemas.js';
 import { correctionsPrompt, linebreaksPrompt, renderWords, stylingPrompt } from '../src/refine/prompts.js';
+import { RULESETS } from '../src/segment/rulesets/index.js';
 import { tokenizeDisplay } from '../src/text/normalize.js';
 import { groupTurns, type SpeakerWord } from '../src/turns.js';
 
@@ -126,10 +127,10 @@ describe('prompt instructions', () => {
     expect(shared).toContain('Glossary (correct spellings of names and terms): DriveCover; Lumora');
   });
 
-  it('5c: pauses are marked and must end a caption', () => {
+  it('5c: pauses are marked and must end a caption (rule set 1)', () => {
     const ws = [...speak('Hello there.', 'S1', 0), ...speak('Next part.', 'S1', 3)];
     const all = { first: 0, last: 3, ownFirst: 0, ownLast: 3 };
-    const { user: task, system: shared } = linebreaksPrompt(P, ws, all, OPTS.profiles[1]);
+    const { user: task, system: shared } = linebreaksPrompt({ ...P, ruleset: RULESETS['1'] }, ws, all, OPTS.profiles[1]);
     expect(shared).toContain('[S1 @0.0s] 0:Hello 1:there. ‖ 2:Next 3:part.');
     expect(task).toContain('A caption must end at every ‖ (a pause).');
     expect(renderWords(ws, all)).not.toContain('‖');
@@ -140,15 +141,30 @@ describe('prompt instructions', () => {
     // gaps after "one" 0.45 s, "two" 0.75 s, "three" 1.15 s, "four" 1.65 s; none across a speaker change
     const ws = [...at('One', 0), ...at('two', 0.8), ...at('three', 1.9), ...at('four', 3.4), ...at('five', 5.4), ...speak('Six', 'S2', 6.0)];
     const all = { first: 0, last: 5, ownFirst: 0, ownLast: 5 };
-    const { user: task, system: shared } = linebreaksPrompt(P, ws, all, OPTS.profiles[1]);
+    const R1 = { ...P, ruleset: RULESETS['1'] };
+    const { user: task, system: shared } = linebreaksPrompt(R1, ws, all, OPTS.profiles[1]);
     expect(shared).toContain('0:One ·0.4s 1:two ·0.7s 2:three ·1.1s 3:four ‖ 4:five\n[S2 @6.0s] 5:Six');
     // below the 0.4 s floor: no mark
     const short = [...at('One', 0), ...at('two', 0.7)];
-    expect(linebreaksPrompt(P, short, { first: 0, last: 1, ownFirst: 0, ownLast: 1 }, OPTS.profiles[1]).system).toContain('0:One 1:two');
+    expect(linebreaksPrompt(R1, short, { first: 0, last: 1, ownFirst: 0, ownLast: 1 }, OPTS.profiles[1]).system).toContain('0:One 1:two');
     expect(shared).toContain('" ‖" after a word marks a long pause, " ·0.7s" a shorter one (here 0.7 s).');
     expect(task).toContain('A "·" mark (e.g. "·0.7s") is a hesitation: break the line or caption there when it helps show the hesitation, even after a short word');
     expect(task).toContain('at 1 s or more prefer ending the caption, and never hide it inside a line.');
     expect(renderWords(ws, all)).not.toContain('·');
+  });
+
+  it('5c: rule set 2 marks a sentence end before a pause of 0.55 s or more as a place where a caption must end', () => {
+    const at = (text: string, start: number) => speak(text, 'S1', start);
+    // "more." then 0.6 s, "Studio," then 0.6 s, "end." then 0.5 s
+    const ws = [...at('more.', 0), ...at('Studio,', 0.95), ...at('end.', 1.9), ...at('Next', 2.75)];
+    const all = { first: 0, last: 3, ownFirst: 0, ownLast: 3 };
+    const R2 = { ...P, ruleset: RULESETS['2'] };
+    const { user: task, system: shared } = linebreaksPrompt(R2, ws, all, OPTS.profiles[1]);
+    expect(shared).toContain('0:more. ‖ 1:Studio, ·0.6s 2:end. ·0.5s 3:Next');
+    expect(shared).toContain('" ‖" after a word marks a long pause or a pause after a sentence end, " ·0.7s" a shorter one');
+    expect(task).toContain('A caption must end at every ‖ (a long pause, or a pause after a sentence end).');
+    // rule set 1 marks the same pause as a hesitation
+    expect(linebreaksPrompt({ ...P, ruleset: RULESETS['1'] }, ws, all, OPTS.profiles[1]).system).toContain('0:more. ·0.6s 1:Studio,');
   });
 
   it('5c: natural breaks, no split groups, the profile limits', () => {

@@ -1,20 +1,21 @@
 import { UserError } from '../../errors.js';
 import { languageDataHash } from '../../lang/fingerprint.js';
 import { RULESET_1 } from './1.js';
+import { RULESET_2 } from './2.js';
 import type { RuleSet } from './types.js';
 
 export type { RuleSet } from './types.js';
 
 /** Every released rule set by id. Each release keeps the earlier ones, so a pinned id gives the same layout. */
-export const RULESETS: Readonly<Record<string, RuleSet>> = Object.freeze({ '1': RULESET_1 });
+export const RULESETS: Readonly<Record<string, RuleSet>> = Object.freeze({ '1': RULESET_1, '2': RULESET_2 });
 
 /** The rule set `"rules": "latest"` (the default) resolves to. */
-export const LATEST = '1';
+export const LATEST = '2';
 
 /** The latest rule set: the default where no rule set is passed. */
 export const LATEST_RULESET: RuleSet = RULESETS[LATEST];
 
-/** The rule set for `id` ("1", or "latest"/undefined for LATEST); an unknown id is a UserError listing the known ones. */
+/** The rule set for `id` ("1", "2", or "latest"/undefined for LATEST); an unknown id is a UserError listing the known ones. */
 export function resolveRuleSet(id: string | undefined, source = '--rules'): RuleSet {
   const key = id === undefined || id.trim().toLowerCase() === 'latest' ? LATEST : id.trim();
   if (!Object.hasOwn(RULESETS, key)) {

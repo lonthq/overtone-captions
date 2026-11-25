@@ -1,6 +1,7 @@
 import { isUntimed } from '../align/align.js';
 import type { StyleSettings } from 'overtone-format';
 import type { ResolvedProfile } from '../config.js';
+import { sentenceEndAt } from '../segment/groups.js';
 import { LATEST_RULESET, type RuleSet } from '../segment/rulesets/index.js';
 import type { SpeakerWord } from '../turns.js';
 import type { Window } from './windows.js';
@@ -23,11 +24,13 @@ const UNCERTAIN = new Set(['fuzzy', 'interpolated']);
 /**
  * A window's words, one line per speaker run: "[S1 @12.3s] 0:Every 1:year, *2:one …". `*` marks an uncertain alignment
  * (likely misheard); words outside the owned range sit on "(context)" lines. With `pauses` (a rule set's thresholds;
- * true: the latest), " ‖" follows a word before a pause of at least `force` (a caption must end) and " ·0.7s" one before
- * a pause of at least `marker` (rounded down to 0.1 s; segment/pauses.ts).
+ * true: the latest), " ‖" follows a word before a pause of at least `force`, or a sentence end before a pause of at
+ * least `sentenceCue` (a caption must end), and " ·0.7s" one before a pause of at least `marker` (rounded down to
+ * 0.1 s; segment/pauses.ts).
  */
 export function renderWords(words: readonly SpeakerWord[], win: Window, marks = true, pauses: boolean | RuleSet['pauses'] = false): string {
   const p = pauses === true ? LATEST_RULESET.pauses : pauses || undefined;
+  const texts = words.map((w) => w.text);
   const lines: string[] = [];
   let current = '';
   let key = '';
@@ -45,7 +48,7 @@ export function renderWords(words: readonly SpeakerWord[], win: Window, marks = 
     // no pause next to a word with an unknown time: its gaps are where it was placed
     const gap = p && i < win.last && next.speaker === w.speaker && !isUntimed(w) && !isUntimed(next) ? next.start - w.end : 0;
     if (!p || gap <= 0) continue;
-    if (gap >= p.force) current += ' ‖';
+    if (gap >= p.force || (p.sentenceCue !== undefined && gap >= p.sentenceCue && sentenceEndAt(texts, i))) current += ' ‖';
     else if (gap >= p.marker) current += ` ·${(Math.floor(gap * 10 + 1e-6) / 10).toFixed(1)}s`;
   }
   if (current) lines.push(current);
@@ -79,9 +82,10 @@ function header(p: PromptContext): string {
  * identical for steps that see the same words, so prompt caching reuses it; the step's task follows in `user`.
  */
 export function sharedPrompt(p: PromptContext, words: readonly SpeakerWord[], win: Window): string {
+  const sentencePauses = (p.ruleset ?? LATEST_RULESET).pauses.sentenceCue !== undefined;
   return [
     'You are a meticulous caption editor. You get a machine transcript as numbered words, then one task about it.',
-    'Notation: "[S1 @12.3s]" marks where speaker S1 starts talking (at 12.3 s). A word marked * was hard to align and is the most likely to be misheard. " ‖" after a word marks a long pause, " ·0.7s" a shorter one (here 0.7 s). Words on lines starting with "(context)" are only shown for context: never change, mark or cover them.',
+    `Notation: "[S1 @12.3s]" marks where speaker S1 starts talking (at 12.3 s). A word marked * was hard to align and is the most likely to be misheard. " ‖" after a word marks a long pause${sentencePauses ? ' or a pause after a sentence end' : ''}, " ·0.7s" a shorter one (here 0.7 s). Words on lines starting with "(context)" are only shown for context: never change, mark or cover them.`,
     '',
     header(p),
     '',
@@ -147,7 +151,7 @@ export function linebreaksPrompt(p: PromptContext, words: readonly SpeakerWord[]
   const rs = p.ruleset ?? LATEST_RULESET;
   const task = [
     `Task: cut the transcript into captions for the "${profile.id}" display${profile.description ? ` (${profile.description})` : ''}.`,
-    `Hard rules: at most ${r.maxCharsPerLine} characters per line (the words joined by single spaces, punctuation included; that is ${wordsPerLine(r.maxCharsPerLine)}), at most ${r.maxLines} line${r.maxLines === 1 ? '' : 's'} per caption, so at most ${r.maxCharsPerLine * r.maxLines} characters (${wordsPerLine(r.maxCharsPerLine * r.maxLines)}) per caption. A new caption starts at every speaker change. A caption must end at every ‖ (a pause).`,
+    `Hard rules: at most ${r.maxCharsPerLine} characters per line (the words joined by single spaces, punctuation included; that is ${wordsPerLine(r.maxCharsPerLine)}), at most ${r.maxLines} line${r.maxLines === 1 ? '' : 's'} per caption, so at most ${r.maxCharsPerLine * r.maxLines} characters (${wordsPerLine(r.maxCharsPerLine * r.maxLines)}) per caption. A new caption starts at every speaker change. A caption must end at every ‖ (${rs.pauses.sentenceCue !== undefined ? 'a long pause, or a pause after a sentence end' : 'a pause'}).`,
     `A caption is shown only while its words are spoken (at most ${rs.layout.maxExtension} s longer), so cutting more often gives the viewer no extra reading time${r.maxCps ? ` (speech often runs faster than the ${r.maxCps} characters per second viewers read comfortably)` : ''}: fill each caption up to the limit unless a sentence ends, the speaker pauses (‖) or a clause ends near it. Avoid captions of only 1–3 words.`,
     'Cut at natural phrase and clause boundaries: break after sentence ends, then after commas/colons, then before conjunctions. Use one line when the caption fits on one line. Balance the lines of a two-line caption (the bottom line may be slightly longer).',
     'Never end a line or caption on an article, preposition, possessive or auxiliary verb. Avoid ending one on a subject pronoun or relative word (I, we, you, they, who, what, which, that): keep it with the words it opens. Keep adjectives with their nouns ("an operational pilot", "a very long gap") and verbs with their particles ("grew up", "carry on"). Never put a single word on a line of its own, except a short interjection such as "Okay." or "Well," on the top line. Never start a new sentence in the last word or two of a line or caption, and never carry only the last word or two of a sentence over to the next line or caption.',

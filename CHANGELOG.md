@@ -10,6 +10,13 @@ changes. The three packages (`overtone-format`, `videojs-overtone`, `overtone-ca
 
 ### Added
 
+- Rule set 2, the new default (`--rules 1` keeps the old layout): a sentence end followed by a pause of 0.55 s or
+  more starts a new caption, and the caption before it stays on screen at most to the middle of the pause or until
+  0.4 s before the next caption, whichever is later. Captions
+  no longer run from the end of one sentence into the next across a pause, often a scene or chapter change. The
+  LLM line-break prompt marks these pauses with `‖`. On real speech the shorter hold makes a few more captions
+  faster than `maxCps`.
+
 - Language detection from audio samples with Google Chirp 3 (`--detect`, `meta.languageDetection`); silent media and
   files without audio return an empty document without any paid call; the document stores the media's EBU R128
   loudness (`meta.loudness`).

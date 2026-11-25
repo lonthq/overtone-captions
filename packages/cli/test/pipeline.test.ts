@@ -306,7 +306,7 @@ describe.skipIf(!hasFfmpeg)('runPipeline (ffmpeg, fake providers)', () => {
       style: { numbers: 'auto', currency: 'auto' },
       // the default since rule set 1: captions and lines cut by the rules alone
       linebreaks: 'rules',
-      rules: '1',
+      rules: '2',
       languageData: languageDataHash('en'),
       models: { text: 'openai:gpt-transcribe', timing: 'azure-speech:fast', llm: 'openai:gpt-6.1-sol' },
       generator: expect.stringMatching(/^overtone-captions@\d+\.\d+\.\d+/),

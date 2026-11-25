@@ -257,7 +257,7 @@ models, flag combinations and measured speeds.
 The line-cutting rules are a versioned rule set. The same words, rule set and language pack data always give the
 same captions, also after an upgrade. The words themselves can vary between runs.
 
-Pin the rule set with `--rules 1` or `"rules": "1"`; the default, `latest`, follows upgrades. `overtone init`
+Pin the rule set with `--rules 2` or `"rules": "2"`; the default, `latest`, follows upgrades. `overtone init`
 writes an `overtone.config.json` with the rule set, default models and profile rules pinned.
 [Rule sets](https://github.com/lonthq/overtone-captions/blob/main/docs/cli/config.md#stable-output-rule-sets) says
 what a rule set locks.

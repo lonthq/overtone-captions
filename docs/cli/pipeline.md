@@ -240,12 +240,13 @@ most 15% of the words (`styling.maxStyledRatio`) and one `key` phrase per cue (`
 
 Rules in code cut captions and lines: the versioned [rule set](config.md#stable-output-rule-sets). Captions show how
 the speaker talks. A break at a real pause is good, even mid-sentence, so viewers who cannot hear can still read the
-hesitation. A pause is the silence between two words of one speaker. In rule set 1:
+hesitation. A pause is the silence between two words of one speaker. In rule set 2 (the latest):
 
 | Pause | Effect |
 |---|---|
 | 1.5 s or more | Always starts a new caption |
 | 1 s or more | Starts a new caption, unless it falls inside a name, number group or glossary term, or a piece of speech would show for less than 0.7 s |
+| 0.55 s or more after a sentence end | Starts a new caption, with the same exceptions as at 1 s. In films and talks this pause is often a scene or chapter change. Rule set 1 treats it as a hesitation |
 | 0.4 s or more | A hesitation: may become a line break, even in a caption that fits on one line. Its weight grows from 0.5 at 0.4 s to 1 at 0.6 s. At full weight a line may end on an article, preposition or pronoun |
 | under 0.4 s | Breath or timing noise: ignored |
 
@@ -263,7 +264,10 @@ silence after it:
 
 - at most 1.5 s past its last word;
 - never into the next caption, past the media's end or past the profile's maximum duration;
-- after a pause of 1 s or more, at least 0.4 s stays blank, so the pause still shows.
+- after a pause of 1 s or more, at least 0.4 s stays blank, so the pause still shows;
+- after a sentence end followed by a pause of 0.55 s or more, at most to the middle of the pause or until 0.4 s
+  before the next caption, whichever is later (rule set 2), so the caption does not run into the next sentence or
+  scene.
 
 Start times and words never move, so fast speech can exceed the reading speed. A gap under 0.1 s between two
 captions of one speaker is closed.
@@ -275,9 +279,11 @@ and profile (effort `effort.linebreaks`, default `low`). It is off by default: i
 [caption benchmark](../../bench/captions/RESULTS.md) the rules alone did better, and they give the same output on
 every run. `meta.linebreaks` records `llm` or `rules`.
 
-- The prompt marks pauses of 1.5 s or more with `‖` and shorter ones from 0.4 s with their length (`·0.7s`).
+- The prompt marks pauses of 1.5 s or more, and (rule set 2) a sentence end before a pause of 0.55 s or more, with
+  `‖`: a caption must end there. It marks shorter pauses from 0.4 s with their length (`·0.7s`).
 - A proposed caption is kept only when it breaks no hard rule and no reading rule. Hard rules: characters per line,
-  lines, speaker changes, a pause of 1.5 s or more inside the caption, a pause of 1 s or more inside a line, maximum
+  lines, speaker changes, a pause of 1.5 s or more inside the caption, a pause of 1 s or more inside a line, a
+  sentence end before a pause of 0.55 s or more inside the caption (rule set 2), maximum
   duration. Reading rules: no break inside a number, name or glossary group; no line ending on an article,
   preposition, possessive, auxiliary, coordinating conjunction, subject pronoun or relative word; no single word
   before or after a sentence end on the same line; no caption break inside a sentence that fits one caption. The

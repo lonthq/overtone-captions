@@ -35,6 +35,11 @@ export interface RuleSet {
     readonly pairExempt: number;
     /** The LLM prompt marks a pause of at least this long (and shorter than `force`) with its length (" ·0.7s"). */
     readonly marker: number;
+    /**
+     * A sentence end followed by a pause of at least this long starts a new cue, with the exceptions of `cue`; an
+     * LLM proposal must end its cue there, and the LLM prompt marks it "‖". Left out: off (only `cue` and `force`).
+     */
+    readonly sentenceCue?: number;
   };
   /** Costs and limits of the splitter (../splitter.ts) and cue timing (../rules.ts). */
   readonly layout: {
@@ -74,6 +79,12 @@ export interface RuleSet {
     readonly maxHold: number;
     /** When a cue is held into a pause of pauses.cue or longer, at least this much of the pause stays blank. */
     readonly minBlank: number;
+    /**
+     * After a sentence end followed by a pause of pauses.sentenceCue or longer, cue timing holds the cue into at
+     * most this share of the pause (0.5: to its middle), or up to minBlank before the next cue if that is later, so
+     * it does not run on to the next sentence, often a new scene. Left out: no limit beyond maxHold and minBlank.
+     */
+    readonly sentenceHold?: number;
     /** Gaps shorter than this (s) between two cues of the same speaker are closed. */
     readonly closeGap: number;
     /** The splitter tries cues of at most ceil(maxCharsPerLine · maxLines / minCharsPerWord) + 1 words. */

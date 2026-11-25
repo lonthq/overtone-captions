@@ -36,7 +36,7 @@ with the [CLI README](../../packages/cli/README.md). Other reference pages:
 | `--context-file <path>` | none | File with the context text. `--context` wins |
 | `--no-infer-context` | off | Without a context, do not infer one ([Context](pipeline.md#context)) |
 | `--llm-linebreaks` / `--no-llm-linebreaks` | off | Also ask the LLM where captions and lines break ([LLM line cutting](pipeline.md#llm-line-cutting)) |
-| `--rules <id>` | `latest` | Rule set for the layout, e.g. `1` ([rule sets](config.md#stable-output-rule-sets)) |
+| `--rules <id>` | `latest` | Rule set for the layout, e.g. `2` ([rule sets](config.md#stable-output-rule-sets)) |
 | `--text-file <path>` | none | Use this transcript as the text ([Your own transcript](#your-own-transcript---text-file)). Not with `--text` or `--two-pass` |
 | `--two-pass` / `--no-two-pass` | off | Transcribe again with the inferred topic, names and terms in the prompt. Up to twice the transcription cost. No effect with a given context |
 | `--glossary <path>` | none | One term per line; blank lines and lines starting with `#` are skipped |
@@ -165,7 +165,7 @@ overtone burn talk.mp4 talk.overtone.json --style social -o talk.captioned.mp4
 
 ### `overtone init`
 
-Writes `overtone.config.json` in the current folder with today's defaults pinned: `"rules": "1"`, the default
+Writes `overtone.config.json` in the current folder with today's defaults pinned: `"rules": "2"`, the default
 `text`, `timing` and `llm`, `llmLinebreaks: false`, and the built-in profiles in `profileRules`. `$comment` lines
 explain each pin. OpenAI has no dated ids for `gpt-transcribe` and `gpt-6.1-sol` yet; pin them once they exist.
 `profiles` is not pinned, so a video still gets a profile for its own shape. `--force` overwrites an existing file.

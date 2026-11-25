@@ -121,7 +121,7 @@ describe('overtone recut', () => {
     const { dir, log, doc } = await recut('talk.srt');
     expect(validate(doc).valid).toBe(true);
     expect(doc.language).toBe('en');
-    expect(doc.meta).toEqual({ source: 'srt', timing: ESTIMATED_TIMING, linebreaks: 'rules', rules: '1', languageData: languageDataHash('en'), generator: 'overtone-captions@test', createdAt: '2026-10-17T09:00:00.000Z' });
+    expect(doc.meta).toEqual({ source: 'srt', timing: ESTIMATED_TIMING, linebreaks: 'rules', rules: '2', languageData: languageDataHash('en'), generator: 'overtone-captions@test', createdAt: '2026-10-17T09:00:00.000Z' });
     expect(doc.speakers).toEqual([{ id: 'S1' }]);
     expect(doc.duration).toBe(24.9);
     const words = flattenWords(doc);

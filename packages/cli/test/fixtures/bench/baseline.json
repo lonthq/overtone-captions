@@ -9,7 +9,7 @@
       "words.within100": 0.8732,
       "words.within250": 0.9827,
       "words.matched": 694,
-      "output.fast": 70,
+      "output.fast": 74,
       "speakers.accuracy": 0.9783
     },
     "ami-es2004a": {
@@ -20,7 +20,7 @@
       "words.within100": 0.8882,
       "words.within250": 0.9904,
       "words.matched": 626,
-      "output.fast": 36,
+      "output.fast": 40,
       "speakers.accuracy": 0.9872
     },
     "cosmos-laundromat": {
@@ -87,7 +87,7 @@
       "cues.matched": 74,
       "cues.over1s": 1,
       "cues.over2s": 0,
-      "output.fast": 41
+      "output.fast": 47
     },
     "nasa-oravec": {
       "wer": 0.0158,
@@ -96,7 +96,7 @@
       "cues.matched": 86,
       "cues.over1s": 0,
       "cues.over2s": 0,
-      "output.fast": 23
+      "output.fast": 25
     },
     "noise-pink-60": {
       "output.fast": 0,
@@ -126,7 +126,7 @@
       "cues.matched": 68,
       "cues.over1s": 6,
       "cues.over2s": 1,
-      "output.fast": 5
+      "output.fast": 6
     }
   }
 }

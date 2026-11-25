@@ -5,7 +5,7 @@ import { isUntimed } from '../align/align.js';
 import type { SpeakerWord } from '../turns.js';
 import { clauseEndAt, invertedAuxiliaryAt, mainVerbAt, plain, pronounEndAt, sentenceEndAt } from './groups.js';
 import { LATEST_RULESET, type RuleSet } from './rulesets/index.js';
-import { layoutLines, lineLength, pauseAfter, pauseCueBreaks, rulesetOf, type CueLayout, type SplitContext } from './splitter.js';
+import { layoutLines, lineLength, pauseAfter, pauseCueBreaks, rulesetOf, sentencePauseAt, type CueLayout, type SplitContext } from './splitter.js';
 
 // Cue timing, and the checks on timed cues: the profile's hard rules (measured as in docs/format/spec.md §16.4)
 // and, for LLM proposals, the reading rules.
@@ -20,7 +20,9 @@ export const TIMING_RULES: ReadonlySet<RuleName> = new Set(['maxCps', 'minDurati
 /**
  * Time cues: start at the first word, end at the last, held up to layout.maxHold past it to reach minDuration or the
  * reading time at maxCps; never into the next cue, past `duration` or past maxDuration. Before a cue-break pause
- * (pauses.cue; none next to an untimed word), layout.minBlank of the silence stays blank so the pause shows. Starts
+ * (pauses.cue; none next to an untimed word), layout.minBlank of the silence stays blank so the pause shows; after a
+ * sentence end followed by a pause of pauses.sentenceCue, the cue is held into at most layout.sentenceHold of it, or
+ * up to layout.minBlank before the next cue if that is later. Starts
  * and words never move. Every cue lasts at least 1 ms and starts no earlier than `after` (previous cue end). A gap
  * under layout.closeGap before the same speaker's next cue is closed (within maxDuration).
  */
@@ -33,7 +35,8 @@ export function timeCues(
   after = 0,
   ruleset: RuleSet = LATEST_RULESET,
 ): Cue[] {
-  const { maxHold, minBlank, closeGap } = ruleset.layout;
+  const { maxHold, minBlank, closeGap, sentenceHold } = ruleset.layout;
+  const { sentenceCue } = ruleset.pauses;
   const texts = words.map((w) => w.text);
   // a word no engine heard has an unknown time: the silence next to it is no pause (as splitter.ts pauseAfter reads it)
   let prevEnd = after;
@@ -48,7 +51,9 @@ export function timeCues(
     const needed = Math.max(rules.minDuration ?? 0, rules.maxCps ? chars / rules.maxCps : 0);
     const longest = rules.maxDuration === undefined ? Infinity : start + rules.maxDuration;
     const pause = nextWord && !isUntimed(words[last]) && !isUntimed(nextWord) ? nextStart - lastEnd : 0;
-    const room = pause >= ruleset.pauses.cue ? nextStart - minBlank : nextStart;
+    let room = pause >= ruleset.pauses.cue ? nextStart - minBlank : nextStart;
+    if (sentenceHold !== undefined && sentenceCue !== undefined && pause >= sentenceCue && sentenceEndAt(texts, last))
+      room = Math.min(room, Math.max(lastEnd + sentenceHold * pause, nextStart - minBlank));
     // the time needed, rounded up to the millisecond: rounded down, a cue held for its reading time is still too fast
     const neededEnd = Math.ceil((start + needed) * 1000 - 1e-6) / 1000;
     let end = roundTime(Math.max(lastEnd, start + 0.001, Math.min(neededEnd, lastEnd + maxHold, room, duration, longest)));
@@ -81,7 +86,7 @@ export function readabilityBreaks(r: Readability): Uint8Array {
 
 /**
  * The first word of line [first, last] followed by a cue-break pause (pauseCueBreaks) hidden inside the line, if
- * any. A proposal must show such a pause as a cue or line break.
+ * any. A proposal must show such a pause as a cue or line break (as a cue break after a sentence end: checkCues).
  */
 export function hiddenPause(first: number, last: number, r: Readability): number | undefined {
   const breaks = readabilityBreaks(r);
@@ -143,7 +148,7 @@ export function breakRule(at: number, lineStart: number, cueEnd: boolean, r: Rea
 /**
  * Check timed cues against the profile's hard rules; `range` = the words they must cover exactly. With
  * `readability` (LLM proposals), also the reading rules (breakRule) and "pause" for a cue-break pause hidden inside
- * a line.
+ * a line or a sentence-end pause (sentencePauseAt) inside a cue.
  */
 export function checkCues(
   cues: readonly Cue[],
@@ -174,6 +179,12 @@ export function checkCues(
     for (let w = cue.lines[0].words[0]; w < cue.lines[cue.lines.length - 1].words[1]; w++) {
       const gap = !words[w + 1] ? 0 : readability ? pauseAfter(readability.ctx, w) : words[w + 1]!.start - words[w]!.end;
       if (gap >= force) { out.push({ cue: i, rule: 'pause', detail: `pause before word ${w + 1}` }); paused = true; break; }
+      // a sentence end before a pause of pauses.sentenceCue ends the cue, as a long pause does (unless pauseCueBreaks dropped it)
+      if (readability && w >= readability.blockStart && w < readability.blockEnd && readabilityBreaks(readability)[w - readability.blockStart] && sentencePauseAt(readability.ctx, w)) {
+        out.push({ cue: i, rule: 'pause', detail: `${gap.toFixed(1)} s pause after the sentence end "${words[w].text}" inside a cue` });
+        paused = true;
+        break;
+      }
     }
     for (const line of readability && !paused ? cue.lines : []) {
       const w = hiddenPause(line.words[0], line.words[1], readability!);

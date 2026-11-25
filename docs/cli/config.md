@@ -19,7 +19,7 @@ exist. [`overtone init`](reference.md#overtone-init) writes one with today's def
   "styling": { "maxStyledRatio": 0.15, "maxKeyPerCue": 1 },
   "edits": { "maxSpan": 6 },
   "effort": { "corrections": "medium", "styling": "low", "linebreaks": "low" },
-  "rules": "1",
+  "rules": "2",
   "languages": { "nl": { "llm": "anthropic" } },
   "cacheDir": ".overtone"
 }
@@ -135,7 +135,7 @@ records `meta.rules` (the rule set id) and `meta.languageData` (a fingerprint of
   proposals) can vary between runs and model updates. Pin dated model ids where the provider has them (an Azure
   OpenAI deployment pins a model version) and keep the [cache](#cache). A changed language pack changes its
   language's layout; that shows as a new `meta.languageData` and a changelog line.
-- Pin with `"rules": "1"` or `--rules 1` (on `transcribe` and `recut`). The default `"latest"` follows upgrades.
+- Pin with `"rules": "2"` or `--rules 2` (on `transcribe` and `recut`). The default `"latest"` follows upgrades.
   `profileRules` apply on top of a rule set's profiles. An unknown id fails with the list of available ones.
 - Every release keeps the earlier rule sets. A layout change goes into a new rule set, never a released one (golden
   tests guard each); the [changelog](../../CHANGELOG.md) says what changed.
@@ -143,6 +143,7 @@ records `meta.rules` (the rule set id) and `meta.languageData` (a fingerprint of
 | Rule set | Since | Rules |
 |---|---|---|
 | `1` | 0.1.0 | Hesitations from 0.4 s, weighted up to 0.6 s; a new caption at 1 s, always at 1.5 s; a line may end on a main-verb "have", "do" or "be" or on the subject of a question head; a caption too short to read stays up to 1.5 s longer, keeping 0.4 s of a pause of 1 s or more blank ([Line cutting](pipeline.md#line-cutting)) |
+| `2` | Unreleased | Rule set 1, plus: a sentence end followed by a pause of 0.55 s or more starts a new caption, and the caption before it stays up at most to the middle of the pause or until 0.4 s before the next caption, whichever is later ([Line cutting](pipeline.md#line-cutting)) |
 
 ## Cache
 

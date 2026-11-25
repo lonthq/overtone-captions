@@ -1,0 +1,30 @@
+{
+  "language": "en",
+  "horizontal": [
+    "0.500 1.910 S1 Welcome back to the workshop.",
+    "1.910 4.400 S1 Today we look at how / captions are cut for phones.",
+    "4.400 6.954 S1 Most subtitle files / were written for a wide screen,",
+    "6.954 9.100 S1 with lines of forty characters or more.",
+    "9.100 13.806 S1 On a phone that becomes four or five short / lines, and nobody can read that fast.",
+    "14.800 18.500 S1 So we re-cut them: shorter lines, shorter / cues, and breaks that follow the sentence.",
+    "18.500 21.000 S1 Tom & Sarah tested it on 12 videos.",
+    "21.200 24.900 S1 The result was easier to read, / and nobody missed a word."
+  ],
+  "vertical": [
+    "0.500 1.910 S1 Welcome back / to the workshop.",
+    "1.910 3.319 S1 Today we look / at how captions",
+    "3.319 4.400 S1 are cut for phones.",
+    "4.400 6.103 S1 Most subtitle / files were written",
+    "6.103 6.954 S1 for a wide screen,",
+    "6.954 9.100 S1 with lines of forty / characters or more.",
+    "9.100 10.378 S1 On a phone / that becomes four",
+    "10.378 11.267 S1 or five short lines,",
+    "11.267 13.267 S1 and nobody / can read that fast.",
+    "14.800 16.126 S1 So we re-cut them: / shorter lines,",
+    "16.126 17.186 S1 shorter cues, / and breaks",
+    "17.186 18.500 S1 that follow / the sentence.",
+    "18.500 21.000 S1 Tom & Sarah tested / it on 12 videos.",
+    "21.200 23.218 S1 The result / was easier to read,",
+    "23.218 24.900 S1 and nobody / missed a word."
+  ]
+}
